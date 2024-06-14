@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>How To Rotate Your O-Piece</title>
+        <link rel="stylesheet" href="files/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>How To Rotate Your O-Piece</h1>
+    
+            <p>
+                A comprehensive guide to the practical and whimsical applications of O-piece rotations in the Tetris series and Tetris-like
+                stackers
+            </p>
+
+            <hr />
+        </header>
+
+        <main>
+            <section id="intro">
+                <h2>Introduction</h2>
+        
+                <h4>
+                    Note: This guide is a work in progress. Some sections are missing or incomplete, and there may be some factual errors
+                    due to incomplete research.
+                </h4>
+        
+                <p>
+                    To a casual Tetris player, rotating the <span class="tooltip" title="Also known as the 'square'">O-piece</span>
+                    appears to be completely useless. It's the only piece which does not move when you rotate it, and its identical rotation
+                    states typically prevent it from interacting with walls or other pieces. However, it turns out many stacker games both
+                    within and outside the Tetris series do actually implement game mechanics which can make it advantageous to rotate the
+                    O-piece.
+                </p>
+        
+                <p>
+                    My name is <span class="tooltip" title="she/they">Dunspixel</span>. I love playing a variety of Tetris games and
+                    learning about the mechanical differences between each one. I also have a very strong opinion about O-piece rotations
+                    and way too much free time, so I decided to make this comprehensive guide describing every known use for rotating the
+                    O-piece in the Tetris series and a variety of Tetris-like stacker games created by game developers in the Tetris
+                    community.
+                </p>
+        
+                <p>
+                    Rotating the O-piece may be nothing more than a meme to some, but many of the techniques in this guide really are
+                    practical and some can be utilised at all skill levels. With that said, I'm still going to include some useless and
+                    whimsical setups and techniques too, simply because they're fun. Useful or otherwise, I hope I can help you appreciate
+                    O-piece rotations for what they can really do.
+                </p>
+
+                <hr />
+            </section>
+
+            <nav>
+                <h2>Contents</h2>
+
+                <ol>
+                    <li>
+                        <a href="#guideline">Guideline Tetris</a>
+                        <ul>
+                            <li><a href="#rotation">Rotations and Wall Kicks</a></li>
+                            <li><a href="#move-reset">Move-Reset Lock Delay</a></li>
+                            <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
+                            <li><a href="#fusion">Puyo Puyo Tetris and Fusion O-Spins</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#non-guideline">Non-Guideline Tetris</a>
+                        <ul>
+                            <li><a href="#tgm2">Tetris The Absolute The Grand Master 2 The RO Medal PLUS</a></li>
+                            <li><a href="#t64">Tetris 64 and its Inexplicably Obscure Rotation System</a></li>
+                            <li><a href="#audio">Audio Cues</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#stackers">Tetris-like Stackers</a>
+                        <ul>
+                            <li><a href="#ascension">Ascension and its Extensive Wall Kicks</a></li>
+                            <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
+                            <li><a href="#techmino">Techmino and Transformative O-Spins</a></li>
+                            <li><a href="#tetrio">TETR.IO and All-Spin</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#closing-thoughts">Closing Thoughts</a>
+                    </li>
+                    <li>
+                        <a href="#ramblings">Random Ramblings</a>
+                    </li>
+                </ol>
+
+                <hr />
+            </nav>
+
+            <section id="guideline">
+                <h2>Guideline Tetris</h2>
+
+                <p>
+                    First of all, let's talk about the Tetris Guideline. It's a document which developers of Tetris games follow to ensure
+                    each game has some degree of mechanical consistency. The first Tetris game to follow the Tetris Guideline, at least in
+                    the form which evolved into what we know today, is Tetris Worlds from 2001.
+                </p>
+
+                <p>
+                    The most important feature of the Tetris Guideline is the Super Rotation System, or SRS for short. We'll encounter a lot
+                    of rotation systems in this guide, but SRS is by far the one you'll see the most both in modern Tetris and in
+                    Tetris-like stackers. In short, SRS defines how pieces behave when they rotate, and how they can move if rotation causes
+                    them to collide with a wall or another piece.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        Tetris Guideline wiki pages:
+                        <a href="https://harddrop.com/wiki/Tetris_Guideline">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Tetris_Guideline">TetrisWiki</a>
+                    </li>
+                </ul>
+
+                <section id="rotation">
+                    <h3>Rotations and Wall Kicks</h3>
+
+                    <p>
+                        Since this doesn't include any specific uses for O-piece rotations, I'll keep it short.
+                    </p>
+
+                    <p>
+                        Pieces can be in one of four orientations. For the purpose of this guide, I will be describing them using the "0R2L"
+                        <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, where pieces
+                        spawn in the 0 orientation, and rotating clockwise changes to R, 2, L, then back to 0.
+                    </p>
+
+                    <p>
+                        I will describe specific rotations (i.e. those where the orientation is relevant) as combinations of the above
+                        orientations. For example, a clockwise rotation from 0 to R will be written as "0R", a clockwise 180-degree rotation
+                        from 0 to 2 will be written as "0R2", and a single button 180-degree rotation from 0 to 2 will be written as "02".
+                    </p>
+
+                    <p>
+                        Wall kicks are a feature of many modern rotation systems, which allow pieces to move when rotated if their new
+                        position is obstructed by a wall or another piece. In SRS, four alternative positions are checked if basic rotation
+                        fails, and the piece will move to the first one that succeeds. Different rotation systems may define different
+                        offsets, or instead try to kick by rotating around an alternate centre.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            SRS wiki pages:
+                            <a href="https://harddrop.com/wiki/SRS">Hard Drop</a> |
+                            <a href="https://tetris.wiki/Super_Rotation_System">TetrisWiki</a>
+                        </li>
+                        <li>
+                            <a href="https://four.lol/srs/kicks-overview">Alternative visualisation of wall kicks on FOUR.lol</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="move-reset">
+                    <h3>Move-Reset Lock Delay</h3>
+
+                    <p>
+                        Finally! I get to talk about an actual use for O-piece rotations! This one is by far the most practical O-piece
+                        rotation technique you can use in the Tetris series at any skill level. Seriously, even if you only learn one thing
+                        from this guide, let it be this.
+                    </p>
+                    
+                    <p>
+                        Many Tetris games, including all guideline games, implement a lock delay. This means when the active piece reaches
+                        the bottom of the board or the top of the stack, the game provides a brief window of time (typically 30 frames or
+                        half a second) to move or rotate the piece before it locks into place.
+                    </p>
+
+                    <p>
+                        Move-Reset Lock Delay, as implemented in
+                        <span class="tooltip" title="A notable exception is Tetris Giant, which uses step-reset lock delay">most</span>
+                        guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris
+                        Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
+                    </p>
+
+                    <p>
+                        Repeatedly resetting the lock delay just before the piece locks is called "stalling". This is a versatile technique
+                        which is useful at a variety of skill levels, especially in multiplayer battles. Some examples include:
+
+                        <ul>
+                            <li>
+                                Giving yourself extra time to decide where to place a piece
+                            </li>
+                            <li>
+                                Delaying a line clear in battle to block or mitigate an incoming attack that would cause you to top out
+                            </li>
+                            <li>
+                                Delaying a <span class="tooltip" title="piecement places">piece placement</span> to receive garbage lines
+                                from an imminent attack, then using this garbage for a counterspike
+                            </li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In
+                        tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with
+                        SRS. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to
+                        use when stalling.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            Lock Delay wiki pages:
+                            <a href="https://harddrop.com/wiki/Lock_delay">Hard Drop</a> |
+                            <a href="https://tetris.wiki/Lock_delay">TetrisWiki</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="irs">
+                    <h3>Tetris Effect and Initial Rotation</h3>
+
+                    <p>
+                        Tetris Effect features two major mechanics which make O-piece rotations especially useful when used together:
+                    </p>
+
+                    <ul>
+                        <li>
+                            The Zone, which stops time and allows you to perform massive line clears
+                        </li>
+                        <li>
+                            Initial Rotation System (IRS), which allows you to spawn pieces in a pre-rotated state and is quite possibly one
+                            of the best things added to Tetris
+                        </li>
+                    </ul>
+
+                    <p>
+                        When using Zone to clear 20 <span class="tooltip" title="kirb your ultimatris">or more</span> lines at once, you
+                        have limited space to spawn and manoeuvre pieces without topping out and ending the zone. To prevent topping out
+                        prematurely, hold the rotation button on your active piece while placing it, which will activate IRS and spawn the
+                        next piece rotated in that direction.
+                    </p>
+
+                    <p>
+                        With most pieces, if your active piece is already in the desired orientation and you are not already holding the
+                        appropriate rotation button, you must first perform a counter-rotation in the opposite direction to the required
+                        spawn orientation for the next piece, which will then allow you to rotate it back and hard-drop the piece while that
+                        rotation button is still held.
+                    </p>
+
+                    <p>
+                        Thanks to its identical rotation states, the O-piece eliminates the need for the counter-rotation, thus making it
+                        the easiest piece to use with IRS.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            <a href="https://www.tetriseffect.game/2021/07/30/tetris-effect-advanced-techniques-community-guide/#HighZoneClears">
+                                Tetris Effect Advanced Techniques Community Guide - High Zone Clears
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="fusion">
+                    <h3>Puyo Puyo Tetris and Fusion O-Spins</h3>
+
+                    <p>
+                        This is much more whimsical than the other uses in this chapter, having pretty much zero practical use. However,
+                        seeing an O-piece wall kick in a modern guideline Tetris game is absolutely hilarious and I love it.
+                    </p>
+
+                    <p>
+                        Puyo Puyo Tetris implements a slightly altered SRS offset table which defines wall kicks for the O-piece. These wall
+                        kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for
+                        use with its equivalent pentomino, the P-piece, in the game's Party mode.
+                    </p>
+
+                    <p>
+                        Triggering this wall kick for the standard O-piece is much tricker and can only be done in the game's Fusion mode.
+                        This mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris
+                        pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break
+                        through the stack, and activate the next piece which you can use at the same time.
+                    </p>
+
+                    <p>
+                        There is a complex setup which allows you to exploit this behaviour and execute an O-spin:
+                        <span class="todo">TODO: Add a screenshot</span>
+                    </p>
+
+                    <ul>
+                        <li>A Tetris stack with a two wide, minimum two high well (preferably higher)</li>
+                        <li>Puyos filling the well in this stack</li>
+                        <li>An overhang above the well, with enough space to the side and underneath to fit an O-piece</li>
+                        <li>A fully enclosed O-shaped hole inside this overhang, with the floor being one block high</li>
+                        <li>Access to two consecutive O-pieces via the next and/or hold queues</li>
+                    </ul>
+
+                    <p>
+                        By sliding the first O-piece under the overhang and soft-dropping it onto the Puyo stack, you can use the time spent
+                        breaking the Puyo stack to place the second O-piece on top of where the first piece locked and perform a 0R rotation.
+                    </p>
+
+                    <p>
+                        When the first piece reaches the bottom, it will clear the two lines at the bottom of the stack and shift the
+                        overhang downwards, causing the floor of the O-shaped hole to overlap with the O-piece. Just after the line clear,
+                        performing a R0 rotation will then trigger an upwards wall kick and move the O-piece into the O-shaped hole.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">Oshisaure's pentomino commentary</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">Oshisaure's O-Spin demo</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr />
+            </section>
+
+            <section id="non-guideline">
+                <h2>Non-Guideline Tetris</h2>
+
+                <p>
+                    Before the Tetris Guideline existed, Tetris games used a variety of rotation systems and game mechanics which aren't
+                    seen in modern entries. Some of these allow for some very interesting techniques.
+                </p>
+
+                <section id="tgm2">
+                    <h3>Tetris The Absolute The Grand Master 2 The RO Medal PLUS</h3>
+
+                    <p>
+                        Tetris The Grand Master 2 (TGM2) features six medals which can be achieved by performing a variety of tasks within a
+                        single round. One of these medals is the RO (rotation) medal, achieved by maintaining an average of at least 6
+                        rotations for every 5 pieces. If you do this, you will receive a bronze RO medal at level 300, a silver medal at
+                        700, and a gold medal at 999.
+                    </p>
+
+                    <p>
+                        All rotations for all pieces count towards this medal, making O-piece rotations very useful for acquiring and
+                        upgrading it.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            <a href="https://tetris.wiki/TGM_Guide">PetitPrince's TGM Guide on TetrisWiki</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="t64">
+                    <h3>Tetris 64 and its Inexplicably Obscure Rotation System</h3>
+
+                    <p>
+                        By default, Tetris 64 uses Sega Rotation, which was originally made for Sega's arcade Tetris and is the rotation
+                        system that was adapted for the TGM games. However, this game offers several options to alter how rotations work:
+                    </p>
+            
+                    <ul>
+                        <li>
+                            Offset Turn: Enables wall kicks
+                        </li>
+                        <li>
+                            Double Turn: Enables limited 180-degree rotations, usable by double-tapping in a tight space
+                        </li>
+                        <li>
+                            Rotate Center:
+                            <span class="tooltip" title="YES AN ENTIRE ROTATION SYSTEM I AM NOT EXAGGERATING">
+                                Enables an alternative, unique rotation system
+                            </span>
+                        </li>
+                    </ul>
+            
+                    <p>
+                        Yeah, this game just casually drops an entire rotation system that is unique to Tetris 64 and intentionally permits
+                        O-spins via wall kicks in the second page of the options menu. No wonder this slipped under most of the Tetris
+                        community's radar!
+                    </p>
+            
+                    <p>
+                        Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other
+                        Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece.
+                        Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this
+                        can be used to execute genuine, developer-intended O-spins.
+                    </p>
+            
+                    <p>
+                        Unfortunately, I wasn't able to find any information about how this rotation system and its wall kicks actually
+                        work, and discussions about the unusual spins this game permits are limited. I guess this is all I can say about
+                        Tetris 64, then-
+                    </p>
+            
+                    <p>
+                        So I decided to experiment with the game and document the entire Tetris 64 rotation system myself, specifically for
+                        a <span class="tooltip" title="If you couldn't tell by now, yes I am autistic">guide about O-piece rotations</span>.
+                        Well, only the tetrominoes. There's a Bio Tetris mode which can spawn anything from monominoes to pentominoes based
+                        on your heart rate, but those were outside the scope of my research.
+                    </p>
+            
+                    <p>
+                        Here is an offset table for the O-piece. <span class="todo">TODO: add image</span> The orientations are in the
+                        middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each
+                        direction. The left kick will always be
+                        <span class="tooltip" title="Fun Fact: this game has Mihara's Conspiracy but mirrored">prioritised</span>
+                        over the right kick if both would succeed.
+                    </p>
+            
+                    <p>
+                        <span class="todo">TODO: Describe the actual O-Spins that's literally what this guide is for</span>
+                    </p>
+            
+                    <ul class="sources">
+                        <li>
+                            Tetris 64 Rotation wiki pages:
+                            <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
+                            <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="audio">
+                    <h3>Audio Cues</h3>
+
+                    <p>
+                        To end the non-guideline section, I'd like to look at another fun use for O-piece rotations that will be impractical
+                        for most people. However, if you like beating scores in blindfolded categories, this may still be useful for you.
+                    </p>
+
+                    <p>
+                        Compared to more recent entries, older Tetris games use very primitive rotation systems. This section will likely
+                        apply to any Tetris game with rotation SFX and no wall kicks, but I'll use Nintendo Rotation System (NRS), as seen
+                        in NES and Game Boy Tetris, to illustrate audio cues. The rotation SFX and lack of wall kicks in these games can be
+                        used while blindfolded to determine what your active piece is, at least to some extent.
+                    </p>
+
+                    <p>The following steps can be applied in NES Tetris:</p>
+
+                    <ul>
+                        <li>
+                            Perform a 0L rotation, DAS to the left wall, then attempt an L0 rotation. If the L0 rotation succeeds, there is
+                            a 100% chance you have an O-piece. Yay!
+                        </li>
+                        <li>
+                            If the L0 rotation fails, move one column to the right and try again. If this still fails, there is a 100%
+                            chance you have an I-piece.
+                        </li>
+                        <li>
+                            If the second L0 rotation succeeds, perform a 0R rotation (this will always succeed), then attempt to move the
+                            piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50%
+                            chance you have a Z-piece.
+                        </li>
+                        <li>
+                            If the movement fails, there is a 33% chance you have a J-piece, a 33% chance you have an L-piece, and a 33%
+                            chance you have a T-piece.
+                        </li>
+                        <li>
+                            Unfortunately, I don't yet know of any ways to distinguish S/Z and J/L/T. If you do, please let me know!
+                        </li>
+                    </ul>
+
+                    <p>
+                        GB Tetris instead uses a mirrored, "left-handed" version of NRS, but the above still applies if all movements and
+                        rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
+                    </p>
+
+                    <p>
+                        While it's
+                        <span class="tooltip" title="I eagerly wait for the Classic Tetris community to prove me wrong">not possible</span>
+                        to play indefinitely without exceptional luck, the above steps can theoretically be used to clear a decent amount of
+                        lines before topping out.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            NRS wiki pages:
+                            <a href="https://harddrop.com/wiki/Nintendo_Rotation_System">Hard Drop</a> |
+                            <a href="https://tetris.wiki/Nintendo_Rotation_System">TetrisWiki</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr />
+            </section>
+
+            <section id="stackers">
+                <h2>Tetris-like Stackers</h2>
+
+                <p>
+                    Outside of the Tetris series is an entire genre inspired by it. These games, as well as Tetris, are known as stackers.
+                    As they are not bound by the Tetris Guideline, these stackers can be much more creative with how pieces behave and
+                    interact with each other, introducing a variety of new game mechanics that can set them apart from Tetris. Many stackers
+                    implement custom rotation systems which introduce unique ways to rotate O-pieces and execute O-spins.
+                </p>
+        
+                <p>
+                    Unless otherwise specified, the techniques described for each game are performed with that game's default rotation
+                    system. Many community-made stacker games allow the selection of rotation systems from other games, which would permit
+                    the use of those games' O-piece rotation techniques. However, describing them in each game that uses them would result
+                    in far too much repetition.
+                </p>
+
+                <section id="ascension">
+                    <h3>Ascension and its Extensive Wall Kicks</h3>
+
+                    <p>
+                        This game has some spicy O-Spins. I need to write about them. <span class="todo">TODO: write this section</span>
+                    </p>
+
+                    <h4><a href="https://asc.winternebs.com/">Ascension</a> by winterNebs</h4>
+                </section>
+
+                <section id="nuketris">
+                    <h3>Nuketris and Worm Mode</h3>
+
+                    <p>
+                        I love this mode! But I haven't written anything about it yet. <span class="todo">TODO: write this section</span>
+                    </p>
+
+                    <h4><a href="https://nuketris.com/">Nuketris</a> by <span class="todo">TODO: find out who made Nuketris</span></h4>
+                </section>
+
+                <section id="techmino">
+                    <h3>Techmino and Transformative O-Spins</h3>
+
+                    <p>
+                        Techmino Rotation System (TRS) functions mostly like SRS, but with a few exceptions. It just so happens that one of
+                        these exceptions is how O-pieces behave when you perform very specific rotations in certain situations - it
+                        transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
+                    </p>
+
+                    <p>
+                        Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a
+                        different piece, then performing the relevant rotation sequence from the list below. Note that "F" is short for
+                        "Flip" and refers to the game's 180-degree rotation button.
+                    </p>
+
+                    <ul>
+                        <li>Z: LRL</li>
+                        <li>S: RLR</li>
+                        <li>J: LLR</li>
+                        <li>L: RRL</li>
+                        <li>T: LLL or RRR</li>
+                        <li>I: FFF</li>
+                    </ul>
+
+                    <ul class="sources">
+                        <li>
+                            <a href="https://techmino-hub.github.io/faq.html">NOT_A_ROBOT's Techmino FAQ</a> -
+                            O-Spin section originally by C29H25N3O5
+                        </li>
+                    </ul>
+
+                    <h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by 26F Studio</h4>
+                </section>
+
+                <section id="tetrio">
+                    <h3>TETR.IO and All-Spin</h3>
+
+                    <p>
+                        While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from
+                        the previously mentioned stalling techniques) with the game's default rotation system, SRS+. However, there are a
+                        few fun things you can do with them.
+                    </p>
+
+                    <p>
+                        TETR.IO offers several options for spin recognition, such as:
+                    </p>
+
+                    <ul>
+                        <li>T-Spins: Only recognises T-Spins as spins</li>
+                        <li>All-Spin: Recognises spins for all pieces</li>
+                        <li>Stupid: Recognises every floor rotation as a "spin"</li>
+                    </ul>
+
+                    <p>
+                        Of course, setting the allowed spins to "Stupid" will allow you to O-Spin with every O-piece, but it's clear that
+                        this is just for fun.
+                    </p>
+
+                    <p>
+                        O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was
+                        intended for use with the game's other rotation system options such as ASC, but it can actually be executed in SRS,
+                        too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created
+                        where such a hole already exists, rotating the piece will still register as an O-Spin.
+                    </p>
+
+                    <ul class="sources">
+                        <li>
+                            <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
+                                J4mi5on's SRS O-Spin demo with All-Spin enabled
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4><a href="https://tetr.io/">TETR.IO</a> by osk</h4>
+                </section>
+
+                <hr />
+            </section>
+
+            <section id="closing-thoughts">
+                <h2>Closing Thoughts</h2>
+
+                <p>
+                    Concluding words! I'll add to this later.
+                </p>
+        
+                <p>
+                    For now, thank you to everyone whose guides, research, and stacker games I've cited, and everyone else who is reading
+                    this guide!
+                </p>
+        
+                <p>
+                    Constructive criticism is welcome. Please teach me how I can improve my guide!
+                </p>
+
+                <hr />
+            </section>
+
+            <section id="ramblings">
+                <h2>Random Ramblings</h2>
+
+                <p>
+                    This isn't really part of the guide, but I like rambling. Maybe you'll find some of it interesting.
+                </p>
+        
+                <p>
+                    You may wonder why I always say "Tetris games" and "Tetris-like stackers", instead of "versions of Tetris". I don't like
+                    the latter because it implies the Tetris series is just the same game with minor visual differences, and that other
+                    stacker games are just knock-offs of Tetris that don't add anything to the gameplay. I've played a lot of stackers, and
+                    I assure you they all feel very different to play at anything higher than a casual level, even if they have to adhere to
+                    the Tetris Guideline.
+                </p>
+        
+                <p>
+                    As for "Tetris-like stackers", this is because the community often uses Tetris to describe the entire stacker genre.
+                    Their fundamental mechanics may look and feel similar to Tetris, but they are not entries in the Tetris series. Many of
+                    them are respected by the Tetris community as games in their own right.
+                </p>
+        
+                <p>
+                    Tetris Effect is not a rhythm game. Rather, you are a rhythm game which Tetris Effect plays perfectly. Tetris Effect has
+                    exactly one rhythm-based game mechanic and it requires you to be dead in Connected mode to utilise it.
+                </p>
+        
+                <p>
+                    My mind is blown by the fact Tetris 64's rotation system exists and it's shocking to me how so few people know about it.
+                    With techniques only seen in Tetris-like stacker games to this day, Tetris 64 was years ahead of its time.
+                </p>
+        
+                <p>
+                    I like purple a normal amount, as I'm sure you can tell.
+                </p>
+        
+                <p>
+                    I often wonder, how many mainline Tetris games are there, and which ones count as mainline?
+                </p>
+        
+                <p>
+                    If you ever think you're useless, know that there's a huge guide about how to rotate the square in Tetris. No matter
+                    what you may think about yourself, you are good for something even if you don't know it yet. I hope you can find it one
+                    day.
+                </p>
+
+                <h4><span class="tooltip" title="also known as human rights">Trans rights</span> are human rights.</h4>
+
+                <hr />
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Copyright © 2024 Dunspixel
+            </p>
+        </footer>
+    </body>
+</html>

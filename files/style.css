@@ -1,0 +1,49 @@
+@font-face
+{
+    font-family: "Quicksand";
+    src: url("Quicksand.ttf");
+}
+
+*
+{
+    font-family: "Quicksand";
+    color: #ECD8FF;
+}
+
+html
+{
+    background-color: #AE96E4;
+}
+
+body
+{
+    max-width: 976px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #675395;
+}
+
+header, footer
+{
+    text-align: center;
+}
+
+a
+{
+    color: #BEA6F4;
+}
+
+.tooltip
+{
+    border-bottom: 1px dotted;
+}
+
+.sources
+{
+    list-style-type: square;
+}
+
+.todo
+{
+    background-color: #000000;
+}
