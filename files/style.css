@@ -33,6 +33,11 @@ a
     color: #BEA6F4;
 }
 
+img
+{
+    float: inline-end;
+}
+
 .tooltip
 {
     border-bottom: 1px dotted;
