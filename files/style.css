@@ -17,9 +17,9 @@ html
 
 body
 {
-    max-width: 976px;
+    max-width: 984px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 1px 20px;
     background-color: #675395;
 }
 
