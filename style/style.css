@@ -33,11 +33,6 @@ a
     color: #BEA6F4;
 }
 
-img
-{
-    float: inline-end;
-}
-
 .tooltip
 {
     border-bottom: 1px dotted;
@@ -46,6 +41,16 @@ img
 .sources
 {
     list-style-type: square;
+}
+
+.inline-end
+{
+    float: inline-end;
+}
+
+.centre
+{
+    text-align: center;
 }
 
 .todo

@@ -396,7 +396,7 @@
                     </p>
             
                     <p>
-                        <img src="img/t64_opiece_offset.png" alt="Tetris 64 O-Piece Offset Table" />
+                        <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
 
                         Here is an offset table for the O-piece. The orientations are in the middle, with basic rotations on either side.
                         Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be
@@ -533,18 +533,14 @@
                     <p>
                         Nuketris mostly uses SRS, but with some modifications to allow O-spins. The O-piece will rotate around its "centre"
                         block without the SRS offset applied to it, and uses the same offset table as the rest of the pieces (except for the
-                        I-piece). The centre block of the O-piece starts in the bottom-right corner in most modes.
-                    </p>
-
-                    <p>
-                        <span class="todo">TODO: Add some details about 180-degree rotations</span>
+                        I-piece). The centre block of the O-piece starts in the bottom-right corner in most modes. There are 180 rotations
+                        based on those featured in Nullpomino, which in turn is based on the SRS-X rotation system from Heboris.
                     </p>
 
                     <p>
                         Nuketris also features a unique mode called Worm, which involves navigating an O-piece through an infinite tunnel
                         which ascends at increasing speeds using O-Spins and your knowledge of wall kicks. You must survive for as long as
-                        possible without topping out due to your O-piece being pushed above the ceiling. In this mode, the centre block of
-                        the O-piece is highlighted, and starts in the top-left instead of the bottom-right.
+                        possible without topping out due to your O-piece being pushed above the ceiling.
                     </p>
 
                     <p>
@@ -552,12 +548,57 @@
                     </p>
 
                     <p>
-                        <span class="todo">TODO: Write a guide for Worm mode</span>
+                        Below is an illustration of the O-piece offset table for Nuketris, with the rotation centre highlighted.
+                        <strong>Please note that the rotation centre is <em>not</em> the block highlighted in Worm mode!</strong>
+                    </p>
+
+                    <div class="centre">
+                        <img src="img/nuketris_opiece_offset.png" alt="Nuketris O-Piece Offset Table" />
+                    </div>
+
+                    <p>
+                        In Worm mode, the block diagonally opposite of the rotation centre is highlighted. Below is a modified version
+                        of the above illustration, which shows how the rotation states are displayed in Worm mode.
+                    </p>
+
+                    <div class="centre">
+                        <img src="img/nuketris_opiece_offset_worm.png" alt="Nuketris O-Piece Offset Table (Worm Mode)" />
+                    </div>
+
+                    <p>
+                        Further notes on wall kicks which I will organise properly later:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined
+                            after it impossible. 0R, R0, 2L, and L2 rotations are essentially useless because of this.
+                        </li>
+                        <li>
+                            In Worm mode, kicks which only move the O-piece upwards will appear to fail if there is space above the O-piece
+                            due to high gravity. This really threw me off when trying to figure out whether my understanding of the kicks is
+                            correct.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <span class="todo">TODO: Write a proper guide for Worm mode</span><br />
                     </p>
 
                     <ul class="sources">
                         <li>
                             <a href="https://discord.gg/MCPRYMZt5g">Nuketris Discord server</a>
+                        </li>
+                        <li>
+                            <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
+                                Tetrisconcept forum post about SRS-X 180 degree rotations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nullpomino/nullpomino/blob/master/nullpomino-core/src/main/java/mu/nu/nullpo/game/subsystem/wallkick/StandardWallkick.java">
+                                Nullpomino wall kick implementation
+                            </a>
+                            - Note that positive y values represent a <em>downward</em> kick here
                         </li>
                     </ul>
 
