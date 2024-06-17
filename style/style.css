@@ -33,6 +33,11 @@ a
     color: #BEA6F4;
 }
 
+img
+{
+    max-width: 100%;
+}
+
 .tooltip
 {
     border-bottom: 1px dotted;
