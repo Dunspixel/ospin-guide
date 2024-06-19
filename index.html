@@ -399,17 +399,605 @@
             
                     <p>
                         <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
-
-                        Here is an offset table for the O-piece. The orientations are in the middle, with basic rotations on either side.
-                        Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be
+                        To the right is an offset table for the O-piece. The rotation states are in the middle, with basic rotations on
+                        either side. Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be
                         <span class="tooltip" title="Fun Fact: this game has Mihara's Conspiracy but mirrored">prioritised</span>
                         over the right kick if both would succeed.
                     </p>
             
                     <p>
-                        <span class="todo">TODO: Describe the actual O-Spins that's literally what this guide is for</span>
+                        Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in Tetris 64 limit you to clearing
+                        O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards.
+                        Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan
+                        around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws
+                        drop at your stylish O-piece placement skills.
                     </p>
-            
+
+                    <div>
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            State 0/L
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="d"></td><td class="o"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            0R/L2 rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            Wall kick
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            O-Spin Single Clear
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>With Offset Turn off, this can alternatively be performed with an L0R or L2R rotation.</li>
+                    </ul>
+
+                    <div>
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            State 0/L
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="o"></td><td class="d"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            0R/L2 rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            Wall kick
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            O-Spin Single Clear
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>With Offset Turn off, this can alternatively be performed with a 0R2 or 0L2 rotation.</li>
+                        <li>Note how the rotation direction is the same as its mirrored setup.</li>
+                    </ul>
+
+                    <div>
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            State 0
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="d"></td><td class="d"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            0R rotation (fail)
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="o"></td>
+                                    <td class="d"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            R2 rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            Wall kick
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            O-Spin Single Clear
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>R2 must be performed quickly to complete the 0R2 rotation.</li>
+                        <li>This can also be performed with a 0L2 rotation.</li>
+                    </ul>
+
+                    <div>
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            State L
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td><td class="o"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="d"></td><td class="d"></td>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            L2 rotation (fail)
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="d"></td>
+                                    <td class="o"></td><td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            2R rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            Wall kick
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+    
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td><td class="f"></td>
+                                    <td class="o"></td><td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+    
+                            <tfoot>
+                                <tr>
+                                    <td colspan="10">
+                                        <span class="playfield-info">
+                                            O-Spin Single Clear
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <ul>
+                        <li>2R must be performed quickly to complete the L2R rotation.</li>
+                        <li>This can also be performed with an L0R rotation.</li>
+                    </ul>
+
                     <ul class="sources">
                         <li>
                             Tetris 64 Rotation wiki pages:
