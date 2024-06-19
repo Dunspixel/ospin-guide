@@ -1,0 +1,68 @@
+.playfield
+{
+    border: 2px solid;
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+.playfield td
+{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+}
+
+.playfield-info
+{
+    padding: 0 4px;
+}
+
+.f
+{
+    background-color: #FFFFFF;
+}
+
+.g
+{
+    background-color: #808080;
+}
+
+.d
+{
+    background-color: #404040;
+}
+
+.i
+{
+    background-color: #00FFFF;
+}
+
+.j
+{
+    background-color: #0000FF;
+}
+
+.l
+{
+    background-color: #FF8000;
+}
+
+.o
+{
+    background-color: #FFE000;
+}
+
+.s
+{
+    background-color: #00FF00;
+}
+
+.t
+{
+    background-color: #C000FF;
+}
+
+.z
+{
+    background-color: #FF0000;
+}
