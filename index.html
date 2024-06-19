@@ -283,11 +283,10 @@
 
                     <p>
                         There is a complex setup which allows you to exploit this behaviour and execute an O-spin:
-                        <span class="todo">TODO: Add a screenshot</span>
                     </p>
 
                     <ul>
-                        <li>A Tetris stack with a two wide, minimum two high well (preferably higher)</li>
+                        <li>A Tetris stack with a two wide, minimum four high well</li>
                         <li>Puyos filling the well in this stack</li>
                         <li>An overhang above the well, with enough space to the side and underneath to fit an O-piece</li>
                         <li>A fully enclosed O-shaped hole inside this overhang, with the floor being one block high</li>
@@ -295,22 +294,285 @@
                     </ul>
 
                     <p>
-                        By sliding the first O-piece under the overhang and soft-dropping it onto the Puyo stack, you can use the time spent
-                        breaking the Puyo stack to place the second O-piece on top of where the first piece locked and perform a 0R rotation.
+                        First, slide the first O-piece under the overhang and allow it to lock on top of the puyo stack. Once it locks, it
+                        will slowly break through the puyo stack.
                     </p>
 
                     <p>
-                        When the first piece reaches the bottom, it will clear the two lines at the bottom of the stack and shift the
-                        overhang downwards, causing the floor of the O-shaped hole to overlap with the O-piece. Just after the line clear,
-                        performing a R0 rotation will then trigger an upwards wall kick and move the O-piece into the O-shaped hole.
+                        When the second O-piece spawns (or you take it out of hold), perform a 0R rotation. You can then use the time spent
+                        by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time
+                        it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
+                    </p>
+
+                    <p>
+                        When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When
+                        this happens, perform an R0 rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
+                    </p>
+
+                    <div>
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr class="f">
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g p"></td>
+                                    <td class="g p"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr class="f">
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g p"></td>
+                                    <td class="g p"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr class="f">
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g p"></td>
+                                    <td class="g p"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr class="f">
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g p"></td>
+                                    <td class="g p"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <span class="playfield-info">
+                                            Lock here
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <span class="playfield-info">
+                                            0R rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="d"></td>
+                                    <td class="d"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <span class="playfield-info">
+                                            Line clear
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                        <table class="playfield">
+                            <tbody>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="o"></td>
+                                    <td class="o"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="g"></td><td class="g"></td>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="f"></td><td class="f"></td><td class="f"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                                <tr>
+                                    <td class="g"></td><td class="g"></td><td class="g"></td><td class="f"></td>
+                                    <td class="f"></td><td class="g"></td><td class="g"></td><td class="g"></td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="8">
+                                        <span class="playfield-info">
+                                            R0 rotation
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <p>
+                        Is it useless? Absolutely! But not everything has to be useful to be fun.
                     </p>
 
                     <ul class="sources">
                         <li>
-                            <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">Oshisaure's pentomino commentary</a>
+                            <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">Lilla Oshisaure's pentomino commentary</a>
                         </li>
                         <li>
-                            <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">Oshisaure's O-Spin demo</a>
+                            <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">Lilla Oshisaure's O-Spin demo</a>
                         </li>
                     </ul>
                 </section>
