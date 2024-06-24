@@ -66,8 +66,8 @@
                             <li><a href="#rotation">Rotations and Wall Kicks</a></li>
                             <li><a href="#move-reset">Move-Reset Lock Delay</a></li>
                             <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
-                            <li><a href="#fusion">Puyo Puyo Tetris and Fusion O-Spins</a></li>
-                            <li><a href="#stardust">Tetris Stardust [Placeholder]</a></li>
+                            <li><a href="#fusion">Puyo Puyo Tetris and Fusion "O-Spins"</a></li>
+                            <li><a href="#stardust">Tetris Stardust and Actual O-Spins</a></li>
                         </ul>
                     </li>
                     <li>
@@ -264,7 +264,7 @@
                 </section>
 
                 <section id="fusion">
-                    <h3>Puyo Puyo Tetris and Fusion O-Spins</h3>
+                    <h3>Puyo Puyo Tetris and Fusion "O-Spins"</h3>
 
                     <p>
                         This is much more whimsical than the other uses in this chapter, having pretty much zero practical use. However,
@@ -581,18 +581,51 @@
                 </section>
 
                 <section id="stardust">
-                    <h3>Tetris Stardust</h3>
+                    <h3>Tetris Stardust and Actual O-Spins</h3>
 
                     <p>
-                        <span class="todo">TODO: write this section</span>
+                        Ok, maybe you're thinking that last section was a bit too silly. Perhaps you're looking for an O-Spin in a guideline
+                        Tetris game that is developer intended and doesn't require a ludicrous setup. You're probably also wondering if such
+                        a game really exists in the Tetris series. Good news, it does, and it's called Tetris Stardust!
                     </p>
 
                     <p>
-                        Summary: This game has a mechanic which rewards multiple spins with the same piece. The O-piece does not normally
-                        move on rotation, but a special case allows it to kick if rotated while on the floor.
+                        To tell you the truth, I only recently learned this game existed, mainly because it's a game that was only released
+                        in Japan, made using Silverlight of all things, and there is very little information about it online. It's mostly
+                        based on Tetris Online, but with a few important differences. As you can probably tell by the existence of this
+                        section, some of these differences have something to do with how the O-piece behaves.
+                    </p>
+
+                    <p>
+                        Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which
+                        allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on
+                        normal rotation, nor does it have multiple distinct rotation states. Instead, it checks the following conditions and
+                        bypasses basic rotation if the check succeeds:
+                    </p>
+
+                    <ul>
+                        <li>If rotating left, the space directly underneath the <strong>lower-right</strong> block must be occupied.</li>
+                        <li>If rotating right, the space directly underneath the <strong>lower-left</strong> block must be occupied.</li>
+                    </ul>
+
+                    <p>
+                        <img src="img/stardust_opiece_offset.png" class="inline-end" alt="Tetris Stardust O-Piece Offset Table" />
+                        If the check succeeds, the O-piece will then kick according to the offset table to the right. To my knowledge,
+                        Tetris Stardust is the only Tetris game which actually acknowledges O-Spins by name, and also the only one which
+                        explicitly rewards them.
+                    </p>
+
+                    <p>
+                        <span class="todo">TODO: Find out if kicks 3 and 4 are in the correct order</span><br />
+                        <span class="todo">TODO: Spin Rank</span>
                     </p>
 
                     <ul class="sources">
+                        <li>
+                            <a href="https://tetris.wiki/Tetris_Stardust">
+                                Tetris Stardust on TetrisWiki
+                            </a>
+                        </li>
                         <li>
                             <a href="https://www.youtube.com/watch?v=vPQCdHB-nyU">
                                 Lilla Oshisaure's Tetris Stardust gameplay
@@ -1354,7 +1387,9 @@
                         used while blindfolded to determine what your active piece is, at least to some extent.
                     </p>
 
-                    <p>The following steps can be applied in NES Tetris:</p>
+                    <p>
+                        The following steps can be applied in NES Tetris:
+                    </p>
 
                     <ul>
                         <li>
