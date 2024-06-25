@@ -1,0 +1,89 @@
+.playfield-container
+{
+    display: inline-block;
+}
+
+.playfield
+{
+    border: 2px solid;
+    display: table;
+}
+
+.playfield-row
+{
+    background-color: #FFFFFF;
+    display: table-row;
+}
+
+.playfield-cell
+{
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    display: table-cell;
+}
+
+.playfield-caption
+{
+    padding: 0 4px;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    display: table-caption;
+    caption-side: bottom;
+}
+
+.f
+{
+    background-color: #FFFFFF !important;
+}
+
+.g
+{
+    background-color: #808080 !important;
+}
+
+.d
+{
+    background-color: #404040 !important;
+}
+
+.i
+{
+    background-color: #00FFFF !important;
+}
+
+.j
+{
+    background-color: #0000FF !important;
+}
+
+.l
+{
+    background-color: #FF8000 !important;
+}
+
+.o
+{
+    background-color: #FFE000 !important;
+}
+
+.s
+{
+    background-color: #00FF00 !important;
+}
+
+.t
+{
+    background-color: #C000FF !important;
+}
+
+.z
+{
+    background-color: #FF0000 !important;
+}
+
+.p
+{
+    border-radius: 8px;
+}
