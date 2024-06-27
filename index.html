@@ -441,16 +441,11 @@
                 <h2>Chapter 2: Guideline Tetris</h2>
 
                 <p>
-                    To begin this chapter, let's talk about the Tetris Guideline. It's a document which developers of Tetris games follow to
-                    ensure each game has some degree of mechanical consistency. The first Tetris game to follow the Tetris Guideline, at
-                    least in the form which evolved into what we know today, is Tetris Worlds from 2001.
+                    The Tetris Guideline is a document which developers of Tetris games follow to ensure each game has some degree of mechanical consistency. The first Tetris game to follow the Tetris Guideline, at least in the form which evolved into what we know today, is Tetris Worlds from 2001. Almost every Tetris game released since then has adhered to some version of this guideline, hence why modern Tetris games are often referred to as "Guideline Tetris".
                 </p>
 
                 <p>
-                    The most important feature of the Tetris Guideline is the Super Rotation System, or SRS for short. We'll encounter a lot
-                    of rotation systems in this guide, but SRS is by far the one you'll see the most both in modern Tetris and in
-                    Tetris-like stackers. In short, SRS defines how pieces behave when they rotate, and how they can move if rotation causes
-                    them to collide with a wall or another piece.
+                    The most important feature of the Tetris Guideline is the aforementioned SRS, which it introduced to the Tetris series. We'll encounter a lot of rotation systems in this guide, but SRS is by far the one you'll see the most both in modern Tetris games and in Tetris-like stackers.
                 </p>
 
                 <ul class="sources">
@@ -460,307 +455,280 @@
                         <a href="https://tetris.wiki/Tetris_Guideline">TetrisWiki</a>
                     </li>
                 </ul>
+            </section>
 
-                <section id="move-reset">
-                    <h3>Move-Reset Lock Delay</h3>
+            <section id="move-reset">
+                <h3>Move-Reset Lock Delay</h3>
 
-                    <p>
-                        Finally! I get to talk about an actual use for O-piece rotations! This one is by far the most practical O-piece
-                        rotation technique you can use in the Tetris series at any skill level. Seriously, even if you only learn one thing
-                        from this guide, let it be this.
-                    </p>
-                    
-                    <p>
-                        Many Tetris games, including all guideline games, implement a lock delay. This means when the active piece reaches
-                        the bottom of the board or the top of the stack, the game provides a brief window of time (typically 30 frames or
-                        half a second) to move or rotate the piece before it locks into place.
-                    </p>
+                <p>
+                    Finally! I get to talk about an actual use for O-piece rotations! This one is by far the most practical O-piece rotation technique you can use in the Tetris series at any skill level. If you only learn one thing from this guide, let it be this.
+                </p>
+                
+                <p>
+                    Many Tetris games, including all guideline games, implement a lock delay. This means when the active piece reaches the bottom of the board or the top of the stack, the game provides a brief window of time (typically 30 frames or half a second) to move or rotate the piece before it locks into place.
+                </p>
 
-                    <p>
-                        Move-Reset Lock Delay, as implemented in
-                        <span class="tooltip" title="A notable exception is Tetris Giant, which uses step-reset lock delay">most</span>
-                        guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris
-                        Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
-                    </p>
+                <p>
+                    Move-Reset Lock Delay, as implemented in <span class="tooltip" title="A notable exception is Tetris Giant, which uses step-reset lock delay">most</span> guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
+                </p>
 
-                    <p>
-                        Repeatedly resetting the lock delay just before the piece locks is called "stalling". This is a versatile technique
-                        which is useful at a variety of skill levels, especially in multiplayer battles. Some examples include:
+                <p>
+                    Repeatedly resetting the lock delay just before the piece locks is called "stalling". This is a versatile technique which is useful at a variety of skill levels, especially in multiplayer battles. Some examples include:
+                </p>
 
+                <ul>
+                    <li>
+                        Giving yourself extra time to decide where to place a piece
+                    </li>
+                    <li>
+                        Delaying a line clear in battle to block or mitigate an incoming attack that would cause you to top out
+                    </li>
+                    <li>
+                        Delaying a <span class="tooltip" title="piecement places">piece placement</span> to receive garbage lines from an imminent attack, then using this garbage for a counterspike
+                    </li>
+                </ul>
+
+                <p>
+                    If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with SRS. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to use when stalling.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        Lock Delay wiki pages:
+                        <a href="https://harddrop.com/wiki/Lock_delay">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Lock_delay">TetrisWiki</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="irs">
+                <h3>Tetris Effect and Initial Rotation</h3>
+
+                <p>
+                    Tetris Effect features two major mechanics which make O-piece rotations especially useful when used together:
+                </p>
+
+                <ul>
+                    <li>
+                        The Zone, which stops time and allows you to perform massive line clears
+                    </li>
+                    <li>
+                        Initial Rotation System (<strong>IRS</strong>), which allows you to spawn pieces in a pre-rotated state
                         <ul>
                             <li>
-                                Giving yourself extra time to decide where to place a piece
-                            </li>
-                            <li>
-                                Delaying a line clear in battle to block or mitigate an incoming attack that would cause you to top out
-                            </li>
-                            <li>
-                                Delaying a <span class="tooltip" title="piecement places">piece placement</span> to receive garbage lines
-                                from an imminent attack, then using this garbage for a counterspike
+                                Quite possibly one of the best things added to Tetris
                             </li>
                         </ul>
-                    </p>
+                    </li>
+                </ul>
 
-                    <p>
-                        If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In
-                        tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with
-                        SRS. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to
-                        use when stalling.
-                    </p>
+                <p>
+                    When using Zone to clear 20 <span class="tooltip" title="kirb your ultimatris">or more</span> lines at once, you have limited space to spawn and manoeuvre pieces without topping out and ending the zone. To prevent topping out prematurely, hold the rotation button on your active piece while placing it, which will activate IRS and spawn the next piece rotated in that direction.
+                </p>
 
-                    <ul class="sources">
-                        <li>
-                            Lock Delay wiki pages:
-                            <a href="https://harddrop.com/wiki/Lock_delay">Hard Drop</a> |
-                            <a href="https://tetris.wiki/Lock_delay">TetrisWiki</a>
-                        </li>
-                    </ul>
-                </section>
+                <p>
+                    With most pieces, if your active piece is already in the desired rotation state and you are not already holding the appropriate rotation button, you must first perform a counter-rotation in the opposite direction to the required spawn state for the next piece, which will then allow you to rotate it back and hard-drop the piece while that rotation button is still held.
+                </p>
 
-                <section id="irs">
-                    <h3>Tetris Effect and Initial Rotation</h3>
+                <p>
+                    Thanks to its identical rotation states, the O-piece eliminates the need for the counter-rotation, thus making it the easiest piece to use with IRS.
+                </p>
 
-                    <p>
-                        Tetris Effect features two major mechanics which make O-piece rotations especially useful when used together:
-                    </p>
-
-                    <ul>
-                        <li>
-                            The Zone, which stops time and allows you to perform massive line clears
-                        </li>
-                        <li>
-                            Initial Rotation System (IRS), which allows you to spawn pieces in a pre-rotated state and is quite possibly one
-                            of the best things added to Tetris
-                        </li>
-                    </ul>
-
-                    <p>
-                        When using Zone to clear 20 <span class="tooltip" title="kirb your ultimatris">or more</span> lines at once, you
-                        have limited space to spawn and manoeuvre pieces without topping out and ending the zone. To prevent topping out
-                        prematurely, hold the rotation button on your active piece while placing it, which will activate IRS and spawn the
-                        next piece rotated in that direction.
-                    </p>
-
-                    <p>
-                        With most pieces, if your active piece is already in the desired rotation state and you are not already holding the
-                        appropriate rotation button, you must first perform a counter-rotation in the opposite direction to the required
-                        spawn state for the next piece, which will then allow you to rotate it back and hard-drop the piece while that
-                        rotation button is still held.
-                    </p>
-
-                    <p>
-                        Thanks to its identical rotation states, the O-piece eliminates the need for the counter-rotation, thus making it
-                        the easiest piece to use with IRS.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://www.tetriseffect.game/2021/07/30/tetris-effect-advanced-techniques-community-guide/#HighZoneClears">
-                                Tetris Effect Advanced Techniques Community Guide - High Zone Clears
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="fusion">
-                    <h3>Puyo Puyo Tetris and Fusion "O-Spins"</h3>
-
-                    <p>
-                        This is much more whimsical than the other uses in this chapter, having pretty much zero practical use. However,
-                        seeing an O-piece wall kick in a modern guideline Tetris game is absolutely hilarious and I love it.
-                    </p>
-
-                    <p>
-                        Puyo Puyo Tetris implements a slightly altered SRS offset table which defines wall kicks for the O-piece. These wall
-                        kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for
-                        use with its equivalent pentomino, the P-piece, in the game's Party mode.
-                    </p>
-
-                    <p>
-                        Triggering this wall kick for the standard O-piece is much tricker and can only be done in the game's Fusion mode.
-                        This mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris
-                        pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break
-                        through the stack, and activate the next piece which you can use at the same time.
-                    </p>
-
-                    <p>
-                        There is a complex setup which allows you to exploit this behaviour and execute an O-spin:
-                    </p>
-
-                    <ul>
-                        <li>A Tetris stack with a two wide, minimum four high well</li>
-                        <li>Puyos filling the well in this stack</li>
-                        <li>An overhang above the well, with enough space to the side and underneath to fit an O-piece</li>
-                        <li>A fully enclosed O-shaped hole inside this overhang, with the floor being one block high</li>
-                        <li>Access to two consecutive O-pieces via the next and/or hold queues</li>
-                    </ul>
-
-                    <p>
-                        First, slide the first O-piece under the overhang and allow it to lock on top of the puyo stack. Once it locks, it
-                        will slowly break through the puyo stack.
-                    </p>
-
-                    <p>
-                        When the second O-piece spawns (or you take it out of hold), perform a 0R rotation. You can then use the time spent
-                        by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time
-                        it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
-                    </p>
-
-                    <p>
-                        When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When
-                        this happens, perform an R0 rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
-                    </p>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                            <div class="playfield-caption">Lock here</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
-                            <div class="playfield-caption">0R Rotation</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][D][D][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-caption">Line clear</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
-                            <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-caption">R0 Rotation</div>
-                        </div>
-                    </div>
-
-                    <p>
-                        Is it useless? Absolutely! But not everything has to be useful to be fun.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">Lilla Oshisaure's pentomino commentary</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">Lilla Oshisaure's O-Spin demo</a>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="stardust">
-                    <h3>Tetris Stardust and Actual O-Spins</h3>
-
-                    <p>
-                        Ok, maybe you're thinking that last section was a bit too silly. Perhaps you're looking for an O-Spin in a guideline
-                        Tetris game that is developer intended and doesn't require a ludicrous setup. You're probably also wondering if such
-                        a game really exists in the Tetris series. Good news, it does, and it's called Tetris Stardust!
-                    </p>
-
-                    <p>
-                        To tell you the truth, I only recently learned this game existed, mainly because it's a game that was only released
-                        in Japan, made using Silverlight of all things, and there is very little information about it online. It's mostly
-                        based on Tetris Online, but with a few important differences. As you can probably tell by the existence of this
-                        section, some of these differences have something to do with how the O-piece behaves.
-                    </p>
-
-                    <p>
-                        Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which
-                        allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on
-                        normal rotation, nor does it have multiple distinct rotation states. Instead, it checks the following conditions and
-                        bypasses basic rotation if the check succeeds:
-                    </p>
-
-                    <ul>
-                        <li>If rotating left, the space directly underneath the <strong>lower-right</strong> block must be occupied.</li>
-                        <li>If rotating right, the space directly underneath the <strong>lower-left</strong> block must be occupied.</li>
-                    </ul>
-
-                    <p>
-                        <img src="img/stardust_opiece_offset.png" class="inline-end" alt="Tetris Stardust O-Piece Offset Table" />
-                        If the check succeeds, the O-piece will then kick according to the offset table to the right. To my knowledge,
-                        Tetris Stardust is the only Tetris game which actually acknowledges O-Spins by name, and also the only one which
-                        explicitly rewards them.
-                    </p>
-
-                    <p>
-                        <span class="todo">TODO: Find out if kicks 3 and 4 are in the correct order</span><br />
-                        <span class="todo">TODO: Spin Rank</span>
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://tetris.wiki/Tetris_Stardust">
-                                Tetris Stardust on TetrisWiki
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=vPQCdHB-nyU">
-                                Lilla Oshisaure's Tetris Stardust gameplay
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://flashpointarchive.org/">
-                                Flashpoint Archive
-                            </a>
-                            <ul>
-                                <li>Necessary to play the game</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <hr />
+                <ul class="sources">
+                    <li>
+                        <a href="https://www.tetriseffect.game/2021/07/30/tetris-effect-advanced-techniques-community-guide/#HighZoneClears">
+                            Tetris Effect Advanced Techniques Community Guide - High Zone Clears
+                        </a>
+                    </li>
+                </ul>
             </section>
+
+            <section id="fusion">
+                <h3>Puyo Puyo Tetris and Fusion "O-Spins"</h3>
+
+                <p>
+                    This is much more whimsical than the other uses in this chapter, having pretty much zero practical use. However, seeing an O-piece wall kick in a modern guideline Tetris game and the ridicuous setup it requires is absolutely hilarious and I love it.
+                </p>
+
+                <p>
+                    Puyo Puyo Tetris implements a slightly altered SRS offset table which defines wall kicks for the O-piece. These wall kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for use with its equivalent pentomino, the P-piece, in the game's Party mode.
+                </p>
+
+                <p>
+                    Triggering this wall kick for the standard O-piece is much tricker and can only be done in the game's Fusion mode. This mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the next piece which you can use at the same time.
+                </p>
+
+                <p>
+                    There is a complex setup which allows you to exploit this behaviour and execute an O-spin:
+                </p>
+
+                <ul>
+                    <li>A Tetris stack with a two wide, minimum four high well</li>
+                    <li>Puyos filling the well in this stack</li>
+                    <li>An overhang above the well, with enough space to the side and underneath to fit an O-piece</li>
+                    <li>A fully enclosed O-shaped hole inside this overhang, with the floor being one block high</li>
+                    <li>Access to two consecutive O-pieces via the next and/or hold queues</li>
+                </ul>
+
+                <p>
+                    First, slide the first O-piece under the overhang and allow it to lock on top of the puyo stack. Once it locks, it will slowly break through the puyo stack.
+                </p>
+
+                <p>
+                    When the second O-piece spawns (or you take it out of hold), perform a 0R rotation. You can then use the time spent by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
+                </p>
+
+                <p>
+                    When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When this happens, perform an R0 rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
+                        <div class="playfield-caption">Lock here</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption">0R Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][D][D][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Line clear</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">R0 Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Is it useless? Absolutely! But not everything has to be useful to be fun.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">
+                            Lilla Oshisaure's pentomino commentary
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">
+                            Lilla Oshisaure's O-Spin demo
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="stardust">
+                <h3>Tetris Stardust and Actual O-Spins</h3>
+
+                <p>
+                    Ok, maybe you're thinking that last section was a bit too silly. Perhaps you're looking for an O-Spin in a guideline Tetris game that is developer intended and doesn't require a ludicrous setup. You're probably also wondering if such a game really exists in the Tetris series. Good news, it does, and it's called Tetris Stardust!
+                </p>
+
+                <p>
+                    To tell you the truth, I only recently learned this game existed, mainly because it's a game that was only released in Japan, made using Silverlight of all things, and there is very little information about it online. It's mostly based on Tetris Online, but with a few important differences. As you can probably tell by the existence of this section, some of these differences have something to do with how the O-piece behaves.
+                </p>
+
+                <p>
+                    Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states. Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
+                </p>
+
+                <ul>
+                    <li>If rotating left, the space directly underneath the <strong>lower-right</strong> block must be occupied.</li>
+                    <li>If rotating right, the space directly underneath the <strong>lower-left</strong> block must be occupied.</li>
+                </ul>
+
+                <img src="img/stardust_opiece_offset.png" class="inline-end" alt="Tetris Stardust O-Piece Offset Table" />
+
+                <p>
+                    If the check succeeds, the O-piece will then kick according to the offset table to the right. To my knowledge, Tetris Stardust is the only Tetris game which actually acknowledges O-Spins by name, and also the only one which explicitly rewards them.
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Find out if kicks 3 and 4 are in the correct order</span>
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Spin Rank</span>
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://tetris.wiki/Tetris_Stardust">
+                            Tetris Stardust on TetrisWiki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=vPQCdHB-nyU">
+                            Lilla Oshisaure's Tetris Stardust gameplay
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://flashpointarchive.org/">
+                            Flashpoint Archive
+                        </a>
+                        <ul>
+                            <li>Necessary to play the game</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <hr />
 
             <section id="non-guideline">
                 <h2>Chapter 3: Non-Guideline Tetris</h2>
