@@ -22,48 +22,48 @@
         </header>
 
         <main>
+            <section id="disclaimer">
+                <h4>
+                    Note: This guide is a work in progress. Some sections are missing or incomplete, and there may be some factual errors due to incomplete research.
+                </h4>
+            </section>
+
+            <hr />
+
             <section id="intro">
                 <h2>Introduction</h2>
-        
-                <h4>
-                    Note: This guide is a work in progress. Some sections are missing or incomplete, and there may be some factual errors
-                    due to incomplete research.
-                </h4>
-        
+
                 <p>
-                    To a casual Tetris player, rotating the <span class="tooltip" title="Also known as the 'square'">O-piece</span>
-                    appears to be completely useless. It's the only piece which does not move when you rotate it, and its identical rotation
-                    states typically prevent it from interacting with walls or other pieces. However, it turns out many stacker games both
-                    within and outside the Tetris series do actually implement game mechanics which can make it advantageous to rotate the
-                    O-piece.
-                </p>
-        
-                <p>
-                    My name is <span class="tooltip" title="she/they">Dunspixel</span>. I love playing a variety of stacker games and
-                    learning about the mechanical differences between each one. I also have a very strong opinion about O-piece rotations
-                    and way too much free time, so I decided to make this comprehensive guide describing every known use for rotating the
-                    O-piece in the Tetris series and a variety of Tetris-like stacker games created by game developers in the Tetris
-                    community.
-                </p>
-        
-                <p>
-                    Rotating the O-piece may be nothing more than a meme to some, but many of the techniques in this guide really are
-                    practical and some can be utilised at all skill levels. With that said, I'm still going to include some useless and
-                    whimsical setups and techniques too, simply because they're fun. Useful or otherwise, I hope I can help you appreciate
-                    O-piece rotations for what they can really do.
+                    To a casual Tetris player, rotating the <span class="tooltip" title="Also known as the 'square'">O-piece</span> appears to be completely useless. It's the only piece which does not move when you rotate it, and its identical rotation states typically prevent it from interacting with walls or other pieces. But what if there were actually ways to use these seemingly useless rotations to your advantage? As it turns out, many Tetris games and stackers based on the series do actually implement game mechanics which make it useful to rotate the O-piece.
                 </p>
 
-                <hr />
+                <p>
+                    My name is <span class="tooltip" title="she/they">Dunspixel</span>. I love playing a variety of stacker games and learning about the mechanical differences between each one. I also have a very strong opinion about O-piece rotations and way too much free time, so I decided to make this guide describing every known use for rotating the O-piece in these games.
+                </p>
+
+                <p>
+                    Rotating the O-piece may be nothing more than a meme to some, but many of the techniques in this guide really are practical and some can be utilised at all skill levels. However, I'm still going to include a variety of useless and whimsical techniques too, simply because they're fun. Useful or otherwise, I hope I can help you appreciate O-piece rotations for what they can really do.
+                </p>
             </section>
+
+            <hr />
 
             <nav>
                 <h2>Contents</h2>
 
                 <ol>
                     <li>
+                        <a href="#concepts">General Concepts</a>
+                        <ul>
+                            <li><a href="#rotation">Rotation</a></li>
+                            <li><a href="#wallkicks">Wall Kicks</a></li>
+                            <li><a href="#wikis">Wiki Links</a></li>
+                            <li><a href="#semantics-rant">"Versions of Tetris"?</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="#guideline">Guideline Tetris</a>
                         <ul>
-                            <li><a href="#rotation">Rotations and Wall Kicks</a></li>
                             <li><a href="#move-reset">Move-Reset Lock Delay</a></li>
                             <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
                             <li><a href="#fusion">Puyo Puyo Tetris and Fusion "O-Spins"</a></li>
@@ -96,17 +96,354 @@
                         <a href="#ramblings">Random Ramblings</a>
                     </li>
                 </ol>
-
-                <hr />
             </nav>
 
-            <section id="guideline">
-                <h2>Chapter 1: Guideline Tetris</h2>
+            <hr />
+
+            <section id="concepts">
+                <h2>Chapter 1: General Concepts</h2>
 
                 <p>
-                    First of all, let's talk about the Tetris Guideline. It's a document which developers of Tetris games follow to ensure
-                    each game has some degree of mechanical consistency. The first Tetris game to follow the Tetris Guideline, at least in
-                    the form which evolved into what we know today, is Tetris Worlds from 2001.
+                    Before we begin, I'd like to discuss some concepts that will be useful to understand the techniques in this guide, then go on a brief rant about the semantics of the terms many people use to describe stacker games. If you don't care about that and just want to know some uses for O-piece rotations, you may want to skip to Chapter 2.
+                </p>
+            </section>
+
+            <section id="rotation">
+                <h3>Rotation</h3>
+
+                <p>
+                    When you press a rotation button, your active piece will rotate by 90 degrees in the chosen direction.
+                </p>
+
+                <p>
+                    Ok, obvious statements aside, there's actually a lot more going on than most people give it credit for.
+                </p>
+
+                <p>
+                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "0R2L" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state 0, and rotating right (clockwise) changes to R, 2, L, then back to 0. Likewise, rotating left (anti-clockwise or counter-clockwise) from state 0 will cycle through states L, 2, R, and 0.
+                </p>
+
+                <p>
+                    I will describe specific rotations (i.e. those where the rotation state is relevant) as combinations of the above rotation states. For example, a clockwise rotation from 0 to R will be written as "0R", a clockwise 180-degree rotation from 0 to 2 will be written as "0R2", and a single button 180-degree rotation from 0 to 2 will be written as "02".
+                </p>
+
+                <p>
+                    You may be wondering how a 0R2 rotation differs from a 02 rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
+                </p>
+
+                <p>
+                    In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the commonly used Super Rotation System, or <strong>SRS</strong> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state 0), but an offset is applied to keep it in place when rotated.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        SRS wiki pages:
+                        <a href="https://harddrop.com/wiki/SRS">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Super_Rotation_System">TetrisWiki</a>
+                        <ul>
+                            <li>
+                                See the "How Guideline SRS <em>Really</em> Works" section for details about internal rotation states and
+                                offsets
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://puyonexus.com/wiki/Rotation">
+                            Rotation on Puyo Nexus
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="wallkicks">
+                <h3>Wall Kicks</h3>
+
+                <p>
+                    Wall kicks are a feature of many modern rotation systems, which allow pieces to move when rotated if their new position is obstructed by a wall or another piece.
+                </p>
+
+                <p>
+                    In SRS, four alternative positions are checked if basic rotation fails, and the piece will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in SRS:
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Fin Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][T][T][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">State 2</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][D][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][T][T][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">2R Rotation (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][D][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][T][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Kick 1 (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][T][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][D][D][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Kick 2 (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][T][D][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][D][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Kick 3 (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][T][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][T][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Kick 4 (success)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][T][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-caption">T-Spin Double Clear</div>
+                    </div>
+                </div>
+
+                <p>
+                    Different rotation systems can handle wall kicks by defining a different offset table, or instead try to kick by rotating around an alternate centre. Regardless of implementation, they're super fun to use once you know how they work!
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://four.lol/srs/kicks-overview">
+                            Wall kick overview on FOUR.lol
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://four.lol/methods/polymer-tspin">
+                            Polymer T-Spins on FOUR.lol
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="wikis">
+                <h3>Wiki Links</h3>
+
+                <p>
+                    You may have noticed that I provide two very similar wiki links for many of the sections in this guide. Hard Drop and TetrisWiki are both fantastic community resources for information about Tetris games, but many of the pages have very similar content due to being forked from the now-defunct Tetrisconcept wiki, and editors adding content to both wikis at the same time.
+                </p>
+
+                <p>
+                    Which one you pick is really down to personal preference, though if there's something you can't find on one wiki, you will probably be able to find it on the other.
+                </p>
+
+                <p>
+                    Even though past proposals to merge the wikis have been rejected, the Tetris community generally agrees that both of them are <strong>significantly</strong> better than the Fandom wiki, which I recommend you avoid.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://harddrop.com/wiki/Tetris_Wiki">
+                            Hard Drop main page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tetris.wiki/">
+                            TetrisWiki main page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://getindie.wiki/">
+                            Indie Wiki Buddy
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="semantics-rant">
+                <h3>"Versions of Tetris"?</h3>
+
+                <p>
+                    So this section is that rant about semantics I mentioned earlier, which you'll hopefully find somewhat educational and/or entertaining. I'd love to know what other people think about this topic!
+                </p>
+
+                <p>
+                    Also, I hope this rant doesn't come across as too negative or angry. I'm not mad at any of you, I promise.
+                </p>
+
+                <p>
+                    Am I the only one who is bothered by different Tetris games, and stackers in general, being referred to as "versions of Tetris"? It's a term which perpetuates the myth that the Tetris series is literally just the same game ported to pretty much every device imaginable, and that Tetris-like stackers are just knock-offs of what they perceive to be the "real thing".
+                </p>
+
+                <p>
+                    This isn't helped at all by the fact that even The Tetris Company, who licenses the Tetris series, refers to their own games as "versions" of the same game instead of what they are: entries in a series.
+                </p>
+
+                <p>
+                    Sure, the original Tetris was the first stacker game. It did indeed start the genre of puzzle games which many people in the Tetris community name after it. But to say that they're all just the exact same game is plainly wrong.
+                </p>
+
+                <p>
+                    While all (tetromino-based) stacker games may superficially look identical to each other, they all feel very different to play at anything higher than a casual level. This is even true of modern Tetris games which have to adhere to the Tetris Guideline. Some examples of differences which drastically affect gameplay include:
+                </p>
+
+                <ul>
+                    <li>Rotation systems</li>
+                    <li>Piece randomisers</li>
+                    <li>Available drop types (soft, hard, sonic)</li>
+                    <li>Hold mechanics</li>
+                    <li>Spin recognition</li>
+                    <li>Lock delay (or lack of it)</li>
+                    <li>Timings (e.g. DAS and ARR)</li>
+                </ul>
+
+                <p>
+                    To clear up some terms related to stacker games, this is how I use them in this guide:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Stacker / Stacker Game</strong>
+                        <ul>
+                            <li>
+                                A genre of puzzle games in which you place pieces (typically tetrominoes) and clear horizontal lines by completing them
+                            </li>
+                            <li>
+                                Includes the Tetris series and all Tetris-like stackers
+                            </li>
+                            <li>
+                                May use pieces other than tetrominoes or feature non-tetromino modes (outside the scope of this guide)
+                            </li>
+                            <li>
+                                Another name for this genre is "falling block puzzle"
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Tetris Community</strong>
+                        <ul>
+                            <li>
+                                The general community of people who love stacker games
+                            </li>
+                            <li>
+                                <em>Includes</em> stackers outside of the Tetris series
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Tetris Series</strong>
+                        <ul>
+                            <li>
+                                A series of stacker games licensed by The Tetris Company or its predecessors
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Tetris Game</strong>
+                        <ul>
+                            <li>
+                                An entry in the Tetris series
+                            </li>
+                            <li>
+                                <em>Does not include</em> games outside of the Tetris series
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Tetris-like Stacker</strong>
+                        <ul>
+                            <li>
+                                A stacker game whose gameplay is largely based on Tetris, but is not a part of the Tetris series
+                            </li>
+                            <li>
+                                Being a "Tetris game" and being a "Tetris-like stacker" are mutually exclusive
+                            </li>
+                            <li>
+                                Known in the Tetris community as "unofficial games" or "fan games"
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Version</strong>
+                        <ul>
+                            <li>
+                                A game ported to another platform with few or no changes
+                            </li>
+                            <li>
+                                The PS4 and Switch releases of Tetris Effect are versions of Tetris Effect, but Tetris Effect is not just a version of Tetris
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>
+                    With that out of the way, let's get to the part where we rotate some O-pieces!
+                </p>
+            </section>
+
+            <hr />
+
+            <section id="guideline">
+                <h2>Chapter 2: Guideline Tetris</h2>
+
+                <p>
+                    To begin this chapter, let's talk about the Tetris Guideline. It's a document which developers of Tetris games follow to
+                    ensure each game has some degree of mechanical consistency. The first Tetris game to follow the Tetris Guideline, at
+                    least in the form which evolved into what we know today, is Tetris Worlds from 2001.
                 </p>
 
                 <p>
@@ -123,44 +460,6 @@
                         <a href="https://tetris.wiki/Tetris_Guideline">TetrisWiki</a>
                     </li>
                 </ul>
-
-                <section id="rotation">
-                    <h3>Rotations and Wall Kicks</h3>
-
-                    <p>
-                        Since this doesn't include any specific uses for O-piece rotations, I'll keep it short.
-                    </p>
-
-                    <p>
-                        Pieces can be in one of four rotation states. For the purpose of this guide, I will be describing them using the
-                        "0R2L" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, where
-                        pieces spawn in the 0 state, and rotating clockwise changes to R, 2, L, then back to 0.
-                    </p>
-
-                    <p>
-                        I will describe specific rotations (i.e. those where the rotation state is relevant) as combinations of the above
-                        rotation states. For example, a clockwise rotation from 0 to R will be written as "0R", a clockwise 180-degree
-                        rotation from 0 to 2 will be written as "0R2", and a single button 180-degree rotation from 0 to 2 will be written as "02".
-                    </p>
-
-                    <p>
-                        Wall kicks are a feature of many modern rotation systems, which allow pieces to move when rotated if their new
-                        position is obstructed by a wall or another piece. In SRS, four alternative positions are checked if basic rotation
-                        fails, and the piece will move to the first one that succeeds. Different rotation systems may define different
-                        offsets, or instead try to kick by rotating around an alternate centre.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            SRS wiki pages:
-                            <a href="https://harddrop.com/wiki/SRS">Hard Drop</a> |
-                            <a href="https://tetris.wiki/Super_Rotation_System">TetrisWiki</a>
-                        </li>
-                        <li>
-                            <a href="https://four.lol/srs/kicks-overview">Alternative visualisation of wall kicks on FOUR.lol</a>
-                        </li>
-                    </ul>
-                </section>
 
                 <section id="move-reset">
                     <h3>Move-Reset Lock Delay</h3>
@@ -464,7 +763,7 @@
             </section>
 
             <section id="non-guideline">
-                <h2>Chapter 2: Non-Guideline Tetris</h2>
+                <h2>Chapter 3: Non-Guideline Tetris</h2>
 
                 <p>
                     Before the Tetris Guideline existed, Tetris games used a variety of rotation systems and game mechanics which aren't
@@ -881,7 +1180,7 @@
             </section>
 
             <section id="stackers">
-                <h2>Chapter 3: Tetris-like Stackers</h2>
+                <h2>Chapter 4: Tetris-like Stackers</h2>
 
                 <p>
                     Outside of the Tetris series is an entire genre inspired by it. These games, as well as Tetris, are known as stackers.
@@ -1134,7 +1433,7 @@
             </section>
 
             <section id="closing-thoughts">
-                <h2>Closing Thoughts</h2>
+                <h2>Chapter 5: Closing Thoughts</h2>
 
                 <p>
                     Concluding words! I'll add to this later.
@@ -1195,26 +1494,6 @@
 
                 <p>
                     This isn't really part of the guide, but I like rambling. Maybe you'll find some of it interesting.
-                </p>
-                
-                <p>
-                    You may wonder why I always say "Tetris games" and "Tetris-like stackers", instead of "versions of Tetris". I don't like
-                    the latter because it implies the Tetris series is just the same game with minor visual differences, and that other
-                    stacker games are just knock-offs of Tetris that don't add anything to the gameplay. I've played a lot of stackers, and
-                    I assure you they all feel very different to play at anything higher than a casual level, even if they have to adhere to
-                    the Tetris Guideline.
-                </p>
-                
-                <p>
-                    Whenever I refer to "Tetris games" (regardless of whether it's in this guide), I am always referring specifically to
-                    entries in the Tetris series.
-                </p>
-                
-                <p>
-                    I use the term "Tetris-like stackers" despite this not being the community-accepted term because the community often
-                    uses Tetris to describe the entire stacker genre (hence the "Tetris community" referring to the community which includes
-                    fans of all stacker games). Their fundamental mechanics may look and feel similar to Tetris, but they are not entries in
-                    the Tetris series. Many of them are respected by the Tetris community as games in their own right.
                 </p>
 
                 <p>
@@ -1280,49 +1559,51 @@
             </p>
         </footer>
 
-        <template id="template-playfield-cell-f">
-            <div class="playfield-cell f"></div>
-        </template>
-
-        <template id="template-playfield-cell-g">
-            <div class="playfield-cell g"></div>
-        </template>
-
-        <template id="template-playfield-cell-d">
-            <div class="playfield-cell d"></div>
-        </template>
-
-        <template id="template-playfield-cell-i">
-            <div class="playfield-cell i"></div>
-        </template>
-
-        <template id="template-playfield-cell-j">
-            <div class="playfield-cell j"></div>
-        </template>
-
-        <template id="template-playfield-cell-l">
-            <div class="playfield-cell l"></div>
-        </template>
-
-        <template id="template-playfield-cell-o">
-            <div class="playfield-cell o"></div>
-        </template>
-
-        <template id="template-playfield-cell-s">
-            <div class="playfield-cell s"></div>
-        </template>
-
-        <template id="template-playfield-cell-t">
-            <div class="playfield-cell t"></div>
-        </template>
-
-        <template id="template-playfield-cell-z">
-            <div class="playfield-cell z"></div>
-        </template>
-
-        <template id="template-playfield-cell-p">
-            <div class="playfield-cell t p"></div>
-        </template>
+        <section id="templates">
+            <template id="template-playfield-cell-f">
+                <div class="playfield-cell f"></div>
+            </template>
+    
+            <template id="template-playfield-cell-g">
+                <div class="playfield-cell g"></div>
+            </template>
+    
+            <template id="template-playfield-cell-d">
+                <div class="playfield-cell d"></div>
+            </template>
+    
+            <template id="template-playfield-cell-i">
+                <div class="playfield-cell i"></div>
+            </template>
+    
+            <template id="template-playfield-cell-j">
+                <div class="playfield-cell j"></div>
+            </template>
+    
+            <template id="template-playfield-cell-l">
+                <div class="playfield-cell l"></div>
+            </template>
+    
+            <template id="template-playfield-cell-o">
+                <div class="playfield-cell o"></div>
+            </template>
+    
+            <template id="template-playfield-cell-s">
+                <div class="playfield-cell s"></div>
+            </template>
+    
+            <template id="template-playfield-cell-t">
+                <div class="playfield-cell t"></div>
+            </template>
+    
+            <template id="template-playfield-cell-z">
+                <div class="playfield-cell z"></div>
+            </template>
+    
+            <template id="template-playfield-cell-p">
+                <div class="playfield-cell t p"></div>
+            </template>
+        </section>
 
         <script type="text/javascript" src="js/playfield.js"></script>
 
