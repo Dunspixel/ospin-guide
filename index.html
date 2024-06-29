@@ -34,11 +34,11 @@
                 <h2>Introduction</h2>
 
                 <p>
-                    To a casual Tetris player, rotating the <span class="tooltip" title="Also known as the 'square'">O-piece</span> appears to be completely useless. It's the only piece which does not move when you rotate it, and its identical rotation states typically prevent it from interacting with walls or other pieces. But what if there were actually ways to use these seemingly useless rotations to your advantage? As it turns out, many Tetris games and stackers based on the series do actually implement game mechanics which make it useful to rotate the O-piece.
+                    To a casual Tetris player, rotating the <span class="tooltip" title="The square piece">O-piece</span> appears to be completely useless. It's the only piece which does not move when you rotate it, and its identical rotation states typically prevent it from interacting with walls or other pieces. But what if there were actually ways to use these seemingly useless rotations to your advantage? As it turns out, many Tetris games and stackers based on the series do actually implement game mechanics which make it useful to rotate the O-piece.
                 </p>
 
                 <p>
-                    My name is <span class="tooltip" title="she/they">Dunspixel</span>. I love playing a variety of stacker games and learning about the mechanical differences between each one. I also have a very strong opinion about O-piece rotations and way too much free time, so I decided to make this guide describing every known use for rotating the O-piece in these games.
+                    My name is Dunspixel (she/they). I love playing a variety of stacker games and learning about the mechanical differences between each one. I also have a very strong opinion about O-piece rotations and way too much free time, so I decided to make this guide describing every known use for rotating the O-piece in these games.
                 </p>
 
                 <p>
@@ -68,6 +68,7 @@
                             <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
                             <li><a href="#fusion">Puyo Puyo Tetris and Fusion "O-Spins"</a></li>
                             <li><a href="#stardust">Tetris Stardust and Actual O-Spins</a></li>
+                            <li><a href="#guideline-notes">Useful Notes</a></li>
                         </ul>
                     </li>
                     <li>
@@ -492,7 +493,7 @@
                 </p>
 
                 <p>
-                    Move-Reset Lock Delay, as implemented in <span class="tooltip" title="A notable exception is Tetris Giant, which uses step-reset lock delay">most</span> guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
+                    Move-Reset Lock Delay, as implemented in most guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
                 </p>
 
                 <p>
@@ -751,6 +752,23 @@
                 </ul>
             </section>
 
+            <section id="guideline-notes">
+                <h3>Useful Notes</h3>
+
+                <p>
+                    Some Guideline-era games actually implement <em>step-reset</em> lock delay instead of move-reset. This means the lock delay only resets when your active piece moves downwards due to gravity or soft-drop, for example when moving a piece down a staircase-like stack. This prevents you from stalling by rotating a piece while it is on the floor and typically removes all utility for O-piece rotations.
+                </p>
+
+                <p>
+                    These games include:
+                </p>
+
+                <ul>
+                    <li>Tetris The Grand Master 3 (Classic Rule)</li>
+                    <li>Tetris Giant</li>
+                </ul>
+            </section>
+
             <hr />
 
             <section id="non-guideline">
@@ -832,7 +850,11 @@
                 <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
 
                 <p>
-                    To the right is an offset table for the O-piece. The rotation states are in the middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be <span class="tooltip" title="Fun Fact: this game has Mihara's Conspiracy but mirrored">prioritised</span> over the right kick if both would succeed.
+                    To the right is an offset table for the O-piece. The rotation states are in the middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be prioritised over the right kick if both would succeed.
+                </p>
+
+                <p>
+                    Fun Fact: Because of the wall kick order, this game has a mirrored form of Mihara's Conspiracy.
                 </p>
 
                 <p>
@@ -1043,6 +1065,14 @@
                         Tetris 64 Rotation wiki pages:
                         <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
                         <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
+                    </li>
+                    <li>
+                        ARS wiki pages:
+                        <a href="https://harddrop.com/wiki/ARS">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Arika_Rotation_System">TetrisWiki</a>
+                        <ul>
+                            <li>Includes a section about Mihara's Conspiracy</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="https://www.youtube.com/watch?v=jgs9f24hzok">
