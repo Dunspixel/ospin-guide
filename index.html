@@ -17,9 +17,9 @@
                 A <span class="tooltip" title="At least, it will be when it's finished">comprehensive</span> guide to the practical and
                 whimsical applications of O-piece rotations in the Tetris series and Tetris-like stackers
             </p>
-
-            <hr />
         </header>
+
+        <hr />
 
         <main>
             <section id="disclaimer">
@@ -754,671 +754,594 @@
                 <h2>Chapter 3: Non-Guideline Tetris</h2>
 
                 <p>
-                    Before the Tetris Guideline existed, Tetris games used a variety of rotation systems and game mechanics which aren't
-                    seen in modern entries. Some of these allow for some very interesting techniques.
+                    Before the Tetris Guideline existed, Tetris games used a variety of rotation systems and game mechanics which aren't seen in modern entries. Some of these allow for some very interesting techniques.
+                </p>
+            </section>
+
+            <section id="tgm2">
+                <h3>Tetris The Absolute The Grand Master 2 The RO Medal PLUS</h3>
+
+                <p>
+                    Tetris The Grand Master 2 (TGM2) features six medals which can be achieved by performing a variety of tasks within a single round. One of these medals is the RO (rotation) medal, achieved by maintaining an average of at least 6 rotations for every 5 pieces. If you do this, you will receive a bronze RO medal at level 300, a silver medal at 700, and a gold medal at 999.
                 </p>
 
-                <section id="tgm2">
-                    <h3>Tetris The Absolute The Grand Master 2 The RO Medal PLUS</h3>
+                <p>
+                    All rotations for all pieces count towards this medal, and it's actually possible to perform a rotation with the O-piece on every frame. Mashing the rotation buttons while an O-piece is active will make it much easier to obtain this medal.
+                </p>
 
-                    <p>
-                        Tetris The Grand Master 2 (TGM2) features six medals which can be achieved by performing a variety of tasks within a
-                        single round. One of these medals is the RO (rotation) medal, achieved by maintaining an average of at least 6
-                        rotations for every 5 pieces. If you do this, you will receive a bronze RO medal at level 300, a silver medal at
-                        700, and a gold medal at 999.
-                    </p>
-
-                    <p>
-                        All rotations for all pieces count towards this medal, and it's actually possible to perform a rotation with the
-                        O-piece on every frame. Mashing the rotation buttons while an O-piece is active will make it much easier to obtain
-                        this medal.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            TGM2 wiki pages:
-                            <a href="https://harddrop.com/wiki/Tetris_The_Absolute_The_Grand_Master_2_PLUS">Hard Drop</a> |
-                            <a href="https://tetris.wiki/Tetris_The_Absolute_The_Grand_Master_2">TetrisWiki</a>
-                        </li>
-                        <li>
-                            <a href="https://tetris.wiki/TGM_Guide">
-                                PetitPrince's TGM Guide on TetrisWiki
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tasvideos.org/6267S">
-                                Steelix100's TGM2 T.A. Death TAS submission
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="t64">
-                    <h3>Tetris 64 and its Inexplicably Obscure Rotation System</h3>
-
-                    <p>
-                        By default, Tetris 64 uses Sega Rotation, which was originally made for Sega's arcade Tetris and is the rotation
-                        system that was adapted for the TGM games. However, this game offers several options to alter how rotations work:
-                    </p>
-            
-                    <ul>
-                        <li>
-                            Offset Turn: Enables wall kicks
-                        </li>
-                        <li>
-                            Double Turn: Enables limited 180-degree rotations, usable by double-tapping in a tight space
-                        </li>
-                        <li>
-                            Rotate Center:
-                            <span class="tooltip" title="YES AN ENTIRE ROTATION SYSTEM I AM NOT EXAGGERATING">
-                                Enables an alternative, unique rotation system
-                            </span>
-                        </li>
-                    </ul>
-            
-                    <p>
-                        This game really just dropped an entire rotation system that is unique to Tetris 64 and intentionally permits
-                        O-Spins via wall kicks in the second page of the options menu. In 1998. And this slipped under most of the Tetris
-                        community's radar, largely due to it being overshadowed by the Bio Sensor that was included with the game. As cool
-                        as that is, it bugs me a little that it's commonly perceived as the only thing this game added to the series.
-                    </p>
-            
-                    <p>
-                        Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other
-                        Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece.
-                        Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this
-                        can be used to execute genuine, developer-intended O-spins.
-                    </p>
-            
-                    <p>
-                        While I could find some gameplay and a few discussions about this game's unusual spins, I unfortunately couldn't
-                        find any detailed information about how any of it actually works, such as the rotation states and the specifics of
-                        how the wall kicks work. I guess this is all I can say about Tetris 64, then-
-                    </p>
-            
-                    <p>
-                        So I decided to lab and document the Tetris 64 rotation system (excluding the Bio Tetris polyminoes) myself,
-                        specifically for a guide
-                        <span class="tooltip" title="If you couldn't tell by now, yes I am autistic">about O-piece rotations</span>.
-                    </p>
-            
-                    <p>
-                        <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
-                        To the right is an offset table for the O-piece. The rotation states are in the middle, with basic rotations on
-                        either side. Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be
-                        <span class="tooltip" title="Fun Fact: this game has Mihara's Conspiracy but mirrored">prioritised</span>
-                        over the right kick if both would succeed.
-                    </p>
-            
-                    <p>
-                        Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in Tetris 64 limit you to clearing
-                        O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards.
-                        Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan
-                        around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws
-                        drop at your stylish O-piece placement skills.
-                    </p>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                            <div class="playfield-caption">State 0/L</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][D][O][F][G][G][G][G]</div>
-                            <div class="playfield-caption">0R/L2 Rotation</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][O][O][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
-                            <div class="playfield-caption">Wall kick</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][O][O][G][G][G][G]</div>
-                            <div class="playfield-caption">O-Spin Single Clear</div>
-                        </div>
-                    </div>
-
-                    <ul>
-                        <li>With Offset Turn off, this can alternatively be performed with an L0R or L2R rotation.</li>
-                    </ul>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                            <div class="playfield-caption">State 0/L</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][F][O][D][G][G][G]</div>
-                            <div class="playfield-caption">0R/L2 Rotation</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][O][O][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
-                            <div class="playfield-caption">Wall kick</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][O][O][F][G][G][G]</div>
-                            <div class="playfield-caption">O-Spin Single Clear</div>
-                        </div>
-                    </div>
-
-                    <ul>
-                        <li>With Offset Turn off, this can alternatively be performed with a 0R2 or 0L2 rotation.</li>
-                        <li>Note how the rotation direction is the same as its mirrored setup.</li>
-                    </ul>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-caption">State 0</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][D][D][G][G][G]</div>
-                            <div class="playfield-caption">0R Rotation (fail)</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][O][D][G][G][G][G]</div>
-                            <div class="playfield-caption">R2 Rotation</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
-                            <div class="playfield-caption">Wall kick</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
-                            <div class="playfield-caption">O-Spin Single Clear</div>
-                        </div>
-                    </div>
-
-                    <ul>
-                        <li>R2 must be performed quickly to complete the 0R2 rotation.</li>
-                        <li>This can also be performed with a 0L2 rotation.</li>
-                    </ul>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                            <div class="playfield-caption">State L</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][D][D][F][F][G][G][G]</div>
-                            <div class="playfield-caption">L2 rotation (fail)</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][D][O][F][G][G][G]</div>
-                            <div class="playfield-caption">2R Rotation</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
-                            <div class="playfield-caption">Wall kick</div>
-                        </div>
-                    </div>
-
-                    <div class="playfield-container">
-                        <div class="playfield">
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                            <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
-                            <div class="playfield-caption">O-Spin Single Clear</div>
-                        </div>
-                    </div>
-
-                    <ul>
-                        <li>2R must be performed quickly to complete the L2R rotation.</li>
-                        <li>This can also be performed with an L0R rotation.</li>
-                    </ul>
-
-                    <ul class="sources">
-                        <li>
-                            Tetris 64 Rotation wiki pages:
-                            <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
-                            <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=jgs9f24hzok">
-                                Lilla Oshisaure's Tetris 64 gameplay
-                            </a>
-                            <ul>
-                                <li>Note that the random piece colours and spawn states are also settings in the options menu</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="sega99">
-                    <h3>Sega Tetris (1999)</h3>
-
-                    <p>
-                        <span class="todo">TODO: write this section</span>
-                    </p>
-
-                    <p>
-                        Summary: In this game's Battle mode, clearing a double will cause your opponent to join the piece you used for the
-                        line clear with their next piece. The attacking piece can then rotate around it. This feature can optionally be
-                        enabled in single player, allowing you to join the line clear piece to your next piece.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://tetris.wiki/Sega_Tetris">
-                                Sega Tetris on TetrisWiki
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=EzXArm11sYo">
-                                Lilla Oshisaure's OT-Spin Triple demonstration
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="audio">
-                    <h3>Audio Cues</h3>
-
-                    <p>
-                        To end the non-guideline section, I'd like to look at another fun use for O-piece rotations that will be impractical
-                        for most people. However, if you like beating scores in blindfolded categories, this may still be useful for you.
-                    </p>
-
-                    <p>
-                        Compared to more recent entries, older Tetris games use very primitive rotation systems. This section will likely
-                        apply to any Tetris game with rotation SFX and no wall kicks, but I'll use Nintendo Rotation System (NRS), as seen
-                        in NES and Game Boy Tetris, to illustrate audio cues. The rotation SFX and lack of wall kicks in these games can be
-                        used while blindfolded to determine what your active piece is, at least to some extent.
-                    </p>
-
-                    <p>
-                        The following steps can be applied in NES Tetris:
-                    </p>
-
-                    <ul>
-                        <li>
-                            Perform a 0L rotation, DAS to the left wall, then attempt an L0 rotation. If the L0 rotation succeeds, there is
-                            a 100% chance you have an O-piece. Yay!
-                        </li>
-                        <li>
-                            If the L0 rotation fails, move one column to the right and try again. If this still fails, there is a 100%
-                            chance you have an I-piece.
-                        </li>
-                        <li>
-                            If the second L0 rotation succeeds, perform a 0R rotation (this will always succeed), then attempt to move the
-                            piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50%
-                            chance you have a Z-piece.
-                        </li>
-                        <li>
-                            If the movement fails, there is a 33% chance you have a J-piece, a 33% chance you have an L-piece, and a 33%
-                            chance you have a T-piece.
-                        </li>
-                        <li>
-                            Unfortunately, I don't yet know of any ways to distinguish S/Z and J/L/T. If you do, please let me know!
-                        </li>
-                    </ul>
-
-                    <p>
-                        GB Tetris instead uses a mirrored, "left-handed" version of NRS, but the above still applies if all movements and
-                        rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
-                    </p>
-
-                    <p>
-                        While it's
-                        <span class="tooltip" title="I eagerly wait for the Classic Tetris community to prove me wrong">not possible</span>
-                        to play indefinitely without exceptional luck, the above steps can theoretically be used to clear a decent amount of
-                        lines before topping out.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            NRS wiki pages:
-                            <a href="https://harddrop.com/wiki/Nintendo_Rotation_System">Hard Drop</a> |
-                            <a href="https://tetris.wiki/Nintendo_Rotation_System">TetrisWiki</a>
-                        </li>
-                    </ul>
-                </section>
-
-                <hr />
+                <ul class="sources">
+                    <li>
+                        TGM2 wiki pages:
+                        <a href="https://harddrop.com/wiki/Tetris_The_Absolute_The_Grand_Master_2_PLUS">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Tetris_The_Absolute_The_Grand_Master_2">TetrisWiki</a>
+                    </li>
+                    <li>
+                        <a href="https://tetris.wiki/TGM_Guide">
+                            PetitPrince's TGM Guide on TetrisWiki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tasvideos.org/6267S">
+                            Steelix100's TGM2 T.A. Death TAS submission
+                        </a>
+                    </li>
+                </ul>
             </section>
+
+            <section id="t64">
+                <h3>Tetris 64 and its Inexplicably Obscure Rotation System</h3>
+
+                <p>
+                    By default, Tetris 64 uses Sega Rotation, which was originally made for Sega's arcade Tetris and is the rotation system that was adapted for the TGM games. However, this game offers several options to alter how rotations work:
+                </p>
+
+                <ul>
+                    <li>
+                        Offset Turn: Enables wall kicks
+                    </li>
+                    <li>
+                        Double Turn: Enables limited 180-degree rotations, usable by double-tapping in a tight space
+                    </li>
+                    <li>
+                        Rotate Center:
+                        <span class="tooltip" title="YES AN ENTIRE ROTATION SYSTEM I AM NOT EXAGGERATING">
+                            Enables an alternative, unique rotation system
+                        </span>
+                    </li>
+                </ul>
+
+                <p>
+                    This game really just dropped an entire rotation system that is unique to Tetris 64 and intentionally permits O-Spins via wall kicks in the second page of the options menu. In 1998. And this slipped under most of the Tetris community's radar, largely due to it being overshadowed by the Bio Sensor that was included with the game. As cool as that is, it bugs me a little that it's commonly perceived as the only thing this game added to the series.
+                </p>
+
+                <p>
+                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-spins.
+                </p>
+
+                <p>
+                    While I could find some gameplay and a few discussions about this game's unusual spins, I unfortunately couldn't find any detailed information about how any of it actually works, such as the rotation states and the specifics of how the wall kicks work. I guess this is all I can say about Tetris 64, then-
+                </p>
+
+                <p>
+                    So I decided to lab and document the Tetris 64 rotation system (excluding the Bio Tetris polyminoes) myself, specifically for a guide <span class="tooltip" title="If you couldn't tell by now, yes I am autistic">about O-piece rotations</span>.
+                </p>
+
+                <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
+
+                <p>
+                    To the right is an offset table for the O-piece. The rotation states are in the middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each direction. The left kick will always be <span class="tooltip" title="Fun Fact: this game has Mihara's Conspiracy but mirrored">prioritised</span> over the right kick if both would succeed.
+                </p>
+
+                <p>
+                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in Tetris 64 limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-caption">State 0/L</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][D][O][F][G][G][G][G]</div>
+                        <div class="playfield-caption">0R/L2 Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-caption">Wall kick</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][G][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single Clear</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>With Offset Turn off, this can alternatively be performed with an L0R or L2R rotation.</li>
+                </ul>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-caption">State 0/L</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][O][D][G][G][G]</div>
+                        <div class="playfield-caption">0R/L2 Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-caption">Wall kick</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][F][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single Clear</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>With Offset Turn off, this can alternatively be performed with a 0R2 or 0L2 rotation.</li>
+                    <li>Note how the rotation direction is the same as its mirrored setup.</li>
+                </ul>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-caption">State 0</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][D][D][G][G][G]</div>
+                        <div class="playfield-caption">0R Rotation (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][D][G][G][G][G]</div>
+                        <div class="playfield-caption">R2 Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Wall kick</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single Clear</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>R2 must be performed quickly to complete the 0R2 rotation.</li>
+                    <li>This can also be performed with a 0L2 rotation.</li>
+                </ul>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">State L</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][D][D][F][F][G][G][G]</div>
+                        <div class="playfield-caption">L2 rotation (fail)</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][D][O][F][G][G][G]</div>
+                        <div class="playfield-caption">2R Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption">Wall kick</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single Clear</div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>2R must be performed quickly to complete the L2R rotation.</li>
+                    <li>This can also be performed with an L0R rotation.</li>
+                </ul>
+
+                <ul class="sources">
+                    <li>
+                        Tetris 64 Rotation wiki pages:
+                        <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=jgs9f24hzok">
+                            Lilla Oshisaure's Tetris 64 gameplay
+                        </a>
+                        <ul>
+                            <li>Note that the random piece colours and spawn states are also settings in the options menu</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="sega99">
+                <h3>Sega Tetris (1999)</h3>
+
+                <p>
+                    <span class="todo">TODO: write this section</span>
+                </p>
+
+                <p>
+                    Summary: In this game's Battle mode, clearing a double will cause your opponent to join the piece you used for the line clear with their next piece. The attacking piece can then rotate around it. This feature can optionally be enabled in single player, allowing you to join the line clear piece to your next piece.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://tetris.wiki/Sega_Tetris">
+                            Sega Tetris on TetrisWiki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=EzXArm11sYo">
+                            Lilla Oshisaure's OT-Spin Triple demonstration
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="audio">
+                <h3>Audio Cues</h3>
+
+                <p>
+                    To end the non-guideline section, I'd like to look at another fun use for O-piece rotations that will be impractical for most people. However, if you like beating scores in blindfolded categories, this may still be useful for you.
+                </p>
+
+                <p>
+                    Compared to more recent entries, older Tetris games use very primitive rotation systems. This section will likely apply to any Tetris game with rotation SFX and no wall kicks, but I'll use Nintendo Rotation System (NRS), as seen in NES and Game Boy Tetris, to illustrate audio cues. The rotation SFX and lack of wall kicks in these games can be used while blindfolded to determine what your active piece is, at least to some extent.
+                </p>
+
+                <p>
+                    The following steps can be applied in NES Tetris:
+                </p>
+
+                <ul>
+                    <li>
+                        Perform a 0L rotation, DAS to the left wall, then attempt an L0 rotation. If the L0 rotation succeeds, there is a 100% chance you have an O-piece. Yay!
+                    </li>
+                    <li>
+                        If the L0 rotation fails, move one column to the right and try again. If this still fails, there is a 100% chance you have an I-piece.
+                    </li>
+                    <li>
+                        If the second L0 rotation succeeds, perform a 0R rotation (this will always succeed), then attempt to move the piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50% chance you have a Z-piece.
+                    </li>
+                    <li>
+                        If the movement fails, there is a 33% chance you have a J-piece, a 33% chance you have an L-piece, and a 33% chance you have a T-piece.
+                    </li>
+                    <li>
+                        Unfortunately, I don't yet know of any ways to distinguish S/Z and J/L/T. If you do, please let me know!
+                    </li>
+                </ul>
+
+                <p>
+                    GB Tetris instead uses a mirrored, "left-handed" version of NRS, but the above still applies if all movements and rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
+                </p>
+
+                <p>
+                    While it's <span class="tooltip" title="I eagerly wait for the Classic Tetris community to prove me wrong">not possible</span> to play indefinitely without exceptional luck, the above steps can theoretically be used to clear a decent amount of lines before topping out.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        NRS wiki pages:
+                        <a href="https://harddrop.com/wiki/Nintendo_Rotation_System">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Nintendo_Rotation_System">TetrisWiki</a>
+                    </li>
+                </ul>
+            </section>
+
+            <hr />
 
             <section id="stackers">
                 <h2>Chapter 4: Tetris-like Stackers</h2>
 
                 <p>
-                    Outside of the Tetris series is an entire genre inspired by it. These games, as well as Tetris, are known as stackers.
-                    As they are not bound by the Tetris Guideline, these stackers can be much more creative with how pieces behave and
-                    interact with each other, introducing a variety of new game mechanics that can set them apart from Tetris. Many stackers
-                    implement custom rotation systems which introduce unique ways to rotate O-pieces and execute O-spins.
+                    Outside of the Tetris series is an entire genre inspired by it. These games, as well as Tetris, are known as stackers. As they are not bound by the Tetris Guideline, these stackers can be much more creative with how pieces behave and interact with each other, introducing a variety of new game mechanics that can set them apart from Tetris. Many stackers implement custom rotation systems which introduce unique ways to rotate O-pieces and execute O-spins.
                 </p>
         
                 <p>
-                    Unless otherwise specified, the techniques described for each game are performed with that game's default rotation
-                    system. Many community-made stacker games allow the selection of rotation systems from other games, which would permit
-                    the use of those games' O-piece rotation techniques. However, describing them in each game that uses them would result
-                    in far too much repetition.
+                    Unless otherwise specified, the techniques described for each game are performed with that game's default rotation system. Many community-made stacker games allow the selection of rotation systems from other games, which would permit the use of those games' O-piece rotation techniques. However, describing them in each game that uses them would result in far too much repetition.
+                </p>
+            </section>
+
+            <section id="ascension">
+                <h3>Ascension and its Extensive Wall Kicks</h3>
+
+                <p>
+                    While Ascension (ASC) features highly customisable pieces which allow you to play with any type of polymino that can fit in a 5x5 grid, I'll be describing things based on the default tetromino set. With that said, this game's O-Spin techniques should be generally applicable to any custom O-piece regardless of where you put its centre block as all pieces use the same offset table.
                 </p>
 
-                <section id="ascension">
-                    <h3>Ascension and its Extensive Wall Kicks</h3>
+                <p>
+                    ASC uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. In addition, because pieces are defined in a 5x5 area, the O-piece will always have a centre which allows it to move on rotation.
+                </p>
 
-                    <p>
-                        While Ascension (ASC) features highly customisable pieces which allow you to play with any type of polymino that can
-                        fit in a 5x5 grid, I'll be describing things based on the default tetromino set. With that said, this game's O-Spin
-                        techniques should be generally applicable to any custom O-piece regardless of where you put its centre block as all
-                        pieces use the same offset table.
-                    </p>
+                <p>
+                    <span class="todo">TODO: Describe some specific O-spin setups</span>
+                </p>
 
-                    <p>
-                        ASC uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. In addition, because
-                        pieces are defined in a 5x5 area, the O-piece will always have a centre which allows it to move on rotation.
-                    </p>
+                <ul class="sources">
+                    <li>
+                        <a href="https://asc.winternebs.com/wiki">ASC Wiki</a>
+                        <ul>
+                            <li>See the "Info" page for more information about ASC wall kicks</li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    <p>
-                        <span class="todo">TODO: Describe some specific O-spin setups</span>
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://asc.winternebs.com/wiki">ASC Wiki</a>
-                            <ul>
-                                <li>See the "Info" page for more information about ASC wall kicks</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h4><a href="https://asc.winternebs.com/">ASC</a> by winterNebs</h4>
-                </section>
-
-                <section id="nuketris">
-                    <h3>Nuketris and Worm Mode</h3>
-
-                    <p>
-                        Nuketris mostly uses SRS, but with some modifications to allow O-spins. The O-piece will rotate around its "centre"
-                        block without the SRS offset applied to it, and uses the same offset table as the rest of the pieces (except for the
-                        I-piece). The centre block of the O-piece starts in the bottom-right corner, and there are 180-degree rotations
-                        based on those featured in Nullpomino, which in turn is based on the SRS-X rotation system from Heboris.
-                    </p>
-
-                    <p>
-                        Nuketris also features a unique mode called Worm, which involves navigating an O-piece through an infinite tunnel
-                        which ascends at increasing speeds using O-Spins and your knowledge of wall kicks. You must survive for as long as
-                        possible without topping out due to your O-piece being pushed above the ceiling.
-                    </p>
-
-                    <p>
-                        Needless to say, I love this mode!
-                    </p>
-
-                    <p>
-                        Below is an illustration of the O-piece offset table for Nuketris. The block outlined in black is the rotation
-                        centre, while the block highlighted in orange, diagonally opposite the rotation centre, shows how the rotation
-                        state is displayed in Worm mode.
-                    </p>
-
-                    <div class="centre">
-                        <img src="img/nuketris_opiece_offset.png" alt="Nuketris O-Piece Offset Table" />
-                    </div>
-
-                    <p>
-                        Further notes on wall kicks which I will organise properly later:
-                    </p>
-
-                    <ul>
-                        <li>
-                            Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined
-                            after it impossible. 0R, R0, 2L, and L2 rotations are essentially useless because of this.
-                        </li>
-                        <li>
-                            In Worm mode, kicks which only move the O-piece upwards will appear to fail if there is space above the O-piece
-                            due to high gravity. This really threw me off when trying to figure out whether my understanding of the kicks is
-                            correct.
-                        </li>
-                    </ul>
-
-                    <p>
-                        <span class="todo">TODO: Write a proper guide for Worm mode</span><br />
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://discord.gg/MCPRYMZt5g">Nuketris Discord server</a>
-                        </li>
-                        <li>
-                            <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
-                                Tetrisconcept forum post about SRS-X 180 degree rotations
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/nullpomino/nullpomino/blob/master/nullpomino-core/src/main/java/mu/nu/nullpo/game/subsystem/wallkick/StandardWallkick.java">
-                                Nullpomino wall kick implementation
-                            </a>
-                            <ul>
-                                <li>Note that positive y values represent a <em>downward</em> kick here</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h4><a href="https://nuketris.com/">Nuketris</a> by nukeexplosions</h4>
-                </section>
-
-                <section id="techmino">
-                    <h3>Techmino and Transformative O-Spins</h3>
-
-                    <p>
-                        Techmino Rotation System (TRS) functions mostly like SRS, but with a few exceptions. It just so happens that one of
-                        these exceptions is how O-pieces behave when you perform very specific rotations in certain situations - it
-                        transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
-                    </p>
-
-                    <p>
-                        Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a
-                        different piece, then performing the relevant rotation sequence from the list below. Note that "F" is short for
-                        "Flip" and refers to the game's 180-degree rotation button.
-                    </p>
-
-                    <ul>
-                        <li>Z: LRL</li>
-                        <li>S: RLR</li>
-                        <li>J: LLR</li>
-                        <li>L: RRL</li>
-                        <li>T: LLL or RRR</li>
-                        <li>I: FFF</li>
-                    </ul>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://techmino-hub.github.io/faq.html">NOT_A_ROBOT's Techmino FAQ</a>
-                            <ul>
-                                <li>O-Spin section originally by C29H25N3O5</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by 26F Studio</h4>
-                </section>
-
-                <section id="jstris">
-                    <h3>Jstris and the O-Spin Rotation System</h3>
-
-                    <p>
-                        This one is very silly, even being described by the game's guide as a "meme rotation system". Fortunately, that is
-                        well within the scope of this guide.
-                    </p>
-
-                    <p>
-                        Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these
-                        options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece
-                        can utilise 16 wall kicks instead of the 4 possible in SRS (the default in Jstris). Second, it permits two
-                        absolutely ridiculous O-Spins.
-                    </p>
-
-                    <p>
-                        The first O-Spin (an O-Spin Triple) is performed by creating a T-Spin Triple setup where the T is "pointing" to the
-                        right. When the O-piece is placed next to the overhang, rotating it to the right will transform it into an L-piece.
-                        Rotating right again will transform it into a T-piece and fill the T-shaped hole, though this is still an "O-Spin"
-                        in a similar vein to Techmino's transformations.
-                    </p>
-
-                    <p>
-                        The second O-Spin (an O-Spin Quadruple) is performed by creating a 4x4 space with a 2x2 space touching its top-right
-                        corner. Placing an O-piece in the 2x2 space and rotating left will transform it into a 4x4 O-piece and kick it to
-                        the larger space.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://jstris.jezevec10.com/about#blocks">
-                                Jstris Guide
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://tetris.wiki/Jstris">
-                                Jstris on TetrisWiki
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/watch?v=-doMK_NAeqw">
-                                Tetris Friends O-Spin meme by 阿嘿卡鷗
-                            </a>
-                            <ul>
-                                <li>This inspired the "O-Spin Triple" in Jstris</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <h4><a href="https://jstris.jezevec10.com/">Jstris</a> by jezevec10</h4>
-                </section>
-
-                <section id="tetrio">
-                    <h3>TETR.IO and All-Spin</h3>
-
-                    <p>
-                        While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from
-                        the previously mentioned stalling techniques) with the game's default rotation system, SRS+. However, there are a
-                        few fun things you can do with them.
-                    </p>
-
-                    <p>
-                        TETR.IO offers several options for spin recognition, such as:
-                    </p>
-
-                    <ul>
-                        <li>T-Spins: Only recognises T-Spins as spins</li>
-                        <li>All-Spin: Recognises spins for all pieces</li>
-                        <li>Stupid: Recognises every floor rotation as a "spin"</li>
-                    </ul>
-
-                    <p>
-                        Of course, setting the allowed spins to "Stupid" will allow you to O-Spin with every O-piece, but it's clear that
-                        this is just a novelty feature and it makes it feel a bit too easy.
-                    </p>
-
-                    <p>
-                        O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was
-                        probably intended for use with the game's other rotation system options based on other stacker games, but it can
-                        actually be executed in SRS, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns,
-                        or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
-                    </p>
-
-                    <ul class="sources">
-                        <li>
-                            <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
-                                J4mi5on's SRS O-Spin demo with All-Spin enabled
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h4><a href="https://tetr.io/">TETR.IO</a> by osk</h4>
-                </section>
-
-                <hr />
+                <h4><a href="https://asc.winternebs.com/">ASC</a> by winterNebs</h4>
             </section>
+
+            <section id="nuketris">
+                <h3>Nuketris and Worm Mode</h3>
+
+                <p>
+                    Nuketris mostly uses SRS, but with some modifications to allow O-spins. The O-piece will rotate around its "centre" block without the SRS offset applied to it, and uses the same offset table as the rest of the pieces (except for the I-piece). The centre block of the O-piece starts in the bottom-right corner, and there are 180-degree rotations based on those featured in Nullpomino, which in turn is based on the SRS-X rotation system from Heboris.
+                </p>
+
+                <p>
+                    Nuketris also features a unique mode called Worm, which involves navigating an O-piece through an infinite tunnel which ascends at increasing speeds using O-Spins and your knowledge of wall kicks. You must survive for as long as possible without topping out due to your O-piece being pushed above the ceiling.
+                </p>
+
+                <p>
+                    Needless to say, I love this mode!
+                </p>
+
+                <p>
+                    Below is an illustration of the O-piece offset table for Nuketris. The block outlined in black is the rotation centre, while the block highlighted in orange, diagonally opposite the rotation centre, shows how the rotation state is displayed in Worm mode.
+                </p>
+
+                <div class="centre">
+                    <img src="img/nuketris_opiece_offset.png" alt="Nuketris O-Piece Offset Table" />
+                </div>
+
+                <p>
+                    Further notes on wall kicks which I will organise properly later:
+                </p>
+
+                <ul>
+                    <li>
+                        Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined after it impossible. 0R, R0, 2L, and L2 rotations are essentially useless because of this.
+                    </li>
+                    <li>
+                        In Worm mode, kicks which only move the O-piece upwards will appear to fail if there is space above the O-piece due to high gravity. This really threw me off when trying to figure out whether my understanding of the kicks is correct.
+                    </li>
+                </ul>
+
+                <p>
+                    <span class="todo">TODO: Write a proper guide for Worm mode</span><br />
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://discord.gg/MCPRYMZt5g">Nuketris Discord server</a>
+                    </li>
+                    <li>
+                        <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
+                            Tetrisconcept forum post about SRS-X 180 degree rotations
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/nullpomino/nullpomino/blob/master/nullpomino-core/src/main/java/mu/nu/nullpo/game/subsystem/wallkick/StandardWallkick.java">
+                            Nullpomino wall kick implementation
+                        </a>
+                        <ul>
+                            <li>Note that positive y values represent a <em>downward</em> kick here</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://nuketris.com/">Nuketris</a> by nukeexplosions</h4>
+            </section>
+
+            <section id="techmino">
+                <h3>Techmino and Transformative O-Spins</h3>
+
+                <p>
+                    Techmino Rotation System (TRS) functions mostly like SRS, but with a few exceptions. It just so happens that one of these exceptions is how O-pieces behave when you perform very specific rotations in certain situations - it transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
+                </p>
+
+                <p>
+                    Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a different piece, then performing the relevant rotation sequence from the list below. Note that "F" is short for "Flip" and refers to the game's 180-degree rotation button.
+                </p>
+
+                <ul>
+                    <li>Z: LRL</li>
+                    <li>S: RLR</li>
+                    <li>J: LLR</li>
+                    <li>L: RRL</li>
+                    <li>T: LLL or RRR</li>
+                    <li>I: FFF</li>
+                </ul>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://techmino-hub.github.io/faq.html">NOT_A_ROBOT's Techmino FAQ</a>
+                        <ul>
+                            <li>O-Spin section originally by C29H25N3O5</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by 26F Studio</h4>
+            </section>
+
+            <section id="jstris">
+                <h3>Jstris and the O-Spin Rotation System</h3>
+
+                <p>
+                    This one is very silly, even being described by the game's guide as a "meme rotation system". Fortunately, that is well within the scope of this guide.
+                </p>
+
+                <p>
+                    Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece can utilise 16 wall kicks instead of the 4 possible in SRS (the default in Jstris). Second, it permits two absolutely ridiculous O-Spins.
+                </p>
+
+                <p>
+                    The first O-Spin (an O-Spin Triple) is performed by creating a T-Spin Triple setup where the T is "pointing" to the right. When the O-piece is placed next to the overhang, rotating it to the right will transform it into an L-piece. Rotating right again will transform it into a T-piece and fill the T-shaped hole, though this is still an "O-Spin" in a similar vein to Techmino's transformations.
+                </p>
+
+                <p>
+                    The second O-Spin (an O-Spin Quadruple) is performed by creating a 4x4 space with a 2x2 space touching its top-right corner. Placing an O-piece in the 2x2 space and rotating left will transform it into a 4x4 O-piece and kick it to the larger space.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://jstris.jezevec10.com/about#blocks">
+                            Jstris Guide
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://tetris.wiki/Jstris">
+                            Jstris on TetrisWiki
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=-doMK_NAeqw">
+                            Tetris Friends O-Spin meme by 阿嘿卡鷗
+                        </a>
+                        <ul>
+                            <li>This inspired the "O-Spin Triple" in Jstris</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://jstris.jezevec10.com/">Jstris</a> by jezevec10</h4>
+            </section>
+
+            <section id="tetrio">
+                <h3>TETR.IO and All-Spin</h3>
+
+                <p>
+                    While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from the previously mentioned stalling techniques) with the game's default rotation system, SRS+. However, there are a few fun things you can do with them.
+                </p>
+
+                <p>
+                    TETR.IO offers several options for spin recognition, such as:
+                </p>
+
+                <ul>
+                    <li>T-Spins: Only recognises T-Spins as spins</li>
+                    <li>All-Spin: Recognises spins for all pieces</li>
+                    <li>Stupid: Recognises every floor rotation as a "spin"</li>
+                </ul>
+
+                <p>
+                    Of course, setting the allowed spins to "Stupid" will allow you to O-Spin with every O-piece, but it's clear that this is just a novelty feature and it makes it feel a bit too easy.
+                </p>
+
+                <p>
+                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in SRS, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
+                            J4mi5on's SRS O-Spin demo with All-Spin enabled
+                        </a>
+                    </li>
+                </ul>
+
+                <h4><a href="https://tetr.io/">TETR.IO</a> by osk</h4>
+            </section>
+
+            <hr />
 
             <section id="closing-thoughts">
                 <h2>Chapter 5: Closing Thoughts</h2>
@@ -1426,12 +1349,11 @@
                 <p>
                     Concluding words! I'll add to this later.
                 </p>
-        
+
                 <p>
-                    For now, thank you to everyone whose guides, research, and stacker games I've cited/featured, and to everyone else who
-                    is reading this guide!
+                    For now, thank you to everyone whose guides, research, and stacker games I've cited/featured, and to everyone else who is reading this guide!
                 </p>
-        
+
                 <p>
                     I welcome feedback and constructive criticism. In particular, I'd like to know:
                 </p>
@@ -1464,18 +1386,15 @@
                 </ul>
 
                 <p>
-                    If you'd like to contact me, my Discord name is dunspixel. I'd be happy to talk about O-piece rotations, O-Spins, and
-                    wacky Tetris mechanics in general. However, please be aware that I'm very shy and socially awkward. I'll do my best to
-                    be nice.
+                    If you'd like to contact me, my Discord name is dunspixel. I'd be happy to talk about O-piece rotations, O-Spins, and wacky Tetris mechanics in general. However, please be aware that I'm very shy and socially awkward. I'll do my best to be nice.
                 </p>
 
                 <p>
-                    For technical and factual problems, feel free to raise an issue on the GitHub repo. There's a link to the repo at the
-                    bottom of the page.
+                    For technical and factual problems, feel free to raise an issue on the GitHub repo. There's a link to the repo at the bottom of the page.
                 </p>
-
-                <hr />
             </section>
+
+            <hr />
 
             <section id="ramblings">
                 <h2>Random Ramblings</h2>
@@ -1485,43 +1404,97 @@
                 </p>
 
                 <p>
-                    Tetris Effect is not a rhythm game. Rather, you are a rhythm game which Tetris Effect plays perfectly. Tetris Effect has
-                    exactly one rhythm-based game mechanic and it requires you to be dead in Connected mode to utilise it.
+                    Tetris Effect is not a rhythm game. Rather, you are a rhythm game which Tetris Effect plays perfectly. Tetris Effect has exactly one rhythm-based game mechanic and it requires you to be dead in Connected mode to utilise it.
                 </p>
 
                 <p>
-                    My main in Puyo Puyo (and by extension PPT/PPT2) is Draco, with my second favourite being Ally. Sadly, I'm
-                    <em>shockingly</em> bad at Puyo. Fun Fact: Ally is also my actual name! 
+                    My main in Puyo Puyo (and by extension PPT/PPT2) is Draco, with my second favourite being Ally. Sadly, I'm <em>shockingly</em> bad at Puyo. Fun Fact: Ally is also my actual name! 
                 </p>
-        
+
                 <p>
-                    My mind is blown by the fact Tetris 64's rotation system exists and it's shocking to me how so few people know about it.
-                    With techniques only seen in Tetris-like stacker games to this day, Tetris 64 was years ahead of its time. Tetris
-                    Stardust is even more mind-blowing, but its obscurity is much less surprising. I wish the O-Spins from that game were a
-                    part of the Tetris Guideline.
+                    My mind is blown by the fact Tetris 64's rotation system exists and it's shocking to me how so few people know about it. With techniques only seen in Tetris-like stacker games to this day, Tetris 64 was years ahead of its time. Tetris Stardust is even more mind-blowing, but its obscurity is much less surprising. I wish the O-Spins from that game were a part of the Tetris Guideline.
                 </p>
-        
+
                 <p>
                     I often wonder, how many mainline Tetris games are there, and which ones count as mainline?
                 </p>
 
                 <p>
-                    You know what's almost as cool as O-Spins? Polymer spins, especially fins. I'd love to see or even create a rotation
-                    system where you can fin every piece. I'd have to add a section to this guide about O-Fins.
+                    You know what's almost as cool as O-Spins? Polymer spins, especially fins. I'd love to see or even create a rotation system where you can fin every piece. I'd have to add a section to this guide about O-Fins.
                 </p>
-        
+
                 <p>
                     I like purple a normal amount, as I'm sure you can tell.
                 </p>
-        
+
                 <p>
-                    If you ever think you're useless, know that there's a huge guide about how to rotate the square in Tetris. No matter
-                    what you may think about yourself, you are good for something even if you don't know it yet. I hope you can find it one
-                    day.
+                    If you ever think you're useless, know that there's a huge guide about how to rotate the square in Tetris. No matter what you may think about yourself, you are good for something even if you don't know it yet. I hope you can find it one day.
                 </p>
 
-                <h4><span class="tooltip" title="also known as human rights">Trans rights</span> are human rights.</h4>
+                <h4>Trans rights are human rights.</h4>
+            </section>
+        </main>
 
+        <hr />
+
+        <footer>
+            <p>
+                Copyright © 2024 Dunspixel
+            </p>
+
+            <p>
+                <a href="https://github.com/Dunspixel/ospin-guide">
+                    GitHub
+                </a>
+            </p>
+        </footer>
+
+        <section id="templates">
+            <template id="template-playfield-cell-f">
+                <div class="playfield-cell f"></div>
+            </template>
+
+            <template id="template-playfield-cell-g">
+                <div class="playfield-cell g"></div>
+            </template>
+
+            <template id="template-playfield-cell-d">
+                <div class="playfield-cell d"></div>
+            </template>
+
+            <template id="template-playfield-cell-i">
+                <div class="playfield-cell i"></div>
+            </template>
+
+            <template id="template-playfield-cell-j">
+                <div class="playfield-cell j"></div>
+            </template>
+
+            <template id="template-playfield-cell-l">
+                <div class="playfield-cell l"></div>
+            </template>
+
+            <template id="template-playfield-cell-o">
+                <div class="playfield-cell o"></div>
+            </template>
+
+            <template id="template-playfield-cell-s">
+                <div class="playfield-cell s"></div>
+            </template>
+
+            <template id="template-playfield-cell-t">
+                <div class="playfield-cell t"></div>
+            </template>
+
+            <template id="template-playfield-cell-z">
+                <div class="playfield-cell z"></div>
+            </template>
+
+            <template id="template-playfield-cell-p">
+                <div class="playfield-cell t p"></div>
+            </template>
+
+            <template id="template-playfield-test">
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
@@ -1532,64 +1505,6 @@
                         <div class="playfield-caption">Playfield Test!</div>
                     </div>
                 </div>
-
-                <hr />
-            </section>
-        </main>
-
-        <footer>
-            <p>
-                Copyright © 2024 Dunspixel
-            </p>
-
-            <p>
-                <a href="https://github.com/Dunspixel/ospin-guide">GitHub</a>
-            </p>
-        </footer>
-
-        <section id="templates">
-            <template id="template-playfield-cell-f">
-                <div class="playfield-cell f"></div>
-            </template>
-    
-            <template id="template-playfield-cell-g">
-                <div class="playfield-cell g"></div>
-            </template>
-    
-            <template id="template-playfield-cell-d">
-                <div class="playfield-cell d"></div>
-            </template>
-    
-            <template id="template-playfield-cell-i">
-                <div class="playfield-cell i"></div>
-            </template>
-    
-            <template id="template-playfield-cell-j">
-                <div class="playfield-cell j"></div>
-            </template>
-    
-            <template id="template-playfield-cell-l">
-                <div class="playfield-cell l"></div>
-            </template>
-    
-            <template id="template-playfield-cell-o">
-                <div class="playfield-cell o"></div>
-            </template>
-    
-            <template id="template-playfield-cell-s">
-                <div class="playfield-cell s"></div>
-            </template>
-    
-            <template id="template-playfield-cell-t">
-                <div class="playfield-cell t"></div>
-            </template>
-    
-            <template id="template-playfield-cell-z">
-                <div class="playfield-cell z"></div>
-            </template>
-    
-            <template id="template-playfield-cell-p">
-                <div class="playfield-cell t p"></div>
             </template>
         </section>
 
