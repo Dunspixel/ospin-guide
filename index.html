@@ -124,19 +124,34 @@
                 </p>
 
                 <p>
-                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "0R2L" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state 0, and rotating right (clockwise) changes to R, 2, L, then back to 0. Likewise, rotating left (anti-clockwise or counter-clockwise) from state 0 will cycle through states L, 2, R, and 0.
+                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "<strong>0R2L</strong>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state <strong>0</strong>, and rotating right (clockwise) changes to <strong>R</strong>, <strong>2</strong>, <strong>L</strong>, then back to <strong>0</strong>. Likewise, rotating left (anti-clockwise or counter-clockwise) from state <strong>0</strong> will cycle through states <strong>L</strong>, <strong>2</strong>, <strong>R</strong>, and <strong>0</strong>.
                 </p>
 
                 <p>
-                    I will describe specific rotations (i.e. those where the rotation state is relevant) as combinations of the above rotation states. For example, a clockwise rotation from 0 to R will be written as "0R", a clockwise 180-degree rotation from 0 to 2 will be written as "0R2", and a single button 180-degree rotation from 0 to 2 will be written as "02".
+                    I will describe specific rotations (i.e. those where the rotation state is relevant) as combinations of the above rotation states, with an arrow to indicate direction. For example:
+                </p>
+
+                <ul>
+                    <li>
+                        A clockwise rotation from <strong>0</strong> to <strong>R</strong> is <strong>0R&gt;</strong>
+                    </li>
+                    <li>
+                        An anti-clockwise rotation from <strong>0</strong> to <strong>L</strong> is <strong>&lt;0L</strong>
+                    </li>
+                    <li>
+                        A clockwise 180-degree rotation from <strong>0</strong> to <strong>2</strong> is <strong>0R2&gt;</strong>
+                    </li>
+                    <li>
+                        A single button 180-degree rotation from <strong>0</strong> to <strong>2</strong> is <strong>&lt;02&gt;</strong>
+                    </li>
+                </ul>
+
+                <p>
+                    You may be wondering how a <strong>0R2&gt;</strong> rotation differs from a <strong>&lt;02&gt;</strong> rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
                 </p>
 
                 <p>
-                    You may be wondering how a 0R2 rotation differs from a 02 rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
-                </p>
-
-                <p>
-                    In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the commonly used Super Rotation System, or <strong>SRS</strong> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state 0), but an offset is applied to keep it in place when rotated.
+                    In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the commonly used Super Rotation System, or <strong>SRS</strong> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state <strong>0</strong>), but an offset is applied to keep it in place when rotated.
                 </p>
 
                 <ul class="sources">
@@ -190,7 +205,7 @@
                         <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption">State 2</div>
+                        <div class="playfield-caption">State <strong>2</strong></div>
                     </div>
                 </div>
 
@@ -202,7 +217,7 @@
                         <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption">2R Rotation (fail)</div>
+                        <div class="playfield-caption"><strong>&lt;2R</strong> Rotation (fail)</div>
                     </div>
                 </div>
 
@@ -599,11 +614,11 @@
                 </p>
 
                 <p>
-                    When the second O-piece spawns (or you take it out of hold), perform a 0R rotation. You can then use the time spent by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
+                    When the second O-piece spawns (or you take it out of hold), perform a <strong>0R&gt;</strong> rotation. You can then use the time spent by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
                 </p>
 
                 <p>
-                    When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When this happens, perform an R0 rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
+                    When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When this happens, perform an <strong>&lt;R0</strong> rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
                 </p>
 
                 <div class="playfield-container">
@@ -638,7 +653,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
-                        <div class="playfield-caption">0R Rotation</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -674,7 +689,7 @@
                         <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">R0 Rotation</div>
+                        <div class="playfield-caption"><strong>&lt;R0</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -867,7 +882,7 @@
                         <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption">State 0/L</div>
+                        <div class="playfield-caption">State <strong>0</strong>/<strong>L</strong></div>
                     </div>
                 </div>
 
@@ -877,7 +892,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][D][O][F][G][G][G][G]</div>
-                        <div class="playfield-caption">0R/L2 Rotation</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong> or <strong>&lt;L2</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -902,7 +917,9 @@
                 </div>
 
                 <ul>
-                    <li>With Offset Turn off, this can alternatively be performed with an L0R or L2R rotation.</li>
+                    <li>
+                        With Offset Turn off, this can alternatively be performed with an <strong>L0R&gt;</strong> or <strong>&lt;L2R</strong> rotation.
+                    </li>
                 </ul>
 
                 <div class="playfield-container">
@@ -911,7 +928,7 @@
                         <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption">State 0/L</div>
+                        <div class="playfield-caption">State <strong>0</strong>/<strong>L</strong></div>
                     </div>
                 </div>
 
@@ -921,7 +938,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][D][G][G][G]</div>
-                        <div class="playfield-caption">0R/L2 Rotation</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong> or <strong>&lt;L2</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -946,8 +963,12 @@
                 </div>
 
                 <ul>
-                    <li>With Offset Turn off, this can alternatively be performed with a 0R2 or 0L2 rotation.</li>
-                    <li>Note how the rotation direction is the same as its mirrored setup.</li>
+                    <li>
+                        With Offset Turn off, this can alternatively be performed with a <strong>0R2&gt;</strong> or <strong>&lt;0L2</strong> rotation.
+                    </li>
+                    <li>
+                        Note how the rotation direction is the same as its mirrored setup.
+                    </li>
                 </ul>
 
                 <div class="playfield-container">
@@ -956,7 +977,7 @@
                         <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                        <div class="playfield-caption">State 0</div>
+                        <div class="playfield-caption">State <strong>0</strong></div>
                     </div>
                 </div>
 
@@ -966,7 +987,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][D][D][G][G][G]</div>
-                        <div class="playfield-caption">0R Rotation (fail)</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation (fail)</div>
                     </div>
                 </div>
 
@@ -976,7 +997,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][D][G][G][G][G]</div>
-                        <div class="playfield-caption">R2 Rotation</div>
+                        <div class="playfield-caption"><strong>R2&gt;</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -1001,8 +1022,8 @@
                 </div>
 
                 <ul>
-                    <li>R2 must be performed quickly to complete the 0R2 rotation.</li>
-                    <li>This can also be performed with a 0L2 rotation.</li>
+                    <li><strong>R2&gt;</strong> must be performed quickly to complete the <strong>0R2&gt;</strong> rotation.</li>
+                    <li>This can also be performed with a <strong>&lt;0L2</strong> rotation.</li>
                 </ul>
 
                 <div class="playfield-container">
@@ -1011,7 +1032,7 @@
                         <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">State L</div>
+                        <div class="playfield-caption">State <strong>L</strong></div>
                     </div>
                 </div>
 
@@ -1021,7 +1042,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][D][D][F][F][G][G][G]</div>
-                        <div class="playfield-caption">L2 rotation (fail)</div>
+                        <div class="playfield-caption"><strong>&lt;L2</strong> rotation (fail)</div>
                     </div>
                 </div>
 
@@ -1031,7 +1052,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][D][O][F][G][G][G]</div>
-                        <div class="playfield-caption">2R Rotation</div>
+                        <div class="playfield-caption"><strong>&lt;2R</strong> Rotation</div>
                     </div>
                 </div>
 
@@ -1056,8 +1077,8 @@
                 </div>
 
                 <ul>
-                    <li>2R must be performed quickly to complete the L2R rotation.</li>
-                    <li>This can also be performed with an L0R rotation.</li>
+                    <li><strong>&lt;2R</strong> must be performed quickly to complete the <strong>&lt;L2R</strong> rotation.</li>
+                    <li>This can also be performed with an <strong>L0R&gt;</strong> rotation.</li>
                 </ul>
 
                 <ul class="sources">
@@ -1127,13 +1148,13 @@
 
                 <ul>
                     <li>
-                        Perform a 0L rotation, DAS to the left wall, then attempt an L0 rotation. If the L0 rotation succeeds, there is a 100% chance you have an O-piece. Yay!
+                        Perform a <strong>&lt;0L</strong> rotation, DAS to the left wall, then attempt an <strong>L0&gt;</strong> rotation. If the <strong>L0&gt;</strong> rotation succeeds, there is a 100% chance you have an O-piece. Yay!
                     </li>
                     <li>
-                        If the L0 rotation fails, move one column to the right and try again. If this still fails, there is a 100% chance you have an I-piece.
+                        If the <strong>L0&gt;</strong> rotation fails, move one column to the right and try again. If this still fails, there is a 100% chance you have an I-piece.
                     </li>
                     <li>
-                        If the second L0 rotation succeeds, perform a 0R rotation (this will always succeed), then attempt to move the piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50% chance you have a Z-piece.
+                        If the second <strong>L0&gt;</strong> rotation succeeds, perform a <strong>0R&gt;</strong> rotation (this will always succeed), then attempt to move the piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50% chance you have a Z-piece.
                     </li>
                     <li>
                         If the movement fails, there is a 33% chance you have a J-piece, a 33% chance you have an L-piece, and a 33% chance you have a T-piece.
@@ -1230,7 +1251,7 @@
 
                 <ul>
                     <li>
-                        Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined after it impossible. 0R, R0, 2L, and L2 rotations are essentially useless because of this.
+                        Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined after it impossible. <strong>0R&gt;</strong>, <strong>&lt;R0</strong>, <strong>2L&gt;</strong>, and <strong>&lt;L2</strong> rotations are only useful for changing the rotation state because of this.
                     </li>
                     <li>
                         In Worm mode, kicks which only move the O-piece upwards will appear to fail if there is space above the O-piece due to high gravity. This really threw me off when trying to figure out whether my understanding of the kicks is correct.
