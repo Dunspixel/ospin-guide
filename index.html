@@ -866,7 +866,7 @@
                 </p>
 
                 <p>
-                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-spins.
+                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-Spins.
                 </p>
 
                 <p>
@@ -1095,6 +1095,116 @@
                     <li><strong>&lt;2R</strong> must be performed quickly to complete the <strong>&lt;L2R</strong> rotation.</li>
                     <li>This can also be performed with an <strong>L0R&gt;</strong> rotation.</li>
                 </ul>
+
+                <p>
+                    Practical uses aside, one can have a lot of fun with O-Spins by making some silly setups. Even with such limited wall kicks, you can chain them together!
+                </p>
+
+                <p>
+                    However, chaining O-Spins is tricky. Trying to do this like you can in some modern stackers won't work as there are no wall kicks that can move the O-piece vertically. Instead, you need to rely on the <strong>R</strong> and <strong>2</strong> rotation states being one row lower than the other two. This means repeating and following the above setups won't allow you to chain spins together as the rotation will either fail or cause the piece to move back to where it was before the first rotation.
+                </p>
+
+                <p>
+                    To get around this, you'll need to create a space above subsequent kick setups, allowing you to rotate the piece back into the <strong>0</strong> or <strong>L</strong> state before performing another wall kick.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][F][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">State <strong>0</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][O][O][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt; Rotation</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Move here</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption"><strong>&lt;R0 Rotation</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Soft Drop/Gravity</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt; Rotation</strong></div>
+                    </div>
+                </div>
+
+                <p>
+                    With enough setups like this, something like the setup below should be theoretically possible, allowing one to perform six O-Spins before clearing an O-Spin Single. I'd love to see a TAS which creates and executes it.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][F][F][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[F][F][G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Secret Grade</div>
+                    </div>
+                </div>
+
+                <p>
+                    Yeah, my brain is just like that sometimes.
+                </p>
 
                 <ul class="sources">
                     <li>
