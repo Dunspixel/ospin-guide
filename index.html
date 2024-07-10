@@ -632,10 +632,10 @@
                         <div class="playfield-row">[F][F][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[F][F][F][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][P][P][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][r][r][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][g][b][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][g][b][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][p][p][G][G][G]</div>
                         <div class="playfield-caption">Lock here</div>
                     </div>
                 </div>
@@ -1649,7 +1649,61 @@
                     If you just scrolled all the way to the bottom, you're reading the Random Ramblings section! The actual guide is structured better than this!
                 </p>
 
-                <h4>Trans rights are human rights!</h4>
+                <p>
+                    <strong>Trans rights are human rights!</strong> Here are some flags I made with my playfield code! (I'm all of these btw)
+                </p>
+
+                <div class="centre">
+                    <div class="playfield-container">
+                        <div class="playfield">
+                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I]</div>
+                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I]</div>
+                        </div>
+                    </div>
+
+                    <div class="playfield-container">
+                        <div class="playfield">
+                            <div class="playfield-row playfield-flag-4">[O][O][O][O][O][O][O][O]</div>
+                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T]</div>
+                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D]</div>
+                        </div>
+                    </div>
+
+                    <div class="playfield-container">
+                        <div class="playfield">
+                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B]</div>
+                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-7">[F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B]</div>
+                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G]</div>
+                        </div>
+                    </div>
+
+                    <div class="playfield-container">
+                        <div class="playfield">
+                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D]</div>
+                            <div class="playfield-row playfield-flag-4">[G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T]</div>
+                        </div>
+                    </div>
+
+                    <div class="playfield-container">
+                        <div class="playfield">
+                            <div class="playfield-row playfield-flag-5">[V][V][V][V][V][V][V][V]</div>
+                            <div class="playfield-row playfield-flag-5">[S][S][S][S][S][S][S][S]</div>
+                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-5">[G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-5">[D][D][D][D][D][D][D][D]</div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -1669,47 +1723,75 @@
 
         <section id="templates">
             <template id="template-playfield-cell-f">
-                <div class="playfield-cell f"></div>
+                <div class="playfield-cell playfield-space"></div>
             </template>
 
             <template id="template-playfield-cell-g">
-                <div class="playfield-cell g"></div>
+                <div class="playfield-cell playfield-block-grey"></div>
             </template>
 
             <template id="template-playfield-cell-d">
-                <div class="playfield-cell d"></div>
+                <div class="playfield-cell playfield-block-dark"></div>
+            </template>
+
+            <template id="template-playfield-cell-b">
+                <div class="playfield-cell playfield-block-bright"></div>
             </template>
 
             <template id="template-playfield-cell-i">
-                <div class="playfield-cell i"></div>
+                <div class="playfield-cell playfield-block-i"></div>
             </template>
 
             <template id="template-playfield-cell-j">
-                <div class="playfield-cell j"></div>
+                <div class="playfield-cell playfield-block-j"></div>
             </template>
 
             <template id="template-playfield-cell-l">
-                <div class="playfield-cell l"></div>
+                <div class="playfield-cell playfield-block-l"></div>
             </template>
 
             <template id="template-playfield-cell-o">
-                <div class="playfield-cell o"></div>
+                <div class="playfield-cell playfield-block-o"></div>
             </template>
 
             <template id="template-playfield-cell-s">
-                <div class="playfield-cell s"></div>
+                <div class="playfield-cell playfield-block-s"></div>
             </template>
 
             <template id="template-playfield-cell-t">
-                <div class="playfield-cell t"></div>
+                <div class="playfield-cell playfield-block-t"></div>
             </template>
 
             <template id="template-playfield-cell-z">
-                <div class="playfield-cell z"></div>
+                <div class="playfield-cell playfield-block-z"></div>
             </template>
 
             <template id="template-playfield-cell-p">
-                <div class="playfield-cell t p"></div>
+                <div class="playfield-cell playfield-block-pink"></div>
+            </template>
+
+            <template id="template-playfield-cell-v">
+                <div class="playfield-cell playfield-block-verdant"></div>
+            </template>
+
+            <template id="template-playfield-cell-puyo-r">
+                <div class="playfield-cell playfield-puyo-red"></div>
+            </template>
+
+            <template id="template-playfield-cell-puyo-g">
+                <div class="playfield-cell playfield-puyo-green"></div>
+            </template>
+
+            <template id="template-playfield-cell-puyo-b">
+                <div class="playfield-cell playfield-puyo-blue"></div>
+            </template>
+
+            <template id="template-playfield-cell-puyo-y">
+                <div class="playfield-cell playfield-puyo-yellow"></div>
+            </template>
+
+            <template id="template-playfield-cell-puyo-p">
+                <div class="playfield-cell playfield-puyo-purple"></div>
             </template>
 
             <template id="template-playfield-test">
@@ -1719,7 +1801,8 @@
                         <div class="playfield-row">[F][F][F][F][O][O][F][F][F][F]</div>
                         <div class="playfield-row">[F][F][F][F][O][O][F][F][F][F]</div>
                         <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[I][J][L][O][S][T][Z][G][D][P]</div>
+                        <div class="playfield-row">[P][V][r][g][b][y][p][F][F][F]</div>
+                        <div class="playfield-row">[I][J][L][O][S][T][Z][G][D][F]</div>
                         <div class="playfield-caption">Playfield Test!</div>
                     </div>
                 </div>

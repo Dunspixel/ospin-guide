@@ -23,6 +23,21 @@
     display: table-cell;
 }
 
+.playfield-flag-4 .playfield-cell
+{
+    height: 20px !important;
+}
+
+.playfield-flag-5 .playfield-cell
+{
+    height: 16px !important;
+}
+
+.playfield-flag-7 .playfield-cell
+{
+    height: 11.429px !important;
+}
+
 .playfield-caption
 {
     padding: 2px 4px;
@@ -33,57 +48,97 @@
     caption-side: bottom;
 }
 
-.f
+.playfield-space
 {
     background-color: #FFFFFF !important;
 }
 
-.g
+.playfield-block-grey
 {
     background-color: #808080 !important;
 }
 
-.d
+.playfield-block-dark
 {
     background-color: #404040 !important;
 }
 
-.i
+.playfield-block-bright
+{
+    background-color: #C0C0C0 !important;
+}
+
+.playfield-block-i
 {
     background-color: #00FFFF !important;
 }
 
-.j
+.playfield-block-j
 {
     background-color: #0000FF !important;
 }
 
-.l
+.playfield-block-l
 {
     background-color: #FF8000 !important;
 }
 
-.o
+.playfield-block-o
 {
     background-color: #FFE000 !important;
 }
 
-.s
+.playfield-block-s
 {
     background-color: #00FF00 !important;
 }
 
-.t
+.playfield-block-t
 {
     background-color: #C000FF !important;
 }
 
-.z
+.playfield-block-z
 {
     background-color: #FF0000 !important;
 }
 
-.p
+.playfield-block-pink
 {
+    background-color: #FF80FF !important;
+}
+
+.playfield-block-verdant
+{
+    background-color: #00A000 !important;
+}
+
+.playfield-puyo-red
+{
+    background-color: #FF0000 !important;
+    border-radius: 8px;
+}
+
+.playfield-puyo-green
+{
+    background-color: #00FF00 !important;
+    border-radius: 8px;
+}
+
+.playfield-puyo-blue
+{
+    background-color: #0000FF !important;
+    border-radius: 8px;
+}
+
+.playfield-puyo-yellow
+{
+    background-color: #FFE000 !important;
+    border-radius: 8px;
+}
+
+.playfield-puyo-purple
+{
+    background-color: #C000FF !important;
     border-radius: 8px;
 }
