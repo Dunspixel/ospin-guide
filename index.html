@@ -1451,12 +1451,13 @@
                 </p>
 
                 <ul>
-                    <li>Z: LRL or RLR</li>
-                    <li>S: RLR or LRL</li>
-                    <li>J: RRL</li>
-                    <li>L: LLR</li>
-                    <li>T: LLL or RRR</li>
+                    <li>T: LLL, RRR</li>
+                    <li>Z: LRL, RLR</li>
+                    <li>S: RLR, LRL</li>
+                    <li>J: LLR, RRL (depending on spin)</li>
+                    <li>L: RRL, LLR (depending on spin)</li>
                     <li>I: FFF</li>
+                    <li>O: RFR, RRF, RFF, LFL, LLF, LFF (depending on kick)</li>
                 </ul>
 
                 <p>
@@ -1464,7 +1465,7 @@
                 </p>
 
                 <p>
-                    Interestingly, the T transformations are defined slightly differently for LLL and RRR - the "T-Spin Mini" transformations only work when rotating in a specific direction.
+                    Interestingly, the T transformations are defined slightly differently for LLL and RRR - the "T-Spin Mini" transformations only work when rotating in a specific direction. This is also true for the J and L pieces, whose different spin sequences have completely different use cases.
                 </p>
 
                 <p>
@@ -1472,11 +1473,7 @@
                 </p>
 
                 <p>
-                    My Lua reading skills are limited, but from what I understand, these are all of the setups permitted by the O-Spin table, in the order they are defined. Note that there are some J/L spins I haven't included here as I'm not sure how to trigger them. They seem to require the O-piece to be floating, which invalidates the immovable check. Please let me know if you know what they're for!
-                </p>
-
-                <p>
-                    Blocks coloured like the other pieces are for illustration purposes only - they show where the O-piece will kick to.
+                    My Lua reading skills are limited, but from what I understand (and confirmed by testing), these are all of the setups permitted by the O-Spin table in the order they are defined. Blocks coloured like the other pieces are for illustration purposes only - they show where the O-piece will kick to.
                 </p>
 
                 <div class="playfield-container">
@@ -1503,7 +1500,7 @@
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][T][O][O][G][G]</div>
                         <div class="playfield-caption">RRR &gt; T</div>
                     </div>
@@ -1533,7 +1530,7 @@
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][T][G][G]</div>
                         <div class="playfield-caption">LLL &gt; T</div>
                     </div>
@@ -1656,6 +1653,36 @@
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][S][O][O][G][G]</div>
                         <div class="playfield-caption">LRL &gt; S</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][J][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G]</div>
+                        <div class="playfield-caption">LLR &gt; J</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][F][F]</div>
+                        <div class="playfield-row">[G][L][O][O][G][G]</div>
+                        <div class="playfield-row">[G][L][G][G][G][G]</div>
+                        <div class="playfield-caption">RRL &gt; L</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][F][F]</div>
+                        <div class="playfield-row">[G][J][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G]</div>
+                        <div class="playfield-caption">RRL &gt; J</div>
                     </div>
                 </div>
 
@@ -1666,6 +1693,16 @@
                         <div class="playfield-row">[F][F][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][J][G]</div>
                         <div class="playfield-caption">RRL &gt; J</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][L][G]</div>
+                        <div class="playfield-row">[G][G][L][G][G][G]</div>
+                        <div class="playfield-caption">LLR &gt; L</div>
                     </div>
                 </div>
 
@@ -1692,7 +1729,7 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F]</div>
                         <div class="playfield-row">[G][I][I][O][O][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G]</div>
                         <div class="playfield-caption">FFF &gt; I</div>
@@ -1702,7 +1739,7 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][I][I][G]</div>
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-caption">FFF &gt; I</div>
@@ -1712,7 +1749,7 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][I][O][O][I][G]</div>
                         <div class="playfield-caption">FFF &gt; I</div>
@@ -1722,8 +1759,8 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F]</div>
                         <div class="playfield-row">[G][I][I][O][O][G]</div>
                         <div class="playfield-caption">FFF &gt; I</div>
                     </div>
@@ -1732,15 +1769,23 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][I][I][G]</div>
                         <div class="playfield-caption">FFF &gt; I</div>
                     </div>
                 </div>
 
                 <p>
-                    There are also some translational O-Spins, triggered by different rotation sequences. These do not transform the O-piece.
+                    Fun Fact: Because the "T-Spin Mini" spins don't require a two-high wall opposite the overhang, the O-piece is actually slightly better at T-Spin Triples in this scenario than the actual T-piece. However, the T-piece can be used when there is no wall here while the O-piece cannot. This is also true of J and L-Spin Triples!
+                </p>
+
+                <p>
+                    There are also some translational O-Spins, triggered by different rotation sequences. These do not appear to transform the O-piece, but they do technically transform the O-piece into itself.
+                </p>
+
+                <p>
+                    This is a distinction without a difference and has no effect on gameplay, but it would be a very funny hill for me to die on if you try to tell me it doesn't transform. Unless you happen to be a Techmino developer and I genuinely missed something, in which case this would be very embarrassing for me.
                 </p>
 
                 <div class="playfield-container">
@@ -1765,7 +1810,7 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][O][O][F][F][F]</div>
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
@@ -1795,7 +1840,7 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[F][F][O][O][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
@@ -1809,7 +1854,7 @@
 
                 <ul class="sources">
                     <li>
-                        <a href="https://github.com/26F-Studio/Techmino/blob/main/parts/RSlist.lua">Techmino rotation impmentation</a>
+                        <a href="https://github.com/26F-Studio/Techmino/blob/main/parts/RSlist.lua">Techmino rotation implementation</a>
                         <ul>
                             <li>See "OspinList" and the O-Spin logic that checks "if P.gameEnv.ospin"</li>
                             <li>For spin sequences, 1 is right, 2 is 180, and 3 is left</li>
