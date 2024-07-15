@@ -5,22 +5,22 @@
 
 .playfield
 {
-    border: 2px solid;
     display: table;
+    border: 2px solid;
 }
 
 .playfield-row
 {
-    background-color: #FFFFFF;
     display: table-row;
+    background-color: #FFFFFF;
 }
 
 .playfield-cell
 {
+    display: table-cell;
     width: 16px;
     height: 16px;
     padding: 0;
-    display: table-cell;
 }
 
 .playfield-flag-4 .playfield-cell
@@ -35,17 +35,17 @@
 
 .playfield-flag-7 .playfield-cell
 {
-    height: 11.429px !important;
+    height: 11.5px !important;
 }
 
 .playfield-caption
 {
+    display: table-caption;
+    caption-side: bottom;
     padding: 2px 4px;
     border-left: 2px solid;
     border-right: 2px solid;
     border-bottom: 2px solid;
-    display: table-caption;
-    caption-side: bottom;
 }
 
 .playfield-space

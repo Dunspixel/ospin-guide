@@ -28,7 +28,7 @@
                 </h4>
 
                 <p>
-                    Last Major Update: <strong>11/07/2024</strong> - Added O-Spin setups to Techmino section
+                    Last Major Update: <strong>15/07/2024</strong> - Added Nuketris Worm Guide Part 1
                 </p>
             </section>
 
@@ -1381,7 +1381,11 @@
                 <h3>Nuketris and Worm Mode</h3>
 
                 <p>
-                    Nuketris mostly uses SRS, but with some modifications to allow O-spins. The O-piece will rotate around its "centre" block without the SRS offset applied to it, and uses the same offset table as the rest of the pieces (except for the I-piece). The centre block of the O-piece starts in the bottom-right corner, and there are 180-degree rotations based on those featured in Nullpomino, which in turn is based on the SRS-X rotation system from Heboris.
+                    Nuketris primarily uses the <strong>SRS-X</strong> rotation system first used in Heboris Unofficial Expansion, and later Nullpomino. <strong>SRS-X</strong> works exactly like <strong>SRS</strong> when rotating 90 degrees, but it has an extensive 180-degree offset table that defines 11 wall kicks for each rotation (as opposed to the 4 wall kicks for the 90-degree rotations).
+                </p>
+
+                <p>
+                    Unlike the original <strong>SRS-X</strong> however, the O-piece rotation states have been modified so it now has four distinct states. The O-piece starts with its rotation centre at the bottom-right block, and will move on rotation. It can then kick using the same offset table as the rest of the pieces, with the exception of the I-piece which uses its own table.
                 </p>
 
                 <p>
@@ -1401,21 +1405,41 @@
                 </div>
 
                 <p>
-                    Further notes on wall kicks which I will organise properly later:
+                    There are some 90-degree kicks here that move the O-piece back to its original position. These kicks are guaranteed to succeed, so any kicks defined after them are completely inaccessible. <strong>0R&gt;</strong>, <strong>&lt;R0</strong>, <strong>2L&gt;</strong>, and <strong>&lt;L2</strong> rotations are only useful for changing the rotation state because of this.
+                </p>
+
+                <p>
+                    In Worm mode, the tunnel is made out of three-column spaces inside a wall of garbage blocks. For each row, the space will move left or right by one column, ensuring there will always be enough space for the O-piece to move. Because of this tunnel generation rule, we can actually rule out a lot of the above wall kicks as being inaccessible in Worm mode (unless you kick the piece above the tunnel at the beginning for some reason). We can rule out kicks for the following reasons:
                 </p>
 
                 <ul>
                     <li>
-                        Kicks which move the O-piece back to its previous position will always succeed, thus making the kicks defined after it impossible. <strong>0R&gt;</strong>, <strong>&lt;R0</strong>, <strong>2L&gt;</strong>, and <strong>&lt;L2</strong> rotations are only useful for changing the rotation state because of this.
+                        The rotation and kick only move the piece horizontally (will be blocked by the wall)
                     </li>
                     <li>
-                        In Worm mode, kicks which only move the O-piece upwards will appear to fail if there is space above the O-piece due to high gravity. This really threw me off when trying to figure out whether my understanding of the kicks is correct.
+                        The rotation and kick only move the piece one or two spaces downwards (will be blocked by the floor)
+                    </li>
+                    <li>
+                        The kick moves the piece far enough horizontally that the tunnel will never reach the O-piece's destination, even if it continues in a single direction
+                    </li>
+                    <li>
+                        The kick is defined after another kick that will always succeed
                     </li>
                 </ul>
 
                 <p>
-                    <span class="todo">TODO: Write a proper guide for Worm mode</span><br />
+                    Below is the same offset table, but only showing the wall kicks relevant to Worm mode.
                 </p>
+
+                <div class="centre">
+                    <img src="img/nuketris_opiece_offset_worm.png" alt="Nuketris O-Piece Offset Table (Worm Mode)" />
+                </div>
+
+                <p>
+                    Each state and rotation has use cases that make them useful, though generally speaking, the <strong>0</strong> and <strong>R</strong> states have more desirable kicks. States can also be divided into pairs, as the <strong>0</strong>/<strong>R</strong> ("upper") and <strong>2</strong>/<strong>L</strong> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations between them that switch states without moving the piece.
+                </p>
+                
+                <p><span class="todo">TODO: Worm Guide Part 2 - Use cases for each state and rotation</span></p>
 
                 <ul class="sources">
                     <li>
@@ -1785,7 +1809,7 @@
                 </p>
 
                 <p>
-                    This is a distinction without a difference and has no effect on gameplay, but it would be a very funny hill for me to die on if you try to tell me it doesn't transform. Unless you happen to be a Techmino developer and I genuinely missed something, in which case this would be very embarrassing for me.
+                    This is a distinction without a difference and has no effect on gameplay, but it would be a very funny hill for me to die on if you try to tell me it doesn't transform (unless you happen to be a Techmino developer and I genuinely missed something, in which case this would be very embarrassing for me).
                 </p>
 
                 <div class="playfield-container">
@@ -2060,51 +2084,51 @@
                 <div class="centre">
                     <div class="playfield-container">
                         <div class="playfield">
-                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I]</div>
-                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P]</div>
-                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P]</div>
-                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I]</div>
+                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I][I][I]</div>
+                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-5">[P][P][P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-5">[I][I][I][I][I][I][I][I][I][I]</div>
                         </div>
                     </div>
 
                     <div class="playfield-container">
                         <div class="playfield">
-                            <div class="playfield-row playfield-flag-4">[O][O][O][O][O][O][O][O]</div>
-                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T]</div>
-                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D]</div>
+                            <div class="playfield-row playfield-flag-4">[O][O][O][O][O][O][O][O][O][O]</div>
+                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T][T][T]</div>
+                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D][D][D]</div>
                         </div>
                     </div>
 
                     <div class="playfield-container">
                         <div class="playfield">
-                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G]</div>
-                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B]</div>
-                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P]</div>
-                            <div class="playfield-row playfield-flag-7">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P]</div>
-                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B]</div>
-                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B][B][B]</div>
+                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-7">[F][F][F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-7">[P][P][P][P][P][P][P][P][P][P]</div>
+                            <div class="playfield-row playfield-flag-7">[B][B][B][B][B][B][B][B][B][B]</div>
+                            <div class="playfield-row playfield-flag-7">[G][G][G][G][G][G][G][G][G][G]</div>
                         </div>
                     </div>
 
                     <div class="playfield-container">
                         <div class="playfield">
-                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D]</div>
-                            <div class="playfield-row playfield-flag-4">[G][G][G][G][G][G][G][G]</div>
-                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T]</div>
+                            <div class="playfield-row playfield-flag-4">[D][D][D][D][D][D][D][D][D][D]</div>
+                            <div class="playfield-row playfield-flag-4">[G][G][G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-4">[F][F][F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-4">[T][T][T][T][T][T][T][T][T][T]</div>
                         </div>
                     </div>
 
                     <div class="playfield-container">
                         <div class="playfield">
-                            <div class="playfield-row playfield-flag-5">[V][V][V][V][V][V][V][V]</div>
-                            <div class="playfield-row playfield-flag-5">[S][S][S][S][S][S][S][S]</div>
-                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F]</div>
-                            <div class="playfield-row playfield-flag-5">[G][G][G][G][G][G][G][G]</div>
-                            <div class="playfield-row playfield-flag-5">[D][D][D][D][D][D][D][D]</div>
+                            <div class="playfield-row playfield-flag-5">[V][V][V][V][V][V][V][V][V][V]</div>
+                            <div class="playfield-row playfield-flag-5">[S][S][S][S][S][S][S][S][S][S]</div>
+                            <div class="playfield-row playfield-flag-5">[F][F][F][F][F][F][F][F][F][F]</div>
+                            <div class="playfield-row playfield-flag-5">[G][G][G][G][G][G][G][G][G][G]</div>
+                            <div class="playfield-row playfield-flag-5">[D][D][D][D][D][D][D][D][D][D]</div>
                         </div>
                     </div>
                 </div>
@@ -2115,7 +2139,7 @@
 
         <footer>
             <p>
-                Copyright © 2024 Dunspixel
+                © 2024 Dunspixel
             </p>
 
             <p>
