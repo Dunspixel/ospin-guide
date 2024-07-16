@@ -28,7 +28,7 @@
                 </h4>
 
                 <p>
-                    Last Major Update: <strong>15/07/2024</strong> - Added Nuketris Worm Guide Part 1
+                    Last Major Update: <strong>16/07/2024</strong> - Added Stardust Spin Rank guide
                 </p>
             </section>
 
@@ -728,7 +728,7 @@
                 </p>
 
                 <p>
-                    Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states. Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
+                    Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states (though it does technically have four identical states). Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
                 </p>
 
                 <ul>
@@ -743,11 +743,215 @@
                 </p>
 
                 <p>
-                    <span class="todo">TODO: Find out if kicks 3 and 4 are in the correct order</span>
+                    In addition to the points scored by O-Spins and their associated line clears, the act of performing these spins awards points based on a "Spin Rank" system unique to this game. There are a total of 10 Spin Ranks: E, D, C, B, A-, A, A+, S-, S, and S+. Any kick that would cause the Spin Rank to exceed S+ will simply award an S+.
                 </p>
 
                 <p>
-                    <span class="todo">TODO: Spin Rank</span>
+                    Spin Rank is particularly useful because it awards points without clearing lines, and the aim of Tetris Stardust is to score as many points as possible in 40 lines.
+                </p>
+                    
+                <p>
+                    Spin Rank is awarded for each kick which moves the piece below its previous lowest block. This means kicks which move the piece upwards or only move horizontally will not award Spin Rank. This also prevents you from gaining Spin Rank by repeatedly performing a kick, then the opposite kick to move it back to its previous position. Score for Spin Rank is awarded per wall kick, so performing multiple rank-eligible kicks with the same piece will award multiple score bonuses. For example, a C-Rank spin (200 points) followed by a B-Rank spin (400 points) performed with the same piece will award a total of 600 points, not just the 400 for the final spin.
+                </p>
+
+                <p>
+                    For the O-Piece, Kick 1 does not award Spin Rank, Kick 2 has a base Spin Rank of C, and Kicks 3 and 4 have a base Spin Rank of A. Chaining multiple kicks together will increase Spin Rank based on the rank of the previous kick:
+                </p>
+
+                <ul>
+                    <li>E, D, C: +1</li>
+                    <li>B, A-: +2</li>
+                    <li>A, A+, S-: +3</li>
+                    <li>S, S+: +4</li>
+                </ul>
+
+                <p>
+                    Here are some examples of chained spins and the ranks they award. All of these setups can be mirrored, though you will need to rotate in the opposite direction.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Spin Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-caption">Spin Rank B</div>
+                    </div>
+                </div>
+
+                <p>
+                    In this example, the first C-Rank spin adds a +1 bonus to the second C-Rank spin, which promotes it to a B-Rank spin. This scores a total of 600 points just from Spin Rank.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Spin Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-caption">Spin Rank A+</div>
+                    </div>
+                </div>
+
+                <p>
+                    As before, the C-Rank spin adds a +1 bonus to the A-Rank spin, increasing it to A+ for a total Spin Rank score bonus of 1200.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-caption">Spin Rank A</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-caption">Spin Rank A</div>
+                    </div>
+                </div>
+
+                <p>
+                    While the second spin is only C-Rank, the prior A-Rank spin adds a +3 bonus to it, increasing it to A-Rank. This setup scores a total Spin Rank bonus of 1600.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Spin Rank A</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-caption">Spin Rank S</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption">Spin Rank S+</div>
+                    </div>
+                </div>
+
+                <p>
+                    A-Rank spins add a +3 bonus to following spins, so chaining two of them together increases the second spin to rank S. Following this, the S-Rank spin will add a +4 bonus to the next spin, so a third A-Rank spin will be increased to the maximum Spin Rank of S+. The total Spin Rank bonus for the first two spins is 2400, while the third increases the total to 4200. 
+                </p>
+
+                <p>
+                    The inner workings of Spin Rank are actually much more complicated than this, but even though I ran the game through a decompiler and tried to read this part of the game logic, hell if I can actually understand it. The spins with a base rank of A actually have an internal base rank of B, but there's a "rotation level" which triggers a thing which increases this B to A. I can't for the life of me figure out why this isn't also being applied to the C-Rank spins. Perhaps what I think are the C-Rank spins don't actually have a defined Spin Rank and they're defaulting to E (because E-Rank is 0 internally)?
                 </p>
 
                 <ul class="sources">
@@ -2050,7 +2254,15 @@
                 </p>
 
                 <p>
-                    My mind is blown by the fact Tetris 64's rotation system exists and it's shocking to me how so few people know about it. With techniques only seen in Tetris-like stacker games to this day, Tetris 64 was years ahead of its time. Tetris Stardust is even more mind-blowing, but its obscurity is much less surprising. I wish the O-Spins from that game were a part of the Tetris Guideline.
+                    My mind is blown by the fact Tetris 64's rotation system exists and it's shocking to me how so few people know about it. With techniques only seen in Tetris-like stacker games to this day, Tetris 64 was years ahead of its time. Tetris Stardust is even more mind-blowing, but its obscurity is much less surprising.
+                </p>
+
+                <p>
+                    I wish the O-Spins and Spin Rank mechanics from Tetris Stardust could return in a new Tetris game.
+                </p>
+
+                <p>
+                    While looking through a decompilation of Tetris Stardust, I found that the internal score values are (mostly) consistent with Guideline scoring. However, when actually playing the game, these score values are doubled when you clear lines, even though the internal "level" variable (and by extension, score multiplier) is always 1. Please tell me if you know why these score values are being doubled, because I can't find what's causing it.
                 </p>
 
                 <p>
