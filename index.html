@@ -158,14 +158,18 @@
                     In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the commonly used Super Rotation System, or <strong>SRS</strong> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state <strong>0</strong>), but an offset is applied to keep it in place when rotated.
                 </p>
 
+                <p>
+                    I will write states, rotations, and rotation system abbreviations in <strong>bold</strong> by convention.
+                </p>
+
                 <ul class="sources">
                     <li>
-                        SRS wiki pages:
+                        <strong>SRS</strong> wiki pages:
                         <a href="https://harddrop.com/wiki/SRS">Hard Drop</a> |
                         <a href="https://tetris.wiki/Super_Rotation_System">TetrisWiki</a>
                         <ul>
                             <li>
-                                See the "How Guideline SRS <em>Really</em> Works" section for details about internal rotation states and
+                                See the "How Guideline <strong>SRS</strong> <em>Really</em> Works" section for details about internal rotation states and
                                 offsets
                             </li>
                         </ul>
@@ -186,7 +190,7 @@
                 </p>
 
                 <p>
-                    In SRS, four alternative positions are checked if basic rotation fails, and the piece will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in SRS:
+                    In <strong>SRS</strong>, four alternative positions are checked if basic rotation fails, and the piece will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in <strong>SRS</strong>:
                 </p>
 
                 <div class="playfield-container">
@@ -296,13 +300,13 @@
                         </a>
                         <ul>
                             <li>
-                                Includes SRS kicks and PPT-specific pentomino/O-piece kicks
+                                Includes <strong>SRS</strong> kicks and PPT-specific pentomino/O-piece kicks
                             </li>
                         </ul>
                     </li>
                     <li>
                         <a href="https://imgur.com/a/srs-rotations-bGwLQsi">
-                            bocifer's SRS offset table visualisation
+                            bocifer's <strong>SRS</strong> offset table visualisation
                         </a>
                         <ul>
                             <li>
@@ -373,11 +377,11 @@
                 </p>
 
                 <p>
-                    This isn't helped at all by the fact that even The Tetris Company, who licenses the Tetris series, refers to their own games as "versions" of the same game instead of what they are: entries in a series.
+                    Sure, the original Tetris was the first stacker game. It did indeed start the genre of puzzle games which many people in the Tetris community name after it. But to say that they're all just the exact same game is plainly wrong.
                 </p>
 
                 <p>
-                    Sure, the original Tetris was the first stacker game. It did indeed start the genre of puzzle games which many people in the Tetris community name after it. But to say that they're all just the exact same game is plainly wrong.
+                    This isn't helped at all by the fact that even The Tetris Company, who licenses the Tetris series, refers to their own games as "versions" of the same game instead of what they are: entries in a series.
                 </p>
 
                 <p>
@@ -489,7 +493,7 @@
                 </p>
 
                 <p>
-                    The most important feature of the Tetris Guideline is the aforementioned SRS, which it introduced to the Tetris series. We'll encounter a lot of rotation systems in this guide, but SRS is by far the one you'll see the most both in modern Tetris games and in Tetris-like stackers.
+                    The most important feature of the Tetris Guideline is the aforementioned <strong>SRS</strong>, which it introduced to the Tetris series. We'll encounter a lot of rotation systems in this guide, but <strong>SRS</strong> is by far the one you'll see the most both in modern Tetris games and in Tetris-like stackers.
                 </p>
 
                 <ul class="sources">
@@ -533,7 +537,7 @@
                 </ul>
 
                 <p>
-                    If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with SRS. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to use when stalling.
+                    If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with <strong>SRS</strong>. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to use when stalling.
                 </p>
 
                 <ul class="sources">
@@ -557,7 +561,7 @@
                         The Zone, which stops time and allows you to perform massive line clears
                     </li>
                     <li>
-                        Initial Rotation System (<strong>IRS</strong>), which allows you to spawn pieces in a pre-rotated state
+                        Initial Rotation System (IRS), which allows you to spawn pieces in a pre-rotated state
                         <ul>
                             <li>
                                 Quite possibly one of the best things added to Tetris
@@ -595,7 +599,7 @@
                 </p>
 
                 <p>
-                    Puyo Puyo Tetris implements a slightly altered SRS offset table which defines wall kicks for the O-piece. These wall kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for use with its equivalent pentomino, the P-piece, in the game's Party mode.
+                    Puyo Puyo Tetris implements a slightly altered <strong>SRS</strong> offset table which defines wall kicks for the O-piece. These wall kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for use with its equivalent pentomino, the P-piece, in the game's Party mode.
                 </p>
 
                 <p>
@@ -728,7 +732,7 @@
                 </p>
 
                 <p>
-                    Tetris Stardust primarily uses SRS just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states (though it does technically have four identical states). Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
+                    Tetris Stardust primarily uses <strong>SRS</strong> just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states (though it does technically have four identical states). Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
                 </p>
 
                 <ul>
@@ -997,7 +1001,7 @@
                         </ul>
                     </li>
                     <li>
-                        Tetris Giant
+                        Tetris Giant/Dekaris
                         <ul>
                             <li>
                                 To my knowledge, there is no use for rotating the O-piece in this particular game. I still love it, though.
@@ -1074,7 +1078,7 @@
                 </p>
 
                 <p>
-                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System, as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-Spins.
+                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System (<strong>T64</strong>), as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-Spins.
                 </p>
 
                 <p>
@@ -1082,7 +1086,7 @@
                 </p>
 
                 <p>
-                    So I decided to lab and document the Tetris 64 rotation system (excluding the Bio Tetris polyminoes) myself, specifically for a guide <span class="tooltip" title="If you couldn't tell by now, yes I am autistic">about O-piece rotations</span>.
+                    So I decided to lab and document <strong>T64</strong> (excluding the Bio Tetris polyminoes) myself, specifically for a guide <span class="tooltip" title="If you couldn't tell by now, yes I am autistic">about O-piece rotations</span>.
                 </p>
 
                 <img src="img/t64_opiece_offset.png" class="inline-end" alt="Tetris 64 O-Piece Offset Table" />
@@ -1096,7 +1100,7 @@
                 </p>
 
                 <p>
-                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in Tetris 64 limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
+                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in <strong>T64</strong> limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
                 </p>
 
                 <div class="playfield-container">
@@ -1442,12 +1446,12 @@
 
                 <ul class="sources">
                     <li>
-                        Tetris 64 Rotation wiki pages:
+                        <strong>T64</strong> wiki pages:
                         <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
                         <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
                     </li>
                     <li>
-                        ARS wiki pages:
+                        <strong>ARS</strong> wiki pages:
                         <a href="https://harddrop.com/wiki/ARS">Hard Drop</a> |
                         <a href="https://tetris.wiki/Arika_Rotation_System">TetrisWiki</a>
                         <ul>
@@ -1469,11 +1473,11 @@
                 <h3>Sega Tetris (1999)</h3>
 
                 <p>
-                    <span class="todo">TODO: write this section</span>
+                    Ah, the one game in this guide I haven't played yet. For the time being, there isn't much I can say about it. Sorry!
                 </p>
 
                 <p>
-                    Summary: In this game's Battle mode, clearing a double will cause your opponent to join the piece you used for the line clear with their next piece. The attacking piece can then rotate around it. This feature can optionally be enabled in single player, allowing you to join the line clear piece to your next piece.
+                    In this game's Battle mode, clearing a double will cause your opponent to join the piece you used for the line clear with their next piece. The attacking piece can then rotate around it. This feature can optionally be enabled in single player, allowing you to join the line clear piece to your next piece.
                 </p>
 
                 <ul class="sources">
@@ -1524,7 +1528,7 @@
                 </ul>
 
                 <p>
-                    GB Tetris instead uses a mirrored, "left-handed" version of NRS, but the above still applies if all movements and rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
+                    GB Tetris instead uses a mirrored, "left-handed" version of <strong>NRS</strong>, but the above still applies if all movements and rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
                 </p>
 
                 <p>
@@ -1533,7 +1537,7 @@
 
                 <ul class="sources">
                     <li>
-                        NRS wiki pages:
+                        <strong>NRS</strong> wiki pages:
                         <a href="https://harddrop.com/wiki/Nintendo_Rotation_System">Hard Drop</a> |
                         <a href="https://tetris.wiki/Nintendo_Rotation_System">TetrisWiki</a>
                     </li>
@@ -1562,7 +1566,7 @@
                 </p>
 
                 <p>
-                    ASC uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. In addition, because pieces are defined in a 5x5 area, the O-piece will always have a centre which allows it to move on rotation.
+                    <strong>ASC</strong> uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. In addition, because pieces are defined in a 5x5 area, the O-piece will always have a centre which allows it to move on rotation.
                 </p>
 
                 <p>
@@ -1573,7 +1577,7 @@
                     <li>
                         <a href="https://asc.winternebs.com/wiki">ASC Wiki</a>
                         <ul>
-                            <li>See the "Info" page for more information about ASC wall kicks</li>
+                            <li>See the "Info" page for more information about <strong>ASC</strong> wall kicks</li>
                         </ul>
                     </li>
                 </ul>
@@ -1651,7 +1655,7 @@
                     </li>
                     <li>
                         <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
-                            Tetrisconcept forum post about SRS-X 180 degree rotations
+                            Tetrisconcept forum post about <strong>SRS-X</strong> 180 degree rotations
                         </a>
                     </li>
                     <li>
@@ -1671,7 +1675,7 @@
                 <h3>Techmino and Transformative O-Spins</h3>
 
                 <p>
-                    Techmino Rotation System (<strong>TRS</strong>) functions mostly like SRS, but with a few exceptions. It just so happens that one of these exceptions is how O-pieces behave when you perform very specific rotations in certain situations - it transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
+                    Techmino Rotation System (<strong>TRS</strong>) functions mostly like <strong>SRS</strong>, but with several changed/added wall kicks and new mechanics. One of these mechanics is how O-pieces behave when you perform very specific rotation sequences in certain situations - it transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
                 </p>
 
                 <p>
@@ -2106,7 +2110,7 @@
                 </p>
 
                 <p>
-                    Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece can utilise 16 wall kicks instead of the 4 possible in SRS (the default in Jstris). Second, it permits two absolutely ridiculous O-Spins.
+                    Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece can utilise 16 wall kicks instead of the 4 possible in <strong>SRS</strong> (the default in Jstris). Second, it permits two absolutely ridiculous O-Spins.
                 </p>
 
                 <p>
@@ -2146,7 +2150,7 @@
                 <h3>TETR.IO and All-Spin</h3>
 
                 <p>
-                    While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from the previously mentioned stalling techniques) with the game's default rotation system, SRS+. However, there are a few fun things you can do with them.
+                    While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from the previously mentioned stalling techniques) with the game's default rotation system, <strong>SRS+</strong>. However, there are a few fun things you can do with them.
                 </p>
 
                 <p>
@@ -2164,13 +2168,13 @@
                 </p>
 
                 <p>
-                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in SRS, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
+                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <strong>SRS+</strong>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
                 </p>
 
                 <ul class="sources">
                     <li>
                         <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
-                            J4mi5on's SRS O-Spin demo with All-Spin enabled
+                            J4mi5on's <strong>SRS+</strong> O-Spin demo with All-Spin enabled
                         </a>
                     </li>
                 </ul>
@@ -2207,9 +2211,6 @@
                     </li>
                     <li>
                         Are there more mechanics and techniques I can add to existing sections?
-                    </li>
-                    <li>
-                        Can S/Z and J/L/T be distinguished while blindfolded in NES Tetris?
                     </li>
                     <li>
                         Is there anything I can explain better? (sorry i'm bad at explaining things)
@@ -2255,10 +2256,6 @@
 
                 <p>
                     I wish the O-Spins and Spin Rank mechanics from Tetris Stardust could return in a new Tetris game.
-                </p>
-
-                <p>
-                    While looking through a decompilation of Tetris Stardust, I found that the internal score values are (mostly) consistent with Guideline scoring. However, when actually playing the game, these score values are doubled when you clear lines, even though the internal "level" variable (and by extension, score multiplier) is always 1. Please tell me if you know why these score values are being doubled, because I can't find what's causing it.
                 </p>
 
                 <p>

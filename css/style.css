@@ -28,7 +28,7 @@ header, footer
     text-align: center;
 }
 
-a
+a, a *
 {
     color: #BEA6F4;
 }
