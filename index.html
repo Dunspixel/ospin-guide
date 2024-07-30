@@ -97,6 +97,7 @@
                     <li>
                         <a href="#closing-thoughts">Closing Thoughts</a>
                         <ul>
+                            <li><a href="#feedback">Feedback</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </li>
@@ -382,6 +383,10 @@
 
                 <p>
                     This isn't helped at all by the fact that even The Tetris Company, who licenses the Tetris series, refers to their own games as "versions" of the same game instead of what they are: entries in a series.
+                </p>
+
+                <p>
+                    Don't get me started on the whole "it's just Tetris" thing.
                 </p>
 
                 <p>
@@ -740,10 +745,16 @@
                     <li>If rotating right, the space directly underneath the <strong>lower-left</strong> block must be occupied.</li>
                 </ul>
 
-                <img src="img/stardust_opiece_offset.png" class="inline-end" alt="Tetris Stardust O-Piece Offset Table" />
+                <p>
+                    If the check succeeds, the O-piece will then kick according to the offset table below. To my knowledge, Tetris Stardust is the only Tetris game which actually acknowledges O-Spins by name, and also the only one to explicitly reward them.
+                </p>
+
+                <div class="centre">
+                    <img src="img/stardust_opiece_offset.png" alt="Tetris Stardust O-Piece Offset Table" />
+                </div>
 
                 <p>
-                    If the check succeeds, the O-piece will then kick according to the offset table to the right. To my knowledge, Tetris Stardust is the only Tetris game which actually acknowledges O-Spins by name, and also the only one to explicitly reward them.
+                    This is about all I could figure out just by playing the game, considering how little it is documented. So I did what any curious and totally sane person would do in this situation, and ran the game through a decompiler. Good thing Silverlight apps are easy to decompile!
                 </p>
 
                 <p>
@@ -955,7 +966,7 @@
                 </p>
 
                 <p>
-                    The inner workings of Spin Rank are actually much more complicated than this, but even though I ran the game through a decompiler and tried to read this part of the game logic, hell if I can actually understand it. The spins with a base rank of A actually have an internal base rank of B, but there's a "rotation level" which triggers a thing which increases this B to A. I can't for the life of me figure out why this isn't also being applied to the C-Rank spins. Perhaps what I think are the C-Rank spins don't actually have a defined Spin Rank and they're defaulting to E (because E-Rank is 0 internally)?
+                    The inner workings of Spin Rank are actually much more complicated than this. Even after spending some time reading this part of the game logic, hell if I can understand it. The spins with a base rank of A actually have an internal base rank of B, but there's a "rotation level" which triggers a thing which increases this B to A. I can't for the life of me figure out why this isn't also being applied to the C-Rank spins. Perhaps what I think are the C-Rank spins don't actually have a defined Spin Rank and they're defaulting to E (because E-Rank is 0 internally)?
                 </p>
 
                 <ul class="sources">
@@ -1570,7 +1581,7 @@
                 </p>
 
                 <p>
-                    <span class="todo">TODO: Describe some specific O-spin setups</span>
+                    <span class="todo">TODO: Actually write this section</span>
                 </p>
 
                 <ul class="sources">
@@ -2128,9 +2139,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://tetris.wiki/Jstris">
-                            Jstris on TetrisWiki
-                        </a>
+                        Jstris wiki pages:
+                        <a href="https://harddrop.com/wiki/Jstris">Hard Drop</a> |
+                        <a href="https://tetris.wiki/Jstris">TetrisWiki</a>
                     </li>
                     <li>
                         <a href="https://www.youtube.com/watch?v=-doMK_NAeqw">
@@ -2171,6 +2182,18 @@
                     O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <strong>SRS+</strong>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
                 </p>
 
+                <p>
+                    Unfortunately, because the O-shaped hole requires blocks to be placed above it, performing an O-Spin by pushing the hole up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. It's by far the most stylish way to die in TETR.IO, though.
+                </p>
+
+                <p>
+                    With the release of the new Quick Play 2 mode, I noticed there's a random condition in Duo Mode which may require you to clear a Double with an O-piece to revive your partner if they're dead. Naturally, this has me wondering: Does performing a sacrificial O-Spin Double with the above method satisfy this condition, revive your partner, and save your run?
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Find an answer to this question</span>
+                </p>
+
                 <ul class="sources">
                     <li>
                         <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
@@ -2188,15 +2211,23 @@
                 <h2>Chapter 5: Closing Thoughts</h2>
 
                 <p>
-                    Concluding words! I'll add to this later.
+                    With that, I hope I was able to teach you how O-piece rotations can be useful or otherwise fun, and that I have helped you learn to love them for what they can do. The stacker genre is far more complex than most players give it credit for and I love to see even the most obscure minutia about these games being shared.
                 </p>
 
                 <p>
-                    For now, thank you to everyone whose guides, research, and stacker games I've cited/featured, and to everyone else who is reading this guide!
+                    Thank you to everyone whose work I have linked in this guide! Every guide and demonstration from the Tetris community and the communities of each stacker game has been incredibly useful to me, and every stacker game featured in Chapter 4 has provided many hours of enjoyment and wonder.
                 </p>
 
                 <p>
-                    I welcome feedback and constructive criticism. In particular, I'd like to know:
+                    I'd also like to thank everyone who has taken the time to read my guide! If you love to rotate the O-piece, you should know that you're really cool!
+                </p>
+            </section>
+
+            <section id="feedback">
+                <h3>Feedback</h3>
+
+                <p>
+                    I welcome feedback and constructive criticism, as I'd like to make this guide as comprehensive and accurate as possible. In particular, I'm interested to know:
                 </p>
 
                 <ul>
