@@ -70,7 +70,7 @@
                         <ul>
                             <li><a href="#move-reset">Move-Reset Lock Delay</a></li>
                             <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
-                            <li><a href="#fusion">Puyo Puyo Tetris and Fusion "O-Spins"</a></li>
+                            <li><a href="#ppt-overlap">Puyo Puyo Tetris and Stack Overlap "O-Spins"</a></li>
                             <li><a href="#stardust">Tetris Stardust and Actual O-Spins</a></li>
                             <li><a href="#guideline-notes">Useful Notes</a></li>
                         </ul>
@@ -596,23 +596,40 @@
                 </ul>
             </section>
 
-            <section id="fusion">
-                <h3>Puyo Puyo Tetris and Fusion "O-Spins"</h3>
+            <section id="ppt-overlap">
+                <h3>Puyo Puyo Tetris and Stack Overlap "O-Spins"</h3>
 
                 <p>
                     This is much more whimsical than the other uses in this chapter, having pretty much zero practical use. However, seeing an O-piece wall kick in a modern guideline Tetris game and the ridiculous setup it requires is absolutely hilarious and I love it.
                 </p>
 
                 <p>
-                    Puyo Puyo Tetris implements a slightly altered <strong>SRS</strong> offset table which defines wall kicks for the O-piece. These wall kicks effectively undo the offset applied to the internal rotation of the O-piece and were mainly implemented for use with its equivalent pentomino, the P-piece, in the game's Party mode.
+                    Puyo Puyo Tetris implements a slightly altered <strong>SRS</strong> offset table which defines wall kicks for the O-piece. This is because of the P pentomino used in the game's Party mode, which the O-piece derives an offset table from.
                 </p>
 
                 <p>
-                    Triggering this wall kick for the standard O-piece is much tricker and can only be done in the game's Fusion mode. This mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the next piece which you can use at the same time.
+                    Triggering this wall kick for the standard O-piece is much tricker, and requires you to exploit situations where your active piece overlaps with your stack without topping you out. There are two ways of doing this:
+                </p>
+
+                <ul>
+                    <li>
+                        Take an O-piece out of hold in a situation where it would overlap with your stack - this won't top you out until the piece locks due to a PPT-specific bug
+                    </li>
+                    <li>
+                        In Fusion mode, use an O-piece to slowly break through a stack of Puyos into a double line clear and place another O-piece underneath a part of your stack before the line clear moves your stack into your O-piece
+                    </li>
+                </ul>
+
+                <p>
+                    Special thanks to Kitaru for bringing the unhold glitch to my attention!
                 </p>
 
                 <p>
-                    There is a complex setup which allows you to exploit this behaviour and execute an O-spin:
+                    Fusion mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the next piece which you can use at the same time.
+                </p>
+
+                <p>
+                    There is a complex setup in Fusion mode which allows you to exploit this behaviour and execute an O-spin:
                 </p>
 
                 <ul>
