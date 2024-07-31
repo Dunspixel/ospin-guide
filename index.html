@@ -617,7 +617,7 @@
                 <p>
                     Special thanks to Kitaru for bringing the unhold glitch to my attention!
                 </p>
-
+                    
                 <p>
                     Fusion mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the next piece which you can use at the same time.
                 </p>
@@ -2190,22 +2190,71 @@
                 </p>
 
                 <p>
-                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <strong>SRS+</strong>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, or if a custom map is created where such a hole already exists, rotating the piece there will register as an O-Spin.
+                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <strong>SRS+</strong>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows 22 and 23.
                 </p>
 
                 <p>
-                    Unfortunately, because the O-shaped hole requires blocks to be placed above it, performing an O-Spin by pushing the hole up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. It's by far the most stylish way to die in TETR.IO, though.
+                    Normally, because the O-shaped hole requires blocks to be placed above it, performing an O-Spin by pushing the hole up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. However, the hole does not need to be completely surrounded; the O-piece only needs to be immobile to register an O-Spin on rotation. Because of this, there is a specific setup which will allow you to survive and downstack by putting an S-shaped hole on top of the O-shaped hole:
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G][G][F]</div>
+                        <div class="playfield-caption">Spawn O and rotate</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G][G][F]</div>
+                        <div class="playfield-caption">O-Spin Double</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][S][S][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][S][S][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G][G][F]</div>
+                        <div class="playfield-caption">Spawn S</div>
+                    </div>
+                </div>
+
+                <p>
+                    Special thanks to KonSola5 for explaining this setup to me and finding a video source!
                 </p>
 
                 <p>
-                    With the release of the new Quick Play 2 mode, I noticed there's a random condition in Duo Mode which may require you to clear a Double with an O-piece to revive your partner if they're dead. Naturally, this has me wondering: Does performing a sacrificial O-Spin Double with the above method satisfy this condition, revive your partner, and save your run?
-                </p>
-
-                <p>
-                    <span class="todo">TODO: Find an answer to this question</span>
+                    With the release of the new Quick Play 2 mode, I noticed there's a random condition in Duo Mode which may require you to clear a Double with an O-piece to revive your partner if they're dead. Naturally, this has me wondering: Does performing a O-Spin Double with the above method satisfy this condition, revive your partner, and save your run even if it's sacrificial?
                 </p>
 
                 <ul class="sources">
+                    <li>
+                        <a href="https://discord.com/invite/ufDb2XJ">
+                            TETR.IO Discord Server
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://cdn.discordapp.com/attachments/696095920248455229/929273538815356958/OSD.mp4?ex=66abe02c&is=66aa8eac&hm=2381ef3138cda822ec2a1364f9bd945b6e9addcbc7fb9e77b0a52a6a02ec6dcb&">
+                            O-Spin Double survival demonstration by Laz and Kivalier
+                        </a>
+                        <ul>
+                            <li>Shared by ZaptorZap on the TETR.IO Discord Server</li>
+                        </ul>
+                    </li>
                     <li>
                         <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
                             J4mi5on's <strong>SRS+</strong> O-Spin demo with All-Spin enabled
