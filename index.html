@@ -14,8 +14,7 @@
             <h1>How To Rotate Your O-Piece</h1>
     
             <p>
-                A <span class="tooltip" title="At least, it will be when it's finished">comprehensive</span> guide to the practical and
-                whimsical applications of O-piece rotations in the Tetris series and Tetris-like stackers
+                A comprehensive guide to the practical and whimsical applications of O-piece rotations in the Tetris series and Tetris-like stackers
             </p>
         </header>
 
@@ -24,11 +23,12 @@
         <main>
             <section id="top">
                 <h4>
-                    Note: This guide is a work in progress. Some sections are missing or incomplete, and there may be some factual errors due to incomplete research.
+                    Note: This guide is a work in progress. Some sections are incomplete and there may be some errors.
                 </h4>
 
                 <p>
-                    Last Major Update: <strong>16/07/2024</strong> - Added Stardust Spin Rank guide
+                    Last Major Update: <strong>16/07/2024</strong> - Added Stardust Spin Rank guide <br />
+                    Last Minor Update: <strong>02/08/2024</strong> - Improved Tetris Effect IRS section
                 </p>
             </section>
 
@@ -69,7 +69,7 @@
                         <a href="#guideline">Guideline Tetris</a>
                         <ul>
                             <li><a href="#move-reset">Move-Reset Lock Delay</a></li>
-                            <li><a href="#irs">Tetris Effect and Initial Rotation</a></li>
+                            <li><a href="#effect-irs">Tetris Effect and Initial Rotation</a></li>
                             <li><a href="#ppt-overlap">Puyo Puyo Tetris and Stack Overlap "O-Spins"</a></li>
                             <li><a href="#stardust">Tetris Stardust and Actual O-Spins</a></li>
                             <li><a href="#guideline-notes">Useful Notes</a></li>
@@ -551,7 +551,7 @@
                 </ul>
             </section>
 
-            <section id="irs">
+            <section id="effect-irs">
                 <h3>Tetris Effect and Initial Rotation</h3>
 
                 <p>
@@ -564,30 +564,57 @@
                     </li>
                     <li>
                         Initial Rotation System (IRS), which allows you to spawn pieces in a pre-rotated state
-                        <ul>
-                            <li>
-                                Quite possibly one of the best things added to Tetris
-                            </li>
-                        </ul>
                     </li>
                 </ul>
 
                 <p>
-                    When using Zone to clear 20 <span class="tooltip" title="kirb your ultimatris">or more</span> lines at once, you have limited space to spawn and manoeuvre pieces without topping out and ending the zone. To prevent topping out prematurely, hold the rotation button on your active piece while placing it, which will activate IRS and spawn the next piece rotated in that direction.
+                    Note that IRS is a setting in the options menu that is turned off by default. You will need to set it to Type-A for it to be able to prevent top-outs in tight spaces.
                 </p>
 
                 <p>
-                    With most pieces, if your active piece is already in the desired rotation state and you are not already holding the appropriate rotation button, you must first perform a counter-rotation in the opposite direction to the required spawn state for the next piece, which will then allow you to rotate it back and hard-drop the piece while that rotation button is still held.
+                    In Tetris Effect, all pieces spawn with their lowest block on row 20. When your stack is at the top of your board, you have limited space to spawn and manoeuvre pieces without topping out. To prevent topping out, hold the rotation button on your active piece while placing it, which will activate IRS and spawn the next piece rotated in that direction. This is particularly useful for two situations:
+                </p>
+
+                <ul>
+                    <li>Surviving poor board states and/or a large number of garbage lines, allowing you to downstack</li>
+                    <li>Using Zone to clear 20 <span class="tooltip" title="kirb your ultimatris">or more</span> lines at once</li>
+                </ul>
+
+                <p>
+                    With most pieces, if your active piece is already in the desired rotation state and you are not already holding the appropriate rotation button, you will need to initialise the next piece's spawn state by performing a rotation in the opposite direction to the desired spawn state, then rotate it back while keeping the rotation button held down. This will then allow you drop the piece and spawn the next piece in its desired state.
                 </p>
 
                 <p>
-                    Thanks to its identical rotation states, the O-piece eliminates the need for the counter-rotation, thus making it the easiest piece to use with IRS.
+                    Because the O-piece has identical rotation states, you do not need to consider its current rotation state when placing it. Even if you are not currently holding a rotation button, you only need to perform a single rotation in the direction of the next piece's desired spawn state, which makes the O-piece the easiest piece to use with IRS.
                 </p>
 
                 <ul class="sources">
                     <li>
                         <a href="https://www.tetriseffect.game/2021/07/30/tetris-effect-advanced-techniques-community-guide/#HighZoneClears">
                             Tetris Effect Advanced Techniques Community Guide - High Zone Clears
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Kibi Byte</strong> -
+                        <a href="https://imgur.com/uT9nt1F">
+                            IRS spawn chart
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Kibi Byte</strong> -
+                        <a href="https://www.youtube.com/watch?v=TZM6qUjX180">
+                            Zone video guide
+                        </a>
+                        <ul>
+                            <li>
+                                The "outdated" warning refers to <a href="https://www.youtube.com/watch?v=9VOGdshcp6E">this amendment</a>, which is unrelated to IRS
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Misty</strong> -
+                        <a href="https://www.youtube.com/watch?v=Hza6rxKviiE">
+                            IRS video guide
                         </a>
                     </li>
                 </ul>
@@ -1024,7 +1051,10 @@
                         Tetris The Grand Master 3 (Classic Rule)
                         <ul>
                             <li>
-                                This game does have IRS, with the first TGM game introducing it to the series, but it also has a much longer piece entry delay. It's more useful to use IRS during this delay, unlike in Tetris Effect where it's only a few frames.
+                                This game does have IRS, with the first TGM game introducing it to the series, but unlike Tetris Effect, the TGM games only allow you to use IRS during piece entry delay. Buffering IRS with an O-piece rotation does not work here.
+                            </li>
+                            <li>
+                                World Rule uses move-reset lock delay, meaning O-piece rotations can be used to stall like in most Guideline games.
                             </li>
                         </ul>
                     </li>
