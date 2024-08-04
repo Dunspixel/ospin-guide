@@ -27,7 +27,7 @@
                 </h4>
 
                 <p>
-                    Last Major Update: <strong>16/07/2024</strong> - Added Stardust Spin Rank guide <br />
+                    Last Major Update: <strong>04/08/2024</strong> - Implemented proper ASC section <br />
                     Last Minor Update: <strong>02/08/2024</strong> - Improved T64 rotation centre visibility
                 </p>
             </section>
@@ -87,7 +87,7 @@
                     <li>
                         <a href="#stackers">Tetris-like Stackers</a>
                         <ul>
-                            <li><a href="#ascension">Ascension and its Extensive Wall Kicks</a></li>
+                            <li><a href="#asc">Ascension and its Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
                             <li><a href="#techmino">Techmino and Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO and All-Spin</a></li>
@@ -1622,26 +1622,273 @@
                 </p>
             </section>
 
-            <section id="ascension">
+            <section id="asc">
                 <h3>Ascension and its Extensive Wall Kicks</h3>
 
                 <p>
-                    While Ascension (<strong>ASC</strong>) features highly customisable pieces which allow you to play with any type of polymino that can fit in a 5x5 grid, I'll be describing things based on the default tetromino set. With that said, this game's O-Spin techniques should be generally applicable to any custom O-piece regardless of where you put its centre block as all pieces use the same offset table.
+                    While Ascension (ASC) features highly customisable pieces allowing you to play with any type of polymino that can fit in a 5x5 grid, I'll be describing things based on the default tetromino set. Also, I will use my bold text convention to distinguish the game (ASC) and its rotation system (<strong>ASC</strong>).
                 </p>
 
                 <p>
-                    <strong>ASC</strong> uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. In addition, because pieces are defined in a 5x5 area, the O-piece will always have a centre which allows it to move on rotation.
+                    <strong>ASC</strong> uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. These kicks can be combined with rotation movement to kick a piece up to three spaces downwards and/or in the opposite direction of rotation. The offset table follows this order:
+                </p>
+
+                <ul>
+                    <li>
+                        Basic rotation is always checked first. It's easy to look at the offset table and think that a kick should work, but the natural movement of the O-piece will always take priority.
+                    </li>
+                    <li>
+                        The offset table prioritises kicks in the "lower backward" corner - horizontal and downwards opposite the direction of rotation.
+                    </li>
+                    <li>
+                        Next, a forward kick and one space down from there is checked.
+                    </li>
+                    <li>
+                        Finally, the first upward kick is checked. This will always succeed if reached.
+                    </li>
+                </ul>
+
+                <p>
+                    I said before that <strong>ASC</strong>'s offset table defines 21 kicks. However, only 11 of these are actually applicable to the O-piece, and even then, most rotations don't have access to all of them. This is because of the kicks that only move the piece one space in a particular direction. For any rotation, one of these kicks will move the piece to its original position and therefore always succeed. The last of these is kick 11, hence why anything after this is irrelevant to the O-piece.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>0R&gt;</strong> and <strong>&lt;L2</strong> rotations can access the full range of 11 kicks. These are by far the most useful rotations for executing O-Spins.
+                    </li>
+                    <li>
+                        <strong>R2&gt;</strong> and <strong>&lt;2R</strong> rotations can access 9 kicks.
+                    </li>
+                    <li>
+                        <strong>2L&gt;</strong> and <strong>&lt;R0</strong> rotations can access 2 kicks.
+                    </li>
+                    <li>
+                        <strong>L0&gt;</strong> and <strong>&lt;0L</strong> rotations can only access 1 kick, which will move it back to its previous position (but in a new state).
+                    </li>
+                    <li>
+                        Rotation will never completely fail and will always at least result in a state change.
+                    </li>
+                    <li>
+                        ASC conveniently highlights the rotation centre of your active piece. In state <strong>0</strong>, this is the bottom-left block.
+                    </li>
+                </ul>
+
+                <p>
+                    Despite these "limitations", there is still huge potential for O-Spins, making this an incredibly fun rotation system for an O-Spin enthusiast like me. Plus, the limitations made the addition of an offset chart for this section feasible! Look at that rotational symmetry!
+                </p>
+
+                <div class="centre">
+                    <img src="img/asc_opiece_offset.png" alt="ASC O-Piece Offset Table" />
+                </div>
+
+                <p>
+                    Here are some setups and common situations with the possible rotations that can execute the desired kick.
                 </p>
 
                 <p>
-                    <span class="todo">TODO: Actually write this section</span>
+                    These diagonal kicks mostly work due to natural downward movement, with other rotations typically failing this kick either due to basic rotation or a lateral kick away from the wall.
                 </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F]</div>
+                        <div class="playfield-row">[G][G][F][O][O][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong>, <strong>&lt;L2</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                    </div>
+                </div>
+
+                <p>
+                    Unlike the previous setups, these only work when rotating in a single direction - away from the O-shaped hole. No wall on the other side of the O-piece is necessary to execute this kick with either rotation.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][O][O][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][F]</div>
+                        <div class="playfield-row">[G][F][F][O][O][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong></div>
+                    </div>
+                </div>
+
+                <p>
+                    Now things get <strong>really</strong> fun. Combining wall kicks with rotation state movement allows you to warp through a floor on your stack if there's an O-shaped hole underneath. As this isn't reversible due to kick limitations, you can even chain them together by going back to the previous state and repeating the rotation. Also, no walls are required either side of your O-piece for most of these!
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>&lt;L2</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][O][O][F][F][F]</div>
+                        <div class="playfield-row">[F][F][G][O][O][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>&lt;L2</strong></div>
+                    </div>
+                </div>
+
+                <p>
+                    Walls, much like floors, are only a suggestion in <strong>ASC</strong>. Unlike the floor warp though, these kicks are reversible, so chaining them together requires cycling through four additional rotations in the same direction.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][O][O][F]</div>
+                        <div class="playfield-row">[G][F][F][G][O][O][F]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>R2&gt;</strong></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[F][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[F][O][O][G][F][F][G]</div>
+                        <div class="playfield-row">[F][O][O][G][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><strong>&lt;2R</strong></div>
+                    </div>
+                </div>
 
                 <ul class="sources">
                     <li>
                         <a href="https://asc.winternebs.com/wiki">ASC Wiki</a>
                         <ul>
-                            <li>See the "Info" page for more information about <strong>ASC</strong> wall kicks</li>
+                            <li>
+                                See the "Info" page for more information about <strong>ASC</strong> wall kicks and a different offset chart
+                            </li>
                         </ul>
                     </li>
                 </ul>
