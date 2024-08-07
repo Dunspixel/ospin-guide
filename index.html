@@ -28,7 +28,7 @@
 
                 <p>
                     Latest Major Update: <strong>04/08/2024</strong> - Implemented proper ASC section <br />
-                    Latest Minor Update: <strong>05/08/2024</strong> - Added more setups to ASC section <br />
+                    Latest Minor Update: <strong>07/08/2024</strong> - Corrected move-reset error <br />
                     Latest Amendment: <strong>07/08/2024</strong>
                 </p>
             </section>
@@ -521,7 +521,11 @@
                 </p>
 
                 <p>
-                    Move-Reset Lock Delay, as implemented in most guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per piece.
+                    Move-Reset Lock Delay, as implemented in most guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per step. This means once your active piece reaches a floor, it can be moved or rotated up to 15 times before it is forced to lock, with these 15 resets replenishing when the piece moves down due to gravity or soft drop (for example, by moving down a staircase-like formation).
+                </p>
+
+                <p>
+                    Special thanks to <strong>DeeDeeEn</strong> for correcting this - I had originally believed it to be per-piece.
                 </p>
 
                 <p>
