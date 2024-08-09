@@ -28,7 +28,7 @@
 
                 <p>
                     Latest Major Update: <strong>09/08/2024</strong> - Improved general readability <br />
-                    Latest Minor Update: <strong>07/08/2024</strong> - Corrected move-reset error <br />
+                    Latest Minor Update: <strong>09/08/2024</strong> - Various small Chapter 4 additions <br />
                     Latest Amendment: <strong>09/08/2024</strong>
                 </p>
             </section>
@@ -1648,13 +1648,13 @@
 
                 <ul>
                     <li>
-                        <span class="state">0R&gt;</span> and <span class="state">&lt;L2</span> rotations can access the full range of 11 kicks. These are by far the most useful rotations for executing O-Spins.
+                        <span class="state">0R&gt;</span> and <span class="state">&lt;L2</span> rotations can access the full range of 11 kicks. These have the unique ability to floor warp and are by far the most useful rotations for executing O-Spins.
                     </li>
                     <li>
-                        <span class="state">R2&gt;</span> and <span class="state">&lt;2R</span> rotations can access 9 kicks.
+                        <span class="state">R2&gt;</span> and <span class="state">&lt;2R</span> rotations can access 9 kicks. These have the unique ability to wall warp.
                     </li>
                     <li>
-                        <span class="state">2L&gt;</span> and <span class="state">&lt;R0</span> rotations can access 2 kicks.
+                        <span class="state">2L&gt;</span> and <span class="state">&lt;R0</span> rotations can access 2 kicks and are mainly used to access states <span class="state">0</span> and <span class="state">L</span>.
                     </li>
                     <li>
                         <span class="state">L0&gt;</span> and <span class="state">&lt;0L</span> rotations can only access 1 kick, which will move it back to its previous position (but in a new state).
@@ -2053,7 +2053,11 @@
                 </p>
 
                 <p>
-                    Interestingly, the T transformations are defined slightly differently for LLL and RRR - the "T-Spin Mini" transformations only work when rotating in a specific direction. This is also true for the J and L pieces, whose different spin sequences have completely different use cases.
+                    Interestingly, the T transformations are defined slightly differently for LLL and RRR - the "T-Spin Mini" transformations only work when rotating in a specific direction. This is also true for the J and L pieces, whose different spin sequences have completely different use cases. As a general rule, the final rotation in the sequence is the rotation you would normally perform with the piece being transformed into.
+                </p>
+
+                <p>
+                    Each sequence for the S and Z pieces can access the same three transformations for each piece. If the O-piece is in a situation where it can transform into both, LRL will prioritise the Z transformation and RLR will prioritise the S transformation.
                 </p>
 
                 <p>
@@ -2061,7 +2065,7 @@
                 </p>
 
                 <p>
-                    My Lua reading skills are limited, but from what I understand (and confirmed by testing), these are all of the setups permitted by the O-Spin table in the order they are defined. Blocks coloured like the other pieces are for illustration purposes only - they show where the O-piece will kick to.
+                    After figuring out the code and testing each offset in the O-Spin offset table, these are all of the setups permitted by the in the order they are defined. Blocks coloured like the other pieces are for illustration purposes only - they show where the O-piece will kick to.
                 </p>
 
                 <div class="playfield-container">
@@ -2475,6 +2479,7 @@
                 <ul>
                     <li>T-Spins: Only recognises T-Spins as spins</li>
                     <li>All-Spin: Recognises spins for all pieces</li>
+                    <li>All-Mini: Like All-Spin, but spins other than T register as Mini spins</li>
                     <li>Stupid: Recognises every floor rotation as a "spin"</li>
                 </ul>
 
@@ -2483,11 +2488,11 @@
                 </p>
 
                 <p>
-                    The new online mode Zenith Tower and the upcoming Season 2 of Tetra League implement a slight variation of All-Spin - these are now recognised normally and will increase your back-to-back chain, but they register as Mini spins. In Zenith Tower specifically, activating The Magician will enable full All-Spins at the cost of punishing duplicate consecutive line clears.
+                    Offline modes use T-Spins by default (though this can be changed in Custom Games), while the new online mode Zenith Tower and the upcoming Season 2 of Tetra League use All-Mini by default. In Zenith Tower specifically, activating The Magician will enable full All-Spin at the cost of punishing duplicate consecutive line clears.
                 </p>
 
                 <p>
-                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <span class="system">SRS+</span>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows 22 and 23.
+                    O-Spins can still be executed when allowed spins is set to All-Spin or All-Mini, though it's still very impractical. This was probably intended for use with the game's other rotation system options, but it can actually be executed in <span class="system">SRS+</span>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows 22 and 23.
                 </p>
 
                 <p>
