@@ -23,13 +23,13 @@
         <main>
             <section id="top">
                 <h4>
-                    Note: This guide is a work in progress. Some sections are incomplete and there may be some errors.
+                    Note: This guide is a work in progress - some sections are incomplete and there may be errors.
                 </h4>
 
                 <p>
-                    Latest Major Update: <strong>04/08/2024</strong> - Implemented proper ASC section <br />
+                    Latest Major Update: <strong>09/08/2024</strong> - Improved general readability <br />
                     Latest Minor Update: <strong>07/08/2024</strong> - Corrected move-reset error <br />
-                    Latest Amendment: <strong>07/08/2024</strong>
+                    Latest Amendment: <strong>09/08/2024</strong>
                 </p>
             </section>
 
@@ -118,6 +118,16 @@
                 <p>
                     Before we begin, I'd like to discuss some concepts that will be useful to understand the techniques in this guide, then go on a brief rant about the semantics of the terms many people use to describe stacker games. If you don't care about that and just want to know some uses for O-piece rotations, you may want to skip to Chapter 2.
                 </p>
+
+                <p>
+                    I will use some conventions throughout the guide to highlight important information, which will be written in colour-coded text:
+                </p>
+
+                <ul>
+                    <li><span class="state">Yellow - states and rotations</span></li>
+                    <li><span class="system">Pink - rotation system abbreviations</span></li>
+                    <li><span class="credit">Green - credited people</span></li>
+                </ul>
             </section>
 
             <section id="rotation">
@@ -132,7 +142,7 @@
                 </p>
 
                 <p>
-                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "<strong>0R2L</strong>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state <strong>0</strong>, and rotating right (clockwise) changes to <strong>R</strong>, <strong>2</strong>, <strong>L</strong>, then back to <strong>0</strong>. Likewise, rotating left (anti-clockwise or counter-clockwise) from state <strong>0</strong> will cycle through states <strong>L</strong>, <strong>2</strong>, <strong>R</strong>, and <strong>0</strong>.
+                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "<span class="state">0R2L</span>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state <span class="state">0</span>, and rotating right (clockwise) changes to <span class="state">R</span>, <span class="state">2</span>, <span class="state">L</span>, then back to <span class="state">0</span>. Likewise, rotating left (anti-clockwise or counter-clockwise) from state <span class="state">0</span> will cycle through states <span class="state">L</span>, <span class="state">2</span>, <span class="state">R</span>, and <span class="state">0</span>.
                 </p>
 
                 <p>
@@ -141,34 +151,30 @@
 
                 <ul>
                     <li>
-                        A clockwise rotation from <strong>0</strong> to <strong>R</strong> is <strong>0R&gt;</strong>
+                        A clockwise rotation from <span class="state">0</span> to <span class="state">R</span> is <span class="state">0R&gt;</span>
                     </li>
                     <li>
-                        An anti-clockwise rotation from <strong>0</strong> to <strong>L</strong> is <strong>&lt;0L</strong>
+                        An anti-clockwise rotation from <span class="state">0</span> to <span class="state">L</span> is <span class="state">&lt;0L</span>
                     </li>
                     <li>
-                        A clockwise 180-degree rotation from <strong>0</strong> to <strong>2</strong> is <strong>0R2&gt;</strong>
+                        A clockwise 180-degree rotation from <span class="state">0</span> to <span class="state">2</span> is <span class="state">0R2&gt;</span>
                     </li>
                     <li>
-                        A single button 180-degree rotation from <strong>0</strong> to <strong>2</strong> is <strong>&lt;02&gt;</strong>
+                        A single button 180-degree rotation from <span class="state">0</span> to <span class="state">2</span> is <span class="state">&lt;02&gt;</span>
                     </li>
                 </ul>
 
                 <p>
-                    You may be wondering how a <strong>0R2&gt;</strong> rotation differs from a <strong>&lt;02&gt;</strong> rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
+                    You may be wondering how a <span class="state">0R2&gt;</span> rotation differs from a <span class="state">&lt;02&gt;</span> rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
                 </p>
 
                 <p>
-                    In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the Tetris Worlds implementation of the commonly used Super Rotation System, or <strong>SRS</strong> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state <strong>0</strong>), but an offset is applied to keep it in place when rotated. This may or may not be the case for implementations in other games, though.
-                </p>
-
-                <p>
-                    I will write states, rotations, and rotation system abbreviations in <strong>bold</strong> by convention.
+                    In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the Tetris Worlds implementation of the commonly used Super Rotation System, or <span class="system">SRS</span> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state <span class="state">0</span>), but an offset is applied to keep it in place when rotated. This may or may not be the case for implementations in other games, though.
                 </p>
 
                 <ul class="sources">
                     <li>
-                        <strong>SRS</strong> wiki pages:
+                        <span class="system">SRS</span> wiki pages:
                         <a href="https://harddrop.com/wiki/SRS">Hard Drop</a> |
                         <a href="https://tetris.wiki/Super_Rotation_System">TetrisWiki</a>
                     </li>
@@ -188,7 +194,7 @@
                 </p>
 
                 <p>
-                    In <strong>SRS</strong>, four alternative positions are checked if basic rotation fails, and the piece will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in <strong>SRS</strong>:
+                    In <span class="system">SRS</span>, four alternative positions are checked if basic rotation fails, and the piece will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in <span class="system">SRS</span>:
                 </p>
 
                 <div class="playfield-container">
@@ -211,7 +217,7 @@
                         <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>2</strong></div>
+                        <div class="playfield-caption">State <span class="state">2</span></div>
                     </div>
                 </div>
 
@@ -223,7 +229,7 @@
                         <div class="playfield-row">[G][F][T][F][F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;2R</strong> Rotation (fail)</div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span> Rotation (fail)</div>
                     </div>
                 </div>
 
@@ -293,20 +299,20 @@
 
                 <ul class="sources">
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://imgur.com/YUlBwTq">
-                            Puyo Puyo Tetris offset table visualisation
+                            Puyo Puyo Tetris offset chart
                         </a>
                         <ul>
                             <li>
-                                Includes <strong>SRS</strong> kicks and PPT-specific pentomino/O-piece kicks
+                                Includes <span class="system">SRS</span> kicks and PPT-specific pentomino/O-piece kicks
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <strong>bocifer</strong> -
+                        <span class="credit">bocifer</span> -
                         <a href="https://imgur.com/a/srs-rotations-bGwLQsi">
-                            <strong>SRS</strong> offset table visualisation
+                            <span class="system">SRS</span> offset charts
                         </a>
                         <ul>
                             <li>
@@ -497,7 +503,7 @@
                 </p>
 
                 <p>
-                    The most important feature of the Tetris Guideline is the aforementioned <strong>SRS</strong>, which it introduced to the Tetris series. We'll encounter a lot of rotation systems in this guide, but <strong>SRS</strong> is by far the one you'll see the most both in modern Tetris games and in Tetris-like stackers.
+                    The most important feature of the Tetris Guideline is the aforementioned <span class="system">SRS</span>, which it introduced to the Tetris series. We'll encounter a lot of rotation systems in this guide, but <span class="system">SRS</span> is by far the one you'll see the most both in modern Tetris games and in Tetris-like stackers.
                 </p>
 
                 <ul class="sources">
@@ -521,11 +527,7 @@
                 </p>
 
                 <p>
-                    Move-Reset Lock Delay, as implemented in most guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per step. This means once your active piece reaches a floor, it can be moved or rotated up to 15 times before it is forced to lock, with these 15 resets replenishing when the piece moves down due to gravity or soft drop (for example, by moving down a staircase-like formation).
-                </p>
-
-                <p>
-                    Special thanks to <strong>DeeDeeEn</strong> for correcting this - I had originally believed it to be per-piece.
+                    Move-Reset Lock Delay, as implemented in most guideline Tetris games, resets whenever the active piece is moved or rotated. Earlier guideline games such as Tetris Worlds and Tetris DS allow you to do this indefinitely, while later games impose a limit of 15 resets per step. This means once your active piece reaches a floor, it can be moved or rotated up to 15 times before it is forced to lock, with these 15 resets replenishing when the piece moves down due to gravity or soft drop. A staircase-like formation can be used to maximise the number of resets you can do with a single piece. (Special thanks to <span class="credit">DeeDeeEn</span> for correcting this - I originally believed the reset count was per piece)
                 </p>
 
                 <p>
@@ -545,7 +547,7 @@
                 </ul>
 
                 <p>
-                    If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with <strong>SRS</strong>. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to use when stalling.
+                    If your active piece is an O-piece, then all of this can be achieved by rotating it while it's on the floor. In tight areas, many pieces can wall kick to unexpected places when rotated, especially if you're less familiar with <span class="system">SRS</span>. Because the O-piece does not move on rotation in guideline Tetris games, it is the easiest and safest piece to use when stalling.
                 </p>
 
                 <ul class="sources">
@@ -578,7 +580,7 @@
                 </p>
 
                 <p>
-                    In Tetris Effect, all pieces spawn with their lowest block on row 20. When your stack is at the top of your board, you have limited space to spawn and manoeuvre pieces without topping out. To prevent topping out, hold a rotation button on your active piece while placing it, which will activate IRS and spawn the next piece rotated in that direction. This will cause the spawned piece to span fewer columns and is particularly useful for two situations:
+                    In Tetris Effect, all pieces spawn with their lowest block on row 20. When your stack is at the top of your board, you have limited space to spawn and manoeuvre pieces without topping out. To prevent topping out, hold a rotation button on your active piece while placing it, which will activate IRS and spawn the next piece rotated in that direction. This will cause the spawned piece to span fewer columns and is particularly useful for two types of situation:
                 </p>
 
                 <ul>
@@ -601,13 +603,13 @@
                         </a>
                     </li>
                     <li>
-                        <strong>Kibi Byte</strong> -
+                        <span class="credit">Kibi Byte</span> -
                         <a href="https://imgur.com/uT9nt1F">
                             IRS spawn chart
                         </a>
                     </li>
                     <li>
-                        <strong>Kibi Byte</strong> -
+                        <span class="credit">Kibi Byte</span> -
                         <a href="https://www.youtube.com/watch?v=TZM6qUjX180">
                             Zone video guide
                         </a>
@@ -618,7 +620,7 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>Misty</strong> -
+                        <span class="credit">Misty</span> -
                         <a href="https://www.youtube.com/watch?v=Hza6rxKviiE">
                             IRS video guide
                         </a>
@@ -634,7 +636,7 @@
                 </p>
 
                 <p>
-                    Puyo Puyo Tetris implements a slightly altered <strong>SRS</strong> offset table which defines wall kicks for the O-piece. This is because of the P pentomino used in the game's Party mode, which the O-piece derives an offset table from.
+                    Puyo Puyo Tetris implements a slightly altered <span class="system">SRS</span> offset table which defines wall kicks for the O-piece. This is because of the P pentomino used in the game's Party mode, which the O-piece derives an offset table from.
                 </p>
 
                 <p>
@@ -643,16 +645,12 @@
 
                 <ul>
                     <li>
-                        Take an O-piece out of hold in a situation where it would overlap with your stack - this won't top you out until the piece locks due to a PPT-specific bug
+                        Take an O-piece out of hold in a situation where it would overlap with your stack - this won't top you out until the piece locks due to a PPT-specific bug (special thanks to <span class="credit">Kitaru</span> for bringing the unhold glitch to my attention!)
                     </li>
                     <li>
                         In Fusion mode, use an O-piece to slowly break through a stack of Puyos into a double line clear and place another O-piece underneath a part of your stack before the line clear moves your stack into your O-piece
                     </li>
                 </ul>
-
-                <p>
-                    Special thanks to <strong>Kitaru</strong> for bringing the unhold glitch to my attention!
-                </p>
                     
                 <p>
                     Fusion mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the next piece which you can use at the same time.
@@ -675,11 +673,11 @@
                 </p>
 
                 <p>
-                    When the second O-piece spawns (or you take it out of hold), perform a <strong>0R&gt;</strong> rotation. You can then use the time spent by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
+                    When the second O-piece spawns (or you take it out of hold), perform a <span class="state">0R&gt;</span> rotation. You can then use the time spent by the first piece breaking through the puyo stack to move the second O-piece to the same place. You'll want to time it so the first piece reaches the bottom and clears the lines before the second piece is affected by gravity.
                 </p>
 
                 <p>
-                    When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When this happens, perform an <strong>&lt;R0</strong> rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
+                    When the lines are cleared, your second O-piece will be pushed into the ceiling (or the floor of the hole). When this happens, perform an <span class="state">&lt;R0</span> rotation and your O-piece will kick upwards, filling the hole and completing the O-Spin.
                 </p>
 
                 <div class="playfield-container">
@@ -714,7 +712,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> Rotation</div>
                     </div>
                 </div>
 
@@ -750,7 +748,7 @@
                         <div class="playfield-row">[F][F][F][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;R0</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
                     </div>
                 </div>
 
@@ -760,13 +758,13 @@
 
                 <ul class="sources">
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://www.youtube.com/watch?v=8B-gZr1T0YQ">
                             Pentomino commentary
                         </a>
                     </li>
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://www.youtube.com/watch?v=CRfV5csii5Y">
                             O-Spin demonstration
                         </a>
@@ -786,7 +784,7 @@
                 </p>
 
                 <p>
-                    Tetris Stardust primarily uses <strong>SRS</strong> just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states (though it does technically have four identical states). Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
+                    Tetris Stardust primarily uses <span class="system">SRS</span> just like any other guideline Tetris game, but there is a special case which allows the O-piece to wall kick. Unusually for a game with O-piece kicks, the O-piece doesn't actually move on normal rotation, nor does it have multiple distinct rotation states (though it does technically have four identical states). Instead, it checks the following conditions and bypasses basic rotation if the check succeeds:
                 </p>
 
                 <ul>
@@ -835,33 +833,33 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Setup</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Spin Rank C</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][O][O][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
                         <div class="playfield-caption">Spin Rank B</div>
                     </div>
                 </div>
@@ -872,36 +870,36 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Setup</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Spin Rank C</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
                         <div class="playfield-caption">Spin Rank A+</div>
                     </div>
                 </div>
@@ -912,36 +910,36 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Setup</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-caption">Spin Rank A</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][O][O][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
                         <div class="playfield-caption">Spin Rank A</div>
                     </div>
                 </div>
@@ -952,60 +950,60 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-caption">Setup</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-caption">Spin Rank A</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
-                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-caption">Spin Rank S</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-caption">Spin Rank S+</div>
                     </div>
                 </div>
@@ -1025,7 +1023,7 @@
                         <a href="https://tetris.wiki/Tetris_Stardust">TetrisWiki</a>
                     </li>
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://www.youtube.com/watch?v=vPQCdHB-nyU">
                             Tetris Stardust gameplay
                         </a>
@@ -1103,13 +1101,13 @@
                         <a href="https://tetris.wiki/Tetris_The_Absolute_The_Grand_Master_2">TetrisWiki</a>
                     </li>
                     <li>
-                        <strong>PetitPrince</strong> -
+                        <span class="credit">PetitPrince</span> -
                         <a href="https://tetris.wiki/TGM_Guide">
                             TGM Guide on TetrisWiki
                         </a>
                     </li>
                     <li>
-                        <strong>Steelix100</strong> -
+                        <span class="credit">Steelix100</span> -
                         <a href="https://tasvideos.org/6267S">
                             TGM2 T.A. Death TAS submission
                         </a>
@@ -1144,7 +1142,7 @@
                 </p>
 
                 <p>
-                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System (<strong>T64</strong>), as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-Spins.
+                    Anyway, Rotate Center activates what I call the Tetris 64 Rotation System (<span class="system">T64</span>), as it's not known to be used in any other Tetris game. This rotation system defines four distinct rotation states for every piece, including the O-piece. Because of this, the O-piece actually moves when rotated. When combined with Offset Turn and/or Double Turn, this can be used to execute genuine, developer-intended O-Spins.
                 </p>
 
                 <p>
@@ -1152,11 +1150,11 @@
                 </p>
 
                 <p>
-                    So I decided to lab and document <strong>T64</strong> (excluding the Bio Tetris polyminoes) myself, specifically for a guide about O-piece rotations.
+                    So I decided to lab and document <span class="system">T64</span> (excluding the Bio Tetris polyminoes) myself, specifically for a guide about O-piece rotations.
                 </p>
 
                 <p>
-                    Below is an offset chart for the O-piece in <strong>T64</strong>. The rotation states are in the middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each direction. The block outlined in black is the rotation centre.
+                    Below is an offset chart for the O-piece in <span class="system">T64</span>. The rotation states are in the middle, with basic rotations on either side. Then, each rotation has two possible wall kicks, one for each direction. The block outlined in black is the rotation centre.
                 </p>
 
                 <div class="centre">
@@ -1164,11 +1162,11 @@
                 </div>
 
                 <p>
-                    Fun Fact: While not relevant to the O-piece, the left kick will always be prioritised over the right kick if both would succeed. Because of the wall kick order, this game has a mirrored form of Mihara's Conspiracy, as seen in Arika Rotation System (<strong>ARS</strong>).
+                    Fun Fact: While not relevant to the O-piece, the left kick will always be prioritised over the right kick if both would succeed. Because of the wall kick order, this game has a mirrored form of Mihara's Conspiracy, as seen in Arika Rotation System (<span class="system">ARS</span>).
                 </p>
 
                 <p>
-                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in <strong>T64</strong> limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
+                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in <span class="system">T64</span> limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
                 </p>
 
                 <div class="playfield-container">
@@ -1177,7 +1175,7 @@
                         <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>0</strong>/<strong>L</strong></div>
+                        <div class="playfield-caption">State <span class="state">0</span>/<span class="state">L</span></div>
                     </div>
                 </div>
 
@@ -1187,7 +1185,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][D][O][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> or <strong>&lt;L2</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> or <span class="state">&lt;L2</span> Rotation</div>
                     </div>
                 </div>
 
@@ -1213,7 +1211,7 @@
 
                 <ul>
                     <li>
-                        With Offset Turn off, this can alternatively be performed with an <strong>L0R&gt;</strong> or <strong>&lt;L2R</strong> rotation.
+                        With Offset Turn off, this can alternatively be performed with an <span class="state">L0R&gt;</span> or <span class="state">&lt;L2R</span> rotation.
                     </li>
                 </ul>
 
@@ -1223,7 +1221,7 @@
                         <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>0</strong>/<strong>L</strong></div>
+                        <div class="playfield-caption">State <span class="state">0</span>/<span class="state">L</span></div>
                     </div>
                 </div>
 
@@ -1233,7 +1231,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][O][D][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> or <strong>&lt;L2</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> or <span class="state">&lt;L2</span> Rotation</div>
                     </div>
                 </div>
 
@@ -1259,7 +1257,7 @@
 
                 <ul>
                     <li>
-                        With Offset Turn off, this can alternatively be performed with a <strong>0R2&gt;</strong> or <strong>&lt;0L2</strong> rotation.
+                        With Offset Turn off, this can alternatively be performed with a <span class="state">0R2&gt;</span> or <span class="state">&lt;0L2</span> rotation.
                     </li>
                     <li>
                         Note how the rotation direction is the same as its mirrored setup.
@@ -1272,7 +1270,7 @@
                         <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>0</strong></div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
                     </div>
                 </div>
 
@@ -1282,7 +1280,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][D][D][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation (fail)</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> Rotation (fail)</div>
                     </div>
                 </div>
 
@@ -1292,7 +1290,7 @@
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][D][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>R2&gt;</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span> Rotation</div>
                     </div>
                 </div>
 
@@ -1317,8 +1315,12 @@
                 </div>
 
                 <ul>
-                    <li><strong>R2&gt;</strong> must be performed quickly to complete the <strong>0R2&gt;</strong> rotation.</li>
-                    <li>This can also be performed with a <strong>&lt;0L2</strong> rotation.</li>
+                    <li>
+                        <span class="state">R2&gt;</span> must be performed quickly to complete the <span class="state">0R2&gt;</span> rotation.
+                    </li>
+                    <li>
+                        This can also be performed with a <span class="state">&lt;0L2</span> rotation.
+                    </li>
                 </ul>
 
                 <div class="playfield-container">
@@ -1327,7 +1329,7 @@
                         <div class="playfield-row">[G][G][G][O][O][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>L</strong></div>
+                        <div class="playfield-caption">State <span class="state">L</span></div>
                     </div>
                 </div>
 
@@ -1337,7 +1339,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][D][D][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;L2</strong> rotation (fail)</div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span> rotation (fail)</div>
                     </div>
                 </div>
 
@@ -1347,7 +1349,7 @@
                         <div class="playfield-row">[G][G][G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][O][O][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][D][O][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;2R</strong> Rotation</div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span> Rotation</div>
                     </div>
                 </div>
 
@@ -1372,8 +1374,12 @@
                 </div>
 
                 <ul>
-                    <li><strong>&lt;2R</strong> must be performed quickly to complete the <strong>&lt;L2R</strong> rotation.</li>
-                    <li>This can also be performed with an <strong>L0R&gt;</strong> rotation.</li>
+                    <li>
+                        <span class="state">&lt;2R</span> must be performed quickly to complete the <span class="state">&lt;L2R</span> rotation.
+                    </li>
+                    <li>
+                        This can also be performed with an <span class="state">L0R&gt;</span> rotation.
+                    </li>
                 </ul>
 
                 <p>
@@ -1381,87 +1387,87 @@
                 </p>
 
                 <p>
-                    However, chaining O-Spins is tricky. Trying to do this like you can in some modern stackers won't work as there are no wall kicks that can move the O-piece vertically. Instead, you need to rely on the <strong>R</strong> and <strong>2</strong> rotation states being one row lower than the other two. This means repeating and following the above setups won't allow you to chain spins together as the rotation will either fail or cause the piece to move back to where it was before the first rotation.
+                    However, chaining O-Spins is tricky. Trying to do this like you can in some modern stackers won't work as there are no wall kicks that can move the O-piece vertically. Instead, you need to rely on the <span class="state">R</span> and <span class="state">2</span> rotation states being one row lower than the other two. This means repeating and following the above setups won't allow you to chain spins together as the rotation will either fail or cause the piece to move back to where it was before the first rotation.
                 </p>
 
                 <p>
-                    To get around this, you'll need to create a space above subsequent kick setups, allowing you to rotate the piece back into the <strong>0</strong> or <strong>L</strong> state before performing another wall kick.
+                    To get around this, you'll need to create a space above subsequent kick setups, allowing you to rotate the piece back into the <span class="state">0</span> or <span class="state">L</span> state before performing another wall kick.
                 </p>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][O][O][F][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">State <strong>0</strong></div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][O][O][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][O][O][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][O][O][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][O][O][F][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][F][O][O][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][F][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][O][O][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][O][O][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
                         <div class="playfield-caption">Move here</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][F][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;R0</strong> Rotation</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][F][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][O][O][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][O][O][F][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">Soft Drop/Gravity</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][O][O][F][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
+                        <div class="playfield-caption">Move Down</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][F][F][F][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][O][O][G][G][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][O][O][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong> Rotation</div>
+                        <div class="playfield-row">[F][F][F][F][F][F][F][F]</div>
+                        <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][F][F][G][F][F][G][G]</div>
+                        <div class="playfield-row">[G][F][F][F][F][F][G][G]</div>
+                        <div class="playfield-row">[G][G][F][F][F][O][O][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][O][O][G]</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> Rotation</div>
                     </div>
                 </div>
 
                 <p>
-                    With enough setups like this, something like the setup below should be theoretically possible, allowing one to perform eight O-Spins before clearing an O-Spin Single. I'd love to see a TAS which creates and executes it.
+                    With enough chains, something like the setup below should be theoretically possible, allowing one to perform eight O-Spins before clearing an O-Spin Single. I'd love to see a TAS which creates and executes it.
                 </p>
 
                 <div class="playfield-container">
@@ -1490,36 +1496,18 @@
                     </div>
                 </div>
 
-                <div class="playfield-container">
-                    <div class="playfield">
-                        <div class="playfield-row">[F][F][F][F][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[F][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-row">[F][F][F][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-row">[F][F][F][F][F][F][G][F][F][G]</div>
-                        <div class="playfield-row">[G][G][F][F][F][F][F][F][F][G]</div>
-                        <div class="playfield-row">[G][G][G][G][G][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][G][G][G][G][G][G][G][F][F]</div>
-                        <div class="playfield-row">[G][G][G][G][F][F][G][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][G][F][F][F][F][F][F]</div>
-                        <div class="playfield-row">[G][F][F][F][F][F][F][F][G][G]</div>
-                        <div class="playfield-row">[F][F][F][F][F][G][G][G][G][G]</div>
-                        <div class="playfield-row">[F][F][G][G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption">Old version</div>
-                    </div>
-                </div>
-
                 <p>
                     Yeah, my brain is just like that sometimes.
                 </p>
 
                 <ul class="sources">
                     <li>
-                        <strong>T64</strong> wiki pages:
+                        <span class="system">T64</span> wiki pages:
                         <a href="https://harddrop.com/wiki/Tetris_64_Rotation">Hard Drop</a> |
                         <a href="https://tetris.wiki/Tetris_64_Rotation">TetrisWiki</a>
                     </li>
                     <li>
-                        <strong>ARS</strong> wiki pages:
+                        <span class="system">ARS</span> wiki pages:
                         <a href="https://harddrop.com/wiki/ARS">Hard Drop</a> |
                         <a href="https://tetris.wiki/Arika_Rotation_System">TetrisWiki</a>
                         <ul>
@@ -1527,7 +1515,7 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://www.youtube.com/watch?v=jgs9f24hzok">
                             Tetris 64 gameplay
                         </a>
@@ -1556,7 +1544,7 @@
                         </a>
                     </li>
                     <li>
-                        <strong>Lilla Oshisaure</strong> -
+                        <span class="credit">Lilla Oshisaure</span> -
                         <a href="https://www.youtube.com/watch?v=EzXArm11sYo">
                             OT-Spin Triple demonstration
                         </a>
@@ -1572,7 +1560,7 @@
                 </p>
 
                 <p>
-                    Compared to more recent entries, older Tetris games use very primitive rotation systems. This section will likely apply to any Tetris game with rotation SFX and no wall kicks, but I'll use Nintendo Rotation System (<strong>NRS</strong>), as seen in NES and Game Boy Tetris, to illustrate audio cues. The rotation SFX and lack of wall kicks in these games can be used while blindfolded to determine what your active piece is, at least to some extent.
+                    Compared to more recent entries, older Tetris games use very primitive rotation systems. This section will likely apply to any Tetris game with rotation SFX and no wall kicks, but I'll use Nintendo Rotation System (<span class="system">NRS</span>), as seen in NES and Game Boy Tetris, to illustrate audio cues. The rotation SFX and lack of wall kicks in these games can be used while blindfolded to determine what your active piece is, at least to some extent.
                 </p>
 
                 <p>
@@ -1581,13 +1569,13 @@
 
                 <ul>
                     <li>
-                        Perform a <strong>&lt;0L</strong> rotation, DAS to the left wall, then attempt an <strong>L0&gt;</strong> rotation. If the <strong>L0&gt;</strong> rotation succeeds, there is a 100% chance you have an O-piece. Yay!
+                        Perform a <span class="state">&lt;0L</span> rotation, DAS to the left wall, then attempt an <span class="state">L0&gt;</span> rotation. If the <span class="state">L0&gt;</span> rotation succeeds, there is a 100% chance you have an O-piece. Yay!
                     </li>
                     <li>
-                        If the <strong>L0&gt;</strong> rotation fails, move one column to the right and try again. If this still fails, there is a 100% chance you have an I-piece.
+                        If the <span class="state">L0&gt;</span> rotation fails, move one column to the right and try again. If this still fails, there is a 100% chance you have an I-piece.
                     </li>
                     <li>
-                        If the second <strong>L0&gt;</strong> rotation succeeds, perform a <strong>0R&gt;</strong> rotation (this will always succeed), then attempt to move the piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50% chance you have a Z-piece.
+                        If the second <span class="state">L0&gt;</span> rotation succeeds, perform a <span class="state">0R&gt;</span> rotation (this will always succeed), then attempt to move the piece 1 column to the left. If this movement succeeds, then there is a 50% chance you have an S-piece and a 50% chance you have a Z-piece.
                     </li>
                     <li>
                         If the movement fails, there is a 33% chance you have a J-piece, a 33% chance you have an L-piece, and a 33% chance you have a T-piece.
@@ -1598,7 +1586,7 @@
                 </ul>
 
                 <p>
-                    GB Tetris instead uses a mirrored, "left-handed" version of <strong>NRS</strong>, but the above still applies if all movements and rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
+                    GB Tetris instead uses a mirrored, "left-handed" version of <span class="system">NRS</span>, but the above still applies if all movements and rotations are mirrored. Beware its 18-height playfield, which will give you less time to determine your piece.
                 </p>
 
                 <p>
@@ -1607,7 +1595,7 @@
 
                 <ul class="sources">
                     <li>
-                        <strong>NRS</strong> wiki pages:
+                        <span class="system">NRS</span> wiki pages:
                         <a href="https://harddrop.com/wiki/Nintendo_Rotation_System">Hard Drop</a> |
                         <a href="https://tetris.wiki/Nintendo_Rotation_System">TetrisWiki</a>
                     </li>
@@ -1632,11 +1620,11 @@
                 <h3>Ascension and its Extensive Wall Kicks</h3>
 
                 <p>
-                    While Ascension (ASC) features highly customisable pieces allowing you to play with any type of polymino that can fit in a 5x5 grid, I'll be describing things based on the default tetromino set. Also, I will use my bold text convention to distinguish the game (ASC) and its rotation system (<strong>ASC</strong>).
+                    While Ascension (ASC) features highly customisable pieces allowing you to play with any type of polymino that can fit in a 5x5 grid, I'll be describing things based on the default tetromino set. Also, I will use my text convention to distinguish the game (ASC) and its rotation system (<span class="system">ASC</span>).
                 </p>
 
                 <p>
-                    <strong>ASC</strong> uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. These kicks can be combined with rotation movement to kick a piece up to three spaces downwards and/or in the opposite direction of rotation. The offset table follows this order:
+                    <span class="system">ASC</span> uses an offset table which defines a massive 21 wall kicks for when basic rotation fails. These kicks can be combined with rotation movement to kick a piece up to three spaces downwards and/or in the opposite direction of rotation. The offset table follows this order:
                 </p>
 
                 <ul>
@@ -1655,27 +1643,30 @@
                 </ul>
 
                 <p>
-                    I said before that <strong>ASC</strong>'s offset table defines 21 kicks. However, only 11 of these are actually applicable to the O-piece, and even then, most rotations don't have access to all of them. This is because of the kicks that only move the piece one space in a particular direction. For any rotation, one of these kicks will move the piece to its original position and therefore always succeed. The last of these is kick 11, hence why anything after this is irrelevant to the O-piece.
+                    I said before that <span class="system">ASC</span>'s offset table defines 21 kicks. However, only 11 of these are actually applicable to the O-piece, and even then, most rotations don't have access to all of them. This is because of the kicks that only move the piece one space in a particular direction. For any rotation, one of these kicks will move the piece to its original position and therefore always succeed. The last of these is kick 11, hence why anything after this is irrelevant to the O-piece.
                 </p>
 
                 <ul>
                     <li>
-                        <strong>0R&gt;</strong> and <strong>&lt;L2</strong> rotations can access the full range of 11 kicks. These are by far the most useful rotations for executing O-Spins.
+                        <span class="state">0R&gt;</span> and <span class="state">&lt;L2</span> rotations can access the full range of 11 kicks. These are by far the most useful rotations for executing O-Spins.
                     </li>
                     <li>
-                        <strong>R2&gt;</strong> and <strong>&lt;2R</strong> rotations can access 9 kicks.
+                        <span class="state">R2&gt;</span> and <span class="state">&lt;2R</span> rotations can access 9 kicks.
                     </li>
                     <li>
-                        <strong>2L&gt;</strong> and <strong>&lt;R0</strong> rotations can access 2 kicks.
+                        <span class="state">2L&gt;</span> and <span class="state">&lt;R0</span> rotations can access 2 kicks.
                     </li>
                     <li>
-                        <strong>L0&gt;</strong> and <strong>&lt;0L</strong> rotations can only access 1 kick, which will move it back to its previous position (but in a new state).
+                        <span class="state">L0&gt;</span> and <span class="state">&lt;0L</span> rotations can only access 1 kick, which will move it back to its previous position (but in a new state).
+                    </li>
+                    <li>
+                        There are 180-degree rotations, but they do not kick.
                     </li>
                     <li>
                         Rotation will never completely fail and will always at least result in a state change.
                     </li>
                     <li>
-                        ASC conveniently highlights the rotation centre of your active piece. In state <strong>0</strong>, this is the bottom-left block.
+                        ASC conveniently highlights the rotation centre of your active piece. In state <span class="state">0</span>, this is the bottom-left block.
                     </li>
                 </ul>
 
@@ -1702,7 +1693,9 @@
                         <div class="playfield-row">[F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[F][F][O][O][F][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                        <div class="playfield-caption">
+                            <span class="state">0R&gt;</span>, <span class="state">&lt;L2</span>, <span class="state">&lt;2R</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1713,7 +1706,9 @@
                         <div class="playfield-row">[G][G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][G][F][O][O][F][F]</div>
                         <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong>, <strong>&lt;L2</strong></div>
+                        <div class="playfield-caption">
+                            <span class="state">0R&gt;</span>, <span class="state">R2&gt;</span>, <span class="state">&lt;L2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1724,7 +1719,9 @@
                         <div class="playfield-row">[F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                        <div class="playfield-caption">
+                            <span class="state">0R&gt;</span>, <span class="state">&lt;L2</span>, <span class="state">&lt;2R</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1735,7 +1732,9 @@
                         <div class="playfield-row">[G][G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong>, <strong>&lt;L2</strong></div>
+                        <div class="playfield-caption">
+                            <span class="state">0R&gt;</span>, <span class="state">R2&gt;</span>, <span class="state">&lt;L2</span>
+                        </div>
                     </div>
                 </div>
 
@@ -1750,7 +1749,7 @@
                         <div class="playfield-row">[F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[F][F][O][O][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span>, <span class="state">&lt;2R</span></div>
                     </div>
                 </div>
 
@@ -1761,7 +1760,7 @@
                         <div class="playfield-row">[G][G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][F][F][O][O][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span>, <span class="state">R2&gt;</span></div>
                     </div>
                 </div>
 
@@ -1772,7 +1771,7 @@
                         <div class="playfield-row">[F][F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;L2</strong>, <strong>&lt;2R</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span>, <span class="state">&lt;2R</span></div>
                     </div>
                 </div>
 
@@ -1783,7 +1782,7 @@
                         <div class="playfield-row">[G][G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>R2&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span>, <span class="state">R2&gt;</span></div>
                     </div>
                 </div>
 
@@ -1799,7 +1798,7 @@
                         <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span></div>
                     </div>
                 </div>
 
@@ -1811,7 +1810,7 @@
                         <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span></div>
                     </div>
                 </div>
 
@@ -1823,7 +1822,7 @@
                         <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G][G][G]</div>
-                        <div class="playfield-caption"><strong>0R&gt;</strong>, <strong>&lt;L2</strong></div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span>, <span class="state">&lt;L2</span></div>
                     </div>
                 </div>
 
@@ -1835,7 +1834,7 @@
                         <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G][G]</div>
-                        <div class="playfield-caption"><strong>&lt;L2</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span></div>
                     </div>
                 </div>
 
@@ -1847,12 +1846,12 @@
                         <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;L2</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span></div>
                     </div>
                 </div>
 
                 <p>
-                    Walls, much like floors, are only a suggestion in <strong>ASC</strong>. The first two of these kicks (only moving the piece horizontally) are actually reversible, and unlike floor warps they require cycling through four rotations in the same direction to chain together.
+                    Walls, much like floors, are only a suggestion in <span class="system">ASC</span>. The first two of these kicks (only moving the piece horizontally) are actually reversible, and unlike floor warps they require cycling through four rotations in the same direction to chain together.
                 </p>
 
                 <div class="playfield-container">
@@ -1862,7 +1861,7 @@
                         <div class="playfield-row">[G][G][G][G][F][F][F]</div>
                         <div class="playfield-row">[G][F][F][G][O][O][F]</div>
                         <div class="playfield-row">[G][F][F][G][O][O][F]</div>
-                        <div class="playfield-caption"><strong>R2&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span></div>
                     </div>
                 </div>
 
@@ -1873,7 +1872,7 @@
                         <div class="playfield-row">[F][F][F][G][G][G][G]</div>
                         <div class="playfield-row">[F][O][O][G][F][F][G]</div>
                         <div class="playfield-row">[F][O][O][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;2R</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span></div>
                     </div>
                 </div>
 
@@ -1884,7 +1883,7 @@
                         <div class="playfield-row">[G][G][G][G][O][O][F]</div>
                         <div class="playfield-row">[G][F][F][G][O][O][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>R2&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span></div>
                     </div>
                 </div>
 
@@ -1895,7 +1894,7 @@
                         <div class="playfield-row">[F][O][O][G][G][G][G]</div>
                         <div class="playfield-row">[F][O][O][G][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;2R</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span></div>
                     </div>
                 </div>
 
@@ -1906,7 +1905,7 @@
                         <div class="playfield-row">[G][G][G][G][O][O][F]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G][G]</div>
-                        <div class="playfield-caption"><strong>R2&gt;</strong></div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span></div>
                     </div>
                 </div>
 
@@ -1917,7 +1916,7 @@
                         <div class="playfield-row">[F][O][O][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][G][F][F][G]</div>
-                        <div class="playfield-caption"><strong>&lt;2R</strong></div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span></div>
                     </div>
                 </div>
 
@@ -1928,7 +1927,7 @@
                         </a>
                         <ul>
                             <li>
-                                See the "Info" page for more information about <strong>ASC</strong> wall kicks and a different offset chart by <strong>cosin307</strong>
+                                See the "Info" page for more information about <span class="system">ASC</span> wall kicks and a different offset chart by <span class="credit">cosin307</span>
                             </li>
                         </ul>
                     </li>
@@ -1939,18 +1938,18 @@
                     </li>
                 </ul>
 
-                <h4><a href="https://asc.winternebs.com/">ASC</a> by winterNebs</h4>
+                <h4><a href="https://asc.winternebs.com/">ASC</a> by <span class="credit">winterNebs</span></h4>
             </section>
 
             <section id="nuketris">
                 <h3>Nuketris and Worm Mode</h3>
 
                 <p>
-                    Nuketris primarily uses the <strong>SRS-X</strong> rotation system first used in Heboris Unofficial Expansion, and later Nullpomino. <strong>SRS-X</strong> works exactly like <strong>SRS</strong> when rotating 90 degrees, but it has an extensive 180-degree offset table that defines 11 wall kicks for each rotation (as opposed to the 4 wall kicks for the 90-degree rotations).
+                    Nuketris primarily uses the <span class="system">SRS-X</span> rotation system first used in Heboris Unofficial Expansion, and later Nullpomino. <span class="system">SRS-X</span> works exactly like <span class="system">SRS</span> when rotating 90 degrees, but it has an extensive 180-degree offset table that defines 11 wall kicks for each rotation (as opposed to the 4 wall kicks for the 90-degree rotations).
                 </p>
 
                 <p>
-                    Unlike the original <strong>SRS-X</strong> however, the O-piece rotation states have been modified so it now has four distinct states. The O-piece starts with its rotation centre at the bottom-right block, and will move on rotation. It can then kick using the same offset table as the rest of the pieces, with the exception of the I-piece which uses its own table.
+                    Unlike the original <span class="system">SRS-X</span> however, the O-piece rotation states have been modified so it now has four distinct states. The O-piece starts with its rotation centre at the bottom-right block, and will move on rotation. It can then kick using the same offset table as the rest of the pieces, with the exception of the I-piece which uses its own table.
                 </p>
 
                 <p>
@@ -1970,7 +1969,7 @@
                 </div>
 
                 <p>
-                    There are some 90-degree kicks here that move the O-piece back to its original position. These kicks are guaranteed to succeed, so any kicks defined after them are completely inaccessible. <strong>0R&gt;</strong>, <strong>&lt;R0</strong>, <strong>2L&gt;</strong>, and <strong>&lt;L2</strong> rotations are only useful for changing the rotation state because of this.
+                    There are some 90-degree kicks here that move the O-piece back to its original position. These kicks are guaranteed to succeed, so any kicks defined after them are completely inaccessible. <span class="state">0R&gt;</span>, <span class="state">&lt;R0</span>, <span class="state">2L&gt;</span>, and <span class="state">&lt;L2</span> rotations are only useful for changing the rotation state because of this.
                 </p>
 
                 <p>
@@ -2001,7 +2000,7 @@
                 </div>
 
                 <p>
-                    Each state and rotation has use cases that make them useful, though generally speaking, the <strong>0</strong> and <strong>R</strong> states have more desirable kicks. States can also be divided into pairs, as the <strong>0</strong>/<strong>R</strong> ("upper") and <strong>2</strong>/<strong>L</strong> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations between them that switch states without moving the piece.
+                    Each state and rotation has use cases that make them useful, though generally speaking, the <span class="state">0</span> and <span class="state">R</span> states have more desirable kicks. States can also be divided into pairs, as the <span class="state">0</span>/<span class="state">R</span> ("upper") and <span class="state">2</span>/<span class="state">L</span> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations between them that switch states without moving the piece.
                 </p>
                 
                 <p><span class="todo">TODO: Worm Guide Part 2 - Use cases for each state and rotation</span></p>
@@ -2012,7 +2011,7 @@
                     </li>
                     <li>
                         <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
-                            Tetrisconcept forum post about <strong>SRS-X</strong> 180 degree rotations
+                            Tetrisconcept forum post about <span class="system">SRS-X</span> 180 degree rotations
                         </a>
                     </li>
                     <li>
@@ -2025,14 +2024,14 @@
                     </li>
                 </ul>
 
-                <h4><a href="https://nuketris.com/">Nuketris</a> by nukeexplosions</h4>
+                <h4><a href="https://nuketris.com/">Nuketris</a> by <span class="credit">nukeexplosions</span></h4>
             </section>
 
             <section id="techmino">
                 <h3>Techmino and Transformative O-Spins</h3>
 
                 <p>
-                    Techmino Rotation System (<strong>TRS</strong>) functions mostly like <strong>SRS</strong>, but with several changed/added wall kicks and new mechanics. One of these mechanics is how O-pieces behave when you perform very specific rotation sequences in certain situations - it transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
+                    Techmino Rotation System (<span class="system">TRS</span>) functions mostly like <span class="system">SRS</span>, but with several changed/added wall kicks and new mechanics. One of these mechanics is how O-pieces behave when you perform very specific rotation sequences in certain situations - it transforms into other pieces and can be used to execute spins which the game registers as O-Spins.
                 </p>
 
                 <p>
@@ -2449,24 +2448,24 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>NOT_A_ROBOT</strong> -
-                        <a href="https://techmino-hub.vercel.app/faq">
+                        <span class="credit">NOT_A_ROBOT</span> -
+                        <a href="https://techmino-hub.vercel.app/faq#o-spins">
                             Techmino Hub FAQ
                         </a>
                         <ul>
-                            <li>O-Spin section written by <strong>C29H25N3O5</strong></li>
+                            <li>O-Spin section written by <span class="credit">C29H25N3O5</span></li>
                         </ul>
                     </li>
                 </ul>
 
-                <h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by 26F Studio</h4>
+                <h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by <span class="credit">26F Studio</span></h4>
             </section>
 
             <section id="tetrio">
                 <h3>TETR.IO and All-Spin</h3>
 
                 <p>
-                    While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from the previously mentioned stalling techniques) with the game's default rotation system, <strong>SRS+</strong>. However, there are a few fun things you can do with them.
+                    While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from the previously mentioned stalling techniques) with the game's default rotation system, <span class="system">SRS+</span>. However, there are a few fun things you can do with them.
                 </p>
 
                 <p>
@@ -2488,7 +2487,7 @@
                 </p>
 
                 <p>
-                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <strong>SRS+</strong>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows 22 and 23.
+                    O-Spins can still be executed when allowed spins is set to "All-Spin", though it's still very impractical. This was probably intended for use with the game's other rotation system options based on other stacker games, but it can actually be executed in <span class="system">SRS+</span>, too. If an O-shaped hole is pushed up to the exact location where the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows 22 and 23.
                 </p>
 
                 <p>
@@ -2532,7 +2531,7 @@
                 </div>
 
                 <p>
-                    Special thanks to <strong>KonSola5</strong> for explaining this setup to me and finding a video source!
+                    Special thanks to <span class="credit">KonSola5</span> for explaining this setup to me and finding a video source!
                 </p>
 
                 <p>
@@ -2546,18 +2545,18 @@
                         </a>
                     </li>
                     <li>
-                        <strong>Laz</strong> and <strong>Kivalier</strong> -
+                        <span class="credit">Laz</span> and <span class="credit">Kivalier</span> -
                         <a href="https://cdn.discordapp.com/attachments/696095920248455229/929273538815356958/OSD.mp4?ex=66abe02c&is=66aa8eac&hm=2381ef3138cda822ec2a1364f9bd945b6e9addcbc7fb9e77b0a52a6a02ec6dcb&">
                             O-Spin Double survival demonstration
                         </a>
                         <ul>
-                            <li>Shared by <strong>ZaptorZap</strong> on the TETR.IO Discord Server</li>
+                            <li>Shared by <span class="credit">ZaptorZap</span> on the TETR.IO Discord Server</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>J4mi5on</strong> -
+                        <span class="credit">J4mi5on</span> -
                         <a href="https://www.reddit.com/r/Tetris/comments/xrn8nt/o_spin_demonstration_with_srs/">
-                            O-Spin demonstration with <strong>SRS+</strong> and All-Spin
+                            O-Spin demonstration with <span class="system">SRS+</span> and All-Spin
                         </a>
                     </li>
                     <li>
@@ -2571,7 +2570,7 @@
                     </li>
                 </ul>
 
-                <h4><a href="https://tetr.io/">TETR.IO</a> by osk</h4>
+                <h4><a href="https://tetr.io/">TETR.IO</a> by <span class="credit">osk</span></h4>
             </section>
 
             <section id="jstris">
@@ -2582,7 +2581,7 @@
                 </p>
 
                 <p>
-                    Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece can utilise 16 wall kicks instead of the 4 possible in <strong>SRS</strong> (the default in Jstris). Second, it permits two absolutely ridiculous O-Spins.
+                    Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece can utilise 16 wall kicks instead of the 4 possible in <span class="system">SRS</span> (the default in Jstris). Second, it permits two absolutely ridiculous O-Spins.
                 </p>
 
                 <p>
@@ -2610,13 +2609,13 @@
                         <a href="https://tetris.wiki/Jstris">TetrisWiki</a>
                     </li>
                     <li>
-                        <strong>QuickandSmart</strong> -
+                        <span class="credit">QuickandSmart</span> -
                         <a href="https://jstris.jezevec10.com/replay/live/241422831">
                             O-Spin Quadruple demonstration
                         </a>
                     </li>
                     <li>
-                        <strong>阿嘿卡鷗</strong> -
+                        <span class="credit">阿嘿卡鷗</span> -
                         <a href="https://www.youtube.com/watch?v=-doMK_NAeqw">
                             Tetris Friends O-Spin meme
                         </a>
@@ -2627,7 +2626,7 @@
                     </li>
                 </ul>
 
-                <h4><a href="https://jstris.jezevec10.com/">Jstris</a> by jezevec10</h4>
+                <h4><a href="https://jstris.jezevec10.com/">Jstris</a> by <span class="credit">jezevec10</span></h4>
             </section>
 
             <hr />

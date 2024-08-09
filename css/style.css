@@ -7,7 +7,7 @@
 *
 {
     font-family: "Quicksand";
-    color: #ECD8FF;
+    color: #F4DCFF;
 }
 
 html
@@ -28,9 +28,58 @@ header, footer
     text-align: center;
 }
 
+nav
+{
+    font-weight: bold;
+}
+
+nav ol, nav ol li
+{
+    list-style: decimal;
+}
+
+h1
+{
+    font-size: 36px;
+    color: #DCB4FF;
+}
+
+h2
+{
+    font-size: 28px;
+    color: #DCB4FF;
+}
+
+h3
+{
+    font-size: 22px;
+    color: #DCB4FF;
+}
+
+h4
+{
+    font-size: 18px;
+}
+
+p
+{
+    font-size: 16px;
+}
+
 a, a *
 {
-    color: #BEA6F4;
+    color: #BCB6FF;
+}
+
+li
+{
+    font-size: 16px;
+    padding-bottom: 6px;
+}
+
+li ul
+{
+    padding-top: 6px;
 }
 
 img
@@ -43,9 +92,27 @@ img
     border-bottom: 1px dotted;
 }
 
-.sources
+.state
 {
-    list-style-type: square;
+    font-weight: 650;
+    color: #FFECD8;
+}
+
+.system
+{
+    font-weight: 650;
+    color: #FFC0E6;
+}
+
+.credit
+{
+    font-weight: 650;
+    color: #F0FFF6;
+}
+
+.sources, .sources li
+{
+    list-style: square;
 }
 
 .inline-end
