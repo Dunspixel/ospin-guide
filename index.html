@@ -28,7 +28,7 @@
 
                 <p>
                     Latest Major Update: <strong>09/08/2024</strong> - Improved general readability <br />
-                    Latest Minor Update: <strong>10/08/2024</strong> - Grouped contributors with sources <br />
+                    Latest Minor Update: <strong>10/08/2024</strong> - Added state-agnostic rotation convention <br />
                     Latest Amendment: <strong>10/08/2024</strong>
                 </p>
             </section>
@@ -124,7 +124,8 @@
                 </p>
 
                 <ul>
-                    <li><span class="state">Yellow - states and rotations</span></li>
+                    <li><span class="state">Yellow - states and state-dependent rotations</span></li>
+                    <li><span class="nostate">Blue - state-agnostic rotations</span></li>
                     <li><span class="system">Pink - rotation system abbreviations</span></li>
                     <li><span class="credit">Green - credited people</span></li>
                 </ul>
@@ -146,7 +147,7 @@
                 </p>
 
                 <p>
-                    I will describe specific rotations (i.e. those where the rotation state is relevant) as combinations of the above rotation states, with an arrow to indicate direction. For example:
+                    I will describe state-dependent rotations (i.e. those where the rotation state is relevant) as combinations of the above rotation states, with an arrow to indicate direction. For example:
                 </p>
 
                 <ul>
@@ -167,6 +168,16 @@
                 <p>
                     You may be wondering how a <span class="state">0R2&gt;</span> rotation differs from a <span class="state">&lt;02&gt;</span> rotation. There's actually one game in this guide that implements 180-degree rotations like those featured in the Puyo Puyo series, where you can flip a piece by quickly double-tapping a rotation button in a tight space. Rotations like these technically work differently from 180-degree rotations triggered by a single button press, hence the different notation.
                 </p>
+
+                <p>
+                    State-agnostic rotations (i.e. those where the rotation state doesn't matter) will be written in one of two ways. The longer notation will be used for rotations on their own, while the shorter notation will be used for sequences.
+                </p>
+
+                <ul>
+                    <li>Counter-Clockwise - <span class="nostate">CCW</span> or <span class="nostate">L</span></li>
+                    <li>Clockwise - <span class="nostate">CW</span> or <span class="nostate">R</span></li>
+                    <li>180 - <span class="nostate">180</span> or <span class="nostate">F</span></li>
+                </ul>
 
                 <p>
                     In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing so. In the Tetris Worlds implementation of the commonly used Super Rotation System, or <span class="system">SRS</span> for short, the O-piece internally rotates around one of its blocks (the lower-left block in state <span class="state">0</span>), but an offset is applied to keep it in place when rotated. This may or may not be the case for implementations in other games, though.
@@ -2060,17 +2071,19 @@
                 </p>
 
                 <p>
-                    Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a different piece, then performing the relevant rotation sequence from the list below. Note that "F" is short for "Flip" and refers to the game's 180-degree rotation button.
+                    Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a different piece, then performing the relevant rotation sequence from the list below. Note that <span class="nostate">F</span> is short for "Flip" and refers to the game's 180-degree rotation button.
                 </p>
 
                 <ul>
-                    <li>T: LLL, RRR</li>
-                    <li>Z: LRL, RLR</li>
-                    <li>S: RLR, LRL</li>
-                    <li>J: LLR, RRL (depending on spin)</li>
-                    <li>L: RRL, LLR (depending on spin)</li>
-                    <li>I: FFF</li>
-                    <li>O: RFR, RRF, RFF, LFL, LLF, LFF (depending on kick)</li>
+                    <li>T: <span class="nostate">LLL</span>, <span class="nostate">RRR</span></li>
+                    <li>Z: <span class="nostate">LRL</span>, <span class="nostate">RLR</span></li>
+                    <li>S: <span class="nostate">RLR</span>, <span class="nostate">LRL</span></li>
+                    <li>J: <span class="nostate">LLR</span>, <span class="nostate">RRL</span> (depending on spin)</li>
+                    <li>L: <span class="nostate">RRL</span>, <span class="nostate">LLR</span> (depending on spin)</li>
+                    <li>I: <span class="nostate">FFF</span></li>
+                    <li>
+                        O: <span class="nostate">RFR</span>, <span class="nostate">RRF</span>, <span class="nostate">RFF</span>, <span class="nostate">LFL</span>, <span class="nostate">LLF</span>, <span class="nostate">LFF</span> (depending on kick)
+                    </li>
                 </ul>
 
                 <p>
@@ -2078,11 +2091,11 @@
                 </p>
 
                 <p>
-                    Interestingly, the T transformations are defined slightly differently for LLL and RRR - the "T-Spin Mini" transformations only work when rotating in a specific direction. This is also true for the J and L pieces, whose different spin sequences have completely different use cases. As a general rule, the final rotation in the sequence is the rotation you would normally perform with the piece being transformed into.
+                    Interestingly, the T transformations are defined slightly differently for <span class="nostate">LLL</span> and <span class="nostate">RRR</span> - the "T-Spin Mini" transformations only work when rotating in a specific direction. This is also true for the J and L pieces, whose different spin sequences have completely different use cases. As a general rule, the final rotation in the sequence is the rotation you would normally perform with the piece being transformed into.
                 </p>
 
                 <p>
-                    Each sequence for the S and Z pieces can access the same three transformations for each piece. If the O-piece is in a situation where it can transform into both, LRL will prioritise the Z transformation and RLR will prioritise the S transformation.
+                    Each sequence for the S and Z pieces can access the same three transformations for each piece. If the O-piece is in a situation where it can transform into both, <span class="nostate">LRL</span> will prioritise the Z transformation and <span class="nostate">RLR</span> will prioritise the S transformation.
                 </p>
 
                 <p>
@@ -2099,7 +2112,7 @@
                         <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][T][G][G]</div>
                         <div class="playfield-row">[G][G][T][G][G][G]</div>
-                        <div class="playfield-caption">RRR &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">RRR</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2109,7 +2122,7 @@
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][T][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][T][G][G][G]</div>
-                        <div class="playfield-caption">RRR &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">RRR</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2119,7 +2132,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][T][O][O][G][G]</div>
-                        <div class="playfield-caption">RRR &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">RRR</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2129,7 +2142,7 @@
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][T][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][T][G][G][G]</div>
-                        <div class="playfield-caption">LLL &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">LLL</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2139,7 +2152,7 @@
                         <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][T][G][G]</div>
                         <div class="playfield-row">[G][G][T][G][G][G]</div>
-                        <div class="playfield-caption">LLL &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">LLL</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2149,7 +2162,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][T][G][G]</div>
-                        <div class="playfield-caption">LLL &gt; T</div>
+                        <div class="playfield-caption"><span class="nostate">LLL</span> &gt; T</div>
                     </div>
                 </div>
 
@@ -2159,7 +2172,7 @@
                         <div class="playfield-row">[G][G][F][F][F][F]</div>
                         <div class="playfield-row">[G][Z][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
-                        <div class="playfield-caption">LRL &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2169,7 +2182,7 @@
                         <div class="playfield-row">[F][O][O][F][F][F]</div>
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][Z][Z][G][G]</div>
-                        <div class="playfield-caption">LRL &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2179,7 +2192,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][Z][G]</div>
-                        <div class="playfield-caption">LRL &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2189,7 +2202,7 @@
                         <div class="playfield-row">[F][F][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][S][G]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
-                        <div class="playfield-caption">RLR &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2199,7 +2212,7 @@
                         <div class="playfield-row">[F][F][F][O][O][F]</div>
                         <div class="playfield-row">[G][G][G][O][O][G]</div>
                         <div class="playfield-row">[G][G][S][S][G][G]</div>
-                        <div class="playfield-caption">RLR &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2209,7 +2222,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][S][O][O][G][G]</div>
-                        <div class="playfield-caption">RLR &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2219,7 +2232,7 @@
                         <div class="playfield-row">[G][G][F][F][F][F]</div>
                         <div class="playfield-row">[G][Z][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
-                        <div class="playfield-caption">RLR &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2229,7 +2242,7 @@
                         <div class="playfield-row">[F][O][O][F][F][F]</div>
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][Z][Z][G][G]</div>
-                        <div class="playfield-caption">RLR &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2239,7 +2252,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][Z][G]</div>
-                        <div class="playfield-caption">RLR &gt; Z</div>
+                        <div class="playfield-caption"><span class="nostate">RLR</span> &gt; Z</div>
                     </div>
                 </div>
 
@@ -2249,7 +2262,7 @@
                         <div class="playfield-row">[F][F][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][S][G]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
-                        <div class="playfield-caption">LRL &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2259,7 +2272,7 @@
                         <div class="playfield-row">[F][F][F][O][O][F]</div>
                         <div class="playfield-row">[G][G][G][O][O][G]</div>
                         <div class="playfield-row">[G][G][S][S][G][G]</div>
-                        <div class="playfield-caption">LRL &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2269,7 +2282,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][S][O][O][G][G]</div>
-                        <div class="playfield-caption">LRL &gt; S</div>
+                        <div class="playfield-caption"><span class="nostate">LRL</span> &gt; S</div>
                     </div>
                 </div>
 
@@ -2279,7 +2292,7 @@
                         <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][J][G][G]</div>
                         <div class="playfield-row">[G][G][G][J][G][G]</div>
-                        <div class="playfield-caption">LLR &gt; J</div>
+                        <div class="playfield-caption"><span class="nostate">LLR</span> &gt; J</div>
                     </div>
                 </div>
 
@@ -2289,7 +2302,7 @@
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][L][O][O][G][G]</div>
                         <div class="playfield-row">[G][L][G][G][G][G]</div>
-                        <div class="playfield-caption">RRL &gt; L</div>
+                        <div class="playfield-caption"><span class="nostate">RRL</span> &gt; L</div>
                     </div>
                 </div>
 
@@ -2299,7 +2312,7 @@
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][J][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][G][J][G][G]</div>
-                        <div class="playfield-caption">RRL &gt; J</div>
+                        <div class="playfield-caption"><span class="nostate">RRL</span> &gt; J</div>
                     </div>
                 </div>
 
@@ -2309,7 +2322,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[F][F][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][J][G]</div>
-                        <div class="playfield-caption">RRL &gt; J</div>
+                        <div class="playfield-caption"><span class="nostate">RRL</span> &gt; J</div>
                     </div>
                 </div>
 
@@ -2319,7 +2332,7 @@
                         <div class="playfield-row">[F][F][O][O][G][G]</div>
                         <div class="playfield-row">[G][G][O][O][L][G]</div>
                         <div class="playfield-row">[G][G][L][G][G][G]</div>
-                        <div class="playfield-caption">LLR &gt; L</div>
+                        <div class="playfield-caption"><span class="nostate">LLR</span> &gt; L</div>
                     </div>
                 </div>
 
@@ -2329,7 +2342,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][F][F]</div>
                         <div class="playfield-row">[G][L][O][O][G][G]</div>
-                        <div class="playfield-caption">LLR &gt; L</div>
+                        <div class="playfield-caption"><span class="nostate">LLR</span> &gt; L</div>
                     </div>
                 </div>
 
@@ -2339,7 +2352,7 @@
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
                         <div class="playfield-row">[G][I][O][O][I][G]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2349,7 +2362,7 @@
                         <div class="playfield-row">[G][G][G][F][F][F]</div>
                         <div class="playfield-row">[G][I][I][O][O][G]</div>
                         <div class="playfield-row">[G][G][G][O][O][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2359,7 +2372,7 @@
                         <div class="playfield-row">[F][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][I][I][G]</div>
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2369,7 +2382,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][I][O][O][I][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2379,7 +2392,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[G][G][G][O][O][F]</div>
                         <div class="playfield-row">[G][I][I][O][O][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2389,7 +2402,7 @@
                         <div class="playfield-row">[F][F][F][F][F][F]</div>
                         <div class="playfield-row">[F][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][I][I][G]</div>
-                        <div class="playfield-caption">FFF &gt; I</div>
+                        <div class="playfield-caption"><span class="nostate">FFF</span> &gt; I</div>
                     </div>
                 </div>
 
@@ -2407,7 +2420,7 @@
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][F][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
-                        <div class="playfield-caption">RFR</div>
+                        <div class="playfield-caption"><span class="nostate">RFR</span></div>
                     </div>
                 </div>
 
@@ -2417,7 +2430,7 @@
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][O][O][F][F][G]</div>
                         <div class="playfield-row">[G][G][G][F][F][G]</div>
-                        <div class="playfield-caption">RRF</div>
+                        <div class="playfield-caption"><span class="nostate">RRF</span></div>
                     </div>
                 </div>
 
@@ -2427,7 +2440,7 @@
                         <div class="playfield-row">[G][O][O][G][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
                         <div class="playfield-row">[G][G][F][F][G][G]</div>
-                        <div class="playfield-caption">RFF</div>
+                        <div class="playfield-caption"><span class="nostate">RFF</span></div>
                     </div>
                 </div>
 
@@ -2437,7 +2450,7 @@
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][F][O][O][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">LFL</div>
+                        <div class="playfield-caption"><span class="nostate">LFL</span></div>
                     </div>
                 </div>
 
@@ -2447,7 +2460,7 @@
                         <div class="playfield-row">[G][G][G][O][O][G]</div>
                         <div class="playfield-row">[G][F][F][O][O][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">LLF</div>
+                        <div class="playfield-caption"><span class="nostate">LLF</span></div>
                     </div>
                 </div>
 
@@ -2457,7 +2470,7 @@
                         <div class="playfield-row">[G][G][O][O][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
                         <div class="playfield-row">[G][F][F][G][G][G]</div>
-                        <div class="playfield-caption">LFF</div>
+                        <div class="playfield-caption"><span class="nostate">LFF</span></div>
                     </div>
                 </div>
 
@@ -2472,8 +2485,12 @@
                     <li>
                         <a href="https://github.com/26F-Studio/Techmino/blob/main/parts/RSlist.lua">Techmino rotation implementation</a>
                         <ul>
-                            <li>See "OspinList" and the O-Spin logic that checks "if P.gameEnv.ospin"</li>
-                            <li>For spin sequences, 1 is right, 2 is 180, and 3 is left</li>
+                            <li>
+                                See "OspinList" and the O-Spin logic that checks "if P.gameEnv.ospin"
+                            </li>
+                            <li>
+                                For spin sequences, 1 is <span class="nostate">CW</span>, 2 is <span class="nostate">180</span>, and 3 is <span class="nostate">CCW</span>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -2619,11 +2636,11 @@
                 </p>
 
                 <p>
-                    The first O-Spin (an O-Spin Triple) is performed by creating a T-Spin Triple setup where the T is "pointing" to the right. When the O-piece is placed next to the overhang, rotating it to the right will transform it into an L-piece. Rotating right again will transform it into a T-piece and fill the T-shaped hole, though this is still an "O-Spin" in a similar vein to Techmino's transformations.
+                    The first O-Spin (an O-Spin Triple) is performed by creating a T-Spin Triple setup where the T is "pointing" to the right. When the O-piece is placed next to the overhang, a <span class="nostate">CW</span> rotation will transform it into an L-piece. A second <span class="nostate">CW</span> rotation will transform it into a T-piece and fill the T-shaped hole, though this is still an "O-Spin" in a similar vein to Techmino's transformations.
                 </p>
 
                 <p>
-                    The second O-Spin (an O-Spin Quadruple) is performed by creating a 4x4 space with a 2x2 space touching its top-left or top-right corner. Placing an O-piece in the 2x2 space and rotating left (regardless of which direction the larger space is) will transform it into a 4x4 O-piece and kick it to the larger space. Following this, rotating the O-piece to the right will revert it to its original 2x2 form, and this can be repeated if there are other 4x4 spaces to kick into.
+                    The second O-Spin (an O-Spin Quadruple) is performed by creating a 4x4 space with a 2x2 space touching its top-left or top-right corner. Placing an O-piece in the 2x2 space and performing a <span class="nostate">CCW</span> rotation (regardless of which direction the larger space is) will transform it into a 4x4 O-piece and kick it to the larger space. Following this, a <span class="nostate">CW</span> rotation will revert it to its original 2x2 form, and this can be repeated if there are other 4x4 spaces to kick into.
                 </p>
 
                 <ul class="sources">

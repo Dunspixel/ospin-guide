@@ -98,16 +98,22 @@ img
     color: #FFECD8;
 }
 
+.nostate
+{
+    font-weight: 650;
+    color: #D6E2FF;
+}
+
 .system
 {
     font-weight: 650;
-    color: #FFC0E6;
+    color: #FFB8E6;
 }
 
 .credit
 {
     font-weight: 650;
-    color: #F0FFF6;
+    color: #ECFFF2;
 }
 
 .sources, .sources li
