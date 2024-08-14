@@ -28,8 +28,8 @@
 
                 <p>
                     Latest Major Update: <strong>09/08/2024</strong> - Improved general readability <br />
-                    Latest Minor Update: <strong>13/08/2024</strong> - Added Aquamino placeholder section <br />
-                    Latest Amendment: <strong>13/08/2024</strong>
+                    Latest Minor Update: <strong>14/08/2024</strong> - Added AqRS information <br />
+                    Latest Amendment: <strong>14/08/2024</strong>
                 </p>
             </section>
 
@@ -2635,15 +2635,48 @@
                 <h3>Aquamino</h3>
 
                 <p>
-                    This game's beta just released! Aquamino features a new rotation system called Aqua Rotation System (<span class="system">AqRS</span>), which has a unique O-piece rotation mechanic that compresses your stack to fill holes!
+                    This game's beta just released, so this section is still a work in progress!
                 </p>
 
                 <p>
-                    For now, I don't know nearly enough to write a proper guide about it, but I look forward to researching this game and its rotation system.
+                    Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System (<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls are adjacent to it. Second is the completely new Push mechanic, allowing you to rotate pieces on the floor and push your stack into holes, filling them.
                 </p>
 
                 <p>
-                    <span class="todo">TODO: write this section</span>
+                    By default, the O-piece does not move or kick on rotation in <span class="system">AqRS</span>. However, depending on its surroundings, a rotation can cause the O-piece to use one of two offset tables:
+                </p>
+
+                <ul>
+                    <li>The "T" table, used when the O-piece is touching a floor</li>
+                    <li>The "L" table, used when the O-piece is touching a wall or ceiling (depending on the rotation)</li>
+                </ul>
+
+                <p>
+                    Each rotation then has different conditions and priorities to decide which offset table to use.
+                </p>
+
+                <ul>
+                    <li>
+                        <span class="nostate">CW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>right</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
+                    </li>
+                    <li>
+                        <span class="nostate">CCW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>left</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
+                    </li>
+                    <li>
+                        <span class="nostate">CW</span> rotations will trigger a kick if touching a floor or a ceiling. If both of these conditions are met, the <strong>L</strong> (ceiling) offset table will be prioritised.
+                    </li>
+                </ul>
+
+                <p>
+                    As usual, I have created an offset table for <span class="system">AqRS</span>. There are no rotation centres this time - instead, the black squares represent the prerequisite floor, wall, or ceiling. While both blocks adjacent in the appropriate directions are filled, only one of them is actually necessary to activate the offset table. Also, for the 90-degree "L" table, only the wall in the direction of rotation must be present.
+                </p>
+
+                <div class="centre">
+                    <img src="img/aqrs_opiece_offset.png" alt="AqRS O-Piece Offset Chart" />
+                </div>
+
+                <p>
+                    <span class="todo">TODO: O-Spin setups and Push mechanic guide</span>
                 </p>
 
                 <ul class="sources">
@@ -2651,6 +2684,16 @@
                         <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/rotateSys/AqRS.lua">
                             <span class="system">AqRS</span> implementation
                         </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/fieldLib.lua">
+                            Field implementation
+                        </a>
+                        <ul>
+                            <li>
+                                pushField() can be found at the bottom of this file
+                            </li>
+                        </ul>
                     </li>
                 </ul>
 
