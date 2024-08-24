@@ -27,7 +27,7 @@
                 </h4>
 
                 <p>
-                    Latest Major Update: <strong>09/08/2024</strong> - Improved general readability <br />
+                    Latest Major Update: <strong>24/08/2024</strong> - Added Tetrs section <br />
                     Latest Minor Update: <strong>24/08/2024</strong> - Heading adjustments <br />
                     Latest Amendment: <strong>24/08/2024</strong>
                 </p>
@@ -92,6 +92,7 @@
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
+                            <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
                             <li><a href="#aquamino">Aquamino and Stack Manipulation [WIP]</a></li>
                             <li><a href="#jstris">Jstris and O-Spin Memes</a></li>
                         </ul>
@@ -2637,6 +2638,50 @@
                 </ul>
 
                 <h4><a href="https://tetr.io/">TETR.IO</a> by <span class="credit">osk</span></h4>
+            </section>
+
+            <section id="tetrs">
+                <h3>Tetrs and Ocular Rotation</h3>
+
+                <p>
+                    Tetrs implements a unique rotation system called Ocular Rotation System, which implements simple but intuitive wall kicks. This includes some basic kicks for the O-piece which, despite their simplicity, are implemented in a unique way compared to other stackers.
+                </p>
+
+                <p>
+                    In Ocular Rotation System, the O-piece only has one rotation state. However, basic rotation moves the piece one space in the direction of rotation, and this can be repeated until it reaches a wall. If basic rotation is blocked, there are two wall kicks which move the O-piece vertically, with the downward kick being prioritised. Of course, I made a chart for it:
+                </p>
+
+                <div class="centre">
+                    <img src="img/ocular_opiece_offset.png" alt="Ocular Rotation System O-Piece Offset Chart" />
+                </div>
+
+                <p>
+                    In addition to the rotation system, Tetrs implements a variation of move-reset lock delay. Instead of the reset limit typically seen in guideline Tetris games, there is a hard time limit which decreases while the active piece is on the floor. Once this is zero, the piece will lock instantly. The maximum ground time is customisable in the Settings menu, with the default value being 2.25 seconds.
+                </p>
+
+                <p>
+                    Due to the movement on rotation, rotating into a wall and failing both kicks will not reset the lock delay. However, there is an option to bind a key to 180-degree rotation, which does not move or kick the O-piece. These can be used for stalling even in a tight space.
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://github.com/Strophox/tetrs/blob/main/tetrs_engine/src/piece_rotation.rs">
+                            Tetrs rotation implementation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Strophox/tetrs?tab=readme-ov-file#ocular-rotation-system">
+                            Ocular Rotation System description
+                        </a>
+                        <ul>
+                            <li>
+                                Includes some really cool heatmap charts for wall kicks in Ocular and <span class="system">SRS</span>, which are good for seeing how to block undesired kicks
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://github.com/Strophox/tetrs">Tetrs</a> by <span class="credit">Strophox</span></h4>
             </section>
 
             <section id="aquamino">
