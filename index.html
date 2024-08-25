@@ -81,20 +81,20 @@
                         <ul>
                             <li><a href="#tgm2">Tetris The Absolute The Grand Master 2 The RO Medal PLUS</a></li>
                             <li><a href="#t64">Tetris 64 and its Inexplicably Obscure Rotation System</a></li>
-                            <li><a href="#sega99">Sega Tetris (1999) [Placeholder]</a></li>
+                            <li><a href="#sega99">Sega Tetris (1999) and Piece Joining [Placeholder]</a></li>
                             <li><a href="#audio">Audio Cues</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#stackers">Tetris-like Stackers</a>
                         <ul>
+                            <li><a href="#aquamino">Aquamino and Stack Manipulation [WIP]</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode [WIP]</a></li>
+                            <li><a href="#spirit">Spirit Drop and Re-Hold [Placeholder]</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
                             <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
-                            <li><a href="#aquamino">Aquamino and Stack Manipulation [WIP]</a></li>
-                            <li><a href="#spirit">Spirit Drop and Re-Hold [Placeholder]</a></li>
                             <li><a href="#jstris">Jstris and O-Spin Memes</a></li>
                         </ul>
                     </li>
@@ -1575,7 +1575,7 @@
             </section>
 
             <section id="sega99">
-                <h3>Sega Tetris (1999)</h3>
+                <h3>Sega Tetris (1999) and Piece Joining</h3>
 
                 <p>
                     Ah, the one game in this guide I haven't played yet. For the time being, there isn't much I can say about it. Sorry!
@@ -1662,6 +1662,87 @@
                 <p>
                     Unless otherwise specified, the techniques described for each game are performed with that game's default rotation system. Many community-made stacker games allow the selection of rotation systems from other games, which would permit the use of those games' O-piece rotation techniques. However, describing them in each game that uses them would result in far too much repetition.
                 </p>
+
+                <p>
+                    This chapter is intended to be a celebration of the Tetris community's creativity! O-piece rotations aside, these are all fantastic games that deserve a lot of love and attention. I have linked each one at the end of its section, so please check them out!
+                </p>
+
+                <p>
+                    With the exception of the Jstris section and its self-proclaimed meme rotation system, the games in this chapter are listed in alphabetical order.
+                </p>
+            </section>
+
+            <section id="aquamino">
+                <h3>Aquamino and Stack Manipulation</h3>
+
+                <p>
+                    This game's beta just released, so this section is still a work in progress!
+                </p>
+
+                <p>
+                    Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System (<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls are adjacent to it. Second is the completely new Push mechanic, allowing you to rotate pieces on the floor and push your stack into holes, filling them.
+                </p>
+
+                <p>
+                    By default, the O-piece does not move or kick on rotation in <span class="system">AqRS</span>. However, depending on its surroundings, a rotation can cause the O-piece to use one of two offset tables:
+                </p>
+
+                <ul>
+                    <li>
+                        The <strong>T</strong> (Touch the floor) table, used when the O-piece is touching a floor
+                    </li>
+                    <li>
+                        The <strong>L</strong> (Levitate) table, used when the O-piece is touching a wall or ceiling (depending on the rotation)
+                    </li>
+                </ul>
+
+                <p>
+                    Each rotation then has different conditions and priorities to decide which offset table to use.
+                </p>
+
+                <ul>
+                    <li>
+                        <span class="nostate">CW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>right</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
+                    </li>
+                    <li>
+                        <span class="nostate">CCW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>left</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
+                    </li>
+                    <li>
+                        <span class="nostate">180</span> rotations will trigger a kick if touching a floor or a ceiling. If both of these conditions are met, the <strong>L</strong> (ceiling) offset table will be prioritised.
+                    </li>
+                </ul>
+
+                <p>
+                    As you will find in many of this chapter's sections, I have created an offset chart for <span class="system">AqRS</span>. The black squares in the state columns represent the prerequisite floor, wall, or ceiling. While both blocks adjacent in the appropriate directions are filled, only one of them is actually necessary to activate the offset table. Also, for the 90-degree "L" table, only the wall in the direction of rotation must be present.
+                </p>
+
+                <div class="centre">
+                    <img src="img/aqrs_opiece_offset.png" alt="AqRS O-Piece Offset Chart" />
+                </div>
+
+                <p>
+                    <span class="todo">TODO: O-Spin setups and Push mechanic guide</span>
+                </p>
+
+                <ul class="sources">
+                    <li>
+                        <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/rotateSys/AqRS.lua">
+                            <span class="system">AqRS</span> implementation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/fieldLib.lua">
+                            Field implementation
+                        </a>
+                        <ul>
+                            <li>
+                                pushField() can be found at the bottom of this file
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://aqua6623.itch.io/aquamino">Aquamino</a> by <span class="credit">Aqua6623</span></h4>
             </section>
 
             <section id="asc">
@@ -2080,6 +2161,24 @@
                 </ul>
 
                 <h4><a href="https://nuketris.com/">Nuketris</a> by <span class="credit">nukeexplosions</span></h4>
+            </section>
+
+            <section id="spirit">
+                <h3>Spirit Drop and Re-Hold</h3>
+
+                <p>
+                    This section is a placeholder for now. I'll update this when I have spent more time with the game.
+                </p>
+
+                <p>
+                    Spirit Drop features a "Re-Hold" mechanic, allowing the player to take a piece out of hold after it has been held without needing to drop the active piece. When Re-Hold is activated (i.e. Hold is used for a second time since the last piece placement), the held piece will appear at the location of your active piece instead of its usual spawn location. This can be used to move O-pieces into certain O-Spin setups and execute O-Spins.
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Write this section</span>
+                </p>
+
+                <h4><a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin</span></h4>
             </section>
 
             <section id="techmino">
@@ -2693,97 +2792,6 @@
                 <h4><a href="https://github.com/Strophox/tetrs">Tetrs</a> by <span class="credit">Strophox</span></h4>
             </section>
 
-            <section id="aquamino">
-                <h3>Aquamino and Stack Manipulation</h3>
-
-                <p>
-                    This game's beta just released, so this section is still a work in progress!
-                </p>
-
-                <p>
-                    Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System (<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls are adjacent to it. Second is the completely new Push mechanic, allowing you to rotate pieces on the floor and push your stack into holes, filling them.
-                </p>
-
-                <p>
-                    By default, the O-piece does not move or kick on rotation in <span class="system">AqRS</span>. However, depending on its surroundings, a rotation can cause the O-piece to use one of two offset tables:
-                </p>
-
-                <ul>
-                    <li>
-                        The <strong>T</strong> (Touch the floor) table, used when the O-piece is touching a floor
-                    </li>
-                    <li>
-                        The <strong>L</strong> (Levitate) table, used when the O-piece is touching a wall or ceiling (depending on the rotation)
-                    </li>
-                </ul>
-
-                <p>
-                    Each rotation then has different conditions and priorities to decide which offset table to use.
-                </p>
-
-                <ul>
-                    <li>
-                        <span class="nostate">CW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>right</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
-                    </li>
-                    <li>
-                        <span class="nostate">CCW</span> rotations will trigger a kick if touching a floor or a wall to the <strong>left</strong>. If both of these conditions are met, the <strong>T</strong> (floor) offset table will be prioritised.
-                    </li>
-                    <li>
-                        <span class="nostate">180</span> rotations will trigger a kick if touching a floor or a ceiling. If both of these conditions are met, the <strong>L</strong> (ceiling) offset table will be prioritised.
-                    </li>
-                </ul>
-
-                <p>
-                    As usual, I have created an offset chart for <span class="system">AqRS</span>. There are no rotation centres this time - instead, the black squares represent the prerequisite floor, wall, or ceiling. While both blocks adjacent in the appropriate directions are filled, only one of them is actually necessary to activate the offset table. Also, for the 90-degree "L" table, only the wall in the direction of rotation must be present.
-                </p>
-
-                <div class="centre">
-                    <img src="img/aqrs_opiece_offset.png" alt="AqRS O-Piece Offset Chart" />
-                </div>
-
-                <p>
-                    <span class="todo">TODO: O-Spin setups and Push mechanic guide</span>
-                </p>
-
-                <ul class="sources">
-                    <li>
-                        <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/rotateSys/AqRS.lua">
-                            <span class="system">AqRS</span> implementation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Team-Blanker/Aquamino/blob/main/mino/fieldLib.lua">
-                            Field implementation
-                        </a>
-                        <ul>
-                            <li>
-                                pushField() can be found at the bottom of this file
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h4><a href="https://aqua6623.itch.io/aquamino">Aquamino</a> by <span class="credit">Aqua6623</span></h4>
-            </section>
-
-            <section id="spirit">
-                <h3>Spirit Drop and Re-Hold</h3>
-
-                <p>
-                    This section is a placeholder for now. I'll update this when I have spent more time with the game.
-                </p>
-
-                <p>
-                    Spirit Drop features a "Re-Hold" mechanic, allowing the player to take a piece out of hold after it has been held without needing to drop the active piece. When Re-Hold is activated (i.e. Hold is used for a second time since the last piece placement), the held piece will appear at the location of your active piece instead of its usual spawn location. This can be used to move O-pieces into certain O-Spin setups and execute O-Spins.
-                </p>
-
-                <p>
-                    <span class="todo">TODO: Write this section</span>
-                </p>
-
-                <h4><a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin</span></h4>
-            </section>
-
             <section id="jstris">
                 <h3>Jstris and O-Spin Memes</h3>
 
@@ -2934,10 +2942,6 @@
                     <li>Aquamino - O-Spin Setups and Push mechanic</li>
                     <li>Spirit Drop - Write section</li>
                 </ul>
-
-                <p>
-                    Once a section in Chapter 4 is finished, I will move it to its alphabetical position in the chapter.
-                </p>
             </section>
 
             <section id="profiles">
