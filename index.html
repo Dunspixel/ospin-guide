@@ -28,8 +28,8 @@
 
                 <p>
                     Latest Major Update: <strong>24/08/2024</strong> - Added Tetrs section <br />
-                    Latest Minor Update: <strong>24/08/2024</strong> - Added placeholder section for Spirit Drop <br />
-                    Latest Amendment: <strong>24/08/2024</strong>
+                    Latest Minor Update: <strong>25/08/2024</strong> - Amended Tetrs section to reflect update <br />
+                    Latest Amendment: <strong>25/08/2024</strong>
                 </p>
             </section>
 
@@ -2653,15 +2653,11 @@
                 <h3>Tetrs and Ocular Rotation</h3>
 
                 <p>
-                    <strong>Note: While this was correct at time of writing, Ocular Rotation System has changed slightly since I wrote it! I will amend this section soon.</strong>
+                    Tetrs implements a unique rotation system called Ocular Rotation System (<span class="system">Ocular</span>), which has simple but intuitive wall kicks. This includes some basic kicks for the O-piece - while very simple and don't allow warp kicks, their mechanics are different from other stackers in several interesting and fun ways.
                 </p>
 
                 <p>
-                    Tetrs implements a unique rotation system called Ocular Rotation System, which has simple but intuitive wall kicks. This includes some basic kicks for the O-piece - while very simple and don't allow warp kicks, their mechanics are different from other stackers in several interesting and fun ways.
-                </p>
-
-                <p>
-                    In Ocular Rotation System, the O-piece only has one rotation state. However, basic rotation moves the piece one space in the direction of rotation, and this can be repeated until it reaches a wall. If basic rotation is blocked, there are two wall kicks which move the O-piece vertically, with the downward kick being prioritised. Of course, I made a chart for it:
+                    In <span class="system">Ocular</span>, the O-piece only has one rotation state. However, basic rotation moves the piece one space in the direction of rotation, and this can be repeated until it reaches a wall. If basic rotation is blocked, there are three wall kicks: two which move the O-piece vertically, with the downward kick being prioritised, then a final kick to move the piece back to its original position and prevent the rotation from failing. Of course, I made a chart for it:
                 </p>
 
                 <div class="centre">
@@ -2673,7 +2669,7 @@
                 </p>
 
                 <p>
-                    Due to the movement on rotation, rotating into a wall and failing both kicks will not reset the lock delay. However, there is an option to bind a key to 180-degree rotation, which does not move or kick the O-piece. These rotations can be used for stalling even in a tight space.
+                    There is an option to bind a key to 180-degree rotation. These rotations do not move or kick the O-piece, and therefore can be used to stall while keeping it in place.
                 </p>
 
                 <ul class="sources">
@@ -2688,7 +2684,7 @@
                         </a>
                         <ul>
                             <li>
-                                Includes some really cool heatmap charts for wall kicks in Ocular and <span class="system">SRS</span>, which are good for seeing how to block undesired kicks
+                                Includes some really cool heatmap charts for wall kicks in <span class="system">Ocular</span> and <span class="system">SRS</span>, which are good for seeing how to block undesired kicks
                             </li>
                         </ul>
                     </li>
@@ -2935,7 +2931,6 @@
 
                 <ul>
                     <li>Nuketris - Worm Guide Part 2</li>
-                    <li>Tetrs - Ocular Rotation System amendments</li>
                     <li>Aquamino - O-Spin Setups and Push mechanic</li>
                     <li>Spirit Drop - Write section</li>
                 </ul>
