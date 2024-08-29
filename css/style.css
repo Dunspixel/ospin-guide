@@ -137,6 +137,11 @@ img
     display: inline-block;
 }
 
+.flex
+{
+    display: flex;
+}
+
 .todo
 {
     background-color: #000000;

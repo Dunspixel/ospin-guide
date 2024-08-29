@@ -23,21 +23,6 @@
     padding: 0;
 }
 
-.playfield-flag-4 .playfield-cell
-{
-    height: 20px !important;
-}
-
-.playfield-flag-5 .playfield-cell
-{
-    height: 16px !important;
-}
-
-.playfield-flag-7 .playfield-cell
-{
-    height: 11.5px !important;
-}
-
 .playfield-caption
 {
     display: table-caption;
@@ -116,4 +101,36 @@
 .playfield-puyo
 {
     border-radius: 8px;
+}
+
+/* Flag Classes (not used in regular playfields) */
+
+.container-flag
+{
+    width: 20%;
+}
+
+.playfield-flag
+{
+    border: 0 !important;
+}
+
+.playfield-flag, .row-flag, .row-flag .playfield-cell
+{
+    width: 100%;
+}
+
+.playfield-flag-4 .playfield-cell
+{
+    height: 20px !important;
+}
+
+.playfield-flag-5 .playfield-cell
+{
+    height: 16px !important;
+}
+
+.playfield-flag-7 .playfield-cell
+{
+    height: 11.5px !important;
 }
