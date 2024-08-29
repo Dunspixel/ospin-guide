@@ -33,11 +33,6 @@
     border-bottom: 2px solid;
 }
 
-.playfield-space
-{
-    background-color: #FFFFFF !important;
-}
-
 .playfield-cell-grey
 {
     background-color: #808080 !important;

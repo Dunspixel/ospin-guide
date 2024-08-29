@@ -26,7 +26,6 @@ function renderCell(cellToken)
 
     const classMappings =
     [
-        ["F", "playfield-space"],
         ["G", "playfield-cell-grey"],
         ["D", "playfield-cell-dark"],
         ["B", "playfield-cell-bright"],
