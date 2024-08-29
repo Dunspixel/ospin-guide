@@ -39,6 +39,7 @@ function renderCell(cellToken)
         ["P", "playfield-cell-pink"],
         ["V", "playfield-cell-darkgreen"],
         ["p", "playfield-puyo"],
+        ["m", "playfield-muted"],
     ];
 
     classMappings.forEach(mapping =>

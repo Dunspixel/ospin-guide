@@ -98,6 +98,11 @@
     border-radius: 8px;
 }
 
+.playfield-muted
+{
+    opacity: 0.5;
+}
+
 /* Flag Classes (not used in regular playfields) */
 
 .container-flag
