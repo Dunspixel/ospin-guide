@@ -27,9 +27,9 @@
                 </h4>
 
                 <p>
-                    Latest Major Update: <strong>24/08/2024</strong> - Added Tetrs section <br />
+                    Latest Major Update: <strong>31/08/2024</strong> - Added Nuketris Worm Guide Part 2 <br />
                     Latest Minor Update: <strong>28/08/2024</strong> - Added reference to Infinity <br />
-                    Latest Amendment: <strong>29/08/2024</strong>
+                    Latest Amendment: <strong>31/08/2024</strong>
                 </p>
             </section>
 
@@ -81,7 +81,7 @@
                         <ul>
                             <li><a href="#tgm2">Tetris The Absolute The Grand Master 2 The RO Medal PLUS</a></li>
                             <li><a href="#t64">Tetris 64 and its Inexplicably Obscure Rotation System</a></li>
-                            <li><a href="#sega99">Sega Tetris (1999) and Piece Joining [Placeholder]</a></li>
+                            <li><a href="#sega99">Sega Tetris (1999) and Piece Joining</a></li>
                             <li><a href="#audio">Audio Cues</a></li>
                         </ul>
                     </li>
@@ -90,7 +90,7 @@
                         <ul>
                             <li><a href="#aquamino">Aquamino and Stack Manipulation [WIP]</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
-                            <li><a href="#nuketris">Nuketris and Worm Mode [WIP]</a></li>
+                            <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
                             <li><a href="#spirit">Spirit Drop and Re-Hold [Placeholder]</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
@@ -2122,7 +2122,7 @@
                         The kick moves the piece far enough horizontally that the tunnel will never reach the O-piece's destination, even if it continues in a single direction
                     </li>
                     <li>
-                        The kick is defined after another kick that will always succeed
+                        The kick is defined after another kick that will always succeed in situations where it would otherwise be possible
                     </li>
                 </ul>
 
@@ -2135,10 +2135,520 @@
                 </div>
 
                 <p>
-                    Each state and rotation has use cases that make them useful, though generally speaking, the <span class="state">0</span> and <span class="state">R</span> states have more desirable kicks. States can also be divided into pairs, as the <span class="state">0</span>/<span class="state">R</span> ("upper") and <span class="state">2</span>/<span class="state">L</span> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations between them that switch states without moving the piece.
+                    Each state and rotation has use cases that make them useful, though the <span class="state">0</span> and <span class="state">R</span> states have more desirable kicks. States can also be divided into pairs, as the <span class="state">0</span>/<span class="state">R</span> ("upper") and <span class="state">2</span>/<span class="state">L</span> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations between them that switch states without moving the piece.
+                </p>
+
+                <p>
+                    <strong>Please note that the setups in this section cannot be mirrored as <span class="system">SRS-X</span> is not symmetrical.</strong>
                 </p>
                 
-                <p><span class="todo">TODO: Worm Guide Part 2 - Use cases for each state and rotation</span></p>
+                <p>
+                    State <span class="state">0</span> is the safest of the four states due to it not having any upward kicks. In any situation, <span class="state">0R&gt;</span> can safely switch from state <span class="state">0</span> to <span class="state">R</span> without moving the piece. If you're in a straight tunnel and your O-piece is at the bottom of the playfield, I would recommend keeping it in state <span class="state">0</span> until the tunnel moves.
+                </p>
+
+                <p>
+                    Moving to the right can be achieved with both <span class="state">&lt;0L</span> and <span class="state">&lt;02&gt;</span>. However, states <span class="state">2</span> and <span class="state">L</span> are generally unsafe states to be in, so it's usually better to switch to state <span class="state">R</span> and use that state's kicks unless you want to take advantage of some stronger kicks mentioned later.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][L][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][L][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">0R&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][L][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">Alt: <span class="state">&lt;0L</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">Alt: <span class="state">&lt;02&gt;</span></div>
+                    </div>
+                </div>
+
+                <p>
+                    Moving left can only be achieved directly with <span class="state">&lt;02&gt;</span>, and is a much better use case for that rotation due to state <span class="state">2</span>'s single useful left kick (more on this later). Alternatively, switch to state <span class="state">R</span> for its more useful left kicks.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][L][O][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][L][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;02&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    State <span class="state">0</span> also has access to a few stronger kicks. First is a kick that moves two down and one to the left, useable in zigzag formations like this. It's good when the destination is followed by a straight tunnel, but if the tunnel goes back to the right, there's a better kick you can use.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][L][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][L][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;02&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    The other two kicks accessible to state <span class="state">0</span> are floor warps, accessible via <span class="state">&lt;0L</span> rotation! In the right situation, these are some of the most useful kicks you can perform, with the exception of a certain kick we'll talk about later.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][L][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][L][O][ ][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;0L</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][L][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">0</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][L][O][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;0L</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Additional notes for state <span class="state">0</span>:
+                </p>
+
+                <ul>
+                    <li>
+                        If your next destination is to the left, <span class="state">&lt;0L</span> will fail and no movement or state change will occur.
+                    </li>
+                    <li>
+                        All <span class="state">&lt;02&gt;</span> kicks are both desirable and reversible, so never perform a <span class="state">&lt;20&gt;</span> rotation after one unless you're falling into a straight tunnel.
+                    </li>
+                </ul>
+
+                <p>
+                    State <span class="state">R</span> is stronger than state <span class="state">0</span>, having access to the most powerful downward kick in the game. However, it does have a few upward kicks, so it is slightly riskier to use if you're not fully familiarised with its offset table.
+                </p>
+
+                <p>
+                    Basic movement is essentially the opposite of state <span class="state">0</span>. To move right, you'll need to use a <span class="state">R2&gt;</span> rotation. Alternatively, switch to state <span class="state">0</span> for its better right kicks - <span class="state">&lt;R0</span> will always succeed without moving the piece.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][L][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][L][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">Alt: <span class="state">R2&gt;</span></div>
+                    </div>
+                </div>
+
+                <p>
+                    Moving left can be achieved with <span class="state">&lt;RL&gt;</span>.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][O][L][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][L][O][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;RL&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    When performing <span class="state">R2&gt;</span> and <span class="state">&lt;RL&gt;</span>, it's important to be wary of upward kicks. They're not quite as dangerous as the ceiling warps possible with the lower states, but nonetheless undesirable.
+                </p>
+
+                <p>
+                    It's also worth noting that gravity is very high in Worm mode, so kicks that only move the piece upwards will succeed without appearing to move it. This means <span class="state">R2&gt;</span> will succeed in a straight tunnel, putting the piece in the less desirable state <span class="state">2</span>.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][O][L][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][O][O][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][O][L][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][L][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][O][O][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][L][O][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;RL&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][L][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Moving on to the stronger downward kicks, <span class="state">&lt;RL&gt;</span> can access a mirrored version of one of the <span class="state">&lt;0L</span> floor warps, allowing it to move one space to the left.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][L][O][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;RL&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Finally, we get to the strongest kick, combining a -3 Y offset with natural downward movement. This results in a massive <strong>4-row</strong> downward kick (plus one to the left). I like to call this one the <strong>Ultra Floor Warp</strong>. However, note that state <span class="state">L</span> is not very good at moving left, so you will likely need to switch to a more usable state afterwards (<span class="state">&lt;L2</span> is very safe for this). Also make sure there is no space up and to the left, otherwise an upward kick will be prioritised!
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][L][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][O][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][L][O][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;RL&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Additional notes for state <span class="state">R</span>:
+                </p>
+
+                <ul>
+                    <li>
+                        If your next destination is to the left and there is no space for upward kicks, <span class="state">R2&gt;</span> will fail.
+                    </li>
+                    <li>
+                        If your next destination is to the right and there is no space for a floor warp, <span class="state">&lt;RL&gt;</span> will fail.
+                    </li>
+                </ul>
+
+                <p>
+                    Onward to state <span class="state">2</span>. Unfortunately, this is one of the less desirable states to be in - most of its kicks move the piece upwards. You'll want to switch to one of the upper states as quickly and efficiently as possible.
+                </p>
+
+                <p>
+                    I would not recommend doing anything with this state outside of the use cases shown below - you'll either want to switch to state <span class="state">L</span> or <span class="state">R</span> depending on which direction you're moving. Anything else will either fail or move upwards.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][O][L][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">2</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][L][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">2L&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][O][L][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">2</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][G][G][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    There's also a single use case for <span class="state">&lt;20&gt;</span> which it shares with <span class="state">&lt;2R</span> - use it in a straight tunnel to switch to an upper state for free.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][L][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">2</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][L][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;2R</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][L][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][O][G][G][G]</div>
+                        <div class="playfield-caption">Alt: <span class="state">&lt;20&gt;</span></div>
+                    </div>
+                </div>
+
+                <p>
+                    Finally, we have state <span class="state">L</span>. Much like state <span class="state">2</span>, its uses are very limited and your main goal is to switch to one of the upper states. Again, I would not recommend doing anything outside of the setups listed below.
+                </p>
+
+                <p>
+                    <span class="state">&lt;LR&gt;</span> can be used to move to the right. It's defined before the ceiling warps, so it's safe in this scenario.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][L][O][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption">State <span class="state">L</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][O][L][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][ ][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;LR&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Additionally, <span class="state">&lt;LR&gt;</span> and <span class="state">L0&gt;</span> can be used to switch to upper states in straight tunnels, much like <span class="state">&lt;20&gt;</span>.
+                </p>
 
                 <ul class="sources">
                     <li>
@@ -2944,7 +3454,6 @@
                 </p>
 
                 <ul>
-                    <li>Nuketris - Worm Guide Part 2</li>
                     <li>Aquamino - O-Spin Setups and Push mechanic</li>
                     <li>Spirit Drop - Write section</li>
                     <li>Bombliss - Add section (will do this after release of Tetris Forever)</li>
@@ -2974,7 +3483,7 @@
                     <li>
                         <a href="https://nuketris.com/user?username=Dunspixel">Nuketris</a>
                         <ul>
-                            <li>As of writing, my best Worm is 3:22.808! Unfortunately, replays seem to be broken.</li>
+                            <li>As of writing, my best Worm is 3:53.987! Unfortunately, replays seem to be broken.</li>
                         </ul>
                     </li>
                     <li>
