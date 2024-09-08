@@ -27,9 +27,9 @@
                 </h4>
 
                 <p>
-                    Latest Major Update: <strong>31/08/2024</strong> - Added Nuketris Worm Guide Part 2 <br />
+                    Latest Major Update: <strong>08/08/2024</strong> - Improved Tetris Stardust Spin Rank explanation <br />
                     Latest Minor Update: <strong>28/08/2024</strong> - Added reference to Infinity <br />
-                    Latest Amendment: <strong>31/08/2024</strong>
+                    Latest Amendment: <strong>08/09/2024</strong>
                 </p>
             </section>
 
@@ -874,7 +874,224 @@
                 </p>
 
                 <p>
-                    For the O-Piece, Kick 1 does not award Spin Rank, Kick 2 has a base Spin Rank of C, and Kicks 3 and 4 have a base Spin Rank of A. Chaining multiple kicks together will increase Spin Rank based on the rank of the previous kick:
+                    The Spin Rank of a particular kick is determined by comparing the position of a piece to its surroundings. The code in this area is very complicated, but I think the idea behind them is that particular configurations require a certain kick to have taken place, so this can be used to award higher ranks for stronger spins.
+                </p>
+
+                <p>
+                    Configurations consist of a list of block positions relative to the active piece's new rotation state. The internal position of the O-piece is considered to be the top-left of a 4x4 area in which the O-piece is at the centre. For each configuration, if all of its listed positions are occupied, then that Spin Rank check will succeed. When a Spin Rank check succeeds, a Spin Rank equal to the configuration's base Spin Rank plus two ranks is awarded:
+                </p>
+
+                <ul>
+                    <li>
+                        If the base Spin Rank is B, this is increased to rank A.
+                    </li>
+                    <li>
+                        If the base Spin Rank is C, this should <em>theoretically</em> be increased to rank A-. However, it awards a C rank without increasing it, and I have no idea why.
+                    </li>
+                    <li>
+                        If the piece is kicked below its previous lowest position, but none of the checks succeed, then a Spin Rank of D is awarded (as this is two higher than the default "-1" rank).
+                    </li>
+                    <li>
+                        Spin Rank E is most likely unused.
+                    </li>
+                </ul>
+
+                <p>
+                    <span class="todo">TODO: Why are C-rank spins not increased by the seemingly unconditional +2 modifier?</span>
+                </p>
+
+                <p>
+                    Below is a full list of configurations checked for the O-piece in the order they are checked, with the <strong>base</strong> ranks (before being increased by 2) listed below. While the game does technically define this for each rotation state, the four lists for the O-piece are identical.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][G]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[G][ ][G][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank B</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][G][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-caption">Rank C</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G]</div>
+                        <div class="playfield-row">[ ][O][O][ ]</div>
+                        <div class="playfield-row">[ ][G][ ][ ]</div>
+                        <div class="playfield-caption">
+                            <span class="tooltip" title="I suspect this one is a typo - from the other configurations it looks like it should be (3, 1), (2, 3) instead of (3, 1), (1, 3)">Rank C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    You don't really need to remember all these, though. Essentially, Kick 1 does not award Spin Rank, Kick 2 awards a Spin Rank of C, and Kicks 3 and 4 award a Spin Rank of A.
+                </p>
+
+                <p>
+                    Spin Rank can be increased by chaining multiple kicks together. The amount depends on the Spin Rank of the previous kick:
                 </p>
 
                 <ul>
@@ -883,6 +1100,10 @@
                     <li>A, A+, S-: +3</li>
                     <li>S, S+: +4</li>
                 </ul>
+
+                <p>
+                    It's also worth noting that for non-T pieces, a spin is considered "mini" if its Spin Rank is B or lower. This means the second O kick will usually be a mini spin, while kicks 3 and 4 register as full spins.
+                </p>
 
                 <p>
                     Here are some examples of chained spins and the ranks they award. All of these setups can be mirrored, though you will need to rotate in the opposite direction.
@@ -1002,7 +1223,7 @@
                 </div>
 
                 <p>
-                    While the second spin is only C-Rank, the prior A-Rank spin adds a +3 bonus to it, increasing it to A-Rank. This setup scores a total Spin Rank bonus of 1600.
+                    While the second spin is only C-Rank, the prior A-Rank spin adds a +3 bonus to it, increasing it to A-Rank. This setup scores a total Spin Rank bonus of 1600. Also, the Spin Rank boost upgrades it from a mini spin to a full spin!
                 </p>
 
                 <div class="playfield-container">
@@ -1067,10 +1288,6 @@
 
                 <p>
                     A-Rank spins add a +3 bonus to following spins, so chaining two of them together increases the second spin to rank S. Following this, the S-Rank spin will add a +4 bonus to the next spin, so a third A-Rank spin will be increased to the maximum Spin Rank of S+. The total Spin Rank bonus for the first two spins is 2400, while the third increases the total to 4200. 
-                </p>
-
-                <p>
-                    The inner workings of Spin Rank are actually much more complicated than this. Even after spending some time reading this part of the game logic, hell if I can understand it. The spins with a base rank of A actually have an internal base rank of B, but there's a "rotation level" which triggers a thing which increases this B to A. I can't for the life of me figure out why this isn't also being applied to the C-Rank spins. Perhaps what I think are the C-Rank spins don't actually have a defined Spin Rank and they're defaulting to E (because E-Rank is 0 internally)?
                 </p>
 
                 <ul class="sources">
@@ -3455,7 +3672,7 @@
 
                 <ul>
                     <li>
-                        How is the initial Spin Rank of a wall kick actually determined in Tetris Stardust?
+                        In Tetris Stardust, why is the seemingly unconditional +2 modifier for Spin Rank not applied to C-rank spins?
                     </li>
                     <li>
                         Can S/Z and J/L/T be distinguished while blindfolded in NES Tetris?
