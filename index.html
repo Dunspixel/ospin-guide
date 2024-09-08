@@ -878,30 +878,11 @@
                 </p>
 
                 <p>
-                    Configurations consist of a list of block positions relative to the active piece's new rotation state. The internal position of the O-piece is considered to be the top-left of a 4x4 area in which the O-piece is at the centre. For each configuration, if all of its listed positions are occupied, then that Spin Rank check will succeed. When a Spin Rank check succeeds, a Spin Rank equal to the configuration's base Spin Rank plus two ranks is awarded:
-                </p>
-
-                <ul>
-                    <li>
-                        If the base Spin Rank is B, this is increased to rank A.
-                    </li>
-                    <li>
-                        If the base Spin Rank is C, this should <em>theoretically</em> be increased to rank A-. However, it awards a C rank without increasing it, and I have no idea why.
-                    </li>
-                    <li>
-                        If the piece is kicked below its previous lowest position, but none of the checks succeed, then a Spin Rank of D is awarded (as this is two higher than the default "-1" rank).
-                    </li>
-                    <li>
-                        Spin Rank E is most likely unused.
-                    </li>
-                </ul>
-
-                <p>
-                    <span class="todo">TODO: Why are C-rank spins not increased by the seemingly unconditional +2 modifier?</span>
+                    Configurations consist of a list of block positions relative to the active piece's new rotation state. The internal position of the O-piece is considered to be the top-left of a 4x4 area in which the O-piece is at the centre. For each configuration, if all of its listed positions are occupied, then that Spin Rank check will succeed, awarding a Spin Rank equal to the base rank of the configuration, plus some bonuses for later wall kicks and chained spins.
                 </p>
 
                 <p>
-                    Below is a full list of configurations checked for the O-piece in the order they are checked, with the <strong>base</strong> ranks (before being increased by 2) listed below. While the game does technically define this for each rotation state, the four lists for the O-piece are identical.
+                    Below is a full list of configurations checked for the O-piece in the order they are checked, with the base ranks listed below. While the game does technically define this for each rotation state, the four lists for the O-piece are identical.
                 </p>
 
                 <div class="playfield-container">
@@ -1087,11 +1068,15 @@
                 </div>
 
                 <p>
-                    You don't really need to remember all these, though. Essentially, Kick 1 does not award Spin Rank, Kick 2 awards a Spin Rank of C, and Kicks 3 and 4 award a Spin Rank of A.
+                    There's a much simpler way of describing this, though, so don't worry about memorising all of these configurations. Kick 1 does not move the piece down, so it does not award Spin Rank. Kick 2 will award a Spin Rank of C. Kicks 3 and 4 will result in one of the B-rank configurations.
                 </p>
 
                 <p>
-                    Spin Rank can be increased by chaining multiple kicks together. The amount depends on the Spin Rank of the previous kick:
+                    So why did I word that last one differently? Well, if a spin is triggered by kick 3 or 4, a +2 bonus is added to Spin Rank. This results in those spins being upgraded to Spin Rank A.
+                </p>
+
+                <p>
+                    Spin Rank can also be increased by chaining multiple kicks together. The amount depends on the Spin Rank of the previous kick:
                 </p>
 
                 <ul>
@@ -3671,9 +3656,6 @@
                 </p>
 
                 <ul>
-                    <li>
-                        In Tetris Stardust, why is the seemingly unconditional +2 modifier for Spin Rank not applied to C-rank spins?
-                    </li>
                     <li>
                         Can S/Z and J/L/T be distinguished while blindfolded in NES Tetris?
                     </li>
