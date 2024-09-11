@@ -43,11 +43,6 @@
     background-color: #404040 !important;
 }
 
-.playfield-cell-bright
-{
-    background-color: #C0C0C0 !important;
-}
-
 .playfield-cell-cyan
 {
     background-color: #00FFFF !important;
@@ -90,7 +85,7 @@
 
 .playfield-cell-darkgreen
 {
-    background-color: #00A000 !important;
+    background-color: #00B000 !important;
 }
 
 .playfield-puyo

@@ -28,7 +28,6 @@ function renderCell(cellToken)
     [
         ["G", "playfield-cell-grey"],
         ["D", "playfield-cell-dark"],
-        ["B", "playfield-cell-bright"],
         ["I", "playfield-cell-cyan"],
         ["J", "playfield-cell-blue"],
         ["L", "playfield-cell-orange"],
