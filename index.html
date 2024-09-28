@@ -22,15 +22,11 @@
 
         <main>
             <section id="top">
-                <h4>
-                    Note: This guide is a work in progress - some sections are incomplete and there may be errors.
-                </h4>
+                <h4>Note: This guide is a work in progress - some sections are incomplete and there may be errors.</h4>
 
-                <p>
-                    Latest Major Update: <strong>08/09/2024</strong> - Improved Tetris Stardust Spin Rank explanation <br />
-                    Latest Minor Update: <strong>11/09/2024</strong> - Improved Stardust kick breakdown <br />
-                    Latest Amendment: <strong>11/09/2024</strong>
-                </p>
+                <h4>Last Updated: 28/09/2024</h4>
+
+                <h4>Latest Major Update: 28/09/2024 - Finished Aquamino section</h4>
             </section>
 
             <hr />
@@ -88,10 +84,10 @@
                     <li>
                         <a href="#stackers">Tetris-like Stackers</a>
                         <ul>
-                            <li><a href="#aquamino">Aquamino and Stack Manipulation [WIP]</a></li>
+                            <li><a href="#aquamino">Aquamino and Stack Manipulation</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
-                            <li><a href="#spirit">Spirit Drop and Re-Hold [Placeholder]</a></li>
+                            <li><a href="#spirit-drop">Spirit Drop and Re-Hold [Placeholder]</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
                             <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
@@ -1079,7 +1075,7 @@
                         Kick 2 awards a configuration's base Spin Rank. For the O-piece, this will always result in a C rank configuration.
                     </li>
                     <li>
-                        Kicks 3 and 4 award a configurations base Spin Rank plus 2. This will usually result in a B rank configuration which gets promoted to A rank, with one exception: if Kick 4 is performed without the opposite upper corner being occupied (see configurations 2 and 5 above) or the block below it (configurations 3 and 6), it will not satisfy any of the B rank checks and instead award a Spin Rank of A- (two higher than C rank).
+                        Kicks 3 and 4 award a configuration's base Spin Rank plus 2. This will usually result in a B rank configuration which gets promoted to A rank, with one exception: if Kick 4 is performed without the opposite upper corner being occupied (see configurations 2 and 5 above) or the block below it (configurations 3 and 6), it will not satisfy any of the B rank checks and instead award a Spin Rank of A- (two higher than C rank).
                     </li>
                     <li>
                         Interestingly, the rank+2 case also applies to Kick 5, even though such a kick does not exist. Looking at some of those configurations, I wonder if the O-piece was originally intended to have additional kicks that move upwards?
@@ -1899,11 +1895,7 @@
                 <h3>Aquamino and Stack Manipulation</h3>
 
                 <p>
-                    This game's beta just released, so this section is still a work in progress!
-                </p>
-
-                <p>
-                    Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System (<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls are adjacent to it. Second is the completely new Push mechanic, allowing you to rotate pieces on the floor and push your stack into holes, filling them.
+                    Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System (<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls are adjacent to it. Second is the completely new Push mechanic, allowing you to rotate pieces on the floor or a wall and push your stack to fill holes.
                 </p>
 
                 <p>
@@ -1944,8 +1936,453 @@
                 </div>
 
                 <p>
-                    <span class="todo">TODO: O-Spin setups and Push mechanic guide</span>
+                    This offset table allows for some very interesting and versatile kicks. Plus, they're entirely state-agnostic, so you don't need to worry about pre-rotating the O-piece to trigger specific kicks. Due to the table being symmetrical, all of the setups below can be mirrored.
                 </p>
+
+                <p>
+                    To start with, here are some simple kicks which can be performed on the floor. These kicks can be reversed with the opposite rotation. Note that some of these setups require a high ceiling above the "entrance" to prevent triggering kicks 5 and 6.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][O][O][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G]</div>
+                        <div class="playfield-row">[G][G][G][G][O][O][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Things get more interesting when we incorporate the Levitate table. If none of the above setups succeed, kick 10 will move the O-piece one space upwards. This alone allows you to move the piece over a bumpy stack where it would normally be stuck. However, with the Levitate kicks, you can move the O-piece out of even deeper holes, up to three blocks high!
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][O][O][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][O][O][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Finally, we have some warps! The wall warp below can be performed both on the floor and in mid-air.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][O][O][G][ ][ ][ ]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][O][O][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][O][O][ ]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    There are also floor and ceiling warps, which are the only kicks that can be performed with <span class="nostate">180</span> rotations.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Note that ceiling warps require the floor warp to fail, so these are not fully reversible if you chain multiple floor warps together.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][O][O][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">Setup</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][O][O][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    Now we can move on to the Push Field mechanic! This allows you to loosen the blocks around you by rotating your active piece while holding a directional movement button. While I'll be describing this in the context of the O-piece here, this actually works with every piece. Currently, Push Field is usable in the Sandbox and Levitate modes.
+                </p>
+
+                <p>
+                    Your active piece has a hidden push counter that increases whenever you perform a rotation with a movement key held down. There are three push modes, and multiple modes can be active at any time. However, your push counter will reset to zero when you release a movement key or press a new one.
+                </p>
+
+                <ul>
+                    <li>
+                        Left: <span class="nostate">CCW</span> rotation while Move Left is held and there is a block directly to the left of your piece
+                    </li>
+                    <li>
+                        Right: <span class="nostate">CW</span> rotation while Move Right is held and there is a block directly to the right of your piece
+                    </li>
+                    <li>
+                        Down: Any rotation while Soft Drop is held and there is a block directly below your piece
+                    </li>
+                </ul>
+
+                <p>
+                    If your push counter is 3 or more, the game will loosen blocks on the field depending on the push mode. This is just both of the blocks to the left, right, or below your piece's destination (after applying wall kicks if necessary). When a block is loosened, it will darken. Further rotations after loosening a block will loosen more blocks in that direction. For example:
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Hold Right</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    If you reach an empty space, one of two things will happen. If this empty space is only one block wide, further blocks after the empty space cannot be loosened in that direction, though the blocks in the other row or column will continue to loosen.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Hold Right</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    If the empty space is two blocks wide, an O-piece will push all loosened blocks in the direction of rotation, plus itself. Due to the space left behind by cleared lines, this is especially useful in Levitate mode!
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Hold Right</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][D][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][D][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][D][D][G]</div>
+                        <div class="playfield-row">[ ][ ][O][O][D][D][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    When your piece locks, all loosened blocks will fall as per an avalanche, then un-loosen.
+                </p>
+
+                <p>
+                    There are a couple of quirks with this mechanic that are important to note:
+                </p>
+
+                <ul>
+                    <li>
+                        Performing a rotation with multiple push modes active will increase the push count for each active mode.
+                    </li>
+                    <li>
+                        Pushing down with the O-piece won't work if you rotate into a wall with <span class="system">AqRS</span>. While not indicated visually when holding soft drop, this is because the rotation moves the O-piece upwards, and the "blocks" to push are just the empty space above the floor. You'll need to use <span class="nostate">180</span> rotations in tight spaces.
+                    </li>
+                </ul>
 
                 <ul class="sources">
                     <li>
@@ -2916,7 +3353,7 @@
                 <h4><a href="https://nuketris.com/">Nuketris</a> by <span class="credit">nukeexplosions</span></h4>
             </section>
 
-            <section id="spirit">
+            <section id="spirit-drop">
                 <h3>Spirit Drop and Re-Hold</h3>
 
                 <p>
@@ -3688,7 +4125,6 @@
                 </p>
 
                 <ul>
-                    <li>Aquamino - O-Spin Setups and Push mechanic</li>
                     <li>Spirit Drop - Write section</li>
                     <li>Bombliss - Add section (will do this after release of Tetris Forever)</li>
                 </ul>
