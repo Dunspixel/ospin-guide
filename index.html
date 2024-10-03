@@ -24,9 +24,9 @@
             <section id="top">
                 <h4>Note: This guide is a work in progress - some sections are incomplete and there may be errors.</h4>
 
-                <h4>Last Updated: 30/09/2024</h4>
+                <h4>Last Updated: 03/10/2024</h4>
 
-                <h4>Latest Major Update: 28/09/2024 - Finished Aquamino section</h4>
+                <h4>Latest Major Update: 03/10/2024 - Expanded Spirit Drop section</h4>
             </section>
 
             <hr />
@@ -87,7 +87,7 @@
                             <li><a href="#aquamino">Aquamino and Stack Manipulation</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
-                            <li><a href="#spirit-drop">Spirit Drop and Re-Hold [Placeholder]</a></li>
+                            <li><a href="#spirit-drop">Spirit Drop and Re-Hold [WIP]</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
                             <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
@@ -99,7 +99,6 @@
                         <ul>
                             <li><a href="#feedback">Feedback</a></li>
                             <li><a href="#unsolved">Unsolved Problems</a></li>
-                            <li><a href="#todo-list">To-Do List</a></li>
                             <li><a href="#profiles">Stacker Profiles</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -3357,15 +3356,439 @@
                 <h3>Spirit Drop and Re-Hold</h3>
 
                 <p>
-                    This section is a placeholder for now. I'll update this when I have spent more time with the game.
+                    Unlike most of the other games in this chapter, Spirit Drop's rotation system does not implement any wall kicks on rotation with the O-piece. However, it does register O-Spins if an O-piece is rotated while immobile. To help you put O-pieces in such situations, the game implements a "Re-Hold" mechanic, allowing you to use Hold an unlimited number of times until your piece locks.
                 </p>
 
                 <p>
-                    Spirit Drop features a "Re-Hold" mechanic, allowing the player to take a piece out of hold after it has been held without needing to drop the active piece. When Re-Hold is activated (i.e. Hold is used for a second time since the last piece placement), the held piece will appear at the location of your active piece instead of its usual spawn location. This can be used to move O-pieces into certain O-Spin setups and execute O-Spins.
+                    Your first hold for a piece works the same as any other stacker, but subsequent holds are Re-Holds, which work differently:
+                </p>
+
+                <ul>
+                    <li>Your hold piece spawns at the location of your active piece, instead of its usual spawn location</li>
+                    <li>Re-Holding on the floor counts as a lock delay reset, acting as a limiter</li>
+                </ul>
+
+                <p>
+                    The location of your piece, for the purpose of Re-Hold, is its rotation centre. For most pieces, if there isn't enough room for your hold piece's <span class="state">0</span> state, Re-Hold will fail much like a failed rotation. An exception to this is the O-piece, which has some basic kicks when Re-Hold is used. As a result, you can Re-Hold an O-piece into an O-shaped hole by kicking the rotation centre of any other piece into it. Rotating after this Re-Hold will then register an O-Spin!
                 </p>
 
                 <p>
-                    <span class="todo">TODO: Write this section</span>
+                    Below is a list of setups which can be used to perform O-Spins with Re-Hold. Note that all of these assume at least one Hold has already been performed with the active piece.
+                </p>
+
+                <p>
+                    When using an I-piece to Re-Hold an O-piece, the centre of the I-piece must not be on the border of the O-shaped hole, as the O-piece kicks can only move its rotation centre up to half a space in each direction. This can easily be fixed with a 180-degree rotation. All I-piece setups can be mirrored.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][I ][I ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][I ][I ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-caption">O-Spin Double</div>
+                    </div>
+                </div>
+
+                <p>
+                    These two setups leave behind undesirable board states, so they should only be used for novelty purposes.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][Gm][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][  ][Gm][  ][G ][G ]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][Gm][Gm][Gm][Gm][G ][G ]</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][I ][I ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][I ][I ][  ][G ][G ]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][I ][I ][  ][G ][G ]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][Gm][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][  ][Gm][  ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][Gm][G ][G ][G ]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][Gm][Gm][Gm][Gm][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][  ][G ][G ][G ]</div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][Gm][Gm][Gm][Gm][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][  ][  ][G ][G ][G ]</div>
+                        <div class="playfield-caption"><span class="state">&lt;20&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][I ][I ][  ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][G ][I ][I ][G ][G ][G ]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[  ][  ][  ][  ][  ][  ][  ][  ]</div>
+                        <div class="playfield-row">[G ][G ][G ][G ][  ][G ][G ][G ]</div>
+                        <div class="playfield-row">[G ][G ][  ][I ][I ][  ][G ][G ]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <p>
+                    J and L pieces are strange - the way they interact with the O-piece and Re-Hold is <strong>not</strong> mirrored. A setup that works with one of these pieces may not necessarily work with the other.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][J][J][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][J][J][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][I][I][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][I][I][G][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][I][I][ ][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][J][J][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][J][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][J][J][J][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;R0</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][I][I][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][I][I][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][I][I][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][T][T][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">L</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][T][T][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">L0&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][I][I][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][I][I][G][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][I][I][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][T][T][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">L</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][T][T][T][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">L0&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][I][I][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][I][I][G][G][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][I][I][ ][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][J][J][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][J][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][J][ ][ ][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">R</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][J][J][J][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][J][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">R2&gt;</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][I][I][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][I][I][G][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][ ][I][I][G][G][G]</div>
+                        <div class="playfield-caption">O-Spin Single</div>
+                    </div>
+                </div>
+
+                <p>
+                    The mirrored version of this with the L-piece does <strong>not</strong> work for O-Spins!
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][T][T][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][T][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][T][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">State <span class="state">L</span></div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][ ][ ][G][G]</div>
+                        <div class="playfield-row">[G][G][G][T][T][T][G][G]</div>
+                        <div class="playfield-row">[G][G][G][T][ ][G][G][G]</div>
+                        <div class="playfield-caption"><span class="state">&lt;L2</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[G][G][G][G][I][I][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][I][I][G][G]</div>
+                        <div class="playfield-row">[G][G][G][ ][ ][G][G][G]</div>
+                        <div class="playfield-caption">Re-Hold</div>
+                    </div>
+                </div>
+
+                <p>
+                    <span class="todo">TODO: Add the rest of the Re-Hold O-Spin setups</span>
                 </p>
 
                 <h4><a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin</span></h4>
@@ -4114,19 +4537,6 @@
                     <li>
                         Can performing an O-Spin Double in TETR.IO's Zenith Tower revive your partner if the last remaining revive condition is to clear a Double with an O-piece? If this kills you, is it registered before your partner is revived?
                     </li>
-                </ul>
-            </section>
-
-            <section id="todo-list">
-                <h3>To-Do List</h3>
-
-                <p>
-                    As some sections are incomplete, here is a list of updates I'm planning for the near future:
-                </p>
-
-                <ul>
-                    <li>Spirit Drop - Write section</li>
-                    <li>Bombliss - Add section (will do this after release of Tetris Forever)</li>
                 </ul>
             </section>
 
