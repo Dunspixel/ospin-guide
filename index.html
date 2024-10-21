@@ -24,7 +24,7 @@
             <section id="top">
                 <h4>Note: This guide is a work in progress - some sections are incomplete and there may be errors.</h4>
 
-                <h4>Last Updated: 04/10/2024</h4>
+                <h4>Last Updated: 21/10/2024</h4>
 
                 <h4>Latest Major Update: 03/10/2024 - Expanded Spirit Drop section</h4>
             </section>
@@ -142,7 +142,7 @@
                 </p>
 
                 <p>
-                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "<span class="state">0R2L</span>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state <span class="state">0</span>, and rotating right (clockwise) changes to <span class="state">R</span>, <span class="state">2</span>, <span class="state">L</span>, then back to <span class="state">0</span>. Likewise, rotating left (anti-clockwise or counter-clockwise) from state <span class="state">0</span> will cycle through states <span class="state">L</span>, <span class="state">2</span>, <span class="state">R</span>, and <span class="state">0</span>.
+                    A piece can be in one of four rotation states. In this guide, I will describe rotation states using "<span class="state">0R2L</span>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">rotation notation</span>, in which pieces spawn in state <span class="state">0</span>, and rotating right (clockwise) changes to <span class="state">R</span>, <span class="state">2</span>, <span class="state">L</span>, then back to <span class="state">0</span>. Likewise, rotating left (<span class="tooltip" title="Despite my preference of 'anti-clockwise', CCW is the community-accepted abbreviation and it would just make things confusing">counter-clockwise</span>) from state <span class="state">0</span> will cycle through states <span class="state">L</span>, <span class="state">2</span>, <span class="state">R</span>, and <span class="state">0</span>.
                 </p>
 
                 <p>
@@ -154,7 +154,7 @@
                         A clockwise rotation from <span class="state">0</span> to <span class="state">R</span> is <span class="state">0R&gt;</span>
                     </li>
                     <li>
-                        An anti-clockwise rotation from <span class="state">0</span> to <span class="state">L</span> is <span class="state">&lt;0L</span>
+                        A counter-clockwise rotation from <span class="state">0</span> to <span class="state">L</span> is <span class="state">&lt;0L</span>
                     </li>
                     <li>
                         A clockwise 180-degree rotation from <span class="state">0</span> to <span class="state">2</span> is <span class="state">0R2&gt;</span>
@@ -1440,7 +1440,7 @@
                 </p>
 
                 <p>
-                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in <span class="system">T64</span> limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish O-piece placement skills.
+                    Below are a few (somewhat) practical O-Spin setups. Unfortunately, the kicks in <span class="system">T64</span> limit you to clearing O-Spin Singles. O-Spin Doubles are impossible as there are no wall kicks which move the piece downwards. Additionally, spins do not award any bonus points in Tetris 64. Their main utility is to fix misdrops and to plan around the game's random piece generator. Alternatively, they're great for flexing on your spectators as their jaws drop at your stylish <span class="tooltip" title="O-place piecement">O-piece placement</span> skills.
                 </p>
 
                 <div class="playfield-container">
@@ -3325,7 +3325,9 @@
 
                 <ul class="sources">
                     <li>
-                        <a href="https://discord.gg/MCPRYMZt5g">Nuketris Discord Server</a>
+                        <a href="https://discord.gg/MCPRYMZt5g">
+                            Nuketris Discord Server
+                        </a>
                     </li>
                     <li>
                         <a href="https://tetrisconcept.net/threads/kick-tables-for-srs-180-degree-rotation.1939/">
@@ -3859,6 +3861,14 @@
                     <span class="todo">TODO: Add the rest of the Re-Hold O-Spin setups</span>
                 </p>
 
+                <ul class="sources">
+                    <li>
+                        <a href="https://discord.gg/jkpE3cfbkH">
+                            Spirit Drop Discord Server
+                        </a>
+                    </li>
+                </ul>
+
                 <h4><a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin</span></h4>
             </section>
 
@@ -4279,10 +4289,14 @@
 
                 <ul class="sources">
                     <li>
-                        <a href="https://discord.gg/f9pUvkh">Techmino Discord Server</a>
+                        <a href="https://discord.gg/f9pUvkh">
+                            Techmino Discord Server
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/26F-Studio/Techmino/blob/main/parts/RSlist.lua">Techmino rotation implementation</a>
+                        <a href="https://github.com/26F-Studio/Techmino/blob/main/parts/RSlist.lua">
+                            Techmino rotation implementation
+                        </a>
                         <ul>
                             <li>
                                 See "OspinList" and the O-Spin logic that checks "if P.gameEnv.ospin"
@@ -4335,7 +4349,7 @@
                 </p>
 
                 <p>
-                    Singleplayer modes use T-Spins by default (though this can be changed in Custom Games), while the new multiplayer mode Zenith Tower and the upcoming Season 2 of Tetra League use All-Mini by default. In Zenith Tower specifically, activating The Magician will enable full All-Spin at the cost of punishing duplicate consecutive line clears.
+                    Singleplayer modes use T-Spins by default (though this can be changed in Custom Games), while the new multiplayer mode Zenith Tower and Season 2 of Tetra League use All-Mini by default. In Zenith Tower specifically, activating The Magician will enable full All-Spin at the cost of punishing duplicate consecutive line clears.
                 </p>
 
                 <p>
@@ -4433,7 +4447,7 @@
                 <h3>Tetrs and Ocular Rotation</h3>
 
                 <p>
-                    Tetrs implements a unique rotation system called Ocular Rotation System (<span class="system">Ocular</span>), which has simple but intuitive wall kicks. This includes some basic kicks for the O-piece - while very simple and don't allow warp kicks, their mechanics are different from other stackers in several interesting and fun ways.
+                    Tetrs implements a unique rotation system called Ocular Rotation System (<span class="system">Ocular</span>), which has some unusual but <span class="tooltip" title="At least, after playing the game's Puzzle mode">intuitive</span> wall kicks. This includes some basic kicks for the O-piece - while very simple and don't allow warp kicks, their mechanics are different from other stackers in several interesting and fun ways.
                 </p>
 
                 <p>
@@ -4709,11 +4723,11 @@
                 </p>
 
                 <p>
-                    This guide is the most <span class="tooltip" title="shocking revelation">autistic</span> thing I've ever written. As of writing, I have been studying O-piece rotations and writing about them for about four months. May this hyperfixation continue to bring me dopamine.
+                    This guide is the most <span class="tooltip" title="shocking revelation">autistic</span> thing I've ever written. I have been studying O-piece rotations for several months, with the bulk of this guide taking about 3-4 months to write. May this hyperfixation continue to bring me dopamine.
                 </p>
 
                 <p>
-                    I like purple a normal amount, as I'm sure you can tell.
+                    I like purple a normal amount, as I'm sure you can tell. It's much like my love for rotating O-pieces, which is also perfectly normal.
                 </p>
 
                 <p>
