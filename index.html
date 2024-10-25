@@ -24,7 +24,7 @@
             <section id="top">
                 <h4>Note: This guide is a work in progress - some sections are incomplete and there may be errors.</h4>
 
-                <h4>Last Updated: 21/10/2024</h4>
+                <h4>Last Updated: 25/10/2024</h4>
 
                 <h4>Latest Major Update: 03/10/2024 - Expanded Spirit Drop section</h4>
             </section>
@@ -2203,7 +2203,7 @@
                 </div>
 
                 <p>
-                    Now we can move on to the Push Field mechanic! This allows you to loosen the blocks around you by rotating your active piece while holding a directional movement button. While I'll be describing this in the context of the O-piece here, this actually works with every piece. Currently, Push Field is usable in the Sandbox and Levitate modes.
+                    Now we can move on to the Push Field mechanic! This allows you to loosen the blocks around you by rotating your active piece while holding a directional movement button. While I'll be describing this in the context of the O-piece here, this actually works with every piece. It also works in any rotation system - it's not exclusive to <span class="system">AqRS</span>. Currently, Push Field is usable in the Sandbox and Levitate modes.
                 </p>
 
                 <p>
@@ -2212,24 +2212,24 @@
 
                 <ul>
                     <li>
-                        Left: <span class="nostate">CCW</span> rotation while Move Left is held and there is a block directly to the left of your piece
+                        Left: Rotate while Move Left is held and there is a block directly to the left of your piece
                     </li>
                     <li>
-                        Right: <span class="nostate">CW</span> rotation while Move Right is held and there is a block directly to the right of your piece
+                        Right: Rotate while Move Right is held and there is a block directly to the right of your piece
                     </li>
                     <li>
-                        Down: Any rotation while Soft Drop is held and there is a block directly below your piece
+                        Down: Rotate while Soft Drop is held and there is a block directly below your piece
                     </li>
                 </ul>
 
                 <p>
-                    If your push counter is 3 or more, the game will loosen blocks on the field depending on the push mode. This is just both of the blocks to the left, right, or below your piece's destination (after applying wall kicks if necessary). When a block is loosened, it will darken. Further rotations after loosening a block will loosen more blocks in that direction. For example:
+                    If your push counter is 3 or more, the game will loosen blocks on the field depending on the push mode. This is just both of the blocks to the left, right, or below your piece's destination (after applying wall kicks if necessary). When a block is loosened, it will darken. Further rotations after loosening a block will loosen more blocks in that direction. Due to their relative ease of use when pushing, I'll use <span class="nostate">180</span> rotations for most of these descriptions. For example:
                 </p>
 
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
@@ -2240,9 +2240,57 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
+                    </div>
+                </div>
+
+                <p>
+                    In <span class="system">AqRS</span> specifically, rotating <span class="nostate">CW</span> or <span class="nostate">CCW</span> will kick upwards, allowing you to push blocks above you. This can be prevented with an overhang, but it's much easier to use <span class="nostate">180</span> rotations to push the lower blocks if needed.
+                </p>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
+                        <div class="playfield-row">[G][G][G][G][G][G][G]</div>
+                        <div class="playfield-caption">Hold Right</div>
+                    </div>
+                </div>
+
+                <div class="playfield-container">
+                    <div class="playfield">
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
                         <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
                     </div>
@@ -2250,10 +2298,10 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
                         <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
                     </div>
@@ -2261,10 +2309,10 @@
 
                 <div class="playfield-container">
                     <div class="playfield">
-                        <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
                         <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
                     </div>
@@ -2277,7 +2325,7 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
@@ -2288,33 +2336,33 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][D][D][G]</div>
                         <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
@@ -2325,7 +2373,7 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
                         <div class="playfield-row">[ ][O][O][G][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
@@ -2336,33 +2384,33 @@
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
                         <div class="playfield-row">[ ][O][O][D][ ][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][ ][O][O][D][G][G]</div>
                         <div class="playfield-row">[ ][ ][O][O][D][G][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
                 <div class="playfield-container">
                     <div class="playfield">
                         <div class="playfield-row">[ ][ ][ ][ ][ ][ ][ ]</div>
-                        <div class="playfield-row">[ ][ ][G][G][G][G][G]</div>
+                        <div class="playfield-row">[ ][ ][ ][G][G][G][G]</div>
                         <div class="playfield-row">[ ][ ][O][O][D][D][G]</div>
                         <div class="playfield-row">[ ][ ][O][O][D][D][G]</div>
                         <div class="playfield-row">[G][G][G][G][G][G][G]</div>
-                        <div class="playfield-caption"><span class="nostate">CW</span> Rotation</div>
+                        <div class="playfield-caption"><span class="nostate">180</span> Rotation</div>
                     </div>
                 </div>
 
@@ -2376,10 +2424,10 @@
 
                 <ul>
                     <li>
-                        Performing a rotation with multiple push modes active will increase the push count for each active mode.
+                        Performing a rotation with multiple push modes active will increase the push count by the number of active modes.
                     </li>
                     <li>
-                        Pushing down with the O-piece won't work if you rotate into a wall with <span class="system">AqRS</span>. While not indicated visually when holding soft drop, this is because the rotation moves the O-piece upwards, and the "blocks" to push are just the empty space above the floor. You'll need to use <span class="nostate">180</span> rotations in tight spaces.
+                        Using <span class="nostate">CW</span> or <span class="nostate">CCW</span> rotations in <span class="system">AqRS</span> will usually prevent you from pushing down, or the lowest block if moving horizontally. While not indicated visually when holding soft drop, this is because the rotation moves the O-piece upwards, and the "blocks" to push are just the empty space above the floor. To work around this, you can use <span class="nostate">180</span> rotations, which only kick if there is a floor or ceiling warp available.
                     </li>
                 </ul>
 
