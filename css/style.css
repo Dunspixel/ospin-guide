@@ -116,7 +116,13 @@ img
     color: #DAFFE4;
 }
 
-.sources, .sources li
+.sources
+{
+    list-style: none;
+    padding-left: 0;
+}
+
+.sources li ul
 {
     list-style: square;
 }
