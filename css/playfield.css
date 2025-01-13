@@ -1,12 +1,20 @@
 .playfield-container
 {
     display: inline-block;
+    vertical-align: top;
+    margin-bottom: 4px;
+}
+
+.playfield-spacer
+{
+    display: inline-block;
+    margin-right: 16px;
 }
 
 .playfield
 {
     display: table;
-    border: 2px solid;
+    padding: 4px;
 }
 
 .playfield-row
@@ -18,8 +26,8 @@
 .playfield-cell
 {
     display: table-cell;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     padding: 0;
 }
 
@@ -27,10 +35,9 @@
 {
     display: table-caption;
     caption-side: bottom;
+    text-align: center;
+    font-size: 14px;
     padding: 2px 4px;
-    border-left: 2px solid;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
 }
 
 .playfield-cell-grey
@@ -103,11 +110,6 @@
 .container-flag
 {
     width: 20%;
-}
-
-.playfield-flag
-{
-    border: 0 !important;
 }
 
 .playfield-flag, .row-flag, .row-flag .playfield-cell

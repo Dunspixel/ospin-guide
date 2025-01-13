@@ -1,22 +1,55 @@
 function renderPlayfields()
 {
-    var playfields = document.querySelectorAll(".playfield");
-    playfields.forEach(playfield => renderPlayfield(playfield));
+    var containers = document.querySelectorAll(".playfield-container");
+    containers.forEach(container => renderPlayfield(container));
 }
 
-function renderPlayfield(playfield)
+function renderPlayfield(container)
 {
-    var playfieldRows = playfield.querySelectorAll(".playfield-row");
-    playfieldRows.forEach(row => renderRow(row));
+    var isFlag = Array.from(container.classList).includes("container-flag");
+    var playfield = document.createElement("div");
+    playfield.classList.add("playfield");
+
+    if (isFlag)
+    {
+        playfield.classList.add("playfield-flag")
+    }
+
+    const rowTokenRegex = /\/(.*?)\//g;
+    const captionTokenRegex = /~(.*?)~/;
+    var rowTokens = container.innerText.match(rowTokenRegex);
+    var captionToken = container.innerHTML.match(captionTokenRegex);
+
+    rowTokens.forEach(token => playfield.appendChild(renderRow(token, isFlag, rowTokens.length)));
+
+    if (captionToken !== null)
+    {
+        var captionDiv = document.createElement("div");
+        captionDiv.classList.add("playfield-caption");
+        captionDiv.innerHTML = captionToken[0].replace(/~/g, '');
+        playfield.appendChild(captionDiv);
+    }
+
+    container.innerText = "";
+    container.appendChild(playfield);
 }
 
-function renderRow(row)
+function renderRow(rowToken, isFlag, rowCount)
 {
-    const tokenRegex = /\[(.*?)\]/g;
-    var rowContent = row.innerText;
-    var cellTokens = rowContent.match(tokenRegex);
-    row.innerText = "";
+    var row = document.createElement("div");
+    row.classList.add("playfield-row");
+
+    if (isFlag)
+    {
+        row.classList.add("row-flag");
+        row.classList.add("playfield-flag-" + rowCount);
+    }
+
+    const cellTokenRegex = /\[(.*?)\]/g;
+    var cellTokens = rowToken.match(cellTokenRegex);
     cellTokens.forEach(token => row.appendChild(renderCell(token)));
+
+    return row;
 }
 
 function renderCell(cellToken)
