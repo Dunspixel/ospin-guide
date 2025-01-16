@@ -647,11 +647,11 @@
                 </ul>
 
                 <p>
-                    With most pieces, if your active piece is already in the desired rotation state and you are not already holding the appropriate rotation button, it's usually easiest to initialise the next piece's spawn state by performing a rotation in the opposite direction to the desired spawn state, then rotate it back while keeping the rotation button held down. This will then allow you drop the piece and spawn the next piece in its desired state.
+                    With most pieces, if your active piece is already in the desired rotation state and you are not already holding the appropriate rotation button, it's usually easiest to initialise the next piece's spawn state with a pair of back-and-forth rotations. For example, if you want to spawn your next piece in state <span class="state">R</span>, you would quickly perform a counter-clockwise rotation, then a clockwise rotation, then lock the piece while still holding that clockwise rotation. It's not strictly necessary to do this, but with such a tight window after locking your piece this technique is much more consistent than relying on piece entry delay.
                 </p>
 
                 <p>
-                    Because the O-piece has identical rotation states, you do not need to consider its current rotation state when placing it. Even if you are not currently holding a rotation button, you only need to perform a single rotation in the direction of the next piece's desired spawn state, which makes the O-piece the easiest piece to use with IRS.
+                    Because the O-piece has identical rotation states, you do not need to consider its current rotation state when placing it. Even if you are not currently holding a rotation button, you only need to perform a single rotation in the direction of the next piece's desired spawn state, which makes the O-piece the easiest piece to use when buffering IRS with such a short piece entry delay.
                 </p>
 
                 <ul class="sources">
