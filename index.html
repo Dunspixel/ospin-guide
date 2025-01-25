@@ -88,7 +88,7 @@
                             <li><a href="#aquamino">Aquamino and Stack Manipulation</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
-                            <li><a href="#spirit-drop">Spirit Drop and Re-Hold [WIP]</a></li>
+                            <li><a href="#spirit-drop">Spirit Drop and Re-Hold</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
                             <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
@@ -3256,11 +3256,15 @@
                 </p>
 
                 <p>
+                    Because most pieces have their rotation centre in the middle of a block, and the O-piece has it between its four blocks, the O-piece can kick up to half a space in each direction following a Re-Hold. Specifically, this starts with an upper-right kick, then checks the remaining corners in clockwise order.
+                </p>
+
+                <p>
                     Below is a list of setups which can be used to perform O-Spins with Re-Hold. Note that all of these assume at least one Hold has already been performed with the active piece.
                 </p>
 
                 <p>
-                    When using an I-piece to Re-Hold an O-piece, the centre of the I-piece must not be on the border of the O-shaped hole, as the O-piece kicks can only move its rotation centre up to half a space in each direction. This can easily be fixed with a 180-degree rotation. All I-piece setups can be mirrored.
+                    When using an I-piece to Re-Hold an O-piece, the centre of the I-piece must line up exactly with the centre of the O-shaped hole. If it's on the border, it can easily be fixed with a 180-degree rotation. All I-piece setups can be mirrored.
                 </p>
 
                 <div class="playfield-container">
@@ -3552,7 +3556,7 @@
                 </div>
 
                 <p>
-                    This next setup cannot be mirrored - the version with the L-piece does <strong>not</strong> work for O-Spins! I don't actually know the full offset table yet, but based on my observations I believe it starts with an upper right kick, then tests the other three corners in clockwise order.
+                    This next setup cannot be mirrored - the version with the L-piece does <strong>not</strong> work for O-Spins! This is because the upper-right kick is the first to be checked, and the upper-left kick is last.
                 </p>
 
                 <div class="playfield-container">
@@ -4132,6 +4136,17 @@
 
                 <ul class="sources">
                     <li>
+                        <strong>Special Thanks</strong>
+                        <ul>
+                            <li>
+                                <span class="credit">AgStarRay</span> - Thank you for confirming the Re-Hold kick order for the O-piece!
+                            </li>
+                            <li>
+                                <span class="credit">KonSola5</span> - Thank you for teaching me about and demonstrating O-Spins with the Re-Hold mechanic!
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <strong>Community</strong>
                         <ul>
                             <li>
@@ -4143,7 +4158,9 @@
                     </li>
                 </ul>
 
-                <h4><a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin</span></h4>
+                <h4>
+                    <a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by <span class="credit">Aaron Griffin (AgStarRay)</span>
+                </h4>
             </section>
 
             <section id="techmino">
