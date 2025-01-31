@@ -22,9 +22,9 @@
 
         <main>
             <section id="top">
-                <h4>Note: This guide is a work in progress - some sections are incomplete and there may be errors.</h4>
+                <h4>Note: Some sections in this guide are still a work in progress.</h4>
 
-                <h4>Last Updated: 30/01/2025</h4>
+                <h4>Last Updated: 31/01/2025</h4>
 
                 <h4>Latest Major Update: 29/01/2025 - Finished Spirit Drop section</h4>
             </section>
@@ -88,13 +88,13 @@
                             <li><a href="#aquamino">Aquamino and Stack Manipulation</a></li>
                             <li><a href="#asc">Ascension's Extensive Wall Kicks</a></li>
                             <li><a href="#nuketris">Nuketris and Worm Mode</a></li>
+                            <li><a href="#polyform">Polyform's Asymmetrical O-Spins</a></li>
                             <li><a href="#spirit-drop">Spirit Drop and Re-Hold</a></li>
                             <li><a href="#techmino">Techmino's Transformative O-Spins</a></li>
                             <li><a href="#tetrio">TETR.IO's All-Spin</a></li>
                             <li><a href="#tetrs">Tetrs and Ocular Rotation</a></li>
                             <li><a href="#jstris">Jstris and O-Spin Memes</a></li>
                             <li><a href="#hakairis">Hakairis [Placeholder]</a></li>
-                            <li><a href="#polyform">Polyform [Placeholder]</a></li>
                             <li><a href="#best">Tetris Best [Placeholder]</a></li>
                             <li><a href="#return">Tetris Return [Placeholder]</a></li>
                             <li><a href="#stacker-notes">Useful Notes</a></li>
@@ -3241,6 +3241,104 @@
                 <h4><a href="https://nuketris.com/">Nuketris</a> by <span class="credit">nukeexplosions</span></h4>
             </section>
 
+            <section id="polyform">
+                <h3>Polyform's Asymmetrical O-Spins</h3>
+
+                <p>
+                    MultiMino 2: Polyform features a variety of piece shapes and rotation systems, with the game's tetrominoes primarily using <span class="system">SRS+</span> and a custom 180-degree offset table.
+                </p>
+
+                <p>
+                    By default, the O tetromino does not move or kick on rotation. By enabling "Allow O-Spins" in the options menu, it is given four distinct rotation states, with state <span class="state">0</span> having its rotation centre in the bottom-left corner. It also inherits the same offset table as the other tetrominoes (except for I)!
+                </p>
+
+                <p>
+                    Unlike most stackers with All-Spin, which use immobile detection for non-T pieces, Polyform actually uses three-corner detection for all polyominoes. Like the T-piece, the O-piece has four "corners" around it, two major and two minor. If it is rotated into a position where three of these corners are occupied, it will register an O-Spin, with this spin being a Mini if only one of the major corners is occupied.
+                </p>
+
+                <p>
+                    An interesting quirk of this corner detection is that O-Spins are actually asymmetrical and state-dependent. Immobile positions don't necessarily register spins, overhangs are not strictly necessary, and perhaps most unusually, you can actually rotate an O-piece in place to upgrade an O-Spin Mini to a full O-Spin! This is because rotating the O-piece also rotates the corners around it, effectively swapping the positions of the major and minor corners.
+                </p>
+
+                <p>
+                    Below is an offset chart for Polyform. This also includes the corners for spin detection - pink corners are major and blue corners are minor. A full O-Spin requires both pink corners and at least one blue corner to be occupied.
+                </p>
+
+                <div class="centre">
+                    <img src="img/polyform_opiece_offset.png" alt="Polyform O-Piece Offset Chart" />
+                </div>
+
+                <p>
+                    <span class="todo">TODO: Add 180-degree rotations to the chart</span>
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Add version of the chart without spin corners (for readability)</span>
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Describe inaccessible kicks and Mini conversions</span>
+                </p>
+
+                <p>
+                    <span class="todo">TODO: List some setups and the rotations necessary to perform them</span>
+                </p>
+
+                <p>
+                    There's also an achievement system, with one of these achievements being for performing an O-Spin with an O tetromino. Of course, the first thing I did when I started this game was accidentally achieve this without knowing it existed.
+                </p>
+
+                <p>
+                    <span class="todo">TODO: Briefly mention the O-Spins and achievements with other polyforms</span>
+                </p>
+                
+                <ul class="sources">
+                    <li>
+                        <strong>Sources</strong>
+                        <ul>
+                            <li>
+                                <span class="credit">Axel Fox</span> -
+                                <a href="https://media.discordapp.net/attachments/1061786737212411984/1061786740169396344/image.png?ex=679cb235&is=679b60b5&hm=9afb83c227aaef2dccd0180370156477f58c77294743bcc92a1c82649e4833ec&=&format=webp&quality=lossless&width=1045&height=600">
+                                    Polyform tetromino offset chart
+                                </a>
+                            </li>
+                            <li>
+                                <span class="credit">Axel Fox</span> -
+                                <a href="https://media.discordapp.net/attachments/780515672433360906/1288432811388309536/image.png?ex=679d4150&is=679befd0&hm=c81c9f44d67dc6ab1522ed42b90546cd83d7a56275c55d08661ea25d878a0018&=&format=webp&quality=lossless&width=1440&height=541">
+                                    Polyform polyomino spin recognition chart
+                                </a>
+                                <ul>
+                                    <li>Both of these charts are on the MultiMino Discord server</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Special Thanks</strong>
+                        <ul>
+                            <li>
+                                <span class="credit">Axel Fox</span> - Thank you for sharing a 180-degree offset chart for the O-piece!
+                            </li>
+                            <li>
+                                <span class="credit">Aqua6623</span> - Thank you for explaining this game's spin detection to me!
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Community</strong>
+                        <ul>
+                            <li>
+                                <a href="https://discord.gg/9Q3mqbC9RT">
+                                    MultiMino Discord Server
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4><a href="https://axelfox149.itch.io/polyform">Polyform</a> by <span class="credit">Axel Fox</span></h4>
+            </section>
+
             <section id="spirit-drop">
                 <h3>Spirit Drop and Re-Hold</h3>
 
@@ -5017,69 +5115,6 @@
                 </ul>
 
                 <h4><a href="https://web.archive.org/web/20150818190710/http://download.seesaa.jp/archive/win/ent/pgame/hkris.lzh">Hakairis</a> by <span class="credit">裏HP研究所</span></h4>
-            </section>
-
-            <section id="polyform">
-                <h3>Polyform [Placeholder]</h3>
-
-                <p>
-                    This game has an option to enable O-Spins, as well as an achievement for performing one! This was the first thing I did, and I didn't even know the achievement existed!
-                </p>
-
-                <p>
-                    For now, here's an offset chart! The pink and blue squares represent the "corners" used for spin detection, with pink being major corners and blue being minor corners. Similar to how T-Spins work in Guideline games, a three-corner spin where only one major corner is filled will register a Mini spin.
-                </p>
-
-                <div class="centre">
-                    <img src="img/polyform_opiece_offset.png" alt="Polyform O-Piece Offset Chart" />
-                </div>
-
-                <p>
-                    Full section coming soon! (hopefully)
-                </p>
-                
-                <ul class="sources">
-                    <li>
-                        <strong>Sources</strong>
-                        <ul>
-                            <li>
-                                <span class="credit">Axel Fox</span> -
-                                <a href="https://media.discordapp.net/attachments/1061786737212411984/1061786740169396344/image.png?ex=679cb235&is=679b60b5&hm=9afb83c227aaef2dccd0180370156477f58c77294743bcc92a1c82649e4833ec&=&format=webp&quality=lossless&width=1045&height=600">
-                                    Polyform tetromino offset chart
-                                </a>
-                            </li>
-                            <li>
-                                <span class="credit">Axel Fox</span> -
-                                <a href="https://media.discordapp.net/attachments/780515672433360906/1288432811388309536/image.png?ex=679d4150&is=679befd0&hm=c81c9f44d67dc6ab1522ed42b90546cd83d7a56275c55d08661ea25d878a0018&=&format=webp&quality=lossless&width=1440&height=541">
-                                    Polyform polyomino spin detection chart
-                                </a>
-                                <ul>
-                                    <li>Both of these charts are on the MultiMino Discord server</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Special Thanks</strong>
-                        <ul>
-                            <li>
-                                <span class="credit">Aqua6623</span> - Thank you for explaining this game's spin detection to me!
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Community</strong>
-                        <ul>
-                            <li>
-                                <a href="https://discord.gg/9Q3mqbC9RT">
-                                    MultiMino Discord Server
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h4><a href="https://axelfox149.itch.io/polyform">Polyform</a> by <span class="credit">Axel Fox</span></h4>
             </section>
 
             <section id="best">
