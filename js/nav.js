@@ -1,3 +1,17 @@
+function toggleMobileNav()
+{
+    var overlay = document.querySelector(".nav-overlay");
+
+    if (overlay.style.display == "block")
+    {
+        overlay.style.display = "none";
+    }
+    else
+    {
+        overlay.style.display = "block";
+    }
+}
+
 function buildNavMenus()
 {
     renderMenuOPiece();
@@ -7,10 +21,6 @@ function buildNavMenus()
 
 function buildNavMenu(nav)
 {
-    var header = document.createElement("h3");
-    header.innerText = "Chapters";
-    nav.appendChild(header);
-
     addChapter(nav, "Introduction", "index.html");
 
     addChapter(nav, "Chapter 1: General Concepts", "chapter1.html");

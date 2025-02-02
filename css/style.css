@@ -51,27 +51,20 @@ body
 
 header
 {
-    display: flex;
     position: sticky;
     top: 0;
     background-color: #6C529A;
 }
 
-header *
-{
-    margin: 0;
-}
-
 footer
 {
-    padding-bottom: 8px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     column-gap: 16px;
     row-gap: 8px;
+    padding-bottom: 8px;
 }
 
 footer p
@@ -134,7 +127,7 @@ img
     display: flex;
 }
 
-.nav-container
+.nav-sidemenu
 {
     min-width: 270px;
     max-width: 270px;
@@ -142,6 +135,20 @@ img
     border-right: 1px solid #F4DCFF;
     overflow: scroll;
     scrollbar-width: none;
+}
+
+.nav-overlay
+{
+    display: none;
+    position: fixed;
+    width: calc(100% - 32px);
+    height: 80%;
+    padding: 0 16px;
+    border-bottom: 1px solid #F4DCFF;
+    z-index: 1;
+    overflow: scroll;
+    scrollbar-width: none;
+    background-color: #45326E;
 }
 
 .nav-container ul
@@ -171,10 +178,23 @@ img
     text-decoration: none;
 }
 
+.nav-button
+{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.5em;
+    gap: 0.25em;
+}
+
+.nav-button h4
+{
+    margin: 0;
+}
+
 .nav-icon
 {
     display: table;
-    margin: 0.5em;
     border-collapse: collapse;
 }
 

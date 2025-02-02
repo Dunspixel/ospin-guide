@@ -11,11 +11,15 @@
 
     <body>
 		<header class="mobile">
-			<div class="nav-icon"></div>
+            <div class="nav-button" onclick="toggleMobileNav()">
+                <div class="nav-icon"></div>
+                <h4>Menu</h4>
+            </div>
 		</header>
 
 		<div class="container">
-			<nav class="nav-container desktop"></nav>
+			<nav class="nav-container nav-sidemenu desktop"></nav>
+			<nav class="nav-container nav-overlay mobile"></nav>
 
 			<main class="content-container">
 				<div class="nav-chapter centre">
