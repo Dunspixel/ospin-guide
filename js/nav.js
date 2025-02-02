@@ -63,7 +63,7 @@ function buildNavMenu(nav)
     addSection(nav, "Unsolved Problems", "chapter5.html#unsolved");
     addSection(nav, "Stacker Profiles", "chapter5.html#profiles");
     addSection(nav, "Contact", "chapter5.html#contact");
-    addSection(nav, "Random Ramblings", "chapter5.html#ramblings.html");
+    addSection(nav, "Random Ramblings", "chapter5.html#ramblings");
 }
 
 function addChapter(nav, text, url)
