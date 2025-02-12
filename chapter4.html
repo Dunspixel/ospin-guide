@@ -2809,10 +2809,10 @@
 					</ul>
 	
 					<p>
-						Specifically, this performs an "immovable" check on the O-piece (can the O-piece move down, left, or right) and the
-						piece it is transforming into (can the new piece move in any direction). An exception to this is the I-piece, which
-						only checks whether it is <em>vertically</em> immovable. If both of the checks see that the piece cannot move after
-						the rotation sequence is entered, the piece will transform.
+						Specifically, this performs a semi-immobile check on the O-piece (can the O-piece move down, left, or right) and an
+						immobile check on the piece it is transforming into (can the new piece move in any direction). An exception to this
+						is the I-piece, which only checks whether it is <em>vertically</em> immobile. If both of the checks see that the
+						piece cannot move after the rotation sequence is entered, the piece will transform.
 					</p>
 	
 					<p>
@@ -3247,10 +3247,9 @@
 	
 					<p>
 						Normally, because the O-shaped hole requires blocks to be placed above it, performing an O-Spin by pushing the hole
-						up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. However, the
-						hole does not need to be completely surrounded; the O-piece only needs to be immobile to register an O-Spin on
-						rotation. Because of this, there is a specific setup which will allow you to survive and downstack by putting an
-						S-shaped hole on top of the O-shaped hole:
+						up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. Because the
+						O-piece only needs to be immobile to register an O-Spin on rotation, there is a specific setup which will allow you
+						to survive and downstack by putting an S-shaped hole on top of the O-shaped hole:
 					</p>
 	
 					<div class="playfield-container">
@@ -3665,6 +3664,24 @@
 						this feature to be used with any of Techmino's rotation system options. However, the feature is only available in
 						Custom Games and cannot be used in the main game modes.
 					</p>
+
+					<p>
+						The O-Spin setup in the TETR.IO section will actually work in any stacker that recognises O-Spins and allows you to
+						stack above the O-piece's spawn point. However, I included it in that section for the following reasons:
+					</p>
+
+					<ul>
+						<li>
+							All demonstrations I could find at the time of writing that section were in the context of TETR.IO
+						</li>
+						<li>
+							TETR.IO is the only game in this chapter where spawn rotations are the <em>only</em> way of performing an O-Spin
+							with the default rotation system and spin recognition settings
+						</li>
+						<li>
+							The unique techniques in the other games' sections are far less situational
+						</li>
+					</ul>
 				</section>
 
 				<hr />
