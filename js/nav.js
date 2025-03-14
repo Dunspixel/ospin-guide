@@ -59,10 +59,8 @@ function buildNavMenu(nav)
     addSection(nav, "Useful Notes", "chapter4.html#stacker-notes");
 
     addChapter(nav, "Chapter 5: Closing Thoughts", "chapter5.html");
-    addSection(nav, "Feedback", "chapter5.html#feedback");
-    addSection(nav, "Unsolved Problems", "chapter5.html#unsolved");
+    addSection(nav, "Feedback / Contact", "chapter5.html#feedback");
     addSection(nav, "Stacker Profiles", "chapter5.html#profiles");
-    addSection(nav, "Contact", "chapter5.html#contact");
     addSection(nav, "Random Ramblings", "chapter5.html#ramblings");
 }
 
