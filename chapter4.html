@@ -114,10 +114,6 @@
 					<div class="centre">
 						<img src="img/aqrs_opiece_offset.png" alt="AqRS O-Piece Offset Chart" />
 					</div>
-
-					<p>
-						<span class="todo">TODO: Update chart for v0.3</span>
-					</p>
 	
 					<p>
 						This offset table allows for some very interesting and versatile kicks. Plus, they're entirely state-agnostic, so
@@ -265,7 +261,7 @@
 					</div>
 	
 					<p>
-						There are also floor and ceiling warps, which are the only kicks that can be performed with
+						There are also floor and ceiling warps, which are the primary kicks that can be performed with
 						<span class="nostate">180</span> rotations.
 					</p>
 	
@@ -299,8 +295,9 @@
 					</div>
 	
 					<p>
-						Note that ceiling warps require the floor warp to fail, so these are not fully reversible if you chain multiple
-						floor warps together.
+						Note that ceiling warps require the floor warp to fail, so these are not fully reversible with
+						<span class="nostate">180</span> rotations. To warp back up more than once, you'll need to use
+						<span class="nostate">CW</span> or <span class="nostate">CCW</span> rotations.
 					</p>
 	
 					<div class="playfield-container">
@@ -352,6 +349,19 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">180</span>~
+					</div>
+	
+					<div class="playfield-container">
+						/[ ][ ][ ][ ][ ][ ][ ][ ]/
+						/[ ][ ][ ][O][O][ ][ ][ ]/
+						/[ ][ ][ ][O][O][ ][ ][ ]/
+						/[G][G][G][G][G][G][G][G]/
+						/[G][G][G][ ][ ][G][G][G]/
+						/[G][G][G][ ][ ][G][G][G]/
+						/[G][G][G][G][G][G][G][G]/
+						/[G][G][G][ ][ ][G][G][G]/
+						/[G][G][G][ ][ ][G][G][G]/
+						~<span class="nostate">CW</span>~
 					</div>
 	
 					<p>
