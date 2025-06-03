@@ -266,28 +266,99 @@
 	
 					<p>
 						Triggering this wall kick for the standard O-piece is much trickier, and requires you to exploit situations where
-						your active piece overlaps with your stack without topping you out. There are two ways of doing this:
+						your active piece overlaps with your stack without topping you out. There are two ways of doing this, though
+						they're both very impractical.
 					</p>
-	
-					<ul>
-						<li>
-							Take an O-piece out of hold in a situation where it would overlap with your stack - this won't top you out
-							until the piece locks due to a PPT-specific bug
-						</li>
-						<li>
-							In Fusion mode, use an O-piece to slowly break through a stack of Puyos into a double line clear and place
-							another O-piece underneath a part of your stack before the line clear moves your stack into your O-piece
-						</li>
-					</ul>
-	
+
 					<p>
-						<span class="todo">TODO: Lab Hold glitch and describe O-Spin setups</span>
+						First, let's talk about the Hold glitch. If you take a piece out of hold, PPT will attempt to spawn the piece such
+						that it won't top you out (e.g. by spawning the piece one row higher if its usual spawn position is blocked), but
+						it doesn't actually check whether spawning your hold piece will actually top you out after it spawns. This can
+						cause your piece to spawn inside your stack while also giving you the ability to rotate it.
 					</p>
+
+					<p>
+						This glitch does work with the O-piece, though due to the alternative spawn position, its usefulness is severely
+						limited. When trying to execute this myself, I could only find one setup that actually works, and it's
+						unfortunately not an O-Spin that can clear lines. However, it can (albeit under <em>very</em> exceptional and
+						specific circumstances) save you from a top-out. This setup can be created with the following steps:
+					</p>
+
+					<ul>
+						<li>Ensure there is space somewhere in the first three columns to place an O-piece</li>
+						<li>Put an O-piece in Hold</li>
+						<li>Fill column 4 of row 20 with any block, just under the top-left block where the Z-piece spawns</li>
+						<li>
+							Use a S-piece or L-piece to occupy the three blocks around the right side of the Z-piece's spawn position,
+							creating an open Z-shaped hole
+							<ul>
+								<li>This piece <strong>must</strong> be followed immediately by a Z-piece in your next queue</li>
+							</ul>
+						</li>
+						<li>Place the S or L-piece and spawn your Z-piece inside the Z-shaped hole</li>
+						<li>Take your O-piece out of hold - the game will attempt to unblock it and spawn it in rows 21-22</li>
+						<li>
+							Perform a <span class="state">&lt;0L</span> rotation to kick the O-piece to the left
+							<ul>
+								<li>
+									The higher spawn will cause your O-piece to overlap its <strong>lower-right</strong> block - this
+									unfortunately prevents a <span class="state">0R&gt;</span> downward kick from working
+								</li>
+							</ul>
+						</li>
+						<li>You can then move your O-piece to the left and place it normally</li>
+					</ul>
+
+					<div class="playfield-container">
+						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
+						/[ ][ ][ ][ ][ ][G][G][ ][ ][ ]/
+						/[ ][ ][ ][G][ ][ ][G][ ][ ][ ]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						~Setup~
+					</div>
+
+					<div class="playfield-container">
+						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
+						/[ ][ ][ ][Z][Z][G][G][ ][ ][ ]/
+						/[ ][ ][ ][G][Z][Z][G][ ][ ][ ]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						~Spawn Z~
+					</div>
+
+					<div class="playfield-container">
+						/[ ][ ][ ][ ][O][O][ ][ ][ ][ ]/
+						/[ ][ ][ ][ ][O][D][G][ ][ ][ ]/
+						/[ ][ ][ ][G][ ][ ][G][ ][ ][ ]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						~Hold~
+					</div>
+
+					<div class="playfield-container">
+						/[ ][ ][ ][O][O][ ][ ][ ][ ][ ]/
+						/[ ][ ][ ][O][O][G][G][ ][ ][ ]/
+						/[ ][ ][ ][G][ ][ ][G][ ][ ][ ]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						/[G][ ][ ][G][G][G][G][G][G][G]/
+						~<span class="state">&lt;0L</span> Rotation~
+					</div>
+
+					<div class="playfield-container">
+						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
+						/[ ][ ][ ][ ][ ][G][G][ ][ ][ ]/
+						/[ ][ ][ ][G][ ][ ][G][ ][ ][ ]/
+						/[G][O][O][G][G][G][G][G][G][G]/
+						/[G][O][O][G][G][G][G][G][G][G]/
+						~Place Piece~
+					</div>
 						
 					<p>
-						Fusion mode combines Puyo Puyo with Tetris on the same board, introducing some unusual behaviour when Puyos and
-						Tetris pieces interact with each other. By soft dropping a piece on top of a Puyo stack, the Tetris piece will
-						slowly break through the stack, and activate the next piece which you can use at the same time.
+						The other O-Spin setup in this game can only be done in Fusion mode, which combines Puyo Puyo with Tetris on the
+						same board. This introduces some unusual behaviour when Puyos and Tetris pieces interact with each other - by soft
+						dropping a piece on top of a Puyo stack, the Tetris piece will slowly break through the stack, and activate the
+						next piece which you can use at the same time.
 					</p>
 	
 					<p>
@@ -400,7 +471,10 @@
 										[Puyo Puyo Tetris] O-SPIN IS A REAL THING
 									</a>
 									<ul>
-										<li>A Fusion O-Spin demonstration, used as the basis for the setup described in this section</li>
+										<li>
+											A Fusion O-Spin demonstration, used as the basis for the setup described in the second half of
+											this section
+										</li>
 									</ul>
 								</li>
 							</ul>
