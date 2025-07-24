@@ -10,7 +10,7 @@ function buildFooter()
 	p1.innerText = "© 2024-2025 Dunspixel";
 
 	var p2 = document.createElement("p");
-	p2.innerText = "Last Updated 03/06/2025";
+	p2.innerText = "Last Updated 24/07/2025";
 
 	var p3 = document.createElement("p");
 	var githubLink = document.createElement("a");
