@@ -25,7 +25,7 @@ function buildNavMenu(nav)
 
     addChapter(nav, "Chapter 1: General Concepts", "chapter1.html");
     addSection(nav, "Rotation", "chapter1.html#rotation");
-    addSection(nav, "Wall Kicks", "chapter1.html#wallkicks");
+    addSection(nav, "Wall Kicks and Spins", "chapter1.html#wallkicks");
     addSection(nav, "Wiki Links", "chapter1.html#wikis");
     addSection(nav, "\"Versions of Tetris\"?", "chapter1.html#semantics-rant");
 

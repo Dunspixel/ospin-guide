@@ -147,7 +147,7 @@
 				</section>
 	
 				<section id="wallkicks">
-					<h3>Wall Kicks</h3>
+					<h3>Wall Kicks and Spins</h3>
 	
 					<p>
 						<strong>Wall kicks</strong> are a feature of many modern rotation systems, allowing pieces to move when rotated if
@@ -235,6 +235,38 @@
 						rotating around an alternate centre. Regardless of implementation, they're super fun to use once you know how they
 						work!
 					</p>
+
+					<p>
+						Many rotations that make use of wall kicks are called <strong>spins</strong>, also known as <strong>twists</strong>.
+						The specific definition of a spin varies between games, but in this guide I'll use the term "spin" to describe any
+						<em>successful</em> rotation that meets at least one of the following criteria:
+					</p>
+
+					<ul>
+						<li>
+							The rotation moves a piece into an <strong>immobile position</strong>
+							<ul>
+								<li>An immobile position is one where the active piece does not have space to move in any direction</li>
+								<li>This also includes such rotations that are not explicitly recognised as spins by the current game</li>
+							</ul>
+						</li>
+						<li>
+							The rotation is an <strong>in-place rotation</strong> of a piece that is already in an immobile position, in a 
+							game that explicitly recognises spins for the piece being rotated
+							<ul>
+								<li>An in-place rotation is a rotation that does not trigger a wall kick</li>
+							</ul>
+						</li>
+						<li>
+							The rotation doesn't meet the other two criteria, but is still recognised by the current game as a spin
+							<ul>
+								<li>
+									The most well-known example of this is the corner-based spin detection used for the T-piece in
+									guideline Tetris games, as these do not necessarily require the piece to be immobile after kicking
+								</li>
+							</ul>
+						</li>
+					</ul>
 	
 					<ul class="sources">
 						<li>
@@ -294,9 +326,10 @@
 	
 					<p>
 						Even though past proposals to merge the wikis have been rejected, the Tetris community generally agrees that both
-						of them are <em>significantly</em> better than the Fandom wiki. Most of what I have seen on there seems to pre-date
-						the wiki split, but there are still some pages on there that have useful information not on the other two wikis.
-						I'd use it for those specific pages, but the others for everything else.
+						of them are <em>significantly</em> better than the Fandom wiki. I would recommend avoiding Fandom except for the
+						extremely rare instances of pages that are not on the other two wikis (and even then, those pages tend to be
+						incredibly "scuffed"). I have done my best to minimise links there, but if you must use it, please ensure you have
+						an <span class="tooltip" title="Honestly, you should be using one anyway">ad blocker</span>.
 					</p>
 	
 					<ul class="sources">
@@ -331,56 +364,87 @@
 	
 				<section id="semantics-rant">
 					<h3>"Versions of Tetris"?</h3>
-	
+
 					<p>
 						So this section is that rant about semantics I mentioned earlier, which you'll hopefully find somewhat educational
-						and/or entertaining. I'd love to know what other people think about this topic!
+						and/or entertaining. It's very much a rambling opinion piece, but I'd love to know what other people think about
+						this topic!
 					</p>
-	
-					<p>
-						Also, I hope this rant doesn't come across as too negative or angry. I'm not mad at any of you, I promise.
-					</p>
-	
+
 					<p>
 						Am I the only one who is bothered by different Tetris games, and stackers in general, being referred to as
 						"versions of Tetris"? It's a term which perpetuates the myth that the Tetris series is literally just the same game
 						ported to pretty much every device imaginable, and that Tetris-like stackers are just knock-offs of what they
-						perceive to be the "real thing".
+						perceive to be the "real thing". This isn't helped at all by the fact that even The Tetris Company, who licenses
+						the Tetris series, refers to their own games as "versions" of the same game.
 					</p>
-	
+
 					<p>
-						Sure, the original Tetris was the first stacker game. It did indeed start the genre of puzzle games which many
-						people in the Tetris community name after it. But to say that they're all just the exact same game is plainly wrong.
+						I've seen a lot of people look at an announcement for a new Tetris game, or a port of an older game to modern
+						hardware, state that "it's just Tetris", lamenting how the game is supposedly no different from any Tetris games
+						that are already available on the platform no matter how much the game presents its own features that may not be
+						included elsewhere.
 					</p>
-	
+
 					<p>
-						This isn't helped at all by the fact that even The Tetris Company, who licenses the Tetris series, refers to their
-						own games as "versions" of the same game instead of what they are: entries in a series.
+						Tetris, like many other puzzle franchises, is a series of video games that shows clear evolution between entries
+						while maintaining the core premise of the original. Each entry either builds on or deviates from the last by
+						introducing new modes and gameplay mechanics that give the player different options when playing. Many entries would
+						be better described as "sequels" than "versions", and some Tetris sub-series even feature numbered entries.
 					</p>
-	
+
 					<p>
-						Don't get me started on the whole "it's just Tetris" thing.
+						New mechanics are often much more than simple quality-of-life improvements. Take lock delay for example - this
+						gives the player a set amount of time to place their piece even after it reaches the floor, even at high gravity.
+						Depending on the game, this can make the game more accessible to new players (like in modern guideline Tetris
+						games), or it can be used to drastically increase the game's maximum gravity and skill cap (like in the Tetris The
+						Grand Master series). In either case, this makes the game play quite differently from a game that locks pieces as
+						soon as gravity takes effect on the floor, like in NES Tetris. It allows different entries to test different skill
+						sets - TGM and NES Tetris are both extremely difficult games, but they have their own distinct communities because
+						they're challenging for vastly different reasons.
 					</p>
-	
+
 					<p>
-						While all (tetromino-based) stacker games may superficially look identical to each other, they all feel very
-						different to play at anything higher than a casual level. This is even true of modern Tetris games which have to
-						adhere to the Tetris Guideline. Some examples of differences which drastically affect gameplay include:
+						Even with the Tetris Guideline unifying certain mechanics in later Tetris games, there is room for these games to
+						be different. Many features of the guideline are optional, evident by their exclusion from certain entries (for
+						example, Tetris Giant does not feature Hold or hard drop). In addition, features not specified in the guideline can
+						be added on top, such as the Zone mechanic in Tetris Effect that drastically affects the core gameplay loop.
 					</p>
-	
-					<ul>
-						<li><strong>Game modes</strong></li>
-						<li><strong>Rotation systems</strong></li>
-						<li>Piece randomisers</li>
-						<li>Available drop types (soft, hard, sonic)</li>
-						<li>Hold mechanics</li>
-						<li>Spin recognition</li>
-						<li>Lock delay (or lack of it)</li>
-						<li>Timings (e.g. DAS and ARR)</li>
-					</ul>
-	
+
 					<p>
-						To clear up some terms related to stacker games, this is how I use them in this guide:
+						My gripes with the perception of Tetris as a single game with many "versions" extend to Tetris-like stackers,
+						often referred to as Tetris games by the community due to them using the term to describe the entire stacker genre.
+						They're typically referred to as "unofficial" or "fan-made" games due to this perception - I don't see the term
+						"Tetris-like" very often even though I think it's a much more fitting term for the tetromino stacker genre, similar
+						to how we have genres like "Roguelike" or "Soulslike" to describe games with similar gameplay loops to the games
+						their genres are named after.
+					</p>
+
+					<p>
+						Many Tetris-like stackers deviate from the Tetris series in ways that can be even more distinct than the differences
+						between entries in said series, even if they retain the core gameplay loop and superficial presentation Tetris
+						players are accustomed to. The most interesting example of this, at least to me, is the implementation of various
+						rotation systems, allowing pieces to move on rotation into places that wouldn't be possible in Tetris games. This
+						can make optimal stacking methods quite different between games, and much like in Tetris, being good at any of
+						these games requires significant technical understanding of how their specific rotations actually work.
+					</p>
+
+					<p>
+						Even details that seem trivial, such as movement timings, can have a huge effect on how a game is played. Many
+						stackers impose a limit on how quickly you can move pieces, forcing high-level players to prioritise efficient
+						stacking and clearing, while others allow players to remove these limits, allowing them to overcome poor efficiency
+						by playing much faster than what is possible in a limited tuning game. Like with the other distinctions, one
+						preference or style of play is not necessarily better than the other - they just give the player even more options
+						to consider when deciding which game to play and how they play it.
+					</p>
+
+					<p>
+						Please consider trying out various stacker games and their different modes to see the full extent of what this
+						genre has to offer!
+					</p>
+
+					<p>
+						Anyway, rant aside, I'd like to present how I'm personally using some terms related to stacker games in this guide:
 					</p>
 	
 					<ul>
@@ -412,7 +476,10 @@
 									<em>Includes</em> stackers outside of the Tetris series
 								</li>
 								<li>
-									The name is likely because the community often uses "Tetris" to refer to the entire genre
+									The name is because the community often uses "Tetris" to refer to the entire genre
+								</li>
+								<li>
+									There is a variety of sub-communities for specific stacker games
 								</li>
 							</ul>
 						</li>
