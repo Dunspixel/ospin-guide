@@ -46,6 +46,7 @@ function buildNavMenu(nav)
     addChapter(nav, "Chapter 4: Tetris-like Stackers", "chapter4.html");
     addSection(nav, "Aquamino and Stack Manipulation", "chapter4.html#aquamino");
     addSection(nav, "Ascension's Extensive Wall Kicks", "chapter4.html#asc");
+    addSection(nav, "Hakairis and Infinite Warp Distance", "chapter4.html#hakairis");
     addSection(nav, "Nuketris and Worm Mode", "chapter4.html#nuketris");
     addSection(nav, "Polyform's Asymmetrical O-Spins", "chapter4.html#polyform");
     addSection(nav, "Spirit Drop and Re-Hold", "chapter4.html#spirit-drop");
@@ -53,7 +54,6 @@ function buildNavMenu(nav)
     addSection(nav, "TETR.IO's All-Spin", "chapter4.html#tetrio");
     addSection(nav, "Tetrs and Ocular Rotation", "chapter4.html#tetrs");
     addSection(nav, "Jstris and O-Spin Memes", "chapter4.html#jstris");
-    addSection(nav, "Hakairis [Placeholder]", "chapter4.html#hakairis");
     addSection(nav, "Tetris Best [Placeholder]", "chapter4.html#best");
     addSection(nav, "Tetris Return [Placeholder]", "chapter4.html#return");
     addSection(nav, "Useful Notes", "chapter4.html#stacker-notes");
