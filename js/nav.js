@@ -41,7 +41,7 @@ function buildNavMenu(nav)
     addSection(nav, "Tetris 64 and its Inexplicably Obscure Rotation System", "chapter3.html#t64");
     addSection(nav, "Sega Tetris (1999) and Piece Joining", "chapter3.html#sega99");
     addSection(nav, "Special Block Positioning", "chapter3.html#special-blocks");
-    addSection(nav, "Audio Cues", "chapter3.html#audio");
+    addSection(nav, "Audio Cues [Obsolete]", "chapter3.html#audio");
 
     addChapter(nav, "Chapter 4: Tetris-like Stackers", "chapter4.html");
     addSection(nav, "Aquamino and Stack Manipulation", "chapter4.html#aquamino");
