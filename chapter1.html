@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>How To Rotate Your O-Piece - General Concepts</title>
-        <link rel="icon" href="img/favicon.ico" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/playfield.css" />
-    </head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>How To Rotate Your O-Piece - General Concepts</title>
+		<link rel="icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/playfield.css" />
+	</head>
 
-    <body>
+	<body>
 		<header class="mobile">
-            <div class="nav-button" onclick="toggleMobileNav()">
-                <div class="nav-icon"></div>
-                <h4>Menu</h4>
-            </div>
+			<div class="nav-button" onclick="toggleMobileNav()">
+				<div class="nav-icon"></div>
+				<h4>Menu</h4>
+			</div>
 		</header>
 
 		<div class="container">
@@ -31,37 +31,37 @@
 				<h3>How To Rotate Your O-Piece</h3>
 				<h2>Chapter 1: General Concepts</h2>
 
-                <p>
-                    Before we begin, I'd like to discuss some concepts that will be useful to understand the techniques in this guide, then
+				<p>
+					Before we begin, I'd like to discuss some concepts that will be useful to understand the techniques in this guide, then
 					go on a brief rant about the semantics of the terms many people use to describe stacker games. If you don't care about
 					that and just want to know some uses for O-piece rotations, you may want to skip to Chapter 2.
-                </p>
+				</p>
 
-                <p>
-                    I will use some conventions throughout the guide to highlight important information, which will be written in
+				<p>
+					I will use some conventions throughout the guide to highlight important information, which will be written in
 					colour-coded text:
-                </p>
+				</p>
 
-                <ul>
-                    <li><span class="state">Yellow - states and state-dependent rotations</span></li>
-                    <li><span class="nostate">Blue - state-agnostic rotations</span></li>
-                    <li><span class="system">Pink - rotation system abbreviations</span></li>
-                    <li><span class="credit">Green - credited people</span></li>
-                </ul>
+				<ul>
+					<li><span class="state">Yellow - states and state-dependent rotations</span></li>
+					<li><span class="nostate">Blue - state-agnostic rotations</span></li>
+					<li><span class="system">Pink - rotation system abbreviations</span></li>
+					<li><span class="credit">Green - credited people</span></li>
+				</ul>
 
 				<hr />
 
 				<section id="rotation">
 					<h3>Rotation</h3>
-	
+
 					<p>
 						When you press a rotation button, your active piece will rotate by 90 degrees in the chosen direction.
 					</p>
-	
+
 					<p>
 						Obvious statements aside, there's actually a lot more going on than most people give it credit for.
 					</p>
-	
+
 					<p>
 						A piece can be in one of four rotation states. In this guide, I will describe rotation states using
 						"<span class="state">0R2L</span>" <span class="tooltip" title="Yes I did this on purpose you can't stop me">
@@ -73,12 +73,12 @@
 						<span class="state">L</span>, <span class="state">2</span>, <span class="state">R</span>, and
 						<span class="state">0</span>.
 					</p>
-	
+
 					<p>
 						<strong>State-dependent</strong> rotations (i.e. those where the rotation state is relevant) will be written as
 						combinations of the above rotation states, with an arrow to indicate direction. For example:
 					</p>
-	
+
 					<ul>
 						<li>
 							A clockwise rotation from <span class="state">0</span> to <span class="state">R</span> is
@@ -97,7 +97,7 @@
 							<span class="state">&lt;02&gt;</span>
 						</li>
 					</ul>
-	
+
 					<p>
 						You may be wondering how a <span class="state">0R2&gt;</span> rotation differs from a <span class="state">&lt;02&gt;
 						</span> rotation. There's actually one game in this guide that implements 180-degree rotations like those featured
@@ -105,19 +105,19 @@
 						Rotations like these technically work differently from 180-degree rotations triggered by a single button press,
 						hence the different notation.
 					</p>
-	
+
 					<p>
 						<strong>State-agnostic</strong> rotations (i.e. those where the rotation state doesn't matter) will be written in
 						one of two ways. The longer notation will be used for rotations on their own, while the shorter notation will be
 						used for sequences.
 					</p>
-	
+
 					<ul>
 						<li>Counter-Clockwise - <span class="nostate">CCW</span> or <span class="nostate">L</span></li>
 						<li>Clockwise - <span class="nostate">CW</span> or <span class="nostate">R</span></li>
 						<li>180 - <span class="nostate">180</span> or <span class="nostate">F</span></li>
 					</ul>
-	
+
 					<p>
 						In many stackers (especially modern Tetris games), the O-piece can have multiple rotation states even if each one
 						is identical. This means the O-piece is actually rotating internally even if there is no visual feedback for doing
@@ -126,7 +126,7 @@
 						<span class="state">0</span>), but an offset is applied to keep it in place when rotated. This may or may not be
 						the case for implementations in other games, though.
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -145,21 +145,21 @@
 						</li>
 					</ul>
 				</section>
-	
+
 				<section id="wallkicks">
 					<h3>Wall Kicks and Spins</h3>
-	
+
 					<p>
 						<strong>Wall kicks</strong> are a feature of many modern rotation systems, allowing pieces to move when rotated if
 						their new position is obstructed by a wall or another piece.
 					</p>
-	
+
 					<p>
 						In <span class="system">SRS</span>, four alternative positions are checked if basic rotation fails, and the piece
 						will move to the first one that succeeds. For example, this is how the infamous Fin TSD works in
 						<span class="system">SRS</span>:
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][ ][ ][ ][ ][ ]/
@@ -169,7 +169,7 @@
 						/[G][ ][G][G][G][G][G][G][G][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][G][D][ ][ ][ ][ ][ ][ ][ ]/
@@ -179,7 +179,7 @@
 						/[G][ ][G][G][G][G][G][G][G][G]/
 						~<span class="state">&lt;2R</span> (fail)~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][D][G][ ][ ][ ][ ][ ][ ][ ]/
@@ -189,7 +189,7 @@
 						/[G][ ][G][G][G][G][G][G][G][G]/
 						~Kick 1 (fail)~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][T][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][D][D][ ][ ][ ][ ][ ][ ][ ]/
@@ -199,7 +199,7 @@
 						/[G][ ][G][G][G][G][G][G][G][G]/
 						~Kick 2 (fail)~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][ ][ ][ ][ ][ ]/
@@ -209,7 +209,7 @@
 						/[G][ ][D][G][G][G][G][G][G][G]/
 						~Kick 3 (fail)~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][ ][ ][ ][ ][ ]/
@@ -219,7 +219,7 @@
 						/[G][T][G][G][G][G][G][G][G][G]/
 						~Kick 4 (success)~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -229,7 +229,7 @@
 						/[G][T][ ][ ][ ][ ][ ][ ][ ][ ]/
 						~T-Spin Double~
 					</div>
-	
+
 					<p>
 						Different rotation systems can handle wall kicks by defining a different offset table, or instead try to kick by
 						rotating around an alternate centre. Regardless of implementation, they're super fun to use once you know how they
@@ -267,7 +267,7 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -308,22 +308,22 @@
 						</li>
 					</ul>
 				</section>
-	
+
 				<section id="wikis">
 					<h3>Wiki Links</h3>
-	
+
 					<p>
 						You may have noticed that I provide two very similar wiki links for many of the sections in this guide. Hard Drop
 						and TetrisWiki are both fantastic community resources for information about Tetris games, but many of the pages
 						have very similar content due to being forked from the now-defunct Tetrisconcept wiki, and editors (including me)
 						adding content to both wikis at the same time.
 					</p>
-	
+
 					<p>
 						Which one you pick is really down to personal preference, though if there's something you can't find on one wiki,
 						you will probably be able to find it on the other.
 					</p>
-	
+
 					<p>
 						Even though past proposals to merge the wikis have been rejected, the Tetris community generally agrees that both
 						of them are <em>significantly</em> better than the Fandom wiki. I would recommend avoiding Fandom except for the
@@ -331,7 +331,7 @@
 						incredibly "scuffed"). I have done my best to minimise links there, but if you must use it, please ensure you have
 						an <span class="tooltip" title="Honestly, you should be using one anyway">ad blocker</span>.
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Resources</strong>
@@ -361,7 +361,7 @@
 						</li>
 					</ul>
 				</section>
-	
+
 				<section id="semantics-rant">
 					<h3>"Versions of Tetris"?</h3>
 
@@ -446,7 +446,7 @@
 					<p>
 						Anyway, rant aside, I'd like to present how I'm personally using some terms related to stacker games in this guide:
 					</p>
-	
+
 					<ul>
 						<li>
 							<strong>Stacker / Stacker Game</strong>
@@ -541,7 +541,7 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<p>
 						With that out of the way, let's get to the part where we rotate some O-pieces!
 					</p>
@@ -559,8 +559,8 @@
 			</main>
 		</div>
 
-        <script type="text/javascript" src="js/nav.js"></script>
-        <script type="text/javascript" src="js/playfield.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-    </body>
+		<script type="text/javascript" src="js/nav.js"></script>
+		<script type="text/javascript" src="js/playfield.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
 </html>

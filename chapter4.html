@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>How To Rotate Your O-Piece - Tetris-like Stackers</title>
-        <link rel="icon" href="img/favicon.ico" />
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/playfield.css" />
-    </head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>How To Rotate Your O-Piece - Tetris-like Stackers</title>
+		<link rel="icon" href="img/favicon.ico" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/playfield.css" />
+	</head>
 
-    <body>
+	<body>
 		<header class="mobile">
-            <div class="nav-button" onclick="toggleMobileNav()">
-                <div class="nav-icon"></div>
-                <h4>Menu</h4>
-            </div>
+			<div class="nav-button" onclick="toggleMobileNav()">
+				<div class="nav-icon"></div>
+				<h4>Menu</h4>
+			</div>
 		</header>
 
 		<div class="container">
@@ -31,48 +31,48 @@
 				<h3>How To Rotate Your O-Piece</h3>
 				<h2>Chapter 4: Tetris-like Stackers</h2>
 
-                <p>
-                    Outside of the Tetris series is an entire genre inspired by it. As they are not bound by the Tetris Guideline, these
+				<p>
+					Outside of the Tetris series is an entire genre inspired by it. As they are not bound by the Tetris Guideline, these
 					stackers can be much more creative with how pieces behave and interact with each other, introducing a variety of new
 					game mechanics that can set them apart from <span class="tooltip"
 					title="Yes, they are distinct games within the same genre">Tetris</span>. Many stackers implement custom rotation
 					systems, introducing unique ways to rotate O-pieces and execute O-spins among whatever new game mechanics they bring to
 					the genre.
-                </p>
-        
-                <p>
-                    Unless otherwise specified, the techniques described for each game are performed with that game's default rotation
+				</p>
+
+				<p>
+					Unless otherwise specified, the techniques described for each game are performed with that game's default rotation
 					system. Many community-made stacker games allow the selection of rotation systems from other games, which would permit
 					the use of those games' O-piece rotation techniques. However, describing them in each game that uses them would result
 					in far too much repetition.
-                </p>
+				</p>
 
-                <p>
-                    This chapter is intended to be a celebration of the Tetris community's creativity! O-piece rotations aside, these are
+				<p>
+					This chapter is intended to be a celebration of the Tetris community's creativity! O-piece rotations aside, these are
 					all fantastic games that deserve a lot of love and attention. I have linked each one at the end of its section, so
 					please check them out!
-                </p>
+				</p>
 
-                <p>
-                    With the exception of the Jstris section and its self-proclaimed meme rotation system, and the placeholder sections I
+				<p>
+					With the exception of the Jstris section and its self-proclaimed meme rotation system, and the placeholder sections I
 					haven't written yet, the games in this chapter are listed in alphabetical order.
-                </p>
+				</p>
 
 				<section id="aquamino">
 					<h3>Aquamino and Stack Manipulation</h3>
-	
+
 					<p>
 						Aquamino introduces two new mechanics involving O-piece rotations. First is the Aqua Rotation System
 						(<span class="system">AqRS</span>), which includes wall kicks for the O-piece depending on where blocks or walls
 						are adjacent to it. Second is the completely new <strong>Push</strong> mechanic, allowing you to rotate pieces on
 						the floor or a wall and push your stack to fill holes.
 					</p>
-	
+
 					<p>
 						By default, the O-piece does not move or kick on rotation in <span class="system">AqRS</span>. However, depending
 						on its surroundings, a rotation can cause the O-piece to use one of two offset tables:
 					</p>
-	
+
 					<ul>
 						<li>
 							The <strong>T</strong> (Touch the floor) table, used when the O-piece is touching a floor
@@ -82,11 +82,11 @@
 							rotation)
 						</li>
 					</ul>
-	
+
 					<p>
 						Each rotation then has different conditions and priorities to decide which offset table to use.
 					</p>
-	
+
 					<ul>
 						<li>
 							<span class="nostate">CW</span> rotations will trigger a kick if touching a floor or a wall to the
@@ -103,7 +103,7 @@
 							these conditions are met, the <strong>L</strong> (ceiling) offset table will be prioritised.
 						</li>
 					</ul>
-	
+
 					<p>
 						As you will find in many of this chapter's sections, I have created an offset chart for
 						<span class="system">AqRS</span>. The black squares in the state columns represent the prerequisite floor, wall, or
@@ -111,23 +111,23 @@
 						necessary to activate the offset table. Also, for the 90-degree "L" table, only the wall in the direction of
 						rotation must be present.
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/aqrs_opiece_offset.png" alt="AqRS O-Piece Offset Chart" />
 					</div>
-	
+
 					<p>
 						This offset table allows for some very interesting and versatile kicks. Plus, they're entirely state-agnostic, so
 						you don't need to worry about pre-rotating the O-piece to trigger specific kicks. Due to the table being
 						symmetrical, all of the setups below can be mirrored.
 					</p>
-	
+
 					<p>
 						To start with, here are some simple kicks which can be performed on the floor. These kicks can be reversed with the
 						opposite rotation. Note that some of these setups require a high ceiling above the "entrance" to prevent triggering
 						kicks 5 and 6.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -135,7 +135,7 @@
 						/[ ][ ][O][O][ ][G][G]/
 						/[G][G][G][ ][ ][G][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -144,9 +144,9 @@
 						/[G][G][G][O][O][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][O][O][ ][ ][ ]/
@@ -154,7 +154,7 @@
 						/[G][G][G][ ][ ][G][G]/
 						/[G][G][G][ ][ ][G][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -163,9 +163,9 @@
 						/[G][G][G][O][O][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][G][G][G]/
@@ -173,7 +173,7 @@
 						/[ ][ ][O][O][ ][ ][G]/
 						/[G][G][G][G][ ][ ][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][G][G][G]/
@@ -182,9 +182,9 @@
 						/[G][G][G][G][O][O][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][G][G][G]/
 						/[ ][ ][O][O][G][G][G]/
@@ -192,7 +192,7 @@
 						/[G][G][G][G][ ][ ][G]/
 						/[G][G][G][G][ ][ ][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][G][G][G]/
 						/[ ][ ][ ][ ][G][G][G]/
@@ -201,14 +201,14 @@
 						/[G][G][G][G][O][O][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<p>
 						Things get more interesting when we incorporate the Levitate table. If none of the above setups succeed, kick 10
 						will move the O-piece one space upwards. This alone allows you to move the piece over a bumpy stack where it would
 						normally be stuck. However, with the Levitate kicks, you can move the O-piece out of even deeper holes, up to three
 						blocks high!
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -217,7 +217,7 @@
 						/[G][G][G][O][O][G][G][G]/
 						/[G][G][G][O][O][G][G][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -227,7 +227,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][O][O][ ][ ]/
@@ -237,11 +237,11 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<p>
 						Finally, we have some warps! The wall warp below can be performed both on the floor and in mid-air.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -250,7 +250,7 @@
 						/[ ][O][O][G][ ][ ][ ]/
 						/[ ][O][O][G][ ][ ][ ]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -260,12 +260,12 @@
 						/[ ][ ][ ][G][O][O][ ]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<p>
 						There are also floor and ceiling warps, which are the primary kicks that can be performed with
 						<span class="nostate">180</span> rotations.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -274,7 +274,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][G][G][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -284,7 +284,7 @@
 						/[G][G][G][O][O][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -294,13 +294,13 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<p>
 						Note that ceiling warps require the floor warp to fail, so these are not fully reversible with
 						<span class="nostate">180</span> rotations. To warp back up more than once, you'll need to use
 						<span class="nostate">CW</span> or <span class="nostate">CCW</span> rotations.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -312,7 +312,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][G][G][G]/
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -325,7 +325,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -338,7 +338,7 @@
 						/[G][G][G][O][O][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -351,7 +351,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -364,20 +364,20 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<p>
 						Now we can move on to the Push mechanic! This allows you to loosen the blocks around you by rotating your active
 						piece while holding a directional movement button. While I'll be describing this in the context of the O-piece
 						here, this actually works with every piece. It also works in any rotation system - it's not exclusive to
 						<span class="system">AqRS</span>. Currently, Push is usable in the Sandbox and Levitate modes.
 					</p>
-	
+
 					<p>
 						Your active piece has a hidden push counter that increases whenever you perform a rotation with a movement key held
 						down. There are three push modes, and multiple modes can be active at any time. However, your push counter will
 						reset to zero when you release a movement key or press a new one.
 					</p>
-	
+
 					<ul>
 						<li>
 							Left: Rotate while Move Left is held and there is a block directly to the left of your piece
@@ -389,7 +389,7 @@
 							Down: Rotate while Soft Drop is held and there is a block directly below your piece
 						</li>
 					</ul>
-	
+
 					<p>
 						If your push counter is 3 or more, the game will loosen blocks on the field depending on the push mode. This is
 						just both of the blocks to the left, right, or below your piece's destination (after applying wall kicks if
@@ -397,7 +397,7 @@
 						blocks in that direction. Due to their relative ease of use when pushing, I'll use <span class="nostate">180</span>
 						rotations for most of these descriptions. For example:
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -406,7 +406,7 @@
 						/[G][G][G][G][G][G][G]/
 						~Hold Right~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -415,7 +415,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -424,7 +424,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -433,14 +433,14 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<p>
 						In <span class="system">AqRS</span> specifically, rotating <span class="nostate">CW</span> or
 						<span class="nostate">CCW</span> will kick upwards, allowing you to push blocks above you. This can be prevented
 						with an overhang, but it's much easier to use <span class="nostate">180</span> rotations to push the lower blocks
 						if needed.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -449,7 +449,7 @@
 						/[G][G][G][G][G][G][G]/
 						~Hold Right~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G]/
 						/[ ][O][O][D][G][G][G]/
@@ -458,7 +458,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G]/
 						/[ ][O][O][D][D][G][G]/
@@ -467,7 +467,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G]/
 						/[ ][O][O][D][D][D][G]/
@@ -476,13 +476,13 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">CW</span>~
 					</div>
-	
+
 					<p>
 						If you reach an empty space, one of two things will happen. If this empty space is only one block wide, further
 						blocks after the empty space cannot be loosened in that direction, though the blocks in the other row or column
 						will continue to loosen.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -491,7 +491,7 @@
 						/[G][G][G][G][G][G][G]/
 						~Hold Right~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -500,7 +500,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -509,7 +509,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -518,12 +518,12 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<p>
 						If the empty space is two blocks wide, an O-piece will push all loosened blocks in the direction of rotation, plus
 						itself. Due to the space left behind by cleared lines, this is especially useful in Levitate mode!
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -532,7 +532,7 @@
 						/[G][G][G][G][G][G][G]/
 						~Hold Right~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -541,7 +541,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -550,7 +550,7 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][G][G][G][G]/
@@ -559,15 +559,15 @@
 						/[G][G][G][G][G][G][G]/
 						~<span class="nostate">180</span>~
 					</div>
-	
+
 					<p>
 						When your piece locks, all loosened blocks will fall as per an avalanche, then un-loosen.
 					</p>
-	
+
 					<p>
 						There are a couple of quirks with this mechanic that are important to note:
 					</p>
-	
+
 					<ul>
 						<li>
 							Performing a rotation with multiple push modes active will increase the push count by the number of active
@@ -582,7 +582,7 @@
 							available.
 						</li>
 					</ul>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -615,25 +615,25 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://aqua6623.itch.io/aquamino">Aquamino</a> by <span class="credit">Team Blanker</span></h4>
 				</section>
-	
+
 				<section id="asc">
 					<h3>Ascension's Extensive Wall Kicks</h3>
-	
+
 					<p>
 						While Ascension (ASC) features highly customisable pieces allowing you to play with any type of polyomino that can
 						fit in a 5x5 grid, I'll be describing things based on the default tetromino set. Also, I will use my text
 						convention to distinguish the game (ASC) and its rotation system (<span class="system">ASC</span>).
 					</p>
-	
+
 					<p>
 						<span class="system">ASC</span> uses an offset table which defines a massive 21 wall kicks for when basic rotation
 						fails. These kicks can be combined with rotation movement to kick a piece up to three spaces downwards and/or in
 						the opposite direction of rotation. The offset table follows this order:
 					</p>
-	
+
 					<ul>
 						<li>
 							Kicks in the "lower backward" corner are prioritised - horizontal and downwards opposite the direction of
@@ -646,7 +646,7 @@
 							Finally, the first upward kick is checked. This will always succeed if reached.
 						</li>
 					</ul>
-	
+
 					<p>
 						I said before that <span class="system">ASC</span>'s offset table defines 21 kicks. However, only 11 of these are
 						actually applicable to the O-piece, and even then, most rotations don't have access to all of them. This is because
@@ -654,7 +654,7 @@
 						will move the piece to its original position and therefore always succeed. The last of these is kick 11, hence why
 						anything after this is irrelevant to the O-piece.
 					</p>
-	
+
 					<ul>
 						<li>
 							<span class="state">0R&gt;</span> and <span class="state">&lt;L2</span> rotations can access the full range of
@@ -684,27 +684,27 @@
 							this is the bottom-left block.
 						</li>
 					</ul>
-	
+
 					<p>
 						Despite these "limitations", there is still huge potential for O-Spins, making this an incredibly fun rotation
 						system for an O-Spin enthusiast like me. Plus, the limitations made the addition of an offset chart for this
 						section feasible! Look at that rotational symmetry!
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/asc_opiece_offset.png" alt="ASC O-Piece Offset Chart" />
 					</div>
-	
+
 					<p>
 						Here are some setups and common situations with the possible rotations that can execute the desired kick.
 					</p>
-	
+
 					<p>
 						These diagonal kicks mostly work due to natural downward movement, with other rotations typically failing this kick
 						either due to a successful basic rotation or a lateral kick away from the wall. You can alternatively perform the
 						first two of these with 180-degree rotations - these will work without needing to wall kick.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -713,7 +713,7 @@
 						/[G][G][G][ ][ ][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">&lt;L2</span>|<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -722,9 +722,9 @@
 						/[G][G][ ][ ][G][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">R2&gt;</span>|<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][O][O][ ][ ][ ]/
@@ -733,7 +733,7 @@
 						/[G][G][G][ ][ ][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">&lt;L2</span>|<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ]/
@@ -742,12 +742,12 @@
 						/[G][G][ ][ ][G][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">R2&gt;</span>|<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<p>
 						Unlike the previous setups, these only work when rotating in a single direction - away from the O-shaped hole. No
 						wall on the other side of the O-piece is necessary to execute this kick with either rotation.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -756,7 +756,7 @@
 						/[G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;L2</span>|<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -765,7 +765,7 @@
 						/[G][ ][ ][G][G][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][O][O][ ][ ][ ]/
@@ -774,7 +774,7 @@
 						/[G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;L2</span>|<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ]/
@@ -783,14 +783,14 @@
 						/[G][ ][ ][G][G][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<p>
 						Now things get really fun. Combining wall kicks with rotation state movement allows you to warp through a floor on
 						your stack if there's an O-shaped hole underneath. As this isn't reversible due to kick limitations, you can even
 						chain them together by going back to the previous state and repeating the rotation. Also, no walls are required
 						either side of your O-piece for these!
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -800,7 +800,7 @@
 						/[G][ ][ ][G][G][G][G][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -810,7 +810,7 @@
 						/[G][G][ ][ ][G][G][G][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -820,7 +820,7 @@
 						/[G][G][G][ ][ ][G][G][G]/
 						~<span class="state">0R&gt;</span>|<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -830,7 +830,7 @@
 						/[G][G][G][G][ ][ ][G][G]/
 						~<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ][ ][ ]/
@@ -840,13 +840,13 @@
 						/[G][G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<p>
 						Walls, much like floors, are only a suggestion in <span class="system">ASC</span>. The first two of these kicks
 						(only moving the piece horizontally) are actually reversible, and unlike floor warps they require cycling through
 						four rotations in the same direction to chain together.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -855,7 +855,7 @@
 						/[G][ ][ ][G][O][O][ ]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -864,7 +864,7 @@
 						/[ ][O][O][G][ ][ ][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -873,7 +873,7 @@
 						/[G][ ][ ][G][G][G][G]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ]/
@@ -882,7 +882,7 @@
 						/[G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][O][O][ ]/
@@ -891,7 +891,7 @@
 						/[G][ ][ ][G][G][G][G]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][O][O][ ][ ][ ][ ]/
@@ -900,7 +900,7 @@
 						/[G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -929,10 +929,10 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://asc.winternebs.com/">ASC</a> by <span class="credit">winterNebs</span></h4>
 				</section>
-	
+
 				<section id="hakairis">
 					<h3>Hakairis and Infinite Warp Distance</h3>
 
@@ -962,11 +962,11 @@
 						walls if they are one block high, so you need a wall that is two blocks high to bias your kick. Also, there are no
 						upward or purely horizontal kicks - the destination must be below your current position.
 					</p>
-	
+
 					<p>
 						<span class="todo">TODO: Figure out how kicks are prioritised</span>
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Special Thanks</strong>
@@ -977,57 +977,57 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4>
 						<a href="https://web.archive.org/web/20150818190710/http://download.seesaa.jp/archive/win/ent/pgame/hkris.lzh">Hakairis</a> by
 						<span class="credit">裏HP研究所</span>
 					</h4>
 				</section>
-	
+
 				<section id="nuketris">
 					<h3>Nuketris and Worm Mode</h3>
-	
+
 					<p>
 						Nuketris primarily uses the <span class="system">SRS-X</span> rotation system first used in Heboris Unofficial
 						Expansion, and later Nullpomino. <span class="system">SRS-X</span> works exactly like <span class="system">SRS
 						</span> when rotating 90 degrees, but it has an extensive 180-degree offset table that defines 11 wall kicks for
 						each rotation (as opposed to the 4 wall kicks for the 90-degree rotations).
 					</p>
-	
+
 					<p>
 						Unlike the original <span class="system">SRS-X</span> however, the O-piece rotation states have been modified so it
 						now has four distinct states. The O-piece starts with its rotation centre at the bottom-right block, and will move
 						on rotation. It can then kick using the same offset table as the rest of the pieces, with the exception of the
 						I-piece which uses its own table.
 					</p>
-	
+
 					<p>
 						Nuketris also features a unique mode called Worm, which involves navigating an O-piece through an infinite tunnel
 						which ascends at increasing speeds using O-Spins and your knowledge of wall kicks. You must survive for as long as
 						possible without topping out due to your O-piece being pushed above the ceiling.
 					</p>
-	
+
 					<p>
 						Needless to say, I love this mode!
 					</p>
-	
+
 					<p>
 						As you have probably come to expect by now, here's an O-piece offset chart for Nuketris. The block outlined in
 						black is the rotation centre, while the block highlighted in orange, diagonally opposite the rotation centre, shows
 						how the rotation state is displayed in Worm mode.
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/nuketris_opiece_offset.png" alt="Nuketris O-Piece Offset Chart" />
 					</div>
-	
+
 					<p>
 						There are some 90-degree kicks here that move the O-piece back to its original position. These kicks are guaranteed
 						to succeed, so any kicks defined after them are completely inaccessible. <span class="state">0R&gt;</span>,
 						<span class="state">&lt;R0</span>, <span class="state">2L&gt;</span>, and <span class="state">&lt;L2</span>
 						rotations are only useful for changing the rotation state because of this.
 					</p>
-	
+
 					<p>
 						In Worm mode, the tunnel is made out of three-column spaces inside a wall of garbage blocks. For each row, the
 						space will move left or right by one column, ensuring there will always be enough space for the O-piece to move.
@@ -1035,7 +1035,7 @@
 						inaccessible in Worm mode (unless you kick the piece above the tunnel at the beginning for some reason). We can
 						rule out kicks for the following reasons:
 					</p>
-	
+
 					<ul>
 						<li>
 							The rotation and kick only move the piece horizontally (will be blocked by the wall)
@@ -1052,15 +1052,15 @@
 							possible
 						</li>
 					</ul>
-	
+
 					<p>
 						Below is the same offset chart, but only showing the wall kicks relevant to Worm mode.
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/nuketris_opiece_offset_worm.png" alt="Nuketris O-Piece Offset Chart (Worm Mode)" />
 					</div>
-	
+
 					<p>
 						Each state and rotation has use cases that make them useful, though the <span class="state">0</span> and
 						<span class="state">R</span> states have more desirable kicks. States can also be divided into pairs, as the
@@ -1068,26 +1068,26 @@
 						<span class="state">L</span> ("lower") state pairs are effectively interchangeable due to the 90-degree rotations
 						between them that switch states without moving the piece.
 					</p>
-	
+
 					<p>
 						<strong>Please note that the setups in this section cannot be mirrored as <span class="system">SRS-X</span> is not
-							symmetrical.</strong>
+						symmetrical.</strong>
 					</p>
-					
+
 					<p>
 						State <span class="state">0</span> is the safest of the four states due to it not having any upward kicks. In any
 						situation, <span class="state">0R&gt;</span> can safely switch from state <span class="state">0</span> to
 						<span class="state">R</span> without moving the piece. If you're in a straight tunnel and your O-piece is at the
 						bottom of the playfield, I would recommend keeping it in state <span class="state">0</span> until the tunnel moves.
 					</p>
-	
+
 					<p>
 						Moving to the right can be achieved with both <span class="state">&lt;0L</span> and <span class="state">&lt;02&gt;
 						</span>. However, states <span class="state">2</span> and <span class="state">L</span> are generally unsafe states
 						to be in, so it's usually better to switch to state <span class="state">R</span> and use that state's kicks unless
 						you want to take advantage of some stronger kicks mentioned later.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][L][O][G][G][G][G]/
@@ -1096,7 +1096,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][L][G][G][G][G]/
@@ -1105,7 +1105,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][ ][ ][G][G][G][G]/
@@ -1114,7 +1114,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~Alt: <span class="state">&lt;0L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][ ][ ][G][G][G][G]/
@@ -1123,13 +1123,13 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~Alt: <span class="state">&lt;02&gt;</span>~
 					</div>
-	
+
 					<p>
 						Moving left can only be achieved directly with <span class="state">&lt;02&gt;</span>, and is a much better use case
 						for that rotation due to state <span class="state">2</span>'s single useful left kick (more on this later).
 						Alternatively, switch to state <span class="state">R</span> for its more useful left kicks.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][L][O][ ][G]/
@@ -1138,7 +1138,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][ ][ ][ ][G]/
@@ -1147,13 +1147,13 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">&lt;02&gt;</span>~
 					</div>
-	
+
 					<p>
 						State <span class="state">0</span> also has access to a few stronger kicks. First is a kick that moves two down and
 						one to the left, useable in zigzag formations like this. It's good when the destination is followed by a straight
 						tunnel, but if the tunnel goes back to the right, there's a better kick you can use.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][L][O][ ][G][G]/
@@ -1163,7 +1163,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1173,13 +1173,13 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">&lt;02&gt;</span>~
 					</div>
-	
+
 					<p>
 						The other two kicks accessible to state <span class="state">0</span> are floor warps, accessible via
 						<span class="state">&lt;0L</span> rotation! In the right situation, these are some of the most useful kicks you can
 						perform, with the exception of a certain kick we'll talk about later.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][L][O][ ][G][G]/
@@ -1189,7 +1189,7 @@
 						/[G][G][G][ ][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1199,7 +1199,7 @@
 						/[G][G][G][L][O][ ][G][G]/
 						~<span class="state">&lt;0L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][ ][ ][ ][G][G]/
 						/[G][G][ ][L][O][G][G][G]/
@@ -1209,7 +1209,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][ ][ ][ ][G][G]/
 						/[G][G][ ][ ][ ][G][G][G]/
@@ -1219,11 +1219,11 @@
 						/[G][G][G][G][L][O][ ][G]/
 						~<span class="state">&lt;0L</span>~
 					</div>
-	
+
 					<p>
 						Additional notes for state <span class="state">0</span>:
 					</p>
-	
+
 					<ul>
 						<li>
 							If your next destination is to the left, <span class="state">&lt;0L</span> will fail and no movement or state
@@ -1234,19 +1234,19 @@
 							<span class="state">&lt;20&gt;</span> rotation after one unless you're falling into a straight tunnel.
 						</li>
 					</ul>
-	
+
 					<p>
 						State <span class="state">R</span> is stronger than state <span class="state">0</span>, having access to the most
 						powerful downward kick in the game. However, it does have a few upward kicks, so it is slightly riskier to use if
 						you're not fully familiarised with its offset table.
 					</p>
-	
+
 					<p>
 						Basic movement is essentially the opposite of state <span class="state">0</span>. To move right, you'll need to use
 						a <span class="state">R2&gt;</span> rotation. Alternatively, switch to state <span class="state">0</span> for its
 						better right kicks - <span class="state">&lt;R0</span> will always succeed without moving the piece.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][L][G][G][G][G]/
@@ -1255,7 +1255,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][L][O][G][G][G][G]/
@@ -1264,7 +1264,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~<span class="state">&lt;R0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][ ][ ][G][G][G][G]/
@@ -1273,11 +1273,11 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~Alt: <span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<p>
 						Moving left can be achieved with <span class="state">&lt;RL&gt;</span>.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][O][L][ ][G]/
@@ -1286,7 +1286,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][ ][ ][ ][G]/
@@ -1295,19 +1295,19 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<p>
 						When performing <span class="state">R2&gt;</span> and <span class="state">&lt;RL&gt;</span>, it's important to be
 						wary of upward kicks. They're not quite as dangerous as the ceiling warps possible with the lower states, but
 						nonetheless undesirable.
 					</p>
-	
+
 					<p>
 						It's also worth noting that gravity is very high in Worm mode, so kicks that only move the piece upwards will
 						succeed without appearing to move it. This means <span class="state">R2&gt;</span> will succeed in a straight
 						tunnel, putting the piece in the less desirable state <span class="state">2</span>.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][O][L][ ][G]/
@@ -1316,7 +1316,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][O][O][ ]/
 						/[G][G][G][G][ ][O][L][G]/
@@ -1325,7 +1325,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][L][G][G][G][G]/
@@ -1334,7 +1334,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][O][O][G][G][G][G][G]/
 						/[G][L][O][ ][G][G][G][G]/
@@ -1343,7 +1343,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1352,7 +1352,7 @@
 						/[G][G][ ][O][O][G][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1361,12 +1361,12 @@
 						/[G][G][ ][O][L][G][G][G]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<p>
 						Moving on to the stronger downward kicks, <span class="state">&lt;RL&gt;</span> can access a mirrored version of
 						one of the <span class="state">&lt;0L</span> floor warps, allowing it to move one space to the left.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][O][L][ ][G][G]/
@@ -1376,7 +1376,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1386,7 +1386,7 @@
 						/[G][ ][L][O][G][G][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<p>
 						Finally, we get to the strongest kick, combining a -3 Y offset with natural downward movement. This results in a
 						massive <strong>4-row</strong> downward kick (plus one to the left). However, note that state
@@ -1394,7 +1394,7 @@
 						state afterwards (<span class="state">&lt;L2</span> is very safe for this). Also make sure there is no space up and
 						to the left, otherwise an upward kick will be prioritised!
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][ ][ ][ ][G][G]/
 						/[G][G][ ][O][L][G][G][G]/
@@ -1405,7 +1405,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][ ][ ][ ][G][G]/
 						/[G][G][ ][ ][ ][G][G][G]/
@@ -1416,11 +1416,11 @@
 						/[G][ ][L][O][G][G][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<p>
 						Additional notes for state <span class="state">R</span>:
 					</p>
-	
+
 					<ul>
 						<li>
 							If your next destination is to the left and there is no space for upward kicks, <span class="state">R2&gt;
@@ -1431,19 +1431,19 @@
 							</span> will fail.
 						</li>
 					</ul>
-	
+
 					<p>
 						Onward to state <span class="state">2</span>. Unfortunately, this is one of the less desirable states to be in -
 						most of its kicks move the piece upwards. You'll want to switch to one of the upper states as quickly and
 						efficiently as possible.
 					</p>
-	
+
 					<p>
 						I would not recommend doing anything with this state outside of the use cases shown below - you'll either want to
 						switch to state <span class="state">L</span> or <span class="state">R</span> depending on which direction you're
 						moving. Anything else will either fail or move upwards.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][O][G][G][G][G]/
@@ -1452,7 +1452,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][O][G][G][G][G]/
@@ -1461,7 +1461,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~<span class="state">2L&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][O][O][ ][G]/
@@ -1470,7 +1470,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][ ][ ][ ][G]/
@@ -1479,12 +1479,12 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<p>
 						There's also a single use case for <span class="state">&lt;20&gt;</span> which it shares with <span class="state">
 						&lt;2R</span> - use it in a straight tunnel to switch to an upper state for free.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1493,7 +1493,7 @@
 						/[G][G][ ][O][L][G][G][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1502,7 +1502,7 @@
 						/[G][G][ ][O][O][G][G][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][ ][G][G][G]/
 						/[G][G][G][ ][ ][ ][G][G]/
@@ -1511,18 +1511,18 @@
 						/[G][G][ ][O][O][G][G][G]/
 						~Alt: <span class="state">&lt;20&gt;</span>~
 					</div>
-	
+
 					<p>
 						Finally, we have state <span class="state">L</span>. Much like state <span class="state">2</span>, its uses are
 						very limited and your main goal is to switch to one of the upper states. Again, I would not recommend doing
 						anything outside of the setups listed below.
 					</p>
-	
+
 					<p>
 						<span class="state">&lt;LR&gt;</span> can be used to move to the right. It's defined before the ceiling warps, so
 						it's safe in this scenario. Alternatively, <span class="state">&lt;L2</span> can be used to safely switch states.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][O][O][ ][G]/
@@ -1531,7 +1531,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][G][G][ ][ ][ ]/
 						/[G][G][G][G][O][O][ ][G]/
@@ -1540,7 +1540,7 @@
 						/[G][ ][ ][ ][G][G][G][G]/
 						~<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][O][O][G][G][G][G]/
@@ -1549,7 +1549,7 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][G][G][G][G][G]/
 						/[G][ ][ ][ ][G][G][G][G]/
@@ -1558,12 +1558,12 @@
 						/[G][G][G][G][ ][ ][ ][G]/
 						~<span class="state">&lt;LR&gt;</span>~
 					</div>
-	
+
 					<p>
 						Additionally, <span class="state">&lt;LR&gt;</span> and <span class="state">L0&gt;</span> can be used to switch to
 						upper states in straight tunnels, much like <span class="state">&lt;20&gt;</span>.
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -1606,31 +1606,31 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://nuketris.com/">Nuketris</a> by <span class="credit">nukeexplosions</span></h4>
 				</section>
-	
+
 				<section id="polyform">
 					<h3>Polyform's Asymmetrical O-Spins</h3>
-	
+
 					<p>
 						MultiMino 2: Polyform features a variety of piece shapes and rotation systems, with the game's tetrominoes
 						primarily using <span class="system">SRS+</span> and a custom 180-degree offset table.
 					</p>
-	
+
 					<p>
 						By default, the O tetromino does not move or kick on rotation. By enabling "Allow O-Spins" in the options menu, it
 						is given four distinct rotation states, with state <span class="state">0</span> having its rotation centre in the
 						bottom-left corner. It also inherits the same offset table as the other tetrominoes (except for I)!
 					</p>
-	
+
 					<p>
 						Unlike most stackers with All-Spin, which use immobile detection for non-T pieces, Polyform actually uses
 						three-corner detection for all polyominoes. Like the T-piece, the O-piece has four "corners" around it, two major
 						and two minor. If it is rotated into a position where three of these corners are occupied, it will register an
 						O-Spin, with this spin being a Mini if only one of the major corners is occupied.
 					</p>
-	
+
 					<p>
 						An interesting quirk of this corner detection is that O-Spins are actually asymmetrical and state-dependent.
 						Immobile positions don't necessarily register spins, overhangs are not strictly necessary, and perhaps most
@@ -1638,34 +1638,34 @@
 						rotating the O-piece also rotates the corners around it, effectively swapping the positions of the major and minor
 						corners.
 					</p>
-	
+
 					<p>
 						Below is an offset chart for Polyform. This also includes the corners for spin detection - pink corners are major
 						and blue corners are minor. A full O-Spin requires both pink corners and at least one blue corner to be occupied. Wall kicks will retain the spin corner locations of basic rotation - they have been omitted from the kicks for readability purposes.
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/polyform_opiece_offset.png" alt="Polyform O-Piece Offset Chart" />
 					</div>
-	
+
 					<p>
 						<span class="todo">TODO: Describe inaccessible kicks and Mini conversions</span>
 					</p>
-	
+
 					<p>
 						<span class="todo">TODO: List some setups and the rotations necessary to perform them</span>
 					</p>
-	
+
 					<p>
 						There's also an achievement system, with one of these achievements being for performing an O-Spin with an O
 						tetromino. Of course, the first thing I did when I started this game was accidentally achieve this without knowing
 						it existed.
 					</p>
-	
+
 					<p>
 						<span class="todo">TODO: Briefly mention the O-Spins and achievements with other polyforms</span>
 					</p>
-					
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -1709,30 +1709,30 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://axelfox149.itch.io/polyform">Polyform</a> by <span class="credit">Stellar Top Hat</span></h4>
 				</section>
-	
+
 				<section id="spirit-drop">
 					<h3>Spirit Drop and Re-Hold</h3>
-	
+
 					<p>
 						Unlike most of the other games in this chapter, Spirit Drop's rotation system does not implement any wall kicks on
 						rotation with the O-piece. However, it does register O-Spins if an O-piece is rotated while immobile. To help you
 						put O-pieces in such situations, the game implements a <strong>Re-Hold</strong> mechanic, allowing you to use Hold
 						an unlimited number of times until your piece locks.
 					</p>
-	
+
 					<p>
 						Your first hold for a piece works the same as any other stacker, but subsequent holds are Re-Holds, which work
 						differently:
 					</p>
-	
+
 					<ul>
 						<li>Your hold piece spawns at the location of your active piece, instead of its usual spawn location</li>
 						<li>Re-Holding on the floor counts as a lock delay reset, acting as a limiter</li>
 					</ul>
-	
+
 					<p>
 						The location of your piece, for the purpose of Re-Hold, is its rotation centre. For most pieces, if there isn't
 						enough room for your hold piece's <span class="state">0</span> state, Re-Hold will fail much like a failed
@@ -1740,24 +1740,24 @@
 						can Re-Hold an O-piece into an O-shaped hole by kicking the rotation centre of any other piece into it. Rotating
 						after this Re-Hold will then register an O-Spin!
 					</p>
-	
+
 					<p>
 						Because most pieces have their rotation centre in the middle of a block, and the O-piece has it between its four
 						blocks, the O-piece can kick up to half a space in each direction following a Re-Hold. Specifically, this starts
 						with an upper-right kick, then checks the remaining corners in clockwise order.
 					</p>
-	
+
 					<p>
 						Below is a list of setups which can be used to perform O-Spins with Re-Hold. Note that all of these assume at least
 						one Hold has already been performed with the active piece.
 					</p>
-	
+
 					<p>
 						When using an I-piece to Re-Hold an O-piece, the centre of the I-piece must line up exactly with the centre of the
 						O-shaped hole. If it's on the border, it can easily be fixed with a 180-degree rotation. All I-piece setups can be
 						mirrored.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][G ][Gm][G ][G ]/
@@ -1766,7 +1766,7 @@
 						/[G ][G ][G ][Gm][G ][G ]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][G ][  ][G ][G ]/
@@ -1775,7 +1775,7 @@
 						/[G ][G ][G ][  ][G ][G ]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1784,11 +1784,11 @@
 						/[G ][G ][G ][  ][G ][G ]/
 						~O-Spin Double~
 					</div>
-	
+
 					<p>
 						These O-Spin Single setups leave behind undesirable board states, so they should only be used for novelty purposes.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][Gm][  ][  ]/
@@ -1797,7 +1797,7 @@
 						/[G ][  ][  ][Gm][  ][G ]/
 						~State <span class="state">R</span>|<span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1806,7 +1806,7 @@
 						/[G ][Gm][Gm][Gm][Gm][G ]/
 						~<span class="state">R2&gt;</span>|<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1815,7 +1815,7 @@
 						/[G ][  ][I ][I ][  ][G ]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1824,9 +1824,9 @@
 						/[G ][  ][I ][I ][  ][G ]/
 						~O-Spin Single~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][Gm][  ][  ]/
@@ -1835,7 +1835,7 @@
 						/[G ][G ][  ][Gm][G ][G ]/
 						~State <span class="state">R</span>|<span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1844,7 +1844,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">R2&gt;</span>|<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1853,7 +1853,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">&lt;20&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1862,7 +1862,7 @@
 						/[G ][G ][I ][I ][G ][G ]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -1871,14 +1871,14 @@
 						/[G ][  ][I ][I ][  ][G ]/
 						~O-Spin Single~
 					</div>
-	
+
 					<br />
-	
+
 					<p>
 						J and L pieces are strange - the way they interact with the O-piece and Re-Hold is <strong>not</strong> mirrored. A
 						setup that works with one of these pieces may not necessarily work with the other.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][J][J][ ][ ]/
@@ -1887,7 +1887,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1896,7 +1896,7 @@
 						/[G][G][ ][ ][G][G]/
 						~<span class="state">&lt;R0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1905,7 +1905,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1914,9 +1914,9 @@
 						/[G][G][I][I][ ][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][T][T][ ][ ]/
@@ -1925,7 +1925,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1934,7 +1934,7 @@
 						/[G][G][ ][ ][G][G]/
 						~<span class="state">L0&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1943,7 +1943,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1952,9 +1952,9 @@
 						/[G][ ][I][I][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][J][J][ ][ ]/
@@ -1963,7 +1963,7 @@
 						/[G][G][G][ ][ ][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1972,7 +1972,7 @@
 						/[G][G][G][ ][ ][G]/
 						~<span class="state">&lt;R0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1981,7 +1981,7 @@
 						/[G][G][G][ ][J][G]/
 						~Alt: <span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1990,7 +1990,7 @@
 						/[G][G][G][I][I][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -1999,9 +1999,9 @@
 						/[G][G][ ][I][I][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][T][T][ ][ ]/
@@ -2010,7 +2010,7 @@
 						/[G][ ][ ][G][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2019,7 +2019,7 @@
 						/[G][ ][ ][G][G][G]/
 						~<span class="state">L0&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2028,7 +2028,7 @@
 						/[G][T][ ][G][G][G]/
 						~Alt: <span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2037,7 +2037,7 @@
 						/[G][I][I][G][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2046,12 +2046,12 @@
 						/[G][I][I][ ][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<p>
 						This next setup cannot be mirrored - the version with the L-piece does not work for O-Spins! This is because the
 						upper-right kick is the first to be checked, and the upper-left kick is last.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][J][J][ ][ ][ ]/
@@ -2060,7 +2060,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2069,7 +2069,7 @@
 						/[G][G][ ][ ][G][G]/
 						~<span class="state">&lt;R0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2078,7 +2078,7 @@
 						/[G][G][ ][J][G][G]/
 						~Alt: <span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2087,7 +2087,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2096,9 +2096,9 @@
 						/[G][ ][I][I][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][T][T][ ]/
@@ -2107,7 +2107,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2116,7 +2116,7 @@
 						/[G][G][ ][ ][G][G]/
 						~<span class="state">L0&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2125,7 +2125,7 @@
 						/[G][G][T][ ][G][G]/
 						~Alt: <span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2134,12 +2134,12 @@
 						/[G][G][ ][ ][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<p>
 						Fortunately, the rest of these setups are much more enclosed, so the above discrepancy won't be a problem long as
 						the setup is complete.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][J][J][J][G][G]/
@@ -2147,7 +2147,7 @@
 						/[G][G][ ][ ][ ][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][ ][ ][J][G][G]/
@@ -2155,7 +2155,7 @@
 						/[G][G][J][J][ ][G]/
 						~<span class="state">2L&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][ ][ ][ ][G][G]/
@@ -2163,7 +2163,7 @@
 						/[G][G][ ][I][I][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2171,9 +2171,9 @@
 						/[G][G][ ][I][I][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][T][T][T][G]/
@@ -2181,7 +2181,7 @@
 						/[G][ ][ ][ ][G][G]/
 						~State <span class="state">2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][T][ ][ ][G]/
@@ -2189,7 +2189,7 @@
 						/[G][ ][T][T][G][G]/
 						~<span class="state">&lt;2R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][ ][ ][G]/
@@ -2197,7 +2197,7 @@
 						/[G][I][I][ ][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2205,9 +2205,9 @@
 						/[G][I][I][ ][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][J][G][G][G][G]/
@@ -2217,7 +2217,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][G][G][G][G]/
@@ -2227,7 +2227,7 @@
 						/[G][G][J][J][G][G]/
 						~<span class="state">&lt;0L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][G][G][G][G]/
@@ -2237,7 +2237,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2247,9 +2247,9 @@
 						/[G][G][G][ ][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][G][T][ ]/
@@ -2259,7 +2259,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][G][ ][ ]/
@@ -2269,7 +2269,7 @@
 						/[G][G][T][T][G][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][G][ ][ ]/
@@ -2279,7 +2279,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2289,9 +2289,9 @@
 						/[G][G][ ][G][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][J][J][G]/
@@ -2299,7 +2299,7 @@
 						/[G][G][ ][J][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][J][ ][G]/
@@ -2307,7 +2307,7 @@
 						/[G][G][J][J][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][G]/
@@ -2315,7 +2315,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2323,9 +2323,9 @@
 						/[G][G][G][ ][ ][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][T][T][G][G][G]/
@@ -2333,7 +2333,7 @@
 						/[G][G][T][ ][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][ ][T][G][G][G]/
@@ -2341,7 +2341,7 @@
 						/[G][G][T][T][G][G]/
 						~<span class="state">&lt;LR&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][ ][ ][G][G][G]/
@@ -2349,7 +2349,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2357,18 +2357,18 @@
 						/[G][ ][ ][G][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<p>
 						Like J/L setups, the S/Z pieces can have discrepancies when kicking to the top right. Also, you may need to perform
 						a 180-degree rotation to move the rotation centre inside the O-shaped hole. I have highlighted the rotation centre
 						in setups where this is relevant.
 					</p>
-	
+
 					<p>
 						For this first setup, the S-Spin is optional - you can Re-Hold immediately from the first position below. I have
 						included it to make it symmetrical with the Z-piece setup, where the Z-Spin is mandatory.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][O][ ][G][G]/
@@ -2377,7 +2377,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][G][G]/
@@ -2386,7 +2386,7 @@
 						/[G][G][O][O][G][G]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][G][G]/
@@ -2395,7 +2395,7 @@
 						/[G][G][ ][ ][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2404,9 +2404,9 @@
 						/[G][G][ ][ ][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][Z][ ][ ]/
@@ -2415,7 +2415,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][ ][ ][ ]/
@@ -2424,7 +2424,7 @@
 						/[G][G][Z][Z][G][G]/
 						~<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][ ][ ][ ]/
@@ -2433,7 +2433,7 @@
 						/[G][G][ ][ ][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2442,9 +2442,9 @@
 						/[G][G][ ][ ][G][G]/
 						~O-Spin Single~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][O ][  ][  ][  ]/
@@ -2454,7 +2454,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2464,7 +2464,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">R2&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2474,7 +2474,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">&lt;20&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2484,7 +2484,7 @@
 						/[G ][G ][I ][I ][G ][G ]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2494,9 +2494,9 @@
 						/[G ][G ][G ][  ][  ][G ]/
 						~O-Spin Double~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][Z ][  ][  ]/
@@ -2506,7 +2506,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2516,7 +2516,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">&lt;L2</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2526,7 +2526,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="state">&lt;20&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2536,7 +2536,7 @@
 						/[G ][G ][I ][I ][G ][G ]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2546,9 +2546,9 @@
 						/[G ][  ][  ][G ][G ][G ]/
 						~O-Spin Double~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][O][O][ ]/
@@ -2558,7 +2558,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2568,7 +2568,7 @@
 						/[G][G][ ][O][G][G]/
 						~<span class="state">&lt;0L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2578,7 +2578,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2588,9 +2588,9 @@
 						/[G][G][ ][G][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<div class="playfield-spacer"></div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][Z][Z][ ][ ][ ]/
@@ -2600,7 +2600,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2610,7 +2610,7 @@
 						/[G][G][Z][ ][G][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2620,7 +2620,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2630,11 +2630,11 @@
 						/[G][G][G][ ][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<p>
 						Finally, we have the T-piece! All of the setups below can be mirrored.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][S][ ][G]/
@@ -2644,7 +2644,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">0</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][G]/
@@ -2654,7 +2654,7 @@
 						/[G][G][S][ ][G][G]/
 						~<span class="state">0R&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][ ][ ][G]/
@@ -2664,7 +2664,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2674,9 +2674,9 @@
 						/[G][G][ ][G][G][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<br />
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2686,7 +2686,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">R</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2696,7 +2696,7 @@
 						/[G][G][ ][S][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2706,7 +2706,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ]/
@@ -2716,12 +2716,12 @@
 						/[G][G][G][ ][ ][G]/
 						~O-Spin Double</span>~
 					</div>
-	
+
 					<p>
 						I find this piece to be the easiest for chaining O-Spin setups together. You can make towers of alternating
 						O-shaped holes, and spin the T all the way to the bottom with only 180-degree rotations!
 					</p>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][S][G][G]/
 						/[G][G][S][S][G][G]/
@@ -2731,7 +2731,7 @@
 						/[G][G][ ][ ][G][G]/
 						~State <span class="state">L</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][G][G]/
 						/[G][G][ ][ ][G][G]/
@@ -2741,7 +2741,7 @@
 						/[G][G][ ][ ][G][G]/
 						~<span class="state">&lt;LR&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][G][G]/
 						/[G][G][ ][ ][G][G]/
@@ -2751,7 +2751,7 @@
 						/[G][G][ ][S][G][G]/
 						~<span class="state">&lt;RL&gt;</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][ ][ ][G][G]/
 						/[G][G][ ][ ][G][G]/
@@ -2761,7 +2761,7 @@
 						/[G][G][I][I][G][G]/
 						~Re-Hold</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[G][G][G][ ][ ][G]/
 						/[G][G][G][ ][ ][G]/
@@ -2771,20 +2771,20 @@
 						/[G][G][G][ ][ ][G]/
 						~O-Spin Double~
 					</div>
-	
+
 					<p>
 						While this normally isn't in the scope of the guide due to it not being an O tetromino, I'll also mention stage
 						4C-1 in Evolution mode as the method of completing this is essentially the same as the setups above. This stage
 						gives you a bag where all of your O-pieces are replaced with O16-pieces (4x4 squares), and features a mission where
 						you must perform an O16-Spin.
 					</p>
-	
+
 					<p>
 						To perform an O16-Spin, simply make a 4x4 hole with an overhang, place any tetromino such that its rotation centre
 						is in one of the central four spaces, Re-Hold an O16-piece, and rotate! You don't even need to clear a line for it
 						to count.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][ ][ ][ ]/
@@ -2794,7 +2794,7 @@
 						/[G][ ][S][ ][ ][G]/
 						~Place Piece~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ]/
 						/[G][G][ ][ ][ ][ ]/
@@ -2804,7 +2804,7 @@
 						/[G][I][I][I][I][G]/
 						~Re-Hold~
 					</div>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Special Thanks</strong>
@@ -2830,29 +2830,29 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4>
 						<a href="https://rayblastgames.com/spiritdrop.php">Spirit Drop</a> by
 						<span class="credit">RayBlast Games</span>
 					</h4>
 				</section>
-	
+
 				<section id="techmino">
 					<h3>Techmino's Transformative O-Spins</h3>
-	
+
 					<p>
 						Techmino Rotation System (<span class="system">TRS</span>) functions mostly like <span class="system">SRS</span>,
 						but with several changed/added wall kicks and new mechanics. One of these mechanics is how O-pieces behave when you
 						perform very specific rotation sequences in certain situations - it transforms into other pieces and can be used to
 						execute spins which the game registers as O-Spins.
 					</p>
-	
+
 					<p>
 						Transformative O-Spins can be performed by moving an O-piece somewhere you would normally perform a spin with a
 						different piece, then performing the relevant rotation sequence from the list below. Note that
 						<span class="nostate">F</span> is short for "Flip" and refers to the game's 180-degree rotation button.
 					</p>
-	
+
 					<ul>
 						<li>T: <span class="nostate">LLL</span>, <span class="nostate">RRR</span></li>
 						<li>Z: <span class="nostate">LRL</span>, <span class="nostate">RLR</span></li>
@@ -2866,14 +2866,14 @@
 							on kick)
 						</li>
 					</ul>
-	
+
 					<p>
 						Specifically, this performs a semi-immobile check on the O-piece (can the O-piece move down, left, or right) and an
 						immobile check on the piece it is transforming into (can the new piece move in any direction). An exception to this
 						is the I-piece, which only checks whether it is <em>vertically</em> immobile. If both of the checks see that the
 						piece cannot move after the rotation sequence is entered, the piece will transform.
 					</p>
-	
+
 					<p>
 						Interestingly, the T transformations are defined slightly differently for <span class="nostate">LLL</span> and
 						<span class="nostate">RRR</span> - the "T-Spin Mini" transformations only work when rotating in a specific
@@ -2881,24 +2881,24 @@
 						cases. As a general rule, the final rotation in the sequence is the rotation you would normally perform with the
 						piece being transformed into.
 					</p>
-	
+
 					<p>
 						Each sequence for the S and Z pieces can access the same three transformations for each piece. If the O-piece is in
 						a situation where it can transform into both, <span class="nostate">LRL</span> will prioritise the Z transformation
 						and <span class="nostate">RLR</span> will prioritise the S transformation.
 					</p>
-	
+
 					<p>
 						Once an O-piece is transformed, it will rotate and kick exactly like the piece it transformed into. You can also
 						hold it and use it later.
 					</p>
-	
+
 					<p>
 						After figuring out the code and testing each offset in the O-Spin offset table, these are all of the setups
 						permitted by it in the order they are defined. Blocks coloured like the other pieces are for illustration purposes
 						only - they show where the O-piece will kick to.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][O ][O ][G ][G ][G ]/
@@ -2906,7 +2906,7 @@
 						/[G ][G ][Tm][G ][G ][G ]/
 						~<span class="nostate">RRR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][O ][O ][  ][  ]/
@@ -2914,7 +2914,7 @@
 						/[G ][G ][Tm][G ][G ][G ]/
 						~<span class="nostate">RRR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2922,7 +2922,7 @@
 						/[G ][Tm][Om][Om][G ][G ]/
 						~<span class="nostate">RRR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][O ][O ][  ][  ]/
@@ -2930,7 +2930,7 @@
 						/[G ][G ][Tm][G ][G ][G ]/
 						~<span class="nostate">LLL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][O ][O ][G ][G ][G ]/
@@ -2938,7 +2938,7 @@
 						/[G ][G ][Tm][G ][G ][G ]/
 						~<span class="nostate">LLL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2946,7 +2946,7 @@
 						/[G ][Om][Om][Tm][G ][G ]/
 						~<span class="nostate">LLL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][  ][  ][  ][  ]/
@@ -2954,7 +2954,7 @@
 						/[G ][G ][Om][Om][G ][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][O ][O ][  ][  ][  ]/
@@ -2962,7 +2962,7 @@
 						/[G ][G ][Zm][Zm][G ][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2970,7 +2970,7 @@
 						/[G ][G ][O ][Om][Zm][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][G ][G ]/
@@ -2978,7 +2978,7 @@
 						/[G ][G ][Om][Om][G ][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][O ][O ][  ]/
@@ -2986,7 +2986,7 @@
 						/[G ][G ][Sm][Sm][G ][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -2994,7 +2994,7 @@
 						/[G ][Sm][Om][O ][G ][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][  ][  ][  ][  ]/
@@ -3002,7 +3002,7 @@
 						/[G ][G ][Om][Om][G ][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][O ][O ][  ][  ][  ]/
@@ -3010,7 +3010,7 @@
 						/[G ][G ][Zm][Zm][G ][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3018,7 +3018,7 @@
 						/[G ][G ][O ][Om][Zm][G ]/
 						~<span class="nostate">RLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][G ][G ]/
@@ -3026,7 +3026,7 @@
 						/[G ][G ][Om][Om][G ][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][O ][O ][  ]/
@@ -3034,7 +3034,7 @@
 						/[G ][G ][Sm][Sm][G ][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3042,7 +3042,7 @@
 						/[G ][Sm][Om][O ][G ][G ]/
 						~<span class="nostate">LRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][O ][O ][G ][G ][G ]/
@@ -3050,7 +3050,7 @@
 						/[G ][G ][G ][Jm][G ][G ]/
 						~<span class="nostate">LLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][O ][O ][  ][  ]/
@@ -3058,7 +3058,7 @@
 						/[G ][Lm][G ][G ][G ][G ]/
 						~<span class="nostate">RRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][O ][O ][  ][  ]/
@@ -3066,7 +3066,7 @@
 						/[G ][G ][G ][Jm][G ][G ]/
 						~<span class="nostate">RRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3074,7 +3074,7 @@
 						/[G ][G ][Om][Om][Jm][G ]/
 						~<span class="nostate">RRL</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][O ][O ][G ][G ]/
@@ -3082,7 +3082,7 @@
 						/[G ][G ][Lm][G ][G ][G ]/
 						~<span class="nostate">LLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3090,7 +3090,7 @@
 						/[G ][Lm][Om][Om][G ][G ]/
 						~<span class="nostate">LLR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][  ][  ][G ][G ]/
@@ -3098,7 +3098,7 @@
 						/[G ][G ][O ][O ][G ][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][G ][  ][  ][  ]/
@@ -3106,7 +3106,7 @@
 						/[G ][G ][G ][O ][O ][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][G ][G ][G ]/
@@ -3114,7 +3114,7 @@
 						/[G ][O ][O ][G ][G ][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3122,7 +3122,7 @@
 						/[G ][Im][Om][Om][Im][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3130,7 +3130,7 @@
 						/[G ][Im][Im][Om][Om][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[  ][  ][  ][  ][  ][  ]/
@@ -3138,19 +3138,19 @@
 						/[G ][Om][Om][Im][Im][G ]/
 						~<span class="nostate">FFF</span>~
 					</div>
-	
+
 					<p>
 						Fun Fact: Because the "T-Spin Mini" spins don't require a two-high wall opposite the overhang, the O-piece is
 						actually slightly better at T-Spin Triples in this scenario than the actual T-piece. However, the T-piece can be
 						used when there is no wall here while the O-piece cannot. This is also true of J and L-Spin Triples!
 					</p>
-	
+
 					<p>
 						There are also some translational O-Spins, triggered by different rotation sequences. These do not appear to
 						transform the O-piece, though from what I can see they do technically transform the O-piece into itself. If it does
 						though, it's a distinction without a difference.
 					</p>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][O ][O ][G ][G ][G ]/
@@ -3158,7 +3158,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="nostate">RFR</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][O ][O ][G ][G ][G ]/
@@ -3166,7 +3166,7 @@
 						/[G ][G ][G ][  ][  ][G ]/
 						~<span class="nostate">RRF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][O ][O ][  ][  ][  ]/
 						/[G ][O ][O ][G ][G ][G ]/
@@ -3174,7 +3174,7 @@
 						/[G ][G ][  ][  ][G ][G ]/
 						~<span class="nostate">RFF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][O ][O ][G ][G ]/
@@ -3182,7 +3182,7 @@
 						/[G ][  ][  ][G ][G ][G ]/
 						~<span class="nostate">LFL</span>~~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][  ][  ][  ][  ]/
 						/[G ][G ][G ][O ][O ][G ]/
@@ -3190,7 +3190,7 @@
 						/[G ][  ][  ][G ][G ][G ]/
 						~<span class="nostate">LLF</span>~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[  ][  ][O ][O ][  ][  ]/
 						/[G ][G ][O ][O ][G ][G ]/
@@ -3198,11 +3198,11 @@
 						/[G ][  ][  ][G ][G ][G ]/
 						~<span class="nostate">LFF</span>~
 					</div>
-	
+
 					<p>
 						<span class="todo">TODO: Describe BiRS and its offsets</span>
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3261,41 +3261,41 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://github.com/26F-Studio/Techmino">Techmino</a> by <span class="credit">26F Studio</span></h4>
 				</section>
-	
+
 				<section id="tetrio">
 					<h3>TETR.IO's All-Spin</h3>
-	
+
 					<p>
 						While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from
 						the previously mentioned stalling techniques) with the game's default rotation system, <span class="system">SRS+
 						</span>. However, there are a few fun things you can do with them.
 					</p>
-	
+
 					<p>
 						TETR.IO offers several options for spin recognition, such as:
 					</p>
-	
+
 					<ul>
 						<li>T-Spins: Only recognises T-Spins as spins</li>
 						<li>All-Spin: Recognises spins for all pieces</li>
 						<li>All-Mini: Like All-Spin, but spins other than T register as Mini spins</li>
 						<li>Stupid: Recognises every floor rotation as a "spin"</li>
 					</ul>
-	
+
 					<p>
 						Of course, setting the allowed spins to "Stupid" will allow you to O-Spin with every O-piece, but it's clear that
 						this is just a novelty feature and it makes it feel a bit too easy.
 					</p>
-	
+
 					<p>
 						Singleplayer modes use T-Spins by default (though this can be changed in Custom Games), while the new multiplayer
 						mode Zenith Tower and Season 2 of Tetra League use All-Mini by default. In Zenith Tower specifically, activating
 						The Magician will enable full All-Spin at the cost of punishing duplicate consecutive line clears.
 					</p>
-	
+
 					<p>
 						O-Spins can still be executed when allowed spins is set to All-Spin or All-Mini, though it's still very
 						impractical. This was probably intended for use with the game's other rotation system options, but it can actually
@@ -3303,14 +3303,14 @@
 						the O-piece spawns, rotating the piece there will register as an O-Spin. Note that the O-piece will spawn on rows
 						22 and 23.
 					</p>
-	
+
 					<p>
 						Normally, because the O-shaped hole requires blocks to be placed above it, performing an O-Spin by pushing the hole
 						up with garbage lines will cause the top of the hole to overlap with your next piece and top you out. Because the
 						O-piece only needs to be immobile to register an O-Spin on rotation, there is a specific setup which will allow you
 						to survive and downstack by putting an S-shaped hole on top of the O-shaped hole:
 					</p>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[G][G][G][G][ ][ ][G][G][G][G]/
@@ -3320,7 +3320,7 @@
 						/[G][G][G][G][G][G][G][G][G][ ]/
 						~Spawn O, Rotate~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -3330,7 +3330,7 @@
 						/[G][G][G][G][G][G][G][G][G][ ]/
 						~O-Spin Double~
 					</div>
-	
+
 					<div class="playfield-container">
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
 						/[ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]/
@@ -3340,11 +3340,11 @@
 						/[G][G][G][G][G][G][G][G][G][ ]/
 						~Spawn S~
 					</div>
-	
+
 					<p>
 						<span class="todo">TODO: O-Spin chaining and Valentine's Day 2025</span>
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3415,17 +3415,17 @@
 
 					<h4><a href="https://tetr.io/">TETR.IO</a> by <span class="credit">osk</span></h4>
 				</section>
-	
+
 				<section id="tetrs">
 					<h3>Tetrs and Ocular Rotation</h3>
-	
+
 					<p>
 						Tetrs implements a unique rotation system called Ocular Rotation System (<span class="system">Ocular</span>), which
 						has some unusual but <span class="tooltip" title="At least, after playing the game's Puzzle mode">intuitive</span>
 						wall kicks. This includes some basic kicks for the O-piece - while very simple and don't allow warp kicks, their
 						mechanics are different from other stackers in several interesting and fun ways.
 					</p>
-	
+
 					<p>
 						In <span class="system">Ocular</span>, the O-piece only has one rotation state. However, basic rotation moves the
 						piece one space in the direction of rotation, and this can be repeated until it reaches a wall. If basic rotation
@@ -3433,23 +3433,23 @@
 						prioritised, then a final kick to move the piece back to its original position and prevent the rotation from
 						failing. Of course, I made a chart for it:
 					</p>
-	
+
 					<div class="centre">
 						<img src="img/ocular_opiece_offset.png" alt="Ocular Rotation System O-Piece Offset Chart" />
 					</div>
-	
+
 					<p>
 						In addition to the rotation system, Tetrs implements a variation of move-reset lock delay. Instead of the reset
 						limit typically seen in guideline Tetris games, there is a hard time limit which decreases while the active piece
 						is on the floor. Once this is zero, the piece will lock instantly. The maximum ground time is customisable in the
 						Settings menu, with the default value being 2.25 seconds.
 					</p>
-	
+
 					<p>
 						There is an option to bind a key to 180-degree rotation. These rotations do not move or kick the O-piece, and
 						therefore can be used to stall while keeping it in place.
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3475,32 +3475,32 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://github.com/Strophox/tetrs">Tetrs</a> by <span class="credit">Strophox</span></h4>
 				</section>
-	
+
 				<section id="jstris">
 					<h3>Jstris and O-Spin Memes</h3>
-	
+
 					<p>
 						This one is very silly, even being described by the game's guide as a "meme rotation system". Fortunately, I'm a
 						very silly person who considers it to be in the scope of this guide.
 					</p>
-	
+
 					<p>
 						Jstris features a config option called "Blocks" which defines the piece set and rotation system. One of these
 						options is "O-Spin", which has two distinct features. First, it vastly broadens the offset table so that each piece
 						can utilise 16 wall kicks instead of the 4 possible in <span class="system">SRS</span> (the default in Jstris). 
 						Second, it permits two absolutely ridiculous O-Spins.
 					</p>
-	
+
 					<p>
 						The first O-Spin (an O-Spin Triple) is performed by creating a T-Spin Triple setup where the T is "pointing" to the
 						right. When the O-piece is placed next to the overhang, a <span class="nostate">CW</span> rotation will transform
 						it into an L-piece. A second <span class="nostate">CW</span> rotation will transform it into a T-piece and fill the
 						T-shaped hole, though this is still an "O-Spin" in a similar vein to Techmino's transformations.
 					</p>
-	
+
 					<p>
 						The second O-Spin (an O-Spin Quadruple) is performed by creating a 4x4 space with a 2x2 space touching its top-left
 						or top-right corner. Placing an O-piece in the 2x2 space and performing a <span class="nostate">CCW</span> rotation
@@ -3508,7 +3508,7 @@
 						space. Following this, a <span class="nostate">CW</span> rotation will revert it to its original 2x2 form, and this
 						can be repeated if there are other 4x4 spaces to kick into.
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3566,34 +3566,34 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://jstris.jezevec10.com/">Jstris</a> by <span class="credit">jezevec10</span></h4>
 				</section>
-	
+
 				<section id="best">
 					<h3>Tetris Best [Placeholder]</h3>
-	
+
 					<p>
 						Contrary to its name, this game is not actually an entry in the Tetris series!
 					</p>
-	
+
 					<p>
 						This game has four distinct rotation states for the O-piece and an offset table that defines <strong>24</strong>
 						wall kicks! However, similar to <span class="system">ASC</span>, this is a general-purpose table, and the ordering
 						of kicks means that only up to 17 of these kicks are accessible to the O-piece, depending on the rotation state.
 					</p>
-	
+
 					<p>
 						Unfortunately, this section won't be very detailed. The game was made using the Flash-based Scratch 2.0, and the
 						upgrade to the HTML5-based Scratch 3.0 introduced a lot of breaking changes that rendered this game unplayable.
 						However, since the rotation system is very interesting in theory, I'll at least give you an offset chart when I get
 						round to it.
 					</p>
-	
+
 					<p>
 						<span class="todo">TODO: Make an offset chart for TBRS</span>
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3614,34 +3614,34 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://scratch.mit.edu/projects/140137647">Tetris Best</a> by <span class="credit">ChatUser2</span></h4>
 				</section>
-	
+
 				<section id="return">
 					<h3>Tetris Return [Placeholder]</h3>
-	
+
 					<p>
 						This one is also not an entry in the Tetris series!
 					</p>
-	
+
 					<p>
 						This game features a huge selection of rotation buttons and an even bigger offset table with <strong>36</strong>
 						kicks! It's currently unclear to me how many of these kicks are accessible to the O-piece with the available
 						rotations, though with a cursory look at the chart I believe it can use a maximum of 20.
 					</p>
-	
+
 					<p>
 						Tetris Return was made using Scratch 2.0 and unfortunately suffered the same fate as Tetris Best. Due to breaking
 						changes in Scratch 3.0, this game is no longer in a playable state. However, I do intend to make some offset charts
 						for its ludicrous rotation system. Perhaps it can be featured in a stacker that won't be killed by the platform it
 						was created on.
 					</p>
-	
+
 					<p>
 						<span class="todo">TODO: Make like twelve absolutely massive offset charts for TRRS because why not</span>
 					</p>
-	
+
 					<ul class="sources">
 						<li>
 							<strong>Sources</strong>
@@ -3668,23 +3668,23 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<h4><a href="https://scratch.mit.edu/projects/214742980">Tetris Return</a> by <span class="credit">ihgfedcba</span></h4>
 				</section>
-	
+
 				<section id="stacker-notes">
 					<h3>Useful Notes</h3>
-	
+
 					<p>
 						As mentioned at the start of this chapter, many stackers include options for each others' rotation systems. This
 						can sometimes allow for additional O-Spin options.
 					</p>
-	
+
 					<ul>
 						<li>
 							<span class="system">ASC</span> is a selectable rotation system in Techmino and TETR.IO. These games use ASC's
 							default tetromino set when this rotation system is selected.
-	
+
 							<ul>
 								<li>
 									Techmino also includes an original <span class="system">ASC+</span> option, adding a new offset table
@@ -3697,7 +3697,7 @@
 							</ul>
 						</li>
 					</ul>
-	
+
 					<p>
 						The Re-Hold mechanic from Spirit Drop is also featured in Techmino (where it is named "In-Place Hold"), allowing
 						this feature to be used with any of Techmino's rotation system options. However, the feature is only available in
@@ -3735,8 +3735,8 @@
 			</main>
 		</div>
 
-        <script type="text/javascript" src="js/nav.js"></script>
-        <script type="text/javascript" src="js/playfield.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-    </body>
+		<script type="text/javascript" src="js/nav.js"></script>
+		<script type="text/javascript" src="js/playfield.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
 </html>

@@ -1,133 +1,133 @@
 .playfield-container
 {
-    display: inline-block;
-    vertical-align: top;
-    margin-bottom: 4px;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 4px;
 }
 
 .playfield-spacer
 {
-    display: inline-block;
-    margin-right: 16px;
+	display: inline-block;
+	margin-right: 16px;
 }
 
 .playfield
 {
-    display: table;
-    padding: 4px;
+	display: table;
+	padding: 4px;
 }
 
 .playfield-row
 {
-    display: table-row;
-    background-color: #FFFFFF;
+	display: table-row;
+	background-color: #FFFFFF;
 }
 
 .playfield-cell
 {
-    display: table-cell;
-    width: 12px;
-    height: 12px;
-    padding: 0;
+	display: table-cell;
+	width: 12px;
+	height: 12px;
+	padding: 0;
 }
 
 .playfield-caption
 {
-    display: table-caption;
-    caption-side: bottom;
-    text-align: center;
-    font-size: 14px;
-    padding: 2px 4px;
+	display: table-caption;
+	caption-side: bottom;
+	text-align: center;
+	font-size: 14px;
+	padding: 2px 4px;
 }
 
 .playfield-cell-grey
 {
-    background-color: #808080 !important;
+	background-color: #808080 !important;
 }
 
 .playfield-cell-dark
 {
-    background-color: #404040 !important;
+	background-color: #404040 !important;
 }
 
 .playfield-cell-cyan
 {
-    background-color: #00FFFF !important;
+	background-color: #00FFFF !important;
 }
 
 .playfield-cell-blue
 {
-    background-color: #0000FF !important;
+	background-color: #0000FF !important;
 }
 
 .playfield-cell-orange
 {
-    background-color: #FF8000 !important;
+	background-color: #FF8000 !important;
 }
 
 .playfield-cell-yellow
 {
-    background-color: #FFE000 !important;
+	background-color: #FFE000 !important;
 }
 
 .playfield-cell-green
 {
-    background-color: #00FF00 !important;
+	background-color: #00FF00 !important;
 }
 
 .playfield-cell-purple
 {
-    background-color: #C000FF !important;
+	background-color: #C000FF !important;
 }
 
 .playfield-cell-red
 {
-    background-color: #FF0000 !important;
+	background-color: #FF0000 !important;
 }
 
 .playfield-cell-pink
 {
-    background-color: #FF80FF !important;
+	background-color: #FF80FF !important;
 }
 
 .playfield-cell-darkgreen
 {
-    background-color: #00B000 !important;
+	background-color: #00B000 !important;
 }
 
 .playfield-puyo
 {
-    border-radius: 8px;
+	border-radius: 8px;
 }
 
 .playfield-muted
 {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 /* Flag Classes (not used in regular playfields) */
 
 .container-flag
 {
-    width: 20%;
+	width: 20%;
 }
 
 .playfield-flag, .row-flag, .row-flag .playfield-cell
 {
-    width: 100%;
+	width: 100%;
 }
 
 .playfield-flag-4 .playfield-cell
 {
-    height: 20px !important;
+	height: 20px !important;
 }
 
 .playfield-flag-5 .playfield-cell
 {
-    height: 16px !important;
+	height: 16px !important;
 }
 
 .playfield-flag-7 .playfield-cell
 {
-    height: 11.5px !important;
+	height: 11.5px !important;
 }
