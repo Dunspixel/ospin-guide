@@ -52,7 +52,7 @@ function buildNavMenu(nav)
 	addSection(nav, "Spirit Drop and Re-Hold", "chapter4.html#spirit-drop");
 	addSection(nav, "Techmino's Transformative O-Spins", "chapter4.html#techmino");
 	addSection(nav, "TETR.IO's All-Spin", "chapter4.html#tetrio");
-	addSection(nav, "Tetrs and Ocular Rotation", "chapter4.html#tetrs");
+	addSection(nav, "Tetro TUI and Ocular Rotation", "chapter4.html#tetro-tui");
 	addSection(nav, "Jstris and O-Spin Memes", "chapter4.html#jstris");
 	addSection(nav, "Tetris Best [Placeholder]", "chapter4.html#best");
 	addSection(nav, "Tetris Return [Placeholder]", "chapter4.html#return");
