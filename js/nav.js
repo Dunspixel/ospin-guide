@@ -54,6 +54,7 @@ function buildNavMenu(nav)
 	addSection(nav, "TETR.IO's All-Spin", "chapter4.html#tetrio");
 	addSection(nav, "Tetro TUI and Ocular Rotation", "chapter4.html#tetro-tui");
 	addSection(nav, "Jstris and O-Spin Memes", "chapter4.html#jstris");
+	addSection(nav, "Tetris-ex [Placeholder]", "chapter4.html#t-ex");
 	addSection(nav, "Tetris Best [Placeholder]", "chapter4.html#best");
 	addSection(nav, "Tetris Return [Placeholder]", "chapter4.html#return");
 	addSection(nav, "Useful Notes", "chapter4.html#stacker-notes");
