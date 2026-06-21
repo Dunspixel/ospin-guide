@@ -21,7 +21,7 @@ function buildFooter()
 	var p4 = document.createElement("p");
 	p4.innerText = "Licensed under "
 	var licenseLink = document.createElement("a");
-	licenseLink.href = "https://github.com/Dunspixel/ospin-guide/LICENSE";
+	licenseLink.href = "https://github.com/Dunspixel/ospin-guide/blob/main/LICENSE";
 	licenseLink.innerText = "CC-BY-SA-4.0";
 	p4.appendChild(licenseLink);
 
