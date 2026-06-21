@@ -10,7 +10,7 @@ function buildFooter()
 	p1.innerText = "© 2024-2026 Dunspixel";
 
 	var p2 = document.createElement("p");
-	p2.innerText = "Last Updated 17/02/2026";
+	p2.innerText = "Last Updated 21/06/2026";
 
 	var p3 = document.createElement("p");
 	var githubLink = document.createElement("a");
@@ -18,7 +18,15 @@ function buildFooter()
 	githubLink.innerText = "GitHub";
 	p3.appendChild(githubLink);
 
+	var p4 = document.createElement("p");
+	p4.innerText = "Licensed under "
+	var licenseLink = document.createElement("a");
+	licenseLink.href = "https://github.com/Dunspixel/ospin-guide/LICENSE";
+	licenseLink.innerText = "CC-BY-SA-4.0";
+	p4.appendChild(licenseLink);
+
 	footer.appendChild(p1);
 	footer.appendChild(p2);
 	footer.appendChild(p3);
+	footer.appendChild(p4);
 }
