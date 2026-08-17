@@ -620,7 +620,7 @@
 				</section>
 
 				<section id="asc">
-					<h3>Ascension's Extensive Wall Kicks</h3>
+					<h3>Ascension's Extensive Kicks and Polyomino Customisation</h3>
 
 					<p>
 						While Ascension (ASC) features highly customisable pieces allowing you to play with any type of polyomino that can
@@ -899,6 +899,55 @@
 						/[G][G][G][G][ ][ ][G]/
 						/[G][G][G][G][ ][ ][G]/
 						~<span class="state">&lt;2R</span>~
+					</div>
+
+					<p>
+						If that chart earlier made it look like O-Spins in <span class="system">ASC</span> have a lot of untapped potential,
+						you'll be pleased to know you can access a lot more kicks via the polyomino customisation feature! You can place an
+						O tetromino anywhere in the 5x5 grid, but the rotation centre will always be in the middle of the grid. This means
+						you can move the O-piece's rotation centre to make the wall kicks even more powerful!
+					</p>
+
+					<p>
+						By default, the O-piece is biased slightly towards the upper-right corner, and its rotation centre is its lower-left
+						block. Within this quadrant of the 5x5 grid, there's space above and to the right of the O-piece, so there are four
+						distinct rotation centres you can give to it:
+					</p>
+
+					<ul>
+						<li>Default position</li>
+						<li>Horizontal offset (move all blocks one space to the right)</li>
+						<li>Vertical offset (move all blocks one space up)</li>
+						<li>Diagonal offset (move all blocks one space up and to the right)</li>
+					</ul>
+
+					<p>
+						If you place the O-piece blocks in a different quadrant, this is actually equivalent to one of the four
+						configurations above, except the piece will effectively spawn in a different state. For example, placing the piece
+						in the lower-right quadrant is equivalent to spawning in state R.
+					</p>
+
+					<p>
+						To give you an idea of how much this increases <span class="system">ASC</span>'s O-Spin potential, I have made some
+						charts for the other O-piece configurations. You can see that both the number of available kicks and the amount they
+						move the piece increases drastically, with the diagonal offset configuration enabling every single kick!
+					</p>
+
+					<p>
+						There is one trade-off with these configurations, though. Rotations that can access all 21 kicks do not have a kick
+						that returns the piece to its original position. As a result of this, these rotations can fail.
+					</p>
+
+					<div class="centre">
+						<img src="img/asc-o-10.png" alt="ASC O-Piece Offset Chart (horizontal state offset)" />
+					</div>
+
+					<div class="centre">
+						<img src="img/asc-o-01.png" alt="ASC O-Piece Offset Chart (vertical state offset)" />
+					</div>
+
+					<div class="centre">
+						<img src="img/asc-o-11.png" alt="ASC O-Piece Offset Chart (diagonal state offset)" />
 					</div>
 
 					<ul class="sources">

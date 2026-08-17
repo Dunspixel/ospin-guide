@@ -45,7 +45,7 @@ function buildNavMenu(nav)
 
 	addChapter(nav, "Chapter 4: Tetris-like Stackers", "chapter4.html");
 	addSection(nav, "Aquamino and Stack Manipulation", "chapter4.html#aquamino");
-	addSection(nav, "Ascension's Extensive Wall Kicks", "chapter4.html#asc");
+	addSection(nav, "Ascension's Extensive Kicks and Polyomino Customisation", "chapter4.html#asc");
 	addSection(nav, "Hakairis and Infinite Warp Distance", "chapter4.html#hakairis");
 	addSection(nav, "Nuketris and Worm Mode", "chapter4.html#nuketris");
 	addSection(nav, "Polyform's Asymmetrical O-Spins", "chapter4.html#polyform");
