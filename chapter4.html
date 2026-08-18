@@ -916,15 +916,15 @@
 
 					<ul>
 						<li>Default position</li>
-						<li>Horizontal offset (move all blocks one space to the right)</li>
-						<li>Vertical offset (move all blocks one space up)</li>
-						<li>Diagonal offset (move all blocks one space up and to the right)</li>
+						<li>Horizontal State Offset (move all blocks one space to the right)</li>
+						<li>Vertical State Offset (move all blocks one space up)</li>
+						<li>Diagonal State Offset (move all blocks one space up and to the right)</li>
 					</ul>
 
 					<p>
 						If you place the O-piece blocks in a different quadrant, this is actually equivalent to one of the four
 						configurations above, except the piece will effectively spawn in a different state. For example, placing the piece
-						in the lower-right quadrant is equivalent to spawning in state R.
+						in the lower-right quadrant is equivalent to spawning in state <span class="state">R</span>.
 					</p>
 
 					<p>
@@ -938,13 +938,25 @@
 						that returns the piece to its original position. As a result of this, these rotations can fail.
 					</p>
 
+					<p>
+						Horizontal State Offset:
+					</p>
+
 					<div class="centre">
 						<img src="img/asc-o-10.png" alt="ASC O-Piece Offset Chart (horizontal state offset)" />
 					</div>
 
+					<p>
+						Vertical State Offset:
+					</p>
+
 					<div class="centre">
 						<img src="img/asc-o-01.png" alt="ASC O-Piece Offset Chart (vertical state offset)" />
 					</div>
+
+					<p>
+						Diagonal State Offset:
+					</p>
 
 					<div class="centre">
 						<img src="img/asc-o-11.png" alt="ASC O-Piece Offset Chart (diagonal state offset)" />
@@ -3331,8 +3343,8 @@
 
 					<p>
 						While TETR.IO does implement O-Spin recognition, O-piece rotations don't really have any practical use (aside from
-						the previously mentioned stalling techniques) with the game's default rotation system, <span class="system">SRS+
-						</span>. However, there are a few fun things you can do with them.
+						the previously mentioned stalling techniques) with the game's default rotation system,
+						<span class="system">SRS+</span>. However, there are a few fun things you can do with them.
 					</p>
 
 					<p>
